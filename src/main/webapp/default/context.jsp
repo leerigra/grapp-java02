@@ -49,13 +49,12 @@ Salesforceから連携されたデータ:
         <td colspan="2">レコードID <b>${canvasRequest.context.environmentContext.record.Id}</b></td>
       </tr>
       <tr>
-        <td colspan="2">資金使途名 <b>${canvasRequest.context.environmentContext.record.Name}</b></td>
+        <td colspan="2">Name <b>${canvasRequest.context.environmentContext.record.Name}</b></td>
       </tr>
       <tr>
-        <td colspan="2">Canvas表示 <b>${canvasRequest.context.environmentContext.displayLocation}</b></td>
+        <td colspan="2">Canvas使用場所 <b>${canvasRequest.context.environmentContext.displayLocation}</b></td>
       </tr>
       <tr>
-        <td>Salesforceバージョン<b>${canvasRequest.context.environmentContext.version.season}</b></td>
         <td><b>${canvasRequest.context.environmentContext.version.api}</b></td>
       </tr>
     </c:if>
