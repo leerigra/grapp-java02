@@ -26,10 +26,11 @@ POSSIBILITY OF SUCH DAMAGE.
 <html>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Force.com Canvas Java Quick Start</title>
 
-    <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css "/>
+    <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css " />
     <link rel="stylesheet" type="text/css" href="/default/tabs${ua.device.mobile ? '-mobile':''}.css" />
 
     <script type="text/javascript" src="/scripts/json2.js"></script>
@@ -38,24 +39,25 @@ POSSIBILITY OF SUCH DAMAGE.
 
     <script>
         function resetSize(newDimensions) {
-        	var options = newDimensions ? newDimensions : {};
+            var options = newDimensions ? newDimensions : {};
             console.log("resize.");
-            Sfdc.canvas.client.resize(sr.client,  {
-            	width : options.width?options.width:"600px", 
-      			height : options.height?options.height:"600px"
-			});
+            Sfdc.canvas.client.resize(sr.client, {
+                width: options.width ? options.width : "600px",
+                height: options.height ? options.height : "600px"
+            });
         }
 
         var sr = JSON.parse('${canvasRequestJson}');
-        Sfdc.canvas(function() {
-            var photoUri = sr.context.user.profileThumbnailUrl +  "?oauth_token=" + sr.client.oauthToken;
-            Sfdc.canvas.byId('header').style.backgroundImage =  "url('"+(photoUri.indexOf("http")==0 ? "" :sr.client.instanceUrl) + photoUri+"')";
+        Sfdc.canvas(function () {
+            var photoUri = sr.context.user.profileThumbnailUrl + "?oauth_token=" + sr.client.oauthToken;
+            Sfdc.canvas.byId('header').style.backgroundImage = "url('" + (photoUri.indexOf("http") == 0 ? "" : sr.client.instanceUrl) + photoUri + "')";
             resetSize();
             initTabs();
         });
     </script>
-	<meta http-equiv="content-type" charset="utf-8">
+    <meta http-equiv="content-type" charset="utf-8">
 </head>
+
 <body>
     <div id="content">
         <div id="header">
@@ -63,18 +65,21 @@ POSSIBILITY OF SUCH DAMAGE.
             <h2>Welcome to the Force.com Canvas Java Quick Start Template!</h2>
         </div>
         <div class="tabcontent paddingAll" id="context-1">
-            <jsp:include page="context.jsp"/>
+            <jsp:include page="context.jsp" />
         </div>
         <div id="footercont">
             <div id="footerleft">
-                <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
+                <p>Powered By: <a title="Heroku" href="#"
+                        onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
                 </p>
             </div>
             <div id="footerright">
-                <p>Salesforce: <a title="Safe Harbor" href="http://www.salesforce.com/company/investor/safe_harbor.jsp"><strong>SafeHarbor</strong></a>
+                <p>Salesforce: <a title="Safe Harbor"
+                        href="http://www.salesforce.com/company/investor/safe_harbor.jsp"><strong>SafeHarbor</strong></a>
                 </p>
             </div>
         </div>
     </div>
 </body>
+
 </html>

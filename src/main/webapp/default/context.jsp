@@ -26,11 +26,11 @@ POSSIBILITY OF SUCH DAMAGE.
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <script>
-  Sfdc.canvas(function() {
-      chatterTalk.init(sr, "chatter-submit", "speech-input-field", function(data) {
-          Sfdc.canvas.byId('status').innerHTML = data.statusText;
-          Sfdc.canvas.byId("speech-input-field").value = "";
-      });
+  Sfdc.canvas(function () {
+    chatterTalk.init(sr, "chatter-submit", "speech-input-field", function (data) {
+      Sfdc.canvas.byId('status').innerHTML = data.statusText;
+      Sfdc.canvas.byId("speech-input-field").value = "";
+    });
   });
 </script>
 
@@ -38,8 +38,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 <p><span id='subtitle'>Salesforceから連携されたデータ</span></p>
 <div id="sfdc_context">
-<table border="0" width="100%">
- 
+  <table border="0" width="100%">
+
     <tr>
       <td><b>Salesforceのログインユーザ名: </b></td>
       <td><span id='username'>${canvasRequest.context.userContext.userName}</span></td>
@@ -48,8 +48,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <td><b>SalesforceのログインユーザID: </b></td>
       <td><span id='userId'>${canvasRequest.context.userContext.userId}</span></td>
     </tr>
-    
-    <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}" >
+
+    <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}">
       <tr>
         <td><b>参照しているオブジェクト: </b></td>
         <td><span id='type'>${canvasRequest.context.environmentContext.record.attributes.type}</span></td>
@@ -67,7 +67,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <td><span id='displayLocation'>${canvasRequest.context.environmentContext.displayLocation}</span></td>
       </tr>
     </c:if>
-    </table>
+  </table>
 </div>
 <br>
 <p><span id='subtitle'>Chatter投稿</span></p>
@@ -75,8 +75,8 @@ POSSIBILITY OF SUCH DAMAGE.
   <table width="100%">
     <tr>
       <td width="20%"><b>Post to Chatter:&nbsp</b></td>
-      <td width="50%"><input id="speech-input-field" type="text" x-webkit-speech/></td>
-      <td width="5%"><button id="chatter-submit" type="submit"/></td>
+      <td width="50%"><input id="speech-input-field" type="text" x-webkit-speech /></td>
+      <td width="5%"><button id="chatter-submit" type="submit" /></td>
       <td width="10%"><span id="status" style="color:green"></span></td>
     </tr>
   </table>
