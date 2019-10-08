@@ -28,7 +28,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <html>
 
 <head>
-    <meta http-equiv="content-type" charset="utf-8">
+g    <meta http-equiv="content-type" charset="utf-8">
     
     <title>Force.com Canvas Java Quick Start</title>
 
