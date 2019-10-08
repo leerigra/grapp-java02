@@ -63,32 +63,15 @@ POSSIBILITY OF SUCH DAMAGE.
             <h1>Hello <span id='fullname'>${canvasRequest.context.userContext.fullName}</span>!</h1>
             <h2>Welcome to the Force.com Canvas Java Quick Start Template!</h2>
         </div>
-
-        <div class="tab-box">
-            <a href="javascript:;" onclick="resetSize()" class="tabLink activeLink" id="context">Context</a>
-            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="resize">Resize</a>
-            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="events">Events</a>
-            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="scroll">Scrolling</a>
-            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="api">Api</a>
-        </div>
-
+       
         <div class="tabcontent paddingAll" id="context-1">
             <jsp:include page="context.jsp"/>
         </div>
 
-        <div class="tabcontent paddingAll hide" id="resize-1">
-            <jsp:include page="resize.jsp"/>
-        </div>
-
-        <div class="tabcontent paddingAll hide" id="events-1">
-            <jsp:include page="events.jsp"/>
-        </div>
-        <div class="tabcontent paddingAll hide" id="scroll-1">
-            <jsp:include page="scroll.jsp"/>
-        </div>
         <div class="tabcontent paddingAll hide" id="api-1">
             <jsp:include page="api.jsp"/>
         </div>
+
         <div id="footercont">
             <div id="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
