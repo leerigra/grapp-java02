@@ -35,11 +35,9 @@ POSSIBILITY OF SUCH DAMAGE.
 </script>
 
 <p><span id='title'>これはHerokuのサンプルアプリケーションです</span></p>
-
 <p><span id='subtitle'>Salesforceから連携されたデータ</span></p>
 <div id="sfdc_context">
   <table border="0" width="100%">
-
     <tr>
       <td><b>Salesforceのログインユーザ名: </b></td>
       <td><span id='username'>${canvasRequest.context.userContext.userName}</span></td>
@@ -76,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <tr>
       <td width="20%"><b>Post to Chatter:&nbsp</b></td>
       <td width="50%"><input id="speech-input-field" type="text" x-webkit-speech /></td>
-      <td width="5%"><button id="chatter-submit" type="submit" /></td>
+      <td width="5%"><button id="chatter-submit" type="Chatter投稿" /></td>
       <td width="10%"><span id="status" style="color:green"></span></td>
     </tr>
   </table>

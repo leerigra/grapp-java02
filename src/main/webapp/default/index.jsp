@@ -26,8 +26,8 @@ POSSIBILITY OF SUCH DAMAGE.
 <html>
 <!DOCTYPE html>
 <html>
-
 <head>
+    <meta http-equiv="content-type" charset="utf-8">
     <title>Force.com Canvas Java Quick Start</title>
 
     <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css " />
@@ -55,7 +55,6 @@ POSSIBILITY OF SUCH DAMAGE.
             initTabs();
         });
     </script>
-    <meta http-equiv="content-type" charset="utf-8">
 </head>
 
 <body>
@@ -64,7 +63,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <h1>Hello <span id='fullname'>${canvasRequest.context.userContext.fullName}</span>!</h1>
             <h2>Welcome to the Force.com Canvas Java Quick Start Template!</h2>
         </div>
-        <div class="tabcontent paddingAll" id="context-1">
+        <div class="content">
             <jsp:include page="context.jsp" />
         </div>
         <div id="footercont">

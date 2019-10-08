@@ -24,29 +24,29 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVE
 POSSIBILITY OF SUCH DAMAGE.
 --%>
 <script>
-  Sfdc.canvas(function() {
-      chatterTalk.init(sr, "chatter-submit", "speech-input-field", function(data) {
-          Sfdc.canvas.byId('status').innerHTML = data.statusText;
-          Sfdc.canvas.byId("speech-input-field").value = "";
-      });
+  Sfdc.canvas(function () {
+    chatterTalk.init(sr, "chatter-submit", "speech-input-field", function (data) {
+      Sfdc.canvas.byId('status').innerHTML = data.statusText;
+      Sfdc.canvas.byId("speech-input-field").value = "";
+    });
   });
 </script>
 
 <p>
-With the Force.com Canvas software development toolkit, working with the Salesforce.com public
-Api is easy.
-</p> 
+  With the Force.com Canvas software development toolkit, working with the Salesforce.com public
+  Api is easy.
+</p>
 <p>
-For example, you can interact natively with the Chatter Api to create posts and work directly 
-with the feed.
+  For example, you can interact natively with the Chatter Api to create posts and work directly
+  with the feed.
 </p>
 
 <div id="canvas-chatter">
   <table width="100%">
     <tr>
       <td width="20%"><b>Post to Chatter:&nbsp</b></td>
-      <td width="50%"><input id="speech-input-field" type="text" x-webkit-speech/></td>
-      <td width="5%"><button id="chatter-submit" type="submit"/></td>
+      <td width="50%"><input id="speech-input-field" type="text" x-webkit-speech /></td>
+      <td width="5%"><button id="chatter-submit" type="submit" /></td>
       <td width="10%"><span id="status" style="color:green"></span></td>
     </tr>
   </table>
