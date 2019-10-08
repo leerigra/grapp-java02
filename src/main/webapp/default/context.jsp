@@ -25,7 +25,7 @@ POSSIBILITY OF SUCH DAMAGE.
 --%>
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<p><span id='title">これはHerokuのサンプルアプリケーションです</span></p>
+<p><span id='title'>これはHerokuのサンプルアプリケーションです</span></p>
 
 <p><span id='subtitle'>Salesforceから連携されたデータ</span></p>
 
