@@ -24,12 +24,11 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVE
 POSSIBILITY OF SUCH DAMAGE.
 --%>
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<p>
-これはHerokuのサンプルアプリケーションです
-</p>
-<p>
-Salesforceから連携されたデータ:
-</p>
+
+<p><span id='title">これはHerokuのサンプルアプリケーションです</span></p>
+
+<p><span id='subtitle'>Salesforceから連携されたデータ</span></p>
+
 <table border="0" width="100%">
 
     <tr>
