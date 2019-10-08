@@ -25,15 +25,7 @@ POSSIBILITY OF SUCH DAMAGE. edit!
 --%>
 
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-<script>
-  Sfdc.canvas(function () {
-    chatterTalk.init(sr, "chatter-submit", "speech-input-field", function (data) {
-      Sfdc.canvas.byId('status').innerHTML = data.statusText;
-      Sfdc.canvas.byId("speech-input-field").value = "";
-    });
-  });
-</script>
+<script type="text/javascript" src="/scripts/chatter-talk.js"></script>
 
 <p><span id='title'>Heroku Canvasサンプルアプリケーション</span></p>
 <p><span id='subtitle'>Salesforceからの送信データ</span></p>
@@ -70,13 +62,4 @@ POSSIBILITY OF SUCH DAMAGE. edit!
 </div>
 <br>
 <p><span id='subtitle'>Chatter Post</span></p>
-<div id="canvas-chatter">
-  <table width="100%">
-    <tr>
-        <td width="20%"><b>Post to Chatter:&nbsp</b></td>
-        <td width="50%"><input id="speech-input-field" type="text" x-webkit-speech /></td>
-        <td width="5%"><button id="chatter-submit" type="submit" /></td>
-        <td width="10%"><span id="status" style="color:green"></span></td>
-    </tr>
-  </table>
-</div>
+<jsp:include page="context.jsp" />
