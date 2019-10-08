@@ -40,10 +40,10 @@ Salesforceから連携されたデータ:
       <td><b>SalesforceのログインユーザID: </b></td>
       <td><span id='userId'>${canvasRequest.context.userContext.userId}</span></td>
     </tr>
+    
     <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}" >
       <tr>
-        <td colspan="2">参照しているオブジェクト <b>${canvasRequest.context.environmentContext.record.attributes.type}
-        <td colspan="2">参照しているオブジェクト <b>${canvasRequest.context.environmentContext.record.attributes.url}
+        <td colspan="2">参照しているオブジェクト <b>${canvasRequest.context.environmentContext.record.attributes.type}${canvasRequest.context.environmentContext.record.attributes.url}</b></td>
       </tr>
       <tr>
         <td colspan="2">レコードID <b>${canvasRequest.context.environmentContext.record.Id}</b></td>
