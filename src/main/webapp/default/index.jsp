@@ -21,66 +21,84 @@ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (
 TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
 HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGE.edit!
+POSSIBILITY OF SUCH DAMAGE.
 --%>
 <html>
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta http-equiv="content-type" charset="utf-8">
-    
     <title>Force.com Canvas Java Quick Start</title>
 
-    <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css " />
+    <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css "/>
     <link rel="stylesheet" type="text/css" href="/default/tabs${ua.device.mobile ? '-mobile':''}.css" />
 
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
+    <script type="text/javascript" src="/default/tabs.js"></script>
     <script type="text/javascript" src="/scripts/chatter-talk.js"></script>
 
     <script>
         function resetSize(newDimensions) {
-            var options = newDimensions ? newDimensions : {};
+        	var options = newDimensions ? newDimensions : {};
             console.log("resize.");
-            Sfdc.canvas.client.resize(sr.client, {
-                width: options.width ? options.width : "600px",
-                height: options.height ? options.height : "600px"
-            });
+            Sfdc.canvas.client.resize(sr.client,  {
+            	width : options.width?options.width:"600px", 
+      			height : options.height?options.height:"600px"
+			});
         }
 
         var sr = JSON.parse('${canvasRequestJson}');
-        Sfdc.canvas(function () {
-            var photoUri = sr.context.user.profileThumbnailUrl + "?oauth_token=" + sr.client.oauthToken;
-            Sfdc.canvas.byId('header').style.backgroundImage = "url('" + (photoUri.indexOf("http") == 0 ? "" : sr.client.instanceUrl) + photoUri + "')";
+        Sfdc.canvas(function() {
+            var photoUri = sr.context.user.profileThumbnailUrl +  "?oauth_token=" + sr.client.oauthToken;
+            Sfdc.canvas.byId('header').style.backgroundImage =  "url('"+(photoUri.indexOf("http")==0 ? "" :sr.client.instanceUrl) + photoUri+"')";
             resetSize();
             initTabs();
         });
     </script>
-</head>
 
+</head>
 <body>
     <div id="content">
         <div id="header">
             <h1>Hello <span id='fullname'>${canvasRequest.context.userContext.fullName}</span>!</h1>
             <h2>Welcome to the Force.com Canvas Java Quick Start Template!</h2>
         </div>
-        <div class="content">
-            <jsp:include page="context.jsp" />
+
+        <div class="tab-box">
+            <a href="javascript:;" onclick="resetSize()" class="tabLink activeLink" id="context">Context</a>
+            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="resize">Resize</a>
+            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="events">Events</a>
+            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="scroll">Scrolling</a>
+            
         </div>
+
+        <div class="tabcontent paddingAll" id="context-1">
+            <jsp:include page="context.jsp"/>
+            <p><span id='subtitle'>Chatter</span></p>
+            <jsp:include page="api.jsp"/>
+        </div>
+
+        <div class="tabcontent paddingAll hide" id="resize-1">
+            <jsp:include page="resize.jsp"/>
+        </div>
+
+        <div class="tabcontent paddingAll hide" id="events-1">
+            <jsp:include page="events.jsp"/>
+        </div>
+        <div class="tabcontent paddingAll hide" id="scroll-1">
+            <jsp:include page="scroll.jsp"/>
+        </div>
+        
         <div id="footercont">
             <div id="footerleft">
-                <p>Powered By: <a title="Heroku" href="#"
-                        onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
+                <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
                 </p>
             </div>
             <div id="footerright">
-                <p>Salesforce: <a title="Safe Harbor"
-                        href="http://www.salesforce.com/company/investor/safe_harbor.jsp"><strong>SafeHarbor</strong></a>
+                <p>Salesforce: <a title="Safe Harbor" href="http://www.salesforce.com/company/investor/safe_harbor.jsp"><strong>SafeHarbor</strong></a>
                 </p>
             </div>
         </div>
     </div>
 </body>
-
 </html>

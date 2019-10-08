@@ -61,6 +61,3 @@ POSSIBILITY OF SUCH DAMAGE. edit!
     </c:if>
   </table>
 </div>
-<br>
-<p><span id='subtitle'>Chatter Post</span></p>
-<jsp:include page="api.jsp" />
