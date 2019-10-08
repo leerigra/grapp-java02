@@ -40,21 +40,21 @@ POSSIBILITY OF SUCH DAMAGE. edit!
 <div id="sfdc_context">
   <table border="0" width="100%">
     <tr>
-      <td><b>Salesforce Login User Name: </b></td>
+      <td><b>Salesforce ログインユーザ名: </b></td>
       <td><span id='username'>${canvasRequest.context.userContext.userName}</span></td>
     </tr>
     <tr>
-      <td><b>Salesforce Login UserID: </b></td>
+      <td><b>Salesforce ログインユーザID: </b></td>
       <td><span id='userId'>${canvasRequest.context.userContext.userId}</span></td>
     </tr>
 
     <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}">
       <tr>
-        <td><b>Object: </b></td>
+        <td><b>Salesforceオブジェクト: </b></td>
         <td><span id='type'>${canvasRequest.context.environmentContext.record.attributes.type}</span></td>
       </tr>
       <tr>
-        <td><b>Record ID: </b></td>
+        <td><b>レコードID: </b></td>
         <td><span id='Id'>${canvasRequest.context.environmentContext.record.Id}</span></td>
       </tr>
       <tr>
@@ -73,10 +73,10 @@ POSSIBILITY OF SUCH DAMAGE. edit!
 <div id="canvas-chatter">
   <table width="100%">
     <tr>
-      <td width="20%"><b>Post to Chatter:&nbsp</b></td>
-      <td width="50%"><input id="speech-input-field" type="text" x-webkit-speech /></td>
-      <td width="5%"><button id="chatter-submit" type="Post" /></td>
-      <td width="10%"><span id="status" style="color:green"></span></td>
+        <td width="20%"><b>Post to Chatter:&nbsp</b></td>
+        <td width="50%"><input id="speech-input-field" type="text" x-webkit-speech /></td>
+        <td width="5%"><button id="chatter-submit" type="submit" /></td>
+        <td width="10%"><span id="status" style="color:green"></span></td>
     </tr>
   </table>
 </div>
