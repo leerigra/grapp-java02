@@ -34,7 +34,6 @@ POSSIBILITY OF SUCH DAMAGE.
 
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
-    <script type="text/javascript" src="/default/tabs.js"></script>
     <script type="text/javascript" src="/scripts/chatter-talk.js"></script>
 
     <script>
@@ -63,15 +62,9 @@ POSSIBILITY OF SUCH DAMAGE.
             <h1>Hello <span id='fullname'>${canvasRequest.context.userContext.fullName}</span>!</h1>
             <h2>Welcome to the Force.com Canvas Java Quick Start Template!</h2>
         </div>
-       
         <div class="tabcontent paddingAll" id="context-1">
             <jsp:include page="context.jsp"/>
         </div>
-
-        <div class="tabcontent paddingAll hide" id="api-1">
-            <jsp:include page="api.jsp"/>
-        </div>
-
         <div id="footercont">
             <div id="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
