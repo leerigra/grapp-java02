@@ -25,33 +25,33 @@ POSSIBILITY OF SUCH DAMAGE.
 --%>
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <p>
-‚±‚ê‚ÍHeroku‚ÌƒTƒ“ƒvƒ‹ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Å‚·
+ã“ã‚Œã¯Herokuã®ã‚µãƒ³ãƒ—ãƒ«ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã™
 </p>
 <p>
-Salesforce‚©‚ç˜AŒg‚³‚ê‚½ƒf[ƒ^:
+Salesforceã‹ã‚‰é€£æºã•ã‚ŒãŸãƒ‡ãƒ¼ã‚¿:
 </p>
 <table border="0" width="100%">
 
     <tr>
-      <td><b>Salesforce‚ÌƒƒOƒCƒ“ƒ†[ƒU–¼: </b></td>
+      <td><b>Salesforceã®ãƒ­ã‚°ã‚¤ãƒ³ãƒ¦ãƒ¼ã‚¶å: </b></td>
       <td><span id='username'>${canvasRequest.context.userContext.userName}</span></td>
     </tr>
     <tr>
-      <td><b>Salesforce‚ÌƒƒOƒCƒ“ƒ†[ƒUID: </b></td>
+      <td><b>Salesforceã®ãƒ­ã‚°ã‚¤ãƒ³ãƒ¦ãƒ¼ã‚¶ID: </b></td>
       <td><span id='userId'>${canvasRequest.context.userContext.userId}</span></td>
     </tr>
     <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}" >
       <tr>
-        <td colspan="2">QÆ‚µ‚Ä‚¢‚éƒIƒuƒWƒFƒNƒg <b>${canvasRequest.context.environmentContext.record.attributes.type}
+        <td colspan="2">å‚ç…§ã—ã¦ã„ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ <b>${canvasRequest.context.environmentContext.record.attributes.type}
       </tr>
       <tr>
-        <td colspan="2">ƒŒƒR[ƒhID <b>${canvasRequest.context.environmentContext.record.Id}</b></td>
+        <td colspan="2">ãƒ¬ã‚³ãƒ¼ãƒ‰ID <b>${canvasRequest.context.environmentContext.record.Id}</b></td>
       </tr>
       <tr>
-        <td colspan="2">‘‹àg“r–¼ <b>${canvasRequest.context.environmentContext.record.Name}</b></td>
+        <td colspan="2">è³‡é‡‘ä½¿é€”å <b>${canvasRequest.context.environmentContext.record.Name}</b></td>
       </tr>
       <tr>
-        <td colspan="2">ŒÚ‹q <b>${canvasRequest.context.environmentContext.record.AccountId}</b></td>
+        <td colspan="2">é¡§å®¢ <b>${canvasRequest.context.environmentContext.record.AccountId}</b></td>
       </tr>
     </c:if>
     

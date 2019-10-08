@@ -27,7 +27,6 @@ POSSIBILITY OF SUCH DAMAGE.
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="content-type" charset="utf-8">
     <title>Force.com Canvas Java Quick Start</title>
 
     <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css "/>
@@ -56,7 +55,7 @@ POSSIBILITY OF SUCH DAMAGE.
             initTabs();
         });
     </script>
-
+	<meta http-equiv="content-type" charset="utf-8">
 </head>
 <body>
     <div id="content">
