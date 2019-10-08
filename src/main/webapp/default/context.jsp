@@ -35,7 +35,7 @@ POSSIBILITY OF SUCH DAMAGE. edit!
   });
 </script>
 
-<p><span id='title'>Heroku SampleApplication</span></p>
+<p><span id='title'>Heroku Canvasサンプルアプリケーション</span></p>
 <p><span id='subtitle'>Salesforceからの送信データ</span></p>
 <div id="sfdc_context">
   <table border="0" width="100%">
