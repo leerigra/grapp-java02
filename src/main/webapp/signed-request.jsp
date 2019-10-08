@@ -38,6 +38,7 @@ POSSIBILITY OF SUCH DAMAGE.
     String signedRequestJson = SignedRequest.verifyAndDecodeAsJson(signedRequest[0], yourConsumerSecret);
 %>
 <!DOCTYPE html>
+<meta http-equiv="content-type" charset="utf-8">
 <html>
     <head>
         <title>Force.com Canvas Java Quick Start</title>

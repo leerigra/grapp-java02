@@ -27,6 +27,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+<meta http-equiv="content-type" charset="utf-8">
 <html>
     <head>
         <title>Force.com Canvas Java Quick Start</title>
