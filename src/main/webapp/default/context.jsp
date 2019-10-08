@@ -54,9 +54,6 @@ Salesforceから連携されたデータ:
       <tr>
         <td colspan="2">Canvas使用場所 <b>${canvasRequest.context.environmentContext.displayLocation}</b></td>
       </tr>
-      <tr>
-        <td><b>${canvasRequest.context.environmentContext.version.api}</b></td>
-      </tr>
     </c:if>
     
 </table>
