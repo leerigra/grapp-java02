@@ -43,6 +43,7 @@ Salesforceから連携されたデータ:
     <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}" >
       <tr>
         <td colspan="2">参照しているオブジェクト <b>${canvasRequest.context.environmentContext.record.attributes.type}
+        <td colspan="2">参照しているオブジェクト <b>${canvasRequest.context.environmentContext.record.attributes.url}
       </tr>
       <tr>
         <td colspan="2">レコードID <b>${canvasRequest.context.environmentContext.record.Id}</b></td>
@@ -51,7 +52,11 @@ Salesforceから連携されたデータ:
         <td colspan="2">資金使途名 <b>${canvasRequest.context.environmentContext.record.Name}</b></td>
       </tr>
       <tr>
-        <td colspan="2">顧客 <b>${canvasRequest.context.environmentContext.record.AccountId}</b></td>
+        <td colspan="2">Canvas表示 <b>${canvasRequest.context.environmentContext.displayLocation}</b></td>
+      </tr>
+      <tr>
+        <td>Salesforceバージョン<b>${canvasRequest.context.environmentContext.version.season}</b></td>
+        <td><b>${canvasRequest.context.environmentContext.version.api}</b></td>
       </tr>
     </c:if>
     
