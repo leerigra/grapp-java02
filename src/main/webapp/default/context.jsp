@@ -45,16 +45,18 @@ Below is a sample of that information:
       <td><span id='username'>${canvasRequest.context.userContext.userName}</span></td>
     </tr>
     <tr>
-      <td><b>Email Address: </b></td>
-      <td><span id='email'>${canvasRequest.context.userContext.email}</span></td>
-    </tr>
-    <tr>
-      <td><b>Company: </b></td>
-      <td><span id='company'>${canvasRequest.context.organizationContext.name}</span></td>
+      <td><b>UserId: </b></td>
+      <td><span id='userId'>${canvasRequest.context.userContext.userId}</span></td>
     </tr>
     <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}" >
       <tr>
         <td colspan="2">You are currently viewing <b>${canvasRequest.context.environmentContext.record.attributes.type} ${canvasRequest.context.environmentContext.record.Id}</b></td>
+      </tr>
+      <tr>
+        <td colspan="2">Name <b>${canvasRequest.context.environmentContext.record.Name}</b></td>
+      </tr>
+      <tr>
+        <td colspan="2">AccountId <b>${canvasRequest.context.environmentContext.record.AccountId}</b></td>
       </tr>
     </c:if>
     
