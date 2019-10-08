@@ -26,6 +26,8 @@ POSSIBILITY OF SUCH DAMAGE. edit!
 
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<script type="text/javascript" src="/scripts/chatter-talk.js"></script>
+
 <p><span id='title'>Heroku Canvasサンプルアプリケーション</span></p>
 <p><span id='subtitle'>Salesforceからの送信データ</span></p>
 <div id="sfdc_context">
@@ -61,4 +63,4 @@ POSSIBILITY OF SUCH DAMAGE. edit!
 </div>
 <br>
 <p><span id='subtitle'>Chatter Post</span></p>
-<jsp:include page="context.jsp" />
+<jsp:include page="api.jsp" />
