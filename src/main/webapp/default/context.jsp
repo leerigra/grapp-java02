@@ -62,7 +62,7 @@ POSSIBILITY OF SUCH DAMAGE. edit!
         <td><span id='Name'>${canvasRequest.context.environmentContext.record.Name}</span></td>
       </tr>
       <tr>
-        <td><b>Canvas: </b></td>
+        <td><b>Canvasの場所: </b></td>
         <td><span id='displayLocation'>${canvasRequest.context.environmentContext.displayLocation}</span></td>
       </tr>
     </c:if>
