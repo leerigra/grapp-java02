@@ -25,7 +25,6 @@ POSSIBILITY OF SUCH DAMAGE. edit!
 --%>
 
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<script type="text/javascript" src="/scripts/chatter-talk.js"></script>
 
 <p><span id='title'>Heroku Canvasサンプルアプリケーション</span></p>
 <p><span id='subtitle'>Salesforceからの送信データ</span></p>
