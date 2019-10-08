@@ -25,38 +25,33 @@ POSSIBILITY OF SUCH DAMAGE.
 --%>
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <p>
-Force.com Canvas delivers user context information directly to your application, complete
-with a scoped authentication token to allow your application to communicate with Salesforce.com.
+これはHerokuのサンプルアプリケーションです
 </p>
 <p>
-Below is a sample of that information:
+Salesforceから連携されたデータ:
 </p>
 <table border="0" width="100%">
+
     <tr>
-      <td width="30%"><b>First Name: </b></td>
-      <td><span id='firstname'>${canvasRequest.context.userContext.firstName}</span></td>
-    </tr>
-    <tr>
-      <td><b>Last Name: </b></td>
-      <td><span id='lastname'>${canvasRequest.context.userContext.lastName}</span></td>
-    </tr>
-    <tr>
-      <td><b>Username: </b></td>
+      <td><b>Salesforceのログインユーザ名: </b></td>
       <td><span id='username'>${canvasRequest.context.userContext.userName}</span></td>
     </tr>
     <tr>
-      <td><b>UserId: </b></td>
+      <td><b>SalesforceのログインユーザID: </b></td>
       <td><span id='userId'>${canvasRequest.context.userContext.userId}</span></td>
     </tr>
     <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}" >
       <tr>
-        <td colspan="2">You are currently viewing <b>${canvasRequest.context.environmentContext.record.attributes.type} ${canvasRequest.context.environmentContext.record.Id}</b></td>
+        <td colspan="2">参照しているオブジェクト <b>${canvasRequest.context.environmentContext.record.attributes.type}
       </tr>
       <tr>
-        <td colspan="2">Name <b>${canvasRequest.context.environmentContext.record.Name}</b></td>
+        <td colspan="2">レコードID <b>${canvasRequest.context.environmentContext.record.Id}</b></td>
       </tr>
       <tr>
-        <td colspan="2">AccountId <b>${canvasRequest.context.environmentContext.record.AccountId}</b></td>
+        <td colspan="2">資金使途名 <b>${canvasRequest.context.environmentContext.record.Name}</b></td>
+      </tr>
+      <tr>
+        <td colspan="2">顧客 <b>${canvasRequest.context.environmentContext.record.AccountId}</b></td>
       </tr>
     </c:if>
     
