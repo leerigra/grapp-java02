@@ -63,7 +63,7 @@ POSSIBILITY OF SUCH DAMAGE.edit!
     <div id="content">
         <div id="header">
             <h1>Hello <span id='fullname'>${canvasRequest.context.userContext.fullName}</span>!</h1>
-            <h2>Welcome to the Force.com Canvas Java Quick Start Template!修正</h2>
+            <h2>Welcome to the Force.com Canvas Java Quick Start Template!</h2>
         </div>
         <div class="content">
             <jsp:include page="context.jsp" />
