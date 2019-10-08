@@ -28,6 +28,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <html>
 <head>
     <meta http-equiv="content-type" charset="utf-8">
+    
     <title>Force.com Canvas Java Quick Start</title>
 
     <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css " />
