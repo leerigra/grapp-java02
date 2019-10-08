@@ -43,16 +43,20 @@ Salesforceから連携されたデータ:
     
     <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}" >
       <tr>
-        <td colspan="2">参照しているオブジェクト <b>${canvasRequest.context.environmentContext.record.attributes.type}${canvasRequest.context.environmentContext.record.attributes.url}</b></td>
+        <td><b>参照しているオブジェクト: </b></td>
+        <td><span id='type'>${canvasRequest.context.environmentContext.record.attributes.type}</span></td>
       </tr>
       <tr>
-        <td colspan="2">レコードID <b>${canvasRequest.context.environmentContext.record.Id}</b></td>
+        <td><b>レコードID: </b></td>
+        <td><span id='Id'>${canvasRequest.context.environmentContext.record.Id}</span></td>
       </tr>
       <tr>
-        <td colspan="2">Name <b>${canvasRequest.context.environmentContext.record.Name}</b></td>
+        <td><b>Name: </b></td>
+        <td><span id='Name'>${canvasRequest.context.environmentContext.record.Name}</span></td>
       </tr>
       <tr>
-        <td colspan="2">Canvas使用場所 <b>${canvasRequest.context.environmentContext.displayLocation}</b></td>
+        <td><b>Canvas使用場所: </b></td>
+        <td><span id='displayLocation'>${canvasRequest.context.environmentContext.displayLocation}</span></td>
       </tr>
     </c:if>
     
