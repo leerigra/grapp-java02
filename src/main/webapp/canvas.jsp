@@ -34,12 +34,11 @@ purposes. The CanvasController should be used instead which should be mapped to 
     // Pull the signed request out of the request body.
     Map<String, String[]> parameters = request.getParameterMap();
     String[] signedRequest = parameters.get("signed_request");
-    
-    //if ("GET".equals(request.getMethod()) || signedRequest == null) {%>
-    //   <jsp:forward page="welcome.jsp"/><%
+
+    if ("GET".equals(request.getMethod()) || signedRequest == null) {%>
+       <%--<jsp:forward page="welcome.jsp"/><%--%>
+       <jsp:forward page="signed-request.jsp"/><%
     }
-    //else {%>
-   
-    <jsp:forward page="signed-request.jsp"/><%
-    //}
+    else {%>
+       <jsp:forward page="signed-request.jsp"/><%
 %>
