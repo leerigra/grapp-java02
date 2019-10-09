@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <body>
     <div id="content">
         <div id="header">
-             <h2><span id='app_title'>Heroku Canvasサンプルアプリケーション</span></h2>
+             <h2>Heroku Canvasサンプルアプリケーション</h2>
         </div>
 
         <div id="no-tab">
