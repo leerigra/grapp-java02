@@ -27,7 +27,7 @@ a:hover {
 
 #content {
     float: left;
-    background-color: white;
+    background-color: #dcdcdc;
     border: 1px solid #aaa;
     height : 99%;
     width : 99%;
@@ -154,14 +154,14 @@ a:hover {
 	background-image:url(../images/heroku.png);	/*背景画像*/
 	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
     background-position: left 10px bottom 2px;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 #header h3 {
     color: #000000;
     font-size: 24px;
     font-weight: normal;
-    background-color: #FFFFFF;
+    background-color: #5f9ea0;
     
 }
 
@@ -172,9 +172,14 @@ a:hover {
     background: #666666 url(../images/share.png) no-repeat;
 }
 
-#header h4 {
+#content-data h4 {
     background-color: #d3d3d3;
     font-size: 18px;
     padding: 10px;
     margin: 10px;
 }
+
+#content-data div {
+    margin: 15px;
+    font-size: 14px;
+} 

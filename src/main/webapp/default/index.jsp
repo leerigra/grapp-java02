@@ -60,16 +60,16 @@ POSSIBILITY OF SUCH DAMAGE.
 <body>
     <div id="content">
         <div id="header">
-             <h2></h2>
+             <h2> </h2>
              <h3>Canvasサンプルアプリケーション</h3>
         </div>
 
-        <div id="no-tab">
-            <h4 id='app_subtitle'>Salesforceからの送信データ</h4>
+        <div id="content-data">
+            <h4>Salesforceからの送信データ</h4>
             <jsp:include page="context.jsp"/>
-            <h4 id='app_subtitle'>Form(post)</h4>
+            <h4>Form(post)</h4>
             <jsp:include page="testform.jsp"/>
-            <h4 id='app_subtitle'>Chatter</h4>
+            <h4>Chatter</h4>
             <jsp:include page="api.jsp"/>
         </div>
  
