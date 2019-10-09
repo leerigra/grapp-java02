@@ -60,7 +60,8 @@ POSSIBILITY OF SUCH DAMAGE.
 <body>
     <div id="content">
         <div id="header">
-             <h2>Canvasサンプルアプリケーション</h2>
+             <h2></h2>
+             <h3>Canvasサンプルアプリケーション</h3>
         </div>
 
         <div id="no-tab">

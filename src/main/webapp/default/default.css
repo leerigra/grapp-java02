@@ -148,14 +148,22 @@ a:hover {
     font-size: 24px;
     font-weight: normal;
     background-color: #FFFFFF;
-    border-bottom: medium solid #9400d3;
+    border-bottom: medium solid #4b0082;
     padding-left: 180px ;		/*パディング*/
     padding-bottom: 5px ;		/*パディング*/
 	background-image:url(../images/heroku.png);	/*背景画像*/
 	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
-    background-position: left bottom;
+    background-position: left 10px bottom 2px;
+    opacity: 0.3;
 }
 
+#header h3 {
+    color: #000000;
+    font-size: 24px;
+    font-weight: normal;
+    background-color: #FFFFFF;
+    
+}
 
 #chatter-submit {
     clear: both;
