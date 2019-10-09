@@ -142,21 +142,20 @@ a:hover {
     height:15px;
 }
 
-#header h2:before {
-    content: '';/*何も入れない*/
-    display: inline-block;/*忘れずに！*/
-    background-size: contain;
-    background-image: url(../images/eye_heroku.png);
-    vertical-align: middle;   
-  }
 #header h2 {
     color: #000000;
     font-size: 24px;
     font-weight: normal;
     background-color: #FFFFFF;
     border-bottom: medium solid #9400d3;
-    height: 30px;
+    height: 40px;
+	padding:17px 0px 0px 100px;		/*パディング*/
+	background-image:url(../images/eye_heroku.png);	/*背景画像*/
+	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
+	background-size:contain;
 }
+
+
 
 
 #chatter-submit {
