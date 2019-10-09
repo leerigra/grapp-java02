@@ -27,7 +27,7 @@ a:hover {
 
 #content {
     float: left;
-    background-color: #dcdcdc;
+    background-color: #FFFFFF;
     border: 1px solid #aaa;
     height : 99%;
     width : 99%;
@@ -174,13 +174,14 @@ a:hover {
 }
 
 #content-data h4 {
-    background-color: #ffffff;
+    background-color: #7058a3;
+    color: #ffffff;
     font-size: 18px;
     padding: 10px;
     margin: 10px;
 }
 
 #content-data div {
-    margin: 15px;
-    font-size: 14px;
+    margin-left: 15px;
+    font-size: 12px;
 } 
