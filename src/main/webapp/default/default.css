@@ -142,7 +142,7 @@ a:hover {
     height:15px;
 }
 
-#title {
+#app_title {
     background-color: #FFFFFF;
     color: #9400d3;
     border-bottom: medium solid #9400d3;
@@ -153,7 +153,7 @@ a:hover {
     background-position: top left;
 }
 
-#subtitle {
+#app_subtitle {
     background-color: #d3d3d3;
-    font-size: 18px;
+    font-size: 14px;
 }

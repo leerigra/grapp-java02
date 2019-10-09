@@ -24,12 +24,6 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVE
 POSSIBILITY OF SUCH DAMAGE. edit!
 --%>
 
-<%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-<script type="text/javascript" src="/scripts/chatter-talk.js"></script>
-
-<p><span id='title'>Heroku Canvasサンプルアプリケーション</span></p>
-<p><span id='subtitle'>Salesforceからの送信データ</span></p>
 <div id="sfdc_context">
   <table border="0" width="100%">
     <tr>

@@ -60,44 +60,18 @@ POSSIBILITY OF SUCH DAMAGE.
 <body>
     <div id="content">
         <div id="header">
-            <h1>Hello <span id='fullname'>${canvasRequest.context.userContext.fullName}</span>!</h1>
-            <h2>Welcome to the Force.com Canvas Java Quick Start Template!</h2>
+             <h2><span id='app_title'>Heroku Canvasサンプルアプリケーション</span></h2>
         </div>
-        
+
         <div id="no-tab">
+            <p><span id='app_subtitle'>Salesforceからの送信データ</span></p>
             <jsp:include page="context.jsp"/>
-            <p><span id='subtitle'>Form(post)</span></p>
+            <p><span id='app_subtitle'>Form(post)</span></p>
             <jsp:include page="testform.jsp"/>
-            <p><span id='subtitle'>Chatter</span></p>
+            <p><span id='app_subtitle'>Chatter</span></p>
             <jsp:include page="api.jsp"/>
         </div>
-
-        <div class="tab-box">
-            <a href="javascript:;" onclick="resetSize()" class="tabLink activeLink" id="context">Context</a>
-            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="resize">Resize</a>
-            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="events">Events</a>
-            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="scroll">Scrolling</a>
-            
-        </div>
-
-        <div class="tabcontent paddingAll" id="context-1">
-            <jsp:include page="context.jsp"/>
-            <p><span id='subtitle'>Form(post)</span></p>
-            <jsp:include page="testform.jsp"/>
-            <p><span id='subtitle'>Chatter</span></p>
-            <jsp:include page="api.jsp"/>
-        </div>
-
-        <div class="tabcontent paddingAll hide" id="resize-1">
-            <jsp:include page="resize.jsp"/>
-        </div>
-
-        <div class="tabcontent paddingAll hide" id="events-1">
-            <jsp:include page="events.jsp"/>
-        </div>
-        <div class="tabcontent paddingAll hide" id="scroll-1">
-            <jsp:include page="scroll.jsp"/>
-        </div>
+ 
         
         <div id="footercont">
             <div id="footerleft">
