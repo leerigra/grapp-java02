@@ -74,6 +74,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
         <div class="tabcontent paddingAll" id="context-1">
             <jsp:include page="context.jsp"/>
+            <p><span id='subtitle'>Form(post)</span></p>
+            <jsp:include page="testform.jsp"/>
             <p><span id='subtitle'>Chatter</span></p>
             <jsp:include page="api.jsp"/>
         </div>
