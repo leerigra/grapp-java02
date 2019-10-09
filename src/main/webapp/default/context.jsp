@@ -44,12 +44,10 @@ POSSIBILITY OF SUCH DAMAGE. edit!
         <td><b>レコードID: </b></td>
         <td><span id='Id'>${canvasRequest.context.environmentContext.record.Id}</span></td>
       </tr>
-
-      <tr>
-        <td><b>Name?: </b></td>
-        <td><span id='Name'>${canvasRequest.context.environmentContext.record.get("Name")}</span></td>
+<tr>
+        <td><b>Name: </b></td>
+        <td><span id='Name'>${canvasRequest.context.environmentContext.record.Name}</span></td>
       </tr>
-      
     </c:if>
   </table>
 </div>
