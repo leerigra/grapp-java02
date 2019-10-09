@@ -65,11 +65,11 @@ POSSIBILITY OF SUCH DAMAGE.
         </div>
 
         <div id="no-tab">
-            <p><span id='app_subtitle'>Salesforceからの送信データ</span></p>
+            <h4 id='app_subtitle'>Salesforceからの送信データ</h4>
             <jsp:include page="context.jsp"/>
-            <p><span id='app_subtitle'>Form(post)</span></p>
+            <h4 id='app_subtitle'>Form(post)</h4>
             <jsp:include page="testform.jsp"/>
-            <p><span id='app_subtitle'>Chatter</span></p>
+            <h4 id='app_subtitle'>Chatter</h4>
             <jsp:include page="api.jsp"/>
         </div>
  
