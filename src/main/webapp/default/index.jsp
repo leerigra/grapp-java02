@@ -49,10 +49,10 @@ POSSIBILITY OF SUCH DAMAGE.
 
         var sr = JSON.parse('${canvasRequestJson}');
         Sfdc.canvas(function() {
-            var photoUri = sr.context.user.profileThumbnailUrl +  "?oauth_token=" + sr.client.oauthToken;
-            Sfdc.canvas.byId('header').style.backgroundImage =  "url('"+(photoUri.indexOf("http")==0 ? "" :sr.client.instanceUrl) + photoUri+"')";
-            resetSize();
-            initTabs();
+            //var photoUri = sr.context.user.profileThumbnailUrl +  "?oauth_token=" + sr.client.oauthToken;
+            //Sfdc.canvas.byId('header').style.backgroundImage =  "url('"+(photoUri.indexOf("http")==0 ? "" :sr.client.instanceUrl) + photoUri+"')";
+            //resetSize();
+            //initTabs();
         });
     </script>
 
