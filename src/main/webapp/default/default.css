@@ -143,10 +143,14 @@ a:hover {
 }
 
 #title {
-    background-color: #2f4f4f;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #9400d3;
+    border-bottom: medium solid #9400d3;
     font-size: 24px;
     padding: 1px;
+    background-image: url("../images/eye_heroku.png");
+    background-repeat: no-repeat;
+    background-position: top left;
 }
 
 #subtitle {
