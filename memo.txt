@@ -1,0 +1,15 @@
+create table canvastest01
+(
+  recid serial PRIMARY KEY,
+  status CHAR(1) NOT NULL,
+  description TEXT,
+  ext_id CHAR(18) NOT NULL
+);
+
+
+
+create sequence recid01 start 10001;
+
+
+insert into canvastest01 ( status, description,ext_id)
+values ('1', 'memomemomeo','0060k000008fEF0AAM');

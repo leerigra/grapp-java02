@@ -34,28 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
-    <script type="text/javascript" src="/default/tabs.js"></script>
-    <script type="text/javascript" src="/scripts/chatter-talk.js"></script>
-
-    <script>
-        function resetSize(newDimensions) {
-        	var options = newDimensions ? newDimensions : {};
-            console.log("resize.");
-            Sfdc.canvas.client.resize(sr.client,  {
-            	width : options.width?options.width:"600px", 
-      			height : options.height?options.height:"800px"
-			});
-        }
-
-        var sr = JSON.parse('${canvasRequestJson}');
-        Sfdc.canvas(function() {
-            //var photoUri = sr.context.user.profileThumbnailUrl +  "?oauth_token=" + sr.client.oauthToken;
-            //Sfdc.canvas.byId('header').style.backgroundImage =  "url('"+(photoUri.indexOf("http")==0 ? "" :sr.client.instanceUrl) + photoUri+"')";
-            //resetSize();
-            //initTabs();
-        });
-    </script>
-
+ 
 </head>
 <body>
     <div id="content">
