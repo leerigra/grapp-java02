@@ -34,11 +34,7 @@ POSSIBILITY OF SUCH DAMAGE. edit!
       <td><b>Salesforce ログインユーザID: </b></td>
       <td><span id='userId'>${canvasRequest.context.userContext.userId}</span></td>
     </tr>
-    <tr>
-      <td><b>Salesforce ログインユーザID: </b></td>
-      <td><span id='userId'>${canvasRequest.context.userContext.userId}</span></td>
-    </tr>
-
+    
     <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}">
       <tr>
         <td><b>Salesforceオブジェクト: </b></td>
