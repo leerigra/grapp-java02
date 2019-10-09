@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Sample_pos_conn {
+public class DBConnectTest {
     public static void main(String[] args) {
         Connection conn = null;
         Statement stmt = null;
