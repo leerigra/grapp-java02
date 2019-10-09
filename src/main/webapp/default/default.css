@@ -144,11 +144,10 @@ a:hover {
 
 #header h2 {
     background-color: #FFFFFF;
-    color: #9400d3;
+    color: #000000;
     border-bottom: medium solid #9400d3;
     font-size: 24px;
-    padding: 1px;
-    background-image: url("../images/eye_heroku.png");
+    background-image: url("/images/eye_heroku.png");
     background-repeat: no-repeat;
     background-position: top left;
 }
