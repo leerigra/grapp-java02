@@ -63,6 +63,14 @@ POSSIBILITY OF SUCH DAMAGE.
             <h1>Hello <span id='fullname'>${canvasRequest.context.userContext.fullName}</span>!</h1>
             <h2>Welcome to the Force.com Canvas Java Quick Start Template!</h2>
         </div>
+        
+        <div id="no-tab">
+            <jsp:include page="context.jsp"/>
+            <p><span id='subtitle'>Form(post)</span></p>
+            <jsp:include page="testform.jsp"/>
+            <p><span id='subtitle'>Chatter</span></p>
+            <jsp:include page="api.jsp"/>
+        </div>
 
         <div class="tab-box">
             <a href="javascript:;" onclick="resetSize()" class="tabLink activeLink" id="context">Context</a>
