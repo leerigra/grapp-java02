@@ -143,14 +143,14 @@ a:hover {
 }
 
 #header h2 {
-    height: 90px;
+    height: 75px;
     color: #000000;
     font-size: 24px;
     font-weight: normal;
     background-color: #FFFFFF;
     border-bottom: medium solid #9400d3;
     padding-left: 200px ;		/*パディング*/
-    padding-bottom: 5px ;		/*パディング*/
+    padding-bottom: 1px ;		/*パディング*/
 	background-image:url(../images/eye_heroku.png);	/*背景画像*/
 	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
     background-position: left bottom;
