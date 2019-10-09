@@ -154,15 +154,16 @@ a:hover {
 	background-image:url(../images/heroku.png);	/*背景画像*/
 	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
     background-position: left 10px bottom 2px;
-    opacity: 0.1;
+    opacity: 0;
 }
 
 #header h3 {
     color: #000000;
     font-size: 24px;
     font-weight: normal;
-    background-color: #5f9ea0;
-    
+    background-color: #d1bada;
+    margin: 5px;
+    padding: 5px;
 }
 
 #chatter-submit {
@@ -173,7 +174,7 @@ a:hover {
 }
 
 #content-data h4 {
-    background-color: #d3d3d3;
+    background-color: #ffffff;
     font-size: 18px;
     padding: 10px;
     margin: 10px;
