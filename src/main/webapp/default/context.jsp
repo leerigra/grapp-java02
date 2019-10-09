@@ -34,6 +34,10 @@ POSSIBILITY OF SUCH DAMAGE. edit!
       <td><b>Salesforce ログインユーザID: </b></td>
       <td><span id='userId'>${canvasRequest.context.userContext.userId}</span></td>
     </tr>
+    <tr>
+      <td><b>Salesforce ログインユーザID: </b></td>
+      <td><span id='userId'>${canvasRequest.context.userContext.userId}</span></td>
+    </tr>
 
     <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}">
       <tr>
@@ -44,14 +48,12 @@ POSSIBILITY OF SUCH DAMAGE. edit!
         <td><b>レコードID: </b></td>
         <td><span id='Id'>${canvasRequest.context.environmentContext.record.Id}</span></td>
       </tr>
+
       <tr>
-        <td><b>Name: </b></td>
-        <td><span id='Name'>${canvasRequest.context.environmentContext.record.Name}</span></td>
+        <td><b>Name?: </b></td>
+        <td><span id='Name'>${canvasRequest.context.environmentContext.record.get("Name")}</span></td>
       </tr>
-      <tr>
-        <td><b>Canvasの場所: </b></td>
-        <td><span id='displayLocation'>${canvasRequest.context.environmentContext.displayLocation}</span></td>
-      </tr>
+      
     </c:if>
   </table>
 </div>
