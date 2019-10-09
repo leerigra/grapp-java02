@@ -143,7 +143,13 @@ a:hover {
 }
 
 #header h2:before {
-    content: url(../images/eye_heroku.png);
+    content: '';/*何も入れない*/
+    display: inline-block;/*忘れずに！*/
+    background-size: contain;
+    background-image: url(../images/eye_heroku.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;   
   }
 #header h2 {
     color: #000000;
@@ -151,9 +157,7 @@ a:hover {
     font-weight: normal;
     background-color: #FFFFFF;
     border-bottom: medium solid #9400d3;
-    background-repeat: no-repeat;
-    background-position: top left;
-}
+
 
 
 #chatter-submit {
