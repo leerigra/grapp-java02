@@ -142,14 +142,15 @@ a:hover {
     height:15px;
 }
 
+#header h2:before {
+    content: url(../images/eye_heroku.png);
+  }
 #header h2 {
-    clear: both;
     color: #000000;
     font-size: 24px;
-    font-style: oblique;
+    font-weight: normal;
     background-color: #FFFFFF;
     border-bottom: medium solid #9400d3;
-    background-image: url(/images/eye_heroku.png);
     background-repeat: no-repeat;
     background-position: top left;
 }
@@ -159,7 +160,7 @@ a:hover {
     clear: both;
     width: 48px;
     height:24px;
-    background: #666666 url(/images/share.png) no-repeat;
+    background: #666666 url(../images/share.png) no-repeat;
 }
 
 #app_subtitle {
