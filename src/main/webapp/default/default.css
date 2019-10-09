@@ -149,11 +149,9 @@ a:hover {
     font-weight: normal;
     background-color: #FFFFFF;
     border-bottom: medium solid #4b0082;
-    padding-left: 180px ;		/*パディング*/
-    padding-bottom: 5px ;		/*パディング*/
 	background-image:url(../images/heroku.png);	/*背景画像*/
 	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
-    background-position: left 0px bottom 2px top 0px;
+    background-position: left 5px bottom 2px;
 }
 
 #header h3 {
