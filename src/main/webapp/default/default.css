@@ -185,6 +185,8 @@ a:hover {
 } 
 
 #fin_msg div {
-    margin-left: 20px;
-    font-size: 14px;
+    font-size: 18px;
+    border: 1px solid #aaa;
+    width: 400px;
+    text-align: center;
 } 
