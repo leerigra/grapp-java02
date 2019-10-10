@@ -44,10 +44,19 @@ POSSIBILITY OF SUCH DAMAGE. edit!
         <td><b>レコードID: </b></td>
         <td><span id='Id'>${canvasRequest.context.environmentContext.record.Id}</span></td>
       </tr>
-<tr>
+      <tr>
         <td><b>Name: </b></td>
         <td><span id='Name'>${canvasRequest.context.environmentContext.record.Name}</span></td>
       </tr>
+      <tr>
+        <td><b>displayLocation: </b></td>
+        <td><span id='displayLocation'>${canvasRequest.context.environmentContext.record.displayLocation}</span></td>
+      </tr>
+      <tr>
+        <td><b>Id?: </b></td>
+        <td><span id='comp_id'>${canvasRequest.Id}</span></td>
+      </tr>
+
     </c:if>
   </table>
 </div>
