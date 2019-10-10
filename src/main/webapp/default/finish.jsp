@@ -35,7 +35,11 @@ POSSIBILITY OF SUCH DAMAGE.
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
 
-
+    <script>
+        function clickBack(){
+	        history.back();
+    }
+</script>
 </head>
 <body>
     <div id="content">
@@ -47,12 +51,16 @@ POSSIBILITY OF SUCH DAMAGE.
         <div id="content-data">
             <h4>申請完了</h4>
             <div id="sfdc_context">
-			    <p>申請が完了しました</p>
-			    <p>申請対象Id: ${canvasRequest.context.environmentContext.record.Id}${canvasRequest.context.environmentContext.parameters.Id}</p>
+			    <p><b>申請が完了しました</b></p>
+			    <p>申請対象Id: <% request.getParameter("ojbID");%></p>
+			    <p>申請内容: <% request.getParameter("description");%></p>        
             </div>
+
         </div>
  
-        
+        <input type="button" value="back" onclick="clickBack()"/>
+
+
         <div id="footercont">
             <div id="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
