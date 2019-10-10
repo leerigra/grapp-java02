@@ -56,11 +56,11 @@ POSSIBILITY OF SUCH DAMAGE.
         <div id="content-data">
             <h4>申請完了</h4>
             <div id="fin_msg">
-			    <p><b>申請が完了しました</b></p>
-			    <p>申請対象Id: <%= strId%></p>
-			    <p>申請内容: <%= strDescription%></p>        
-            <br/>
-            <input type="button" value="back" onclick="clickBack()"/>
+			    <b>申請が完了しました</b><br/>
+			    申請対象Id: <%= strId%><br/>
+			    申請内容: <%= strDescription%><br/>        
+                <br/>
+                <input type="button" value="back" onclick="clickBack()"/>
             </div>
 
         </div>
