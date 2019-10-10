@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE. edit!
       </tr>
       <tr>
         <td><b>displayLocation: </b></td>
-        <td><span id='displayLocation'>${canvasRequest.context.environmentContext.record.displayLocation}</span></td>
+        <td><span id='displayLocation'>${canvasRequest.context.environmentContext.displayLocation}</span></td>
       </tr>
       <tr>
         <td><b>レコードID(from AuraComponent): </b></td>
