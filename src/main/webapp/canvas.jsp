@@ -36,7 +36,8 @@ purposes. The CanvasController should be used instead which should be mapped to 
     String[] signedRequest = parameters.get("signed_request");
 
     if ("GET".equals(request.getMethod()) || signedRequest == null) {%>
-       <jsp:forward page="welcome.jsp"/><%
+       <%--<jsp:forward page="welcome.jsp"/>--%>
+       <jsp:forward page="signed-request.jsp"/><%
     }
     else {%>
        <jsp:forward page="signed-request.jsp"/><%
