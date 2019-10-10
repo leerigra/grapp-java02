@@ -53,8 +53,12 @@ POSSIBILITY OF SUCH DAMAGE. edit!
         <td><span id='displayLocation'>${canvasRequest.context.environmentContext.record.displayLocation}</span></td>
       </tr>
       <tr>
-        <td><b>Id?: </b></td>
+        <td><b>レコードID(from AuraComponent): </b></td>
         <td><span id='comp_id'>${canvasRequest.context.environmentContext.parameters.Id}</span></td>
+      </tr>
+      <tr>
+        <td><b>Name(from AuraComponent): </b></td>
+        <td><span id='comp_Name'>${canvasRequest.context.environmentContext.parameters.Name}</span></td>
       </tr>
 
     </c:if>
