@@ -68,7 +68,6 @@ POSSIBILITY OF SUCH DAMAGE.
             <h4>Salesforceからの送信データ</h4>
             <jsp:include page="context.jsp"/>
             <h4>Form(post)</h4>
-            <jsp:include page="events.jsp"/>
             <jsp:include page="testform.jsp"/>
             <h4>Chatter</h4>
             <jsp:include page="api.jsp"/>
