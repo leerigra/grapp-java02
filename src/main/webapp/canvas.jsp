@@ -23,7 +23,7 @@ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABI
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 --%>
-
+ 
 <%--
 NOTE: This page is deprecated as of Spring 2014 release, but is here for backward compatibility
 purposes. The CanvasController should be used instead which should be mapped to the "/canvas" resource.
