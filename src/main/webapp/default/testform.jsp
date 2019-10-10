@@ -9,13 +9,13 @@
 
 <div>
 <form name="testform" onsubmit="checkText()">
-    <p>申請対象レコードID：<input type="text" name="ojbID" value=${canvasRequest.context.environmentContext.record.Id}+${canvasRequest.context.environmentContext.parameters.Id}></p>
+    <p>申請対象レコードID：<input type="text" name="ojbID" value=${canvasRequest.context.environmentContext.record.Id}${canvasRequest.context.environmentContext.parameters.Id}></p>
     <p>申請内容：<input type="text" name="description"></p>
     <p>申請ステータス：
-    <select name="birthMonth">
-      <option value="申請中">0</option>
-      <option value="申請済">1</option>
-      <option value="申請エラー">9</option>
+    <select name="appl_status">
+      <option value=0>申請中</option>
+      <option value=1>申請済</option>
+      <option value=9>申請エラー</option>
     </select>
 　　</p>
     <p><input type="submit" value="送信する"></p>
