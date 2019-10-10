@@ -32,19 +32,15 @@ POSSIBILITY OF SUCH DAMAGE.
   });
 </script>
 
-<p>
-  With the Force.com Canvas software development toolkit, working with the Salesforce.com public
-  Api is easy.
-</p>
-<p>
-  For example, you can interact natively with the Chatter Api to create posts and work directly
-  with the feed.
-</p>
+
 
 <div id="canvas-chatter">
+<p>
+  Chatterに投稿。
+</p>
   <table width="100%">
     <tr>
-      <td width="20%"><b>Post to Chatter:&nbsp</b></td>
+      <td width="20%">Post to Chatter:&nbsp</td>
       <td width="50%"><input id="speech-input-field" type="text" x-webkit-speech /></td>
       <td width="5%"><button id="chatter-submit" type="submit" value="投稿"/></td>
       <td width="10%"><span id="status" style="color:green"></span></td>
