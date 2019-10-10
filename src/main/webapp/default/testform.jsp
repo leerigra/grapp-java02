@@ -7,7 +7,7 @@
   </script>
 
 <div>
-<form name="testform">
+<form name="testform" action="finish.jsp">
     <p>申請対象レコードID：<input type="text" name="ojbID" value=${canvasRequest.context.environmentContext.record.Id}${canvasRequest.context.environmentContext.parameters.Id}></p>
     <p>申請内容：<input type="text" name="description"></p>
     <p>申請ステータス：
@@ -17,6 +17,6 @@
       <option value=9>申請エラー</option>
     </select>
 　　</p>
-    <p><input type="submit" value="送信する" onclick="checkText()"</p>
+    <p><input type="submit" value="送信する"</p>
   </form>
 </div>
