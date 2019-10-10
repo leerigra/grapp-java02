@@ -185,6 +185,7 @@ a:hover {
 } 
 
 #fin_msg div {
+    clear: both;
     font-size: 18px;
     border: 1px solid #aaa;
     width: 400px;
