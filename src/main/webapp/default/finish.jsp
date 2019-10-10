@@ -46,8 +46,10 @@ POSSIBILITY OF SUCH DAMAGE.
 
         <div id="content-data">
             <h4>申請完了</h4>
-			<p>申請が完了しました</p>
-			<p>申請対象Id: ${canvasRequest.context.environmentContext.record.Id}</p>
+            <div id="sfdc_context">
+			    <p>申請が完了しました</p>
+			    <p>申請対象Id: ${canvasRequest.context.environmentContext.record.Id}${canvasRequest.context.environmentContext.parameters.Id}</p>
+            </div>
         </div>
  
         
