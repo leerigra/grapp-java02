@@ -167,7 +167,7 @@ a:hover {
     clear: both;
     width: 48px;
     height:24px;
-    background: #666666 url(../images/share.png) no-repeat;
+    /*background: #666666 url(../images/share.png) no-repeat;*/
 }
 
 #content-data h4 {
