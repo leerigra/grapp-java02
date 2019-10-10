@@ -54,7 +54,7 @@ POSSIBILITY OF SUCH DAMAGE. edit!
       </tr>
       <tr>
         <td><b>Id?: </b></td>
-        <td><span id='comp_id'>${canvasRequest.Id}</span></td>
+        <td><span id='comp_id'>${canvasRequest.context.environmentContext.parameters.Id}</span></td>
       </tr>
 
     </c:if>
