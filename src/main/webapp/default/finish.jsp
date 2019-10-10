@@ -58,7 +58,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <div id="fin_msg">
 			    <p><b>申請が完了しました</b></p>
 			    <p>申請対象Id: <%= strId%></p>
-			    <p>申請内容: <%= request.getParameter("description");%></p>        
+			    <p>申請内容: <%= request.getParameter("description")%></p>        
             </div>
 
         </div>
