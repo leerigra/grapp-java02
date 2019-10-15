@@ -199,20 +199,23 @@ table.oppBrListTable{
 
 } 
 
-table.oppBrListTable th{
-    padding: 10px 0;
-    text-align: center;
-    font-size: 12px;
-}
-
-table.oppBrListTable td{
-    font-size: 12px;
-}
 
 table.oppBrListTable tr{
     background-color: #ffffff;
 }
 
 table.oppBrListTable tr:ntn-child(odd){
-    background-color: #eeeeee;
+    background-color: #bfd7f5;
 }
+
+table.oppBrListTable th{
+    font-size: 12px;
+    border-bottom: 1px;
+    border-color:#666666;
+    background-color:#7058a3;
+}
+
+table.oppBrListTable td{
+    font-size: 10px;
+}
+
