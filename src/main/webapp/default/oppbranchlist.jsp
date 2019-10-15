@@ -18,14 +18,7 @@
   String plan_accuracy3="C";
   String create_date3="2019/10/15";
 %>
-<html>
-    <head>
-            <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css "/>
-            <link rel="stylesheet" type="text/css" href="/default/tabs${ua.device.mobile ? '-mobile':''}.css" />
-    </head>
-
-<body>
-<form>
+<div id="sfdc_context">
 <table class="oppBrListTable">
     <tr>
         <th>実行／払込予定日</th>
@@ -62,6 +55,6 @@
 <br/>
 
 </form>
-
+</div>
 </body>
 </html>
