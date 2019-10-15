@@ -1,6 +1,6 @@
 package bean;
 
-public class Member {
+public class oppBranchList {
 	private String id;
 	private String name;
 	private String age;
