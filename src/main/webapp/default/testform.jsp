@@ -2,9 +2,8 @@
       function checkText() {
            //入力ボックスの内容を表示する
           alert( "対象レコードID: " + document.testform.ojbID.value + "\n申請内容："　+ document.testform.description.value );
- 
       }
-  </script>
+</script>
 
 <div>
 <form name="testform" action="/default/finish.jsp" method="post">
