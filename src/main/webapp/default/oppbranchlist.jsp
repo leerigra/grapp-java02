@@ -18,7 +18,7 @@
   String plan_accuracy3="C";
   String create_date3="2019/10/15";
 %>
-<div id="sfdc_context">
+
 <table class="oppBrListTable">
     <tr>
         <th>実行／払込予定日</th>
@@ -52,7 +52,4 @@
     </tr>
         
 </table>
-<br/>
 
-</form>
-</div>
