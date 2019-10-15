@@ -16,21 +16,24 @@
     </tr>
     
     <tr id=oppBranchList>
-        <td><input type="text" name="id_1" value="1"></td>
-        <td><input type="text" name="name_1" value="なまえ３"></td>
-        <td><input type="text" name="age_1" value="11"></td>
+        <td><input type="date" name="plan_date1" value="2019/10/30"></td>
+        <td><input type="number" name="plan_amount1" value="10000000"></td>
+        <td><input type="text" name="plan_accuracy" value="A"></td>
+        <td><input type="date" name="create_date1" value="2019/10/15"></td>
     </tr>
 
     <tr id=oppBranchList>
-            <td><input type="text" name="id_1" value="2"></td>
-            <td><input type="text" name="name_1" value="なまえ２"></td>
-            <td><input type="text" name="age_1" value="22"></td>
-        </tr>
+        <td><input type="date" name="plan_date2" value="2019/11/20"></td>
+        <td><input type="number" name="plan_amount2" value="20000000"></td>
+        <td><input type="text" name="plan_accuracy2" value="B"></td>
+        <td><input type="date" name="create_date2" value="2019/10/15"></td>
+    </tr>
     
     <tr id=oppBranchList>
-        <td><input type="text" name="id_1" value="3"></td>
-        <td><input type="text" name="name_1" value="なまえ3"></td>
-        <td><input type="text" name="age_1" value="33"></td>
+        <td><input type="date" name="plan_date3" value="2019/12/10"></td>
+        <td><input type="number" name="plan_amount3" value="30000000"></td>
+        <td><input type="text" name="plan_accuracy3" value="C"></td>
+        <td><input type="date" name="create_date3" value="2019/10/15"></td>
     </tr>
         
 </table>

@@ -192,7 +192,7 @@ a:hover {
     padding-left: 100px;
 } 
 
-input[type="text"] {  
+#oppBranchList input {  
     padding: 2px 4px;
     outline: 0;
     border: 0px;
