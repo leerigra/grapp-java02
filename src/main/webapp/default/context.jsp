@@ -24,8 +24,7 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVE
 POSSIBILITY OF SUCH DAMAGE. edit!
 --%>
 
-<div id="sfdc_context">
-  <table border="0" width="100%">
+  <table>
     <tr>
       <td><b>Salesforce ログインユーザ名: </b></td>
       <td><span id='username'>${canvasRequest.context.userContext.userName}</span></td>
@@ -59,6 +58,5 @@ POSSIBILITY OF SUCH DAMAGE. edit!
         <td><b>Name(from AuraComponent): </b></td>
         <td><span id='comp_Name'>${canvasRequest.context.environmentContext.parameters.Name}</span></td>
       </tr>
-
   </table>
-</div>
+
