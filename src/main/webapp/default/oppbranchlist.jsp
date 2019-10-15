@@ -2,9 +2,25 @@
 <%@ page session="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<% 
+  String plan_date1="2019/10/30";
+  String plan_amount1="1,000,000";
+  String plan_accuracy="A";
+  String create_date1="2019/10/15";
+
+  String plan_date1="2019/11/20";
+  String plan_amount1="2,000,000";
+  String plan_accuracy="B";
+  String create_date1="2019/10/15";
+
+  String plan_date1="2019/12/10";
+  String plan_amount1="3,000,000";
+  String plan_accuracy="C";
+  String create_date1="2019/10/15";
+%>
 <html>
 <body>
-
+<form>
 <table id=oppBranchList>
     <tr id=oppBranchList>
         <th>実行／払込予定日</th>
@@ -14,30 +30,33 @@
     </tr>
     
     <tr id=oppBranchList>
-        <td><input type="date" name="plan_date1" value="2019-10-30"></td>
-        <td><input type="number" name="plan_amount1" value="10000000"></td>
-        <td><input type="text" name="plan_accuracy" value="A"></td>
-        <td><input type="date" name="create_date1" value="2019-10-15"></td>
+        <td><%= plan_date1%></td>
+        <td><%= plan_amount1%></td>
+        <td><%= plan_accuracy1%></td>
+        <td><%= create_date1%></td>
+        <td><input type ="submit" name="btn1" value ="変更"></td>
     </tr>
 
     <tr id=oppBranchList>
-        <td><input type="date" name="plan_date2" value="2019-11-20"></td>
-        <td><input type="number" name="plan_amount2" value="20000000"></td>
-        <td><input type="text" name="plan_accuracy2" value="B"></td>
-        <td><input type="date" name="create_date2" value="2019-10-15"></td>
+        <td><%= plan_date2%></td>
+        <td><%= plan_amount2%></td>
+        <td><%= plan_accuracy2%></td>
+        <td><%= create_date2%></td>
+        <td><input type ="submit" name="btn2" value ="変更"></td>
     </tr>
     
     <tr id=oppBranchList>
-        <td><input type="date" name="plan_date3" value="2019-12-10"></td>
-        <td><input type="number" name="plan_amount3" value="30000000"></td>
-        <td><input type="text" name="plan_accuracy3" value="C"></td>
-        <td><input type="date" name="create_date3" value="2019-10-15"></td>
+        <td><%= plan_date3%></td>
+        <td><%= plan_amount3%></td>
+        <td><%= plan_accuracy3%></td>
+        <td><%= create_date3%></td>
+        <td><input type ="submit" name="btn3" value ="変更"></td>
     </tr>
         
 </table>
 <br/>
 
-
+</form>
 
 </body>
 </html>
