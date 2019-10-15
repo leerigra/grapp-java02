@@ -192,4 +192,10 @@ a:hover {
     padding-left: 100px;
 } 
 
-
+input[type="text"] {  
+    padding: 2px 4px;
+    outline: 0;
+    border: 0px;
+    background: transparent;
+    font-size: 20px;
+}

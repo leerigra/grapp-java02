@@ -69,6 +69,8 @@ POSSIBILITY OF SUCH DAMAGE.
             <jsp:include page="context.jsp"/>
             <h4>Form(post)</h4>
             <jsp:include page="testform.jsp"/>
+            <h4>枝口サンプル</h4>
+            <jsp:include page="oppbranchlist.jsp"/>
             <h4>Chatter</h4>
             <jsp:include page="api.jsp"/>
         </div>
