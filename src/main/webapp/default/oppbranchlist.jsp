@@ -21,36 +21,36 @@
 <html>
 <body>
 <form>
-<table id=oppBrListTable>
-    <tr id=oppBrListRow>
-        <th id=oppBrListHd>実行／払込予定日</th>
-        <th id=oppBrListHd>実行／払込予定額（現通貨）</th>
-        <th id=oppBrListHd>実行／払込確度</th>
-        <th id=oppBrListHd>作成日時</th>
+<table class="oppBrListTable">
+    <tr>
+        <th>実行／払込予定日</th>
+        <th>実行／払込予定額（現通貨）</th>
+        <th>実行／払込確度</th>
+        <th>作成日時</th>
     </tr>
     
-    <tr id=oppBrListRow>
-        <td id=oppBrListCell><%= plan_date1%></td>
-        <td id=oppBrListCell><%= plan_amount1%></td>
-        <td id=oppBrListCell><%= plan_accuracy1%></td>
-        <td id=oppBrListCell><%= create_date1%></td>
-        <td id=oppBrListCell><input type ="submit" name="btn1" value ="変更"></td>
+    <tr>
+        <td><%= plan_date1%></td>
+        <td><%= plan_amount1%></td>
+        <td><%= plan_accuracy1%></td>
+        <td><%= create_date1%></td>
+        <td><input type ="submit" name="btn1" value ="変更"></td>
     </tr>
 
-    <tr id=oppBrListRow>
-        <td id=oppBrListCell><%= plan_date2%></td>
-        <td id=oppBrListCell><%= plan_amount2%></td>
-        <td id=oppBrListCell><%= plan_accuracy2%></td>
-        <td id=oppBrListCell><%= create_date2%></td>
-        <td id=oppBrListCell><input type ="submit" name="btn2" value ="変更"></td>
+    <tr>
+        <td><%= plan_date2%></td>
+        <td><%= plan_amount2%></td>
+        <td><%= plan_accuracy2%></td>
+        <td><%= create_date2%></td>
+        <td><input type ="submit" name="btn2" value ="変更"></td>
     </tr>
     
     <tr id=oppBrListRow>
-        <td id=oppBrListCell><%= plan_date3%></td>
-        <td id=oppBrListCell><%= plan_amount3%></td>
-        <td id=oppBrListCell><%= plan_accuracy3%></td>
-        <td id=oppBrListCell><%= create_date3%></td>
-        <td id=oppBrListCell><input type ="submit" name="btn3" value ="変更"></td>
+        <td><%= plan_date3%></td>
+        <td><%= plan_amount3%></td>
+        <td><%= plan_accuracy3%></td>
+        <td><%= create_date3%></td>
+        <td><input type ="submit" name="btn3" value ="変更"></td>
     </tr>
         
 </table>
