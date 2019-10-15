@@ -206,7 +206,7 @@ a:hover {
     border-collapse: collapse;
     border-spacing: 0;
     margin-left:10px;
-    
+
   }
   
 #oppBranchList table th,table td{
@@ -214,7 +214,7 @@ a:hover {
     text-align: center;
     font-size: 12px;
 }
-  }
+
   
 #oppBranchList table tr:nth-child(odd){
     background-color: #eee
