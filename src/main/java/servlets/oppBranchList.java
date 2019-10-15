@@ -23,7 +23,7 @@ public class oppBranchList {
 		this.age = age;
 	}
 
-	public Member(String id, String name, String age) {
+	public oppBranchList(String id, String name, String age) {
 		this.id = id;
 		this.name = name;
 		this.age = age;
