@@ -17,6 +17,6 @@
       <option value=9>申請エラー</option>
     </select>
 　　</p>
-    <p><input type="submit" value="送信する"</p>
+    <p><input type="submit" value="送信する"></p>
   </form>
 </div>
