@@ -23,7 +23,7 @@ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABI
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE. edit!
 --%>
-
+<div class="content-data">
   <table>
     <tr>
       <td><b>Salesforce ログインユーザ名: </b></td>
@@ -59,4 +59,4 @@ POSSIBILITY OF SUCH DAMAGE. edit!
         <td><span id='comp_Name'>${canvasRequest.context.environmentContext.parameters.Name}</span></td>
       </tr>
   </table>
-
+</div>

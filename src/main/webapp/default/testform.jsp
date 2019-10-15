@@ -5,8 +5,8 @@
       }
 </script>
 
-<div>
-<form name="testform" action="/default/finish.jsp" method="post">
+<div class="content-data">
+  <form name="testform" action="/default/finish.jsp" method="post">
     <p>申請対象レコードID：<input type="text" name="ojbID" value=${canvasRequest.context.environmentContext.record.Id}${canvasRequest.context.environmentContext.parameters.Id}></p>
     <p>申請内容：<input type="text" name="description"></p>
     <p>申請ステータス：

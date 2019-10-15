@@ -178,7 +178,7 @@ a:hover {
     margin-left: 15px;
 }
 
-#content-data div {
+div.content-data {
     margin-left: 15px;
     font-size: 12px;
 } 
