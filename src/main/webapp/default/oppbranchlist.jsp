@@ -21,6 +21,7 @@
 <html>
     <head>
             <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css "/>
+            <link rel="stylesheet" type="text/css" href="/default/tabs${ua.device.mobile ? '-mobile':''}.css" />
     </head>
 
 <body>
@@ -49,7 +50,7 @@
         <td><input type ="submit" name="btn2" value ="変更"></td>
     </tr>
     
-    <tr id=oppBrListRow>
+    <tr>
         <td><%= plan_date3%></td>
         <td><%= plan_amount3%></td>
         <td><%= plan_accuracy3%></td>
