@@ -5,18 +5,18 @@
 <% 
   String plan_date1="2019/10/30";
   String plan_amount1="1,000,000";
-  String plan_accuracy="A";
+  String plan_accuracy1="A";
   String create_date1="2019/10/15";
 
-  String plan_date1="2019/11/20";
-  String plan_amount1="2,000,000";
-  String plan_accuracy="B";
-  String create_date1="2019/10/15";
+  String plan_date2="2019/11/20";
+  String plan_amount2="2,000,000";
+  String plan_accuracy2="B";
+  String create_date2="2019/10/15";
 
-  String plan_date1="2019/12/10";
-  String plan_amount1="3,000,000";
-  String plan_accuracy="C";
-  String create_date1="2019/10/15";
+  String plan_date3="2019/12/10";
+  String plan_amount3="3,000,000";
+  String plan_accuracy3="C";
+  String create_date3="2019/10/15";
 %>
 <html>
 <body>
