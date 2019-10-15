@@ -167,7 +167,6 @@ a:hover {
     clear: both;
     width: 48px;
     height:24px;
-    /*background: #666666 url(../images/share.png) no-repeat;*/
 }
 
 #content-data h4 {
@@ -192,7 +191,7 @@ a:hover {
     padding-left: 100px;
 } 
 
-.oppBrListTable {
+table.oppBrListTable{
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
@@ -200,20 +199,20 @@ a:hover {
 
 } 
 
-.oppBrListTable th{
+table.oppBrListTable th{
     padding: 10px 0;
     text-align: center;
     font-size: 12px;
 }
 
-.oppBrListTable td{
+table.oppBrListTable td{
     font-size: 12px;
 }
 
-.oppBrListTable tr{
+table.oppBrListTable tr{
     background-color: #ffffff;
-  }
+}
 
-.oppBrListTable tr:nth-child(odd){
+table.oppBrListTable tr:ntn-child(odd){
     background-color: #eeeeee;
-  }
+}
