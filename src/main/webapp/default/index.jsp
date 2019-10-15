@@ -27,11 +27,9 @@ POSSIBILITY OF SUCH DAMAGE.
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Force.com Canvas Java Quick Start</title>
-
-    <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css" />
-    <link rel="stylesheet" type="text/css" href="/default/tabs${ua.device.mobile ? '-mobile':''}.css" />
-
+    <link rel="stylesheet" type="text/css" href="default${ua.device.mobile ? '-mobile':''}.css" />
+    <link rel="stylesheet" type="text/css" href="tabs${ua.device.mobile ? '-mobile':''}.css" />
+    
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
     <script type="text/javascript" src="/default/tabs.js"></script>
@@ -55,7 +53,7 @@ POSSIBILITY OF SUCH DAMAGE.
             //initTabs();
         });
     </script>
-
+    <title>Force.com Canvas Java Quick Start</title>
 </head>
 <body>
     <div id="content">
