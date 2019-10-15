@@ -192,30 +192,25 @@ a:hover {
     padding-left: 100px;
 } 
 
-#oppBranchList table td input {  
-    padding: 2px 4px;
-    outline: 0;
-    border: 0px;
-    background: transparent;
-    font-size: 20px;
-}
-
-
-#oppBranchList table{
+#oppBrListTable table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     margin-left:10px;
 
-  }
-  
-#oppBranchList table th,table td{
+} 
+
+#oppBrListHd table th{
     padding: 10px 0;
     text-align: center;
     font-size: 12px;
 }
 
+#oppBrListCell table td{
+    font-size: 12px;
+}
+
   
-#oppBranchList table tr:nth-child(odd){
+#oppBrListRow tr:nth-child(odd){
     background-color: #eee
   }
