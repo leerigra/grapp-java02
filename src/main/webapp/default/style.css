@@ -1,3 +1,10 @@
+#page {
+    background-color: #FFFFFF;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 body {
     font-family: "Meiryo UI", "Arial", "Helvetica", "sans-serif";
     font-size: 90%;
@@ -6,7 +13,16 @@ body {
     background-color: #dcdcdc;
 }
 
-#header h2 {
+#footer {
+    clear: both
+}
+
+#canvas-content {
+    padding-left: 0px;
+    padding-right: 30px
+}
+
+]#header h2 {
     height: 50px;
     color: #000000;
     font-size: 24px;
@@ -30,6 +46,7 @@ body {
 div.content-data {
     margin-left: 20px;
 } 
+
 div.content-data h4 {
     background-color: #7058a3;
     color: #ffffff;
