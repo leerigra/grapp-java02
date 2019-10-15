@@ -200,17 +200,20 @@ a:hover {
 
 } 
 
-#oppBrListHd table th{
+#oppBrListHd th{
     padding: 10px 0;
     text-align: center;
     font-size: 12px;
 }
 
-#oppBrListCell table td{
+#oppBrListCell td{
     font-size: 12px;
 }
 
-  
+#oppBrListRow tr{
+    background-color: #ffffff;
+  }
+
 #oppBrListRow tr:nth-child(odd){
-    background-color: #eee
+    background-color: #eeeeee;
   }
