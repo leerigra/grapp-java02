@@ -19,6 +19,10 @@
   String create_date3="2019/10/15";
 %>
 <html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css "/>
+    </head>
+
 <body>
 <form>
 <table class="oppBrListTable">
