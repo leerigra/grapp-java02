@@ -19,7 +19,10 @@
   String create_date3="2019/10/15";
 %>
 
-<table class="oppBrListTable">
+<table class="oppBrListTable" style="width: 100%;
+border-collapse: collapse;
+border-spacing: 0;
+margin-left:10px;">
     <tr>
         <th>実行／払込予定日</th>
         <th>実行／払込予定額（現通貨）</th>
