@@ -192,7 +192,7 @@ a:hover {
     padding-left: 100px;
 } 
 
-table.oppBrListTable {
+.oppBrListTable {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
@@ -200,20 +200,20 @@ table.oppBrListTable {
 
 } 
 
-table.oppBrListTable th{
+.oppBrListTable th{
     padding: 10px 0;
     text-align: center;
     font-size: 12px;
 }
 
-table.oppBrListTable td{
+.oppBrListTable td{
     font-size: 12px;
 }
 
-table.oppBrListTable tr{
+.oppBrListTable tr{
     background-color: #ffffff;
   }
 
-table.oppBrListTable tr:nth-child(odd){
+.oppBrListTable tr:nth-child(odd){
     background-color: #eeeeee;
   }
