@@ -1,0 +1,40 @@
+body {
+    font-family: "Meiryo UI", "Arial", "Helvetica", "sans-serif";
+    font-size: 90%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    background-color: #dcdcdc;
+}
+
+#header h2 {
+    height: 50px;
+    color: #000000;
+    font-size: 24px;
+    font-weight: normal;
+    background-color: #FFFFFF;
+    border-bottom: medium solid #4b0082;
+	background-image:url(../images/heroku.png);	/*背景画像*/
+	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
+    background-position: left 5px bottom 2px;
+}
+
+#header h3 {
+    color: #000000;
+    font-size: 24px;
+    font-weight: normal;
+    background-color: #d1bada;
+    margin: 5px;
+    padding: 10px;
+}
+
+div.content-data {
+    margin-left: 20px;
+} 
+div.content-data h4 {
+    background-color: #7058a3;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 18px;
+    padding: 5px;
+    margin-left: 15px;
+}

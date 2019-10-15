@@ -27,8 +27,9 @@ POSSIBILITY OF SUCH DAMAGE.
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css" />
-    <link rel="stylesheet" type="text/css" href="/default/tabs${ua.device.mobile ? '-mobile':''}.css" />
+    <!--link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css" /-->
+    <!--link rel="stylesheet" type="text/css" href="/default/tabs${ua.device.mobile ? '-mobile':''}.css" /-->
+    <link rel="stylesheet" type="text/css" href="/default/style.css" />
     
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
