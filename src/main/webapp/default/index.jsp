@@ -63,12 +63,12 @@ POSSIBILITY OF SUCH DAMAGE.
         </div>
 
         <div id="content-data">
+            <h4>実行予定</h4>
+            <jsp:include page="oppbranchlist.jsp"/>
             <h4>Salesforceからの送信データ</h4>
             <jsp:include page="context.jsp"/>
             <h4>Form(post)</h4>
             <jsp:include page="testform.jsp"/>
-            <h4>枝口サンプル</h4>
-            <jsp:include page="oppbranchlist.jsp"/>
             <h4>Chatter</h4>
             <jsp:include page="api.jsp"/>
         </div>
