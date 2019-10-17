@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <head>
     <!--link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css" /-->
     <!--link rel="stylesheet" type="text/css" href="/default/tabs${ua.device.mobile ? '-mobile':''}.css" /-->
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="/default/style.css" />
     
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
@@ -59,7 +59,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <body>
     <div id="content">
         <div id="header">
-             <h2> </h2>
+             <h2>xx</h2>
              <h3>Canvasサンプルアプリケーション</h3>
         </div>
 
