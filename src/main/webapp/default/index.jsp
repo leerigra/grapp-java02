@@ -58,7 +58,7 @@ POSSIBILITY OF SUCH DAMAGE.
 </head>
 <body>
     <div id="content">
-        <div class="header">
+        <div id="header">
              <h2> </h2>
              <h3>Canvasサンプルアプリケーション</h3>
         </div>
