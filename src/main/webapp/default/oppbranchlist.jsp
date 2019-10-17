@@ -1,7 +1,7 @@
 <%! 
   String change_category1="";
   String plan_date1="2019-10-30";
-  String plan_amount1="1000000";
+  String plan_amount1="1,000,000";
   String plan_accuracy1="A";
   String create_date1="2019-10-15";
 
@@ -47,11 +47,11 @@ function insertRow(id) {
  
     // セルの内容入力
     cell1.innerHTML = "追加";
-    cell2.innerHTML = "&nbsp;";
-    cell3.innerHTML = "&nbsp;";
-    cell4.innerHTML = "&nbsp;";
+    cell2.innerHTML = "<input type="date"/>"
+    cell3.innerHTML = "<input type="text" onfocus="offComma(this)" onblur="toComma(this)" />";
+    cell4.innerHTML = "<select><option value=""></option><option value="A">A</option> <option value="B">B</option> <option value="C">C</option> </select> ";
     cell5.innerHTML = "&nbsp;";
-    cell6.innerHTML = del_button;
+    cell6.innerHTML = "<input type="button" value="行削除" onclick="deleteRow(this)" />";
 
     cell1.setAttribute("class","center");
     cell2.setAttribute("class","left");
@@ -108,10 +108,11 @@ function offComma(obj){
     
     <tr>
         <td class="center"><%= change_category1%></td>
-        <td class="left"><input type="date" value="2019-10-30"/></td>
+        <td class="left"><input type="date" value=<%= plan_date1%>/></td>
         <td class="right"><input type="text" value=<%= plan_amount1%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
             <select name="plan_accuracy1">
+                <option value=""></option>
                 <option value="A" selected>A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
@@ -126,6 +127,7 @@ function offComma(obj){
         <td class="right"><%= plan_amount2%></td>
         <td class="center">
             <select name="plan_accuracy2">
+                <option value=""></option>
                 <option value="A">A</option>
                 <option value="B" selected>B</option>
                 <option value="C">C</option>
@@ -140,6 +142,7 @@ function offComma(obj){
         <td class="right"><%= plan_amount3%></td>
        <td class="center">
             <select name="plan_accuracy3">
+                <option value=""></option>
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C" selected>C</option>
