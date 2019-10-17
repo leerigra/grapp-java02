@@ -32,6 +32,17 @@ body {
 
 #footer {
     clear: both;
+    font-size: 9px;
+
+}
+
+#footerleft {
+    float: left;
+}
+
+#footerright {
+    float: right;
+    text-align: right;
 }
 
 #canvas-content {
