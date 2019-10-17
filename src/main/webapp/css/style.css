@@ -95,7 +95,7 @@ div.content-data {
 } 
 
 table.oppBrListTable{
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
     border-spacing: 0;
     margin-left:10px;
@@ -113,13 +113,13 @@ table.oppBrListTable tr:ntn-child(odd){
 }
 
 table.oppBrListTable th{
-    font-size: 12px;
+    font-size: 16px;
     border-bottom: 1px;
     border-color:#666666;
-    background-color:#7058a3;
+    background-color:#ad9dcf;
 }
 
 table.oppBrListTable td{
-    font-size: 10px;
+    font-size: 12px;
 }
 

@@ -14,8 +14,8 @@
         <div class="content-header">
             <h2></h2>
             <h3>Canvasサンプルアプリケーション</h3>
-            <p>Salesforce ログインユーザ名: <span id='username'>${canvasRequest.context.userContext.userName}</span></p>
-            <p>操作対象レコードID: <span id='comp_id'>${canvasRequest.context.environmentContext.parameters.Id}</span></p>
+            <p>Salesforce ログインユーザ名: <span id='username'>${canvasRequest.context.userContext.userName}</span>
+               操作対象レコードID: <span id='comp_id'>${canvasRequest.context.environmentContext.parameters.Id}</span></p>
         </div>
 
         <div class="content-subhedder">
