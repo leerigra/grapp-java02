@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/default/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
@@ -11,19 +11,18 @@
 
 <body>
     <div id="content">
-        <div>
-             <h2 class="content-header">xx</h2>
-             <h3 class="content-header">Canvasサンプルアプリケーション</h3>
+        <div class="content-header">
+             <h2>xx</h2>
+             <h3>Canvasサンプルアプリケーション</h3>
         </div>
 
-        <div>
-            <h4 class="content-subhedder">実行予定</h4>
+        <div class="content-subhedder">
+            <h4>実行予定</h4>
             <jsp:include page="oppbranchlist.jsp"/>
-            <h4 class="content-subhedder">Salesforceからの送信データ</h4>
+            <h4>Salesforceからの送信データ</h4>
             <jsp:include page="context.jsp"/>
         </div>
  
-        
         <div id="footer">
             <div id="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>

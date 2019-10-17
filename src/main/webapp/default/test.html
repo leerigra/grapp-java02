@@ -1,192 +1,115 @@
 
-
+<!DOCTYPE html>
 <html>
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Force.com Canvas Java Quick Start</title>
-        
-            <link rel="stylesheet" type="text/css" href="default.css" />
-            <link rel="stylesheet" type="text/css" href="tabs.css" />
-        
-            <script type="text/javascript" src="/scripts/json2.js"></script>
-            <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
-            <script type="text/javascript" src="/default/tabs.js"></script>
-            <script type="text/javascript" src="/scripts/chatter-talk.js"></script>
-        
-            <script>
-                function resetSize(newDimensions) {
-                    var options = newDimensions ? newDimensions : {};
-                    console.log("resize.");
-                    Sfdc.canvas.client.resize(sr.client,  {
-                        width : options.width?options.width:"600px", 
-                          height : options.height?options.height:"800px"
-                    });
-                }
-        
-                var sr = JSON.parse('{"algorithm":"HMACSHA256","issuedAt":-830297386,"userId":"0057F000002Fh5RQAS","client":{"refreshToken":null,"instanceId":"_:CanvasTest02:4288:0:canvasapp","targetOrigin":"https://dbj-prod--citsdev01x.cs57.my.salesforce.com","instanceUrl":"https://dbj-prod--citsdev01x.cs57.my.salesforce.com","oauthToken":"00D0k00000055Zu!ARsAQDKTUUNH07EKDWkJKwG65tTtxgUaILge3WZBxCjqWawVMGaud0Ax4jVNs.C2I.9hTj1ZA3JSgJLvOnDo1cXVgauZGRVR"},"context":{"user":{"userId":"0057F000002Fh5RQAS","userName":"xogawa.naoko@dbj.contract.isid.co.jp.citsdev01x","firstName":"naoko","lastName":"ogawa","email":"xogawa.naoko@contract.isid.co.jp","fullName":"ogawa naoko","locale":"ja_JP","language":"ja","timeZone":"Asia/Tokyo","profileId":"00e7F000002cS2a","roleId":"00E7F000001kwOx","userType":"STANDARD","currencyISOCode":"JPY","profilePhotoUrl":"https://dbj-prod--citsdev01x--c.cs57.content.force.com/profilephoto/005/F","profileThumbnailUrl":"https://dbj-prod--citsdev01x--c.cs57.content.force.com/profilephoto/005/T","siteUrl":null,"siteUrlPrefix":null,"networkId":null,"accessibilityModeEnabled":false,"isDefaultNetwork":true},"links":{"loginUrl":"https://dbj-prod--citsdev01x.cs57.my.salesforce.com","enterpriseUrl":"/services/Soap/c/47.0/00D0k00000055Zu","metadataUrl":"/services/Soap/m/47.0/00D0k00000055Zu","partnerUrl":"/services/Soap/u/47.0/00D0k00000055Zu","restUrl":"/services/data/v47.0/","sobjectUrl":"/services/data/v47.0/sobjects/","searchUrl":"/services/data/v47.0/search/","queryUrl":"/services/data/v47.0/query/","recentItemsUrl":"/services/data/v47.0/recent/","chatterFeedsUrl":"/services/data/v31.0/chatter/feeds","chatterGroupsUrl":"/services/data/v47.0/chatter/groups","chatterUsersUrl":"/services/data/v47.0/chatter/users","chatterFeedItemsUrl":"/services/data/v31.0/chatter/feed-items","userUrl":"/0057F000002Fh5RQAS"},"application":{"namespace":"","name":"CanvasTest02","canvasUrl":"https://grapp-java02.herokuapp.com/canvas","applicationId":"06P0k0000004Ol4","version":"1.0","authType":"SIGNED_REQUEST","referenceId":"09H0k0000000CVk","options":[],"samlInitiationMethod":"None","developerName":"CanvasTest02"},"organization":{"organizationId":"00D0k00000055ZuEAI","name":"株日本政策投資銀行","multicurrencyEnabled":false,"namespacePrefix":null,"currencyIsoCode":"JPY"},"environment":{"locationUrl":"https://dbj-prod--citsdev01x.lightning.force.com/lightning/r/Opportunity/0060k0000091Sc4AAE/view","displayLocation":"Aura","sublocation":null,"uiTheme":"Theme3","dimensions":{"width":"800px","height":"900px","maxWidth":"1000px","maxHeight":"2000px","clientWidth":"859px","clientHeight":"155px"},"parameters":{"Id":"0060k0000091Sc4AAE"},"record":{},"version":{"season":"WINTER","api":"47.0"}}}}');
-                Sfdc.canvas(function() {
-                    //var photoUri = sr.context.user.profileThumbnailUrl +  "?oauth_token=" + sr.client.oauthToken;
-                    //Sfdc.canvas.byId('header').style.backgroundImage =  "url('"+(photoUri.indexOf("http")==0 ? "" :sr.client.instanceUrl) + photoUri+"')";
-                    //resetSize();
-                    //initTabs();
-                });
-            </script>
-        
-        </head>
-        <body>
-            <div id="content">
-                <div id="header">
-                     <h2> </h2>
-                     <h3>Canvasサンプルアプリケーション</h3>
-                </div>
-        
-                <div id="content-data">
-                    <h4>Salesforceからの送信データ</h4>
-                    
-        
-        <div id="sfdc_context">
-          <table border="0" width="100%">
-            <tr>
-              <td><b>Salesforce ログインユーザ名: </b></td>
-              <td><span id='username'>xogawa.naoko@dbj.contract.isid.co.jp.citsdev01x</span></td>
-            </tr>
-            <tr>
-              <td><b>Salesforce ログインユーザID: </b></td>
-              <td><span id='userId'>0057F000002Fh5RQAS</span></td>
-            </tr>
-              <tr>
-                <td><b>displayLocation: </b></td>
-                <td><span id='displayLocation'>Aura</span></td>
-              </tr>
-        
-            <c:if test="false">
-              <tr>
-                <td><b>Salesforceオブジェクト: </b></td>
-                <td><span id='type'></span></td>
-              </tr>
-        
-              <tr>
-                <td><b>レコードID(from Page): </b></td>
-                <td><span id='Id'></span></td>
-              </tr>
-            </c:if>
-        
-              <tr>
-                <td><b>レコードID(from AuraComponent): </b></td>
-                <td><span id='comp_id'>0060k0000091Sc4AAE</span></td>
-              </tr>
-              <tr>
-                <td><b>Name(from AuraComponent): </b></td>
-                <td><span id='comp_Name'></span></td>
-              </tr>
-        
-          </table>
-        </div>
-        
-                    <h4>Form(post)</h4>
-                    <script>
-              function checkText() {
-                   //入力ボックスの内容を表示する
-                  alert( "対象レコードID: " + document.testform.ojbID.value + "\n申請内容："　+ document.testform.description.value );
-         
-              }
-          </script>
-        
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  
+    <script type="text/javascript" src="/scripts/json2.js"></script>
+    <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
+
+    <title>Force.com Canvas Java Quick Start</title>
+</head>
+
+<body>
+    <div id="content">
         <div>
-        <form name="testform" action="/default/finish.jsp" method="post">
-            <p>申請対象レコードID：<input type="text" name="ojbID" value=0060k0000091Sc4AAE></p>
-            <p>申請内容：<input type="text" name="description"></p>
-            <p>申請ステータス：
-            <select name="appl_status">
-              <option value=0>申請中</option>
-              <option value=1>申請済</option>
-              <option value=9>申請エラー</option>
-            </select>
-        　　</p>
-            <p><input type="submit" value="送信する"</p>
-          </form>
+             <h2 class="content-header">xx</h2>
+             <h3 class="content-header">Canvasサンプルアプリケーション</h3>
         </div>
-        
-                    <h4>枝口サンプル</h4>
-                    
-        
-        <table class="oppBrListTable">
-            <tr>
-                <th>実行／払込予定日</th>
-                <th>実行／払込予定額（現通貨）</th>
-                <th>実行／払込確度</th>
-                <th>作成日時</th>
-                <th>資金化への申請状況</th>
-            </tr>
+
+        <div>
+            <h4 class="content-subhedder">実行予定</h4>
             
-            <tr>
-                <td>2019/10/30</td>
-                <td>1,000,000</td>
-                <td>A</td>
-                <td>2019/10/15</td>
-                <td>申請中</td>
-            </tr>
+<div class="content-data">
+<table class="oppBrListTable">
+    <tr>
+        <th>実行／払込予定日</th>
+        <th>実行／払込予定額（現通貨）</th>
+        <th>実行／払込確度</th>
+        <th>作成日時</th>
+        <th>資金化への申請状況</th>
+    </tr>
+    
+    <tr>
+        <td>2019/10/30</td>
+        <td>1,000,000</td>
+        <td>A</td>
+        <td>2019/10/15</td>
+        <td>申請中</td>
+    </tr>
+
+    <tr>
+        <td>2019/11/20</td>
+        <td>2,000,000</td>
+        <td>B</td>
+        <td>2019/10/15</td>
+        <td>&nbsp;</td>
+    </tr>
+    
+    <tr>
+        <td>2019/12/10</td>
+        <td>3,000,000</td>
+        <td>C</td>
+        <td>2019/10/15</td>
+        <td>&nbsp;</td>
+    </tr>
         
-            <tr>
-                <td>2019/11/20</td>
-                <td>2,000,000</td>
-                <td>B</td>
-                <td>2019/10/15</td>
-                <td>&nbsp;</td>
-            </tr>
+</table>
+</div>
+
+            <h4 class="content-subhedder">Salesforceからの送信データ</h4>
             
-            <tr>
-                <td>2019/12/10</td>
-                <td>3,000,000</td>
-                <td>C</td>
-                <td>2019/10/15</td>
-                <td>&nbsp;</td>
-            </tr>
-                
-        </table>
-        
-        
-                    <h4>Chatter</h4>
-                    
-        <script>
-          Sfdc.canvas(function () {
-            chatterTalk.init(sr, "chatter-submit", "speech-input-field", function (data) {
-              Sfdc.canvas.byId('status').innerHTML = data.statusText;
-              Sfdc.canvas.byId("speech-input-field").value = "";
-            });
-          });
-        </script>
-        
-        
-        
-        <div id="canvas-chatter">
-        <p>
-          Chatterに投稿。
-        </p>
-          <table width="100%">
-            <tr>
-              <td width="20%">Post to Chatter:&nbsp</td>
-              <td width="50%"><input id="speech-input-field" type="text" x-webkit-speech /></td>
-              <td width="5%"><button id="chatter-submit" type="submit" value="投稿"/></td>
-              <td width="10%"><span id="status" style="color:green"></span></td>
-            </tr>
-          </table>
+<div class="content-data">
+  <table>
+    <tr>
+      <td><b>Salesforce ログインユーザ名: </b></td>
+      <td><span id='username'>xogawa.naoko@dbj.contract.isid.co.jp.citsdev01x</span></td>
+    </tr>
+    <tr>
+      <td><b>Salesforce ログインユーザID: </b></td>
+      <td><span id='userId'>0057F000002Fh5RQAS</span></td>
+    </tr>
+      <tr>
+        <td><b>displayLocation: </b></td>
+        <td><span id='displayLocation'>Aura</span></td>
+      </tr>
+
+    <c:if test="false">
+      <tr>
+        <td><b>Salesforceオブジェクト: </b></td>
+        <td><span id='type'></span></td>
+      </tr>
+
+      <tr>
+        <td><b>レコードID(from Page): </b></td>
+        <td><span id='Id'></span></td>
+      </tr>
+    </c:if>
+
+      <tr>
+        <td><b>レコードID(from AuraComponent): </b></td>
+        <td><span id='comp_id'>0060k0000091Sc4AAE</span></td>
+      </tr>
+      <tr>
+        <td><b>Name(from AuraComponent): </b></td>
+        <td><span id='comp_Name'></span></td>
+      </tr>
+  </table>
+</div>
+
         </div>
-                </div>
-         
-                
-                <div id="footercont">
-                    <div id="footerleft">
-                        <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
-                        </p>
-                    </div>
-                    <div id="footerright">
-                        <p>Salesforce: <a title="Safe Harbor" href="http://www.salesforce.com/company/investor/safe_harbor.jsp"><strong>SafeHarbor</strong></a>
-                        </p>
-                    </div>
-                </div>
+ 
+        
+        <div id="footer">
+            <div id="footerleft">
+                <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
+                </p>
             </div>
-        </body>
-        </html>
-        
+            <div id="footerright">
+                <p>Salesforce: <a title="Safe Harbor" href="http://www.salesforce.com/company/investor/safe_harbor.jsp"><strong>SafeHarbor</strong></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
