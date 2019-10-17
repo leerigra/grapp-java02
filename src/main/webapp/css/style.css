@@ -164,9 +164,9 @@ table.oppBrListTable td{
   width: 140px;
   text-align: center;
   background-color: #333;
-  float: right;
-  height: 50px;
-  line-height: 50px;
+  float: left;
+  height: 20px;
+  line-height: 20px;
   margin-right: 2px;
 }
  
@@ -174,5 +174,5 @@ table.oppBrListTable td{
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  padding: 20px;
+  padding: 10px;
 }
