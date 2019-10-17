@@ -30,6 +30,13 @@ body {
     margin-left: 10px;
 } 
 
+
+div.content-navi {
+    clear: both;
+    height: 25px;
+    padding:1px;
+    margin:0px;
+}
 div.content-footer {
     clear: both;
     height: 25px;
@@ -114,7 +121,6 @@ div.content-subhedder h4 {
     font-size: 18px;
     padding: 5px;
     margin-left: 15px;
-    position: relative;
 }
 
 
@@ -157,14 +163,13 @@ table.oppBrListTable td{
 #nav {
   list-style: none;
   overflow: hidden;
-  position: absolute;
 }
  
 #nav li {
   width: 140px;
   text-align: center;
   background-color: #333;
-  float: left;
+  float: right;
   height: 20px;
   line-height: 20px;
   margin-right: 2px;
@@ -173,6 +178,7 @@ table.oppBrListTable td{
 #nav li a {
   text-decoration: none;
   color: #fff;
-  font-weight: bold;
+  font-size: 10px;
+  font-weight: normal;
   padding: 10px;
 }
