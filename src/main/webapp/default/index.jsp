@@ -24,7 +24,7 @@
             <h4>実行予定</h4>
             <jsp:include page="oppbranchlist.jsp"/>
         </div>
- 
+        <br/>
         <div class="content-footer">
             <div class="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
