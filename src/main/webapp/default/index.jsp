@@ -19,6 +19,11 @@
             </p>
             </h2>
         </div>
+        
+        <div class="content-header">
+            <h3>枝口リスト</h4>
+            <jsp:include page="oppbranchlist.jsp"/>
+        </div>
         <div class="content-navi">
             <ul id="nav">
                 <li><a href="#">MENU1</a></li>
@@ -26,15 +31,6 @@
                 <li><a href="#">MENU3</a></li>
             <li><a href="#">MENU4</a></li>
             </ul>
-        </div>
-        <div class="content-subhedder">
-            <h4>口情報</h4>
-            <jsp:include page="oppinfo.jsp"/>
-        </div>
-
-        <div class="content-subhedder">
-            <h4>枝口リスト</h4>
-            <jsp:include page="oppbranchlist.jsp"/>
         </div>
         <br/>
         <div class="content-footer">
