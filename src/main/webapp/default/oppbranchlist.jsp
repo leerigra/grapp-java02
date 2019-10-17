@@ -73,10 +73,8 @@ function deleteRow(obj) {
 }
 </script>
 
-<div class="content-data">
 <input type="button" value="行追加" onclick="insertRow('BranchList')" />
-<input type="button" value="列追加" onclick="insertColumn('BranchList')" />
-
+<div class="content-data">
 <table class="oppBrListTable" id="BranchList">
     <tr>
         <th>変更区分</th>
