@@ -78,8 +78,13 @@ div.content-header h2 {
     margin:0 0 0 auto;
 }
 
+.left{
+    text-align: left;
+}
+.center{
+    text-align: center;
+}
 .right{
-    padding: 1px;
     text-align: right;
 }
 
@@ -145,6 +150,6 @@ table.oppBrListTable th{
 
 table.oppBrListTable td{
     font-size: 12px;
-    padding: 1px;
+    padding: 5px;
 }
 

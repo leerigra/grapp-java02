@@ -25,10 +25,10 @@
     </tr>
     
     <tr>
-        <td><%= plan_date1%></td>
-        <td><%= plan_amount1%></td>
-        <td><%= plan_accuracy1%></td>
-        <td><%= create_date1%></td>
+        <td class="center"><%= plan_date1%></td>
+        <td class="right"><%= plan_amount1%></td>
+        <td class="center"><%= plan_accuracy1%></td>
+        <td class="right"><%= create_date1%></td>
         <td>申請中</td>
     </tr>
 
