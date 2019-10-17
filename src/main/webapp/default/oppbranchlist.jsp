@@ -87,9 +87,15 @@ function deleteRow(obj) {
     
     <tr>
         <td class="center"><%= change_category1%></td>
-        <td class="left"><%= plan_date1%></td>
-        <td class="right"><%= plan_amount1%></td>
-        <td class="center"><%= plan_accuracy1%></td>
+        <td class="left"><input type="date" value=<%= plan_date1%>/></td>
+        <td class="right"><input type="number" value=<%= plan_amount1%>/></td>
+        <td class="center">
+            <select name="plan_accuracy1">
+                <option value="A" selected>"A"</option>
+                <option value="B">"B"</option>
+                <option value="C">"C"</option>
+            </select> 
+        </td>
         <td class="left"><%= create_date1%></td>
         <td nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
     </tr>
@@ -97,7 +103,13 @@ function deleteRow(obj) {
         <td class="center"><%= change_category2%></td>
         <td class="left"><%= plan_date2%></td>
         <td class="right"><%= plan_amount2%></td>
-        <td class="center"><%= plan_accuracy2%></td>
+        <td class="center">
+            <select name="plan_accuracy2">
+                <option value="A">"A"</option>
+                <option value="B" selected>"B"</option>
+                <option value="C">"C"</option>
+            </select> 
+        </td>
         <td class="left"><%= create_date2%></td>
         <td nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
     </tr>
@@ -105,7 +117,13 @@ function deleteRow(obj) {
         <td class="center"><%= change_category3%></td>
         <td class="left"><%= plan_date3%></td>
         <td class="right"><%= plan_amount3%></td>
-        <td class="center"><%= plan_accuracy3%></td>
+       <td class="center">
+            <select name="plan_accuracy3">
+                <option value="A">"A"</option>
+                <option value="B">"B"</option>
+                <option value="C" selected>"C"</option>
+            </select> 
+        </td>
         <td class="left"><%= create_date3%></td>
         <td nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
     </tr>
