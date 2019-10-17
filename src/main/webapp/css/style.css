@@ -40,12 +40,14 @@ body {
 #footerleft {
     float: left;
     padding: 2px;
+    background-color: #3a3a3a;
 }
 
 #footerright {
     float: right;
     text-align: right;
     padding: 2px;
+    background-color: #3a3a3a;
 }
 
 #canvas-content {
@@ -140,16 +142,14 @@ table.oppBrListTable tr:ntn-child(odd){
 table.oppBrListTable th{
     font-size: 12px;
     font-weight: normal;
-    border-bottom: 1px;
-    border-color:#666666;
     background-color:#ad9dcf;
-    padding: 0;
-    border-bottom: 1px solid #333;
+    padding: 2px;
+    border-bottom: 1px solid #222;
 }
 
 table.oppBrListTable td{
     font-size: 12px;
-    padding: 0;
-    border-bottom: 1px dotted #333;
+    padding: 1px;
+    border-bottom: 1px solid #333;
 }
 
