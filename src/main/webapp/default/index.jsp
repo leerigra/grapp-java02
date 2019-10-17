@@ -12,10 +12,10 @@
 <body>
     <div id="content">
         <div class="content-header">
-            <h2></h2>
-            <h3>Canvasサンプルアプリケーション</h3>
-            <p>Salesforce ログインユーザ名: <span id='username'>${canvasRequest.context.userContext.userName}</span>
-               操作対象レコードID: <span id='comp_id'>${canvasRequest.context.environmentContext.parameters.Id}</span></p>
+            <h2>
+            Salesforce ログインユーザ名: <span id='username'>${canvasRequest.context.userContext.userName}</span><br/>
+            操作対象レコードID: <span id='comp_id'>${canvasRequest.context.environmentContext.parameters.Id}</span>
+            </h2>
         </div>
 
         <div class="content-subhedder">
