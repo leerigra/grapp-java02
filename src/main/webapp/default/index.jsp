@@ -12,15 +12,15 @@
 <body>
     <div id="content">
         <div class="content-header">
-             <h2>xx</h2>
-             <h3>Canvasサンプルアプリケーション</h3>
+            <h2></h2>
+            <h3>Canvasサンプルアプリケーション</h3>
+            <p>Salesforce ログインユーザ名: <span id='username'>${canvasRequest.context.userContext.userName}</span></p>
+            <p>操作対象レコードID: <span id='comp_id'>${canvasRequest.context.environmentContext.parameters.Id}</span></p>
         </div>
 
         <div class="content-subhedder">
             <h4>実行予定</h4>
             <jsp:include page="oppbranchlist.jsp"/>
-            <h4>Salesforceからの送信データ</h4>
-            <jsp:include page="context.jsp"/>
         </div>
  
         <div id="footer">
