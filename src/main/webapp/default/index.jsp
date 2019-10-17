@@ -16,7 +16,7 @@
              <h3>Canvasサンプルアプリケーション</h3>
         </div>
 
-        <div id="content-body">
+        <div class="content-body">
             <h4>実行予定</h4>
             <jsp:include page="oppbranchlist.jsp"/>
             <h4>Salesforceからの送信データ</h4>

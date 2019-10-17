@@ -23,7 +23,7 @@ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABI
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE. edit!
 --%>
-<div id="content-data">
+<div class="content-data">
   <table>
     <tr>
       <td><b>Salesforce ログインユーザ名: </b></td>
