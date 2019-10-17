@@ -10,13 +10,13 @@
 </head>
 
 <body>
-    <div class="content">
-        <div class="content-header">
+    <div id="content">
+        <div id="content-header">
              <h2>xx</h2>
              <h3>Canvasサンプルアプリケーション</h3>
         </div>
 
-        <div class="content-body">
+        <div id="content-body">
             <h4>実行予定</h4>
             <jsp:include page="oppbranchlist.jsp"/>
             <h4>Salesforceからの送信データ</h4>
@@ -24,7 +24,7 @@
         </div>
  
         
-        <div class="footer">
+        <div id="footer">
             <div id="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
                 </p>
