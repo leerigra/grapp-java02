@@ -1,9 +1,9 @@
 <%! 
   String change_category1="";
-  String plan_date1="2019/10/30";
-  String plan_amount1="1,000,000";
+  String plan_date1="2019-10-30";
+  String plan_amount1="1000000";
   String plan_accuracy1="A";
-  String create_date1="2019/10/15";
+  String create_date1="2019-10-15";
 
   String change_category2="";
   String plan_date2="2019/11/20";
@@ -71,6 +71,27 @@ function deleteRow(obj) {
     // trのインデックスを取得して行を削除する
     tr.parentNode.deleteRow(tr.sectionRowIndex);
 }
+
+/**************************
+ * カンマ編集を行うFunction
+ **************************/
+function toComma(obj){
+  if((obj.value).trim().length != 0 && !isNaN(obj.value)){
+    obj.value = Number(obj.value).toLocaleString();
+  }
+}
+ 
+/**************************
+ * カンマ編集を解除するFunction
+ **************************/
+function offComma(obj){
+  var reg = new RegExp(",", "g");
+  var chgVal = obj.value.replace(reg, "");
+  if(!isNaN(chgVal)){
+    obj.value = chgVal;  //値セット
+    obj.select();        //全選択
+  }
+}
 </script>
 
 <input type="button" value="行追加" onclick="insertRow('BranchList')" />
@@ -88,12 +109,12 @@ function deleteRow(obj) {
     <tr>
         <td class="center"><%= change_category1%></td>
         <td class="left"><input type="date" value=<%= plan_date1%>/></td>
-        <td class="right"><input type="number" value=<%= plan_amount1%>/></td>
+        <td class="right"><input type="text" onfocus="offComma(this);" onblur="toComma(this); value=<%= plan_amount1%>/></td>
         <td class="center">
             <select name="plan_accuracy1">
-                <option value="A" selected>"A"</option>
-                <option value="B">"B"</option>
-                <option value="C">"C"</option>
+                <option value="A" selected>A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
             </select> 
         </td>
         <td class="left"><%= create_date1%></td>
@@ -105,9 +126,9 @@ function deleteRow(obj) {
         <td class="right"><%= plan_amount2%></td>
         <td class="center">
             <select name="plan_accuracy2">
-                <option value="A">"A"</option>
-                <option value="B" selected>"B"</option>
-                <option value="C">"C"</option>
+                <option value="A">A</option>
+                <option value="B" selected>B</option>
+                <option value="C">C</option>
             </select> 
         </td>
         <td class="left"><%= create_date2%></td>
@@ -119,9 +140,9 @@ function deleteRow(obj) {
         <td class="right"><%= plan_amount3%></td>
        <td class="center">
             <select name="plan_accuracy3">
-                <option value="A">"A"</option>
-                <option value="B">"B"</option>
-                <option value="C" selected>"C"</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C" selected>C</option>
             </select> 
         </td>
         <td class="left"><%= create_date3%></td>
