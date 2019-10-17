@@ -45,7 +45,7 @@
     </tr>
     
     <tr>
-        <td class="center"><%= plan_date3%></td>
+        <td class="left"><%= plan_date3%></td>
         <td class="right"><%= plan_amount3%></td>
         <td class="center"><%= plan_accuracy3%></td>
         <td class="left"><%= create_date3%></td>
