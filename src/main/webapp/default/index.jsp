@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <div id="content">
-        <div id="content-header">
+    <div class="content">
+        <div class="content-header">
              <h2>xx</h2>
              <h3>Canvasサンプルアプリケーション</h3>
         </div>

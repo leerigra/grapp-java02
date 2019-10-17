@@ -18,7 +18,7 @@ body {
     font-family: "Arial", "Helvetica", "sans-serif";
 }
 
-#content {
+div.content {
     float: left;
     background-color: #FFFFFF;
     border: 1px solid #aaa;
@@ -26,11 +26,11 @@ body {
     width : 99%;
 }
 
-#content-body {
+div.content-body {
     margin-left: 10px;
 } 
 
-#content-data {
+div.content-data {
     margin-left: 20px;
 } 
 
