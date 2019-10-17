@@ -35,7 +35,18 @@ body {
     padding-right: 30px
 }
 
-#header h2 {
+a {
+    color: #015BA7
+}
+
+a:hover {
+    background-color: #015BA7;
+    color: white;
+    text-decoration: none
+}
+
+
+h2 {
     height: 50px;
     color: #000000;
     font-size: 24px;
@@ -47,13 +58,22 @@ body {
     background-position: left 5px bottom 2px;
 }
 
-#header h3 {
+h3 {
     color: #000000;
     font-size: 24px;
     font-weight: normal;
     background-color: #d1bada;
     margin: 5px;
     padding: 10px;
+}
+
+h4 {
+    background-color: #7058a3;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 18px;
+    padding: 5px;
+    margin-left: 15px;
 }
 
 div.content-data {
