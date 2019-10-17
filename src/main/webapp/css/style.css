@@ -123,10 +123,9 @@ div.content-data {
 table.oppBrListTable{
     width: 80%;
     border-collapse: collapse;
+    border-bottom:1px solid #333;
     border-spacing: 0;
     margin-left:10px;
-    background-color: #579cf1;
-
 } 
 
 
@@ -140,12 +139,12 @@ table.oppBrListTable tr:ntn-child(odd){
 }
 
 table.oppBrListTable th{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     border-bottom: 1px;
     border-color:#666666;
     background-color:#ad9dcf;
-    padding: 1px;
+    padding: 5px;
 }
 
 table.oppBrListTable td{
