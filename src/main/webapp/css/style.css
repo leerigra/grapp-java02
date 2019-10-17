@@ -39,11 +39,13 @@ body {
 
 #footerleft {
     float: left;
+    padding: 2px;
 }
 
 #footerright {
     float: right;
     text-align: right;
+    padding: 2px;
 }
 
 #canvas-content {
@@ -63,13 +65,13 @@ a:hover {
 
 
 div.content-header h2 {
-    height: 40px;
+    height: 50px;
     background-color: #FFFFFF;
     border-bottom: medium solid #4b0082;
 	background-image:url(../images/heroku.png);	/*背景画像*/
 	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
     background-position: left 5px bottom 2px;
-    padding: 1px;
+    padding: 0px;
     color: #5f5f5f;
     font-size: 9px;
     font-weight: normal;
