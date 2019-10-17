@@ -43,11 +43,11 @@ function insertRow(id) {
     var row_len = table.rows.length;
  
     // セルの内容入力
-    cell1.innerHTML = "";
-    cell2.innerHTML = "";
-    cell3.innerHTML = "";
-    cell4.innerHTML = "";
-    cell5.innerHTML = "";
+    cell1.innerHTML = "a";
+    cell2.innerHTML = "b";
+    cell3.innerHTML = "c";
+    cell4.innerHTML = "d";
+    cell5.innerHTML = "&nbsp;";
     cell6.innerHTML = button;
 
 }
