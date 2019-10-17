@@ -97,12 +97,12 @@ div.content-header h2 {
 }
 
 div.content-header h3 {
-    color: #000000;
+    color: #ffffff;
     font-size: 18px;
     font-weight: normal;
-    background-color: #a98fe2;
-    margin: 5px;
-    padding: 10px;
+    background-color: #5a5a5a;
+    margin: 0px;
+    padding: 1px;
 }
 
 div.content-header p {

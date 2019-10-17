@@ -21,16 +21,16 @@
         </div>
         
         <div class="content-header">
-            <h3>枝口リスト</h4>
+            <h3>枝口リスト</h3>
+            <div class="content-navi">
+                <ul id="nav">
+                    <li><a href="#">キャンセル</a></li>
+                    <li><a href="#">保存</a></li>
+                    <li><a href="#">行削除</a></li>
+                    <li><a href="#">行追加</a></li>
+                </ul>
+            </div>
             <jsp:include page="oppbranchlist.jsp"/>
-        </div>
-        <div class="content-navi">
-            <ul id="nav">
-                <li><a href="#">行追加</a></li>
-                <li><a href="#">行削除</a></li>
-                <li><a href="#">保存</a></li>
-                <li><a href="#">キャンセル</a></li>
-            </ul>
         </div>
         <br/>
         <div class="content-footer">

@@ -11,7 +11,7 @@
   String plan_accuracy2="B";
   String create_date2="2019/10/15";
 
-  String change_category3="";
+  String change_category3="新規";
   String plan_date3="2019/12/10";
   String plan_amount3="3,000,000";
   String plan_accuracy3="C";
