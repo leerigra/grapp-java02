@@ -51,7 +51,7 @@ a:hover {
 
 
 div.content-header h2 {
-    height: 30px;
+    height: 40px;
     background-color: #FFFFFF;
     border-bottom: medium solid #4b0082;
 	background-image:url(../images/heroku.png);	/*背景画像*/
@@ -65,6 +65,7 @@ div.content-header h2 {
 }
 
 .right{
+    padding: 0px;
     text-align: right;
 }
 
