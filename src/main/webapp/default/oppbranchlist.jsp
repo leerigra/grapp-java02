@@ -37,16 +37,16 @@ function insertRow(id) {
     var cell5 = row.insertCell(-1);
     
     // ボタン用 HTML
-    var button = '<input type="button" value="行削除" onclick="deleteRow(this)" />';
+    var button = "<input type="button" value="行削除" onclick="deleteRow(this)" />";
  
     // 行数取得
     var row_len = table.rows.length;
  
     // セルの内容入力
-    cell1.innerHTML = "a";
-    cell2.innerHTML = "b";
-    cell3.innerHTML = "c";
-    cell4.innerHTML = "d";
+    cell1.innerHTML = "&nbsp;";
+    cell2.innerHTML = "&nbsp;";
+    cell3.innerHTML = "&nbsp;";
+    cell4.innerHTML = "&nbsp;";
     cell5.innerHTML = "&nbsp;";
     cell6.innerHTML = button;
 
