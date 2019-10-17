@@ -34,18 +34,16 @@ div.content-footer {
     clear: both;
     font-size: 9px;
     color: #ffffff;
-    background-color: #3a3a3a;
+    background-color: #2a46e4;
     padding:1px;
 }
 
 div.footerleft {
     float: left;
-    opacity: 0.2;
 }
 
 div.footerright {
     float: right;
-    opacity: 0.2;
 }
 
 #canvas-content {
