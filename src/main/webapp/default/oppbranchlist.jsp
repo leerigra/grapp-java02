@@ -14,7 +14,7 @@
   String plan_accuracy3="C";
   String create_date3="2019/10/15";
 %>
-<div class="content-data">
+<div id="content-data">
 <table class="oppBrListTable">
     <tr>
         <th>実行／払込予定日</th>
