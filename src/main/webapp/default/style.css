@@ -50,7 +50,7 @@ a:hover {
 }
 
 
-div#content-header h2 {
+h2.content-header  {
     height: 50px;
     color: #000000;
     font-size: 24px;
@@ -62,7 +62,7 @@ div#content-header h2 {
     background-position: left 5px bottom 2px;
 }
 
-div#content-header h3 {
+h3.content-header  {
     color: #000000;
     font-size: 24px;
     font-weight: normal;
@@ -71,7 +71,7 @@ div#content-header h3 {
     padding: 10px;
 }
 
-div#content-body h4 {
+h4.content-subhedder {
     background-color: #7058a3;
     color: #ffffff;
     font-weight: normal;

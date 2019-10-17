@@ -11,15 +11,15 @@
 
 <body>
     <div id="content">
-        <div id="content-header">
-             <h2>xx</h2>
-             <h3>Canvasサンプルアプリケーション</h3>
+        <div>
+             <h2 class="content-header">xx</h2>
+             <h3 class="content-header">Canvasサンプルアプリケーション</h3>
         </div>
 
-        <div id="content-body">
-            <h4>実行予定</h4>
+        <div>
+            <h4 class="content-subhedder">実行予定</h4>
             <jsp:include page="oppbranchlist.jsp"/>
-            <h4>Salesforceからの送信データ</h4>
+            <h4 class="content-subhedder">Salesforceからの送信データ</h4>
             <jsp:include page="context.jsp"/>
         </div>
  
