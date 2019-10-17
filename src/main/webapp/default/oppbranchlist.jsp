@@ -108,7 +108,7 @@ function offComma(obj){
     
     <tr>
         <td class="center"><%= change_category1%></td>
-        <td class="left"><input type="date" value=<%= plan_date1%>/></td>
+        <td class="left"><input type="date" value="2019-10-30"/></td>
         <td class="right"><input type="text" value=<%= plan_amount1%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
             <select name="plan_accuracy1">
