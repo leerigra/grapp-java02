@@ -37,6 +37,8 @@ function insertRow(id) {
     var cell5 = row.insertCell(-1);
     var cell6 = row.insertCell(-1);
     
+
+    
     
     // ボタン用 HTML
     var del_button = '<input type="button" value="行削除" onclick="deleteRow(this)" />';
@@ -50,6 +52,13 @@ function insertRow(id) {
     cell4.innerHTML = "&nbsp;";
     cell5.innerHTML = "&nbsp;";
     cell6.innerHTML = del_button;
+
+    cell1.setAttribute("class","center");
+    cell2.setAttribute("class","left");
+    cell3.setAttribute("class","right");
+    cell4.setAttribute("class","center");
+    cell5.setAttribute("class","left");
+   
 
 }
  
