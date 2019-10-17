@@ -33,10 +33,7 @@
         </div>
 
         <div class="content-subhedder">
-            <h4>実行予定</h4>
-h1に入れ子でボタンを配置して、h1にposition relativeを指定、ボタンにposition absoluteで位置指定すれば良いです。
-
-
+            <h4>枝口リスト</h4>
             <jsp:include page="oppbranchlist.jsp"/>
         </div>
         <br/>
