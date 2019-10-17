@@ -47,7 +47,7 @@ function insertRow(id) {
     cell3.innerHTML = '\t';
     cell4.innerHTML = '\t';
     cell5.innerHTML = '\t';
-    cell6.innerHTML = '<input type="button" value="行削除" onclick="deleteRow(this)>';
+    cell6.innerHTML = '<input type="button" value="行削除" onclick="deleteRow(this)">';
 
 }
  
