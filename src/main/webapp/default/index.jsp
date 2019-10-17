@@ -25,7 +25,7 @@
             <jsp:include page="oppbranchlist.jsp"/>
         </div>
  
-        <div class="footer">
+        <div class="content-footer">
             <div class="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
                 </p>

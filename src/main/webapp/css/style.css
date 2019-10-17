@@ -30,7 +30,7 @@ body {
     margin-left: 10px;
 } 
 
-div.footer {
+div.content-footer {
     clear: both;
     font-size: 9px;
     color: #ffffff;
@@ -40,10 +40,12 @@ div.footer {
 
 div.footerleft {
     float: left;
+    opacity: 0.2;
 }
 
 div.footerright {
     float: right;
+    opacity: 0.2;
 }
 
 #canvas-content {
