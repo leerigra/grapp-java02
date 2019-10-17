@@ -25,12 +25,12 @@
             <jsp:include page="oppbranchlist.jsp"/>
         </div>
  
-        <div id="footer">
-            <div id="footerleft">
+        <div class="footer">
+            <div class="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
                 </p>
             </div>
-            <div id="footerright">
+            <div class="footerright">
                 <p>Salesforce: <a title="Safe Harbor" href="http://www.salesforce.com/company/investor/safe_harbor.jsp"><strong>SafeHarbor</strong></a>
                 </p>
             </div>

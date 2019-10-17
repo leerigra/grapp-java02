@@ -30,24 +30,20 @@ body {
     margin-left: 10px;
 } 
 
-#footer {
+div.footer {
     clear: both;
     font-size: 9px;
     color: #ffffff;
     background-color: #3a3a3a;
+    padding:1px;
 }
 
-#footerleft {
+div.footerleft {
     float: left;
-    padding: 2px;
-    background-color: #3a3a3a;
 }
 
-#footerright {
+div.footerright {
     float: right;
-    text-align: right;
-    padding: 2px;
-    background-color: #3a3a3a;
 }
 
 #canvas-content {
