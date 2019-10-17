@@ -32,19 +32,21 @@ body {
 
 div.content-footer {
     clear: both;
-    height: 30px;
-    font-size: 9px;
+    height: 25px;
+    font-size: 10px;
     color: #ffffff;
-    background-color: #333;
+    background-color: #555;
     padding:1px;
 }
 
 div.footerleft {
     float: left;
+    margin-left:5px;
 }
 
 div.footerright {
     float: right;
+    margin-right:5px;
 }
 
 #canvas-content {
@@ -141,13 +143,13 @@ table.oppBrListTable th{
     font-size: 12px;
     font-weight: normal;
     background-color:#ad9dcf;
-    padding: 2px;
+    padding: 5px;
     border-bottom: 1px solid #222;
 }
 
 table.oppBrListTable td{
     font-size: 12px;
-    padding: 1px;
-    border-bottom: 1px solid #333;
+    padding: 5px;
+    border-bottom: 1px solid #777;
 }
 
