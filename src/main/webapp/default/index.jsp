@@ -25,13 +25,13 @@
         </div>
 
         <div class="content-subhedder">
-            <h4>実行予定</h4>
+            <h4>実行予定
             <ul id="nav">
                 <li><a href="#">MENU1</a></li>
                 <li><a href="#">MENU2</a></li>
                 <li><a href="#">MENU3</a></li>
             <li><a href="#">MENU4</a></li>
-            </ul>
+            </ul></h4>
 h1に入れ子でボタンを配置して、h1にposition relativeを指定、ボタンにposition absoluteで位置指定すれば良いです。
 
 
