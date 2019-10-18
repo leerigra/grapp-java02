@@ -25,13 +25,10 @@
 
             <div class="content-navi">
                 <ul id="nav">
-                    <li><a href="#">キャンセル</a></li>
-                    <li><a href="#">保存</a></li>
-                    
+                    <li><a href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
+                    <li><a href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>                   
                 </ul>
                 <br/>
-            <input type="button" value="キャンセル" onclick="btnCancel_Click();"/>
-            <input type="button" value="OK" onclick="btnOK_click();"/><br />
             </div>
         </div>
         <br/>

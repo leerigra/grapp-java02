@@ -22,9 +22,10 @@
 
 <script type="text/javascript" src="/scripts/util.js"></script>
  
-<input type="button" value="行追加" onclick="insertRow('BranchList')" />
 <div class="content-data">
-<table class="oppBrListTable" id="BranchList">
+    <input type="button" value="行追加" onclick="insertRow('BranchList')" />
+
+    <table class="oppBrListTable" id="BranchList">
     <tr>
         <th>変更区分</th>
         <th>実行／払込予定日</th>
