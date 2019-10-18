@@ -23,7 +23,7 @@
 <script type="text/javascript" src="/scripts/util.js"></script>
  
 <div class="content-data">
-    <input type="button" value="行追加" onclick="insertRow('BranchList')" />
+    <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchList')" />
 
     <table class="oppBrListTable" id="BranchList">
     <tr>
