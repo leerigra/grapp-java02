@@ -86,7 +86,7 @@ div.content-header h2 {
     background-position: left 5px bottom 2px;
     padding: 0px;
     color: #5f5f5f;
-    font-size: 9px;
+    font-size: 8px;
     font-weight: normal;
     margin:0 0 0 auto;
 }
@@ -185,6 +185,7 @@ table.oppBrListTable td{
     padding:5px 0 5px;
     border-radius:5px;
     display:block;
+    box-shadow:2px 2px 2px #555;
 }
 .btnCancel {
     color:#8574ad;
@@ -197,4 +198,5 @@ table.oppBrListTable td{
     padding:5px 0 5px;
     border-radius:5px;
     display:block;
+    box-shadow:2px 2px 2px #555;
 }
