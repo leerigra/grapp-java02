@@ -18,7 +18,7 @@ body {
     font-family: "Arial", "Helvetica", "sans-serif";
 }
 
-.content {
+div.content {
     float: left;
     background-color: #FFFFFF;
     border: 1px solid #aaa;
@@ -26,16 +26,16 @@ body {
     width : 99%;
 }
 
-.content-body {
+div.content-body {
     margin-left: 10px;
 } 
 
 
-.content-navi {
+div.content-navi {
     margin: 10px;
 }
 
-.content-footer {
+div.content-footer {
     clear: both;
     height: 25px;
     font-size: 10px;
@@ -74,7 +74,7 @@ a:hover {
 }
 
 
-.content-header h2 {
+div.content-header h2 {
     height: 50px;
     background-color: #FFFFFF;
     border-bottom: medium solid #4b0082;
