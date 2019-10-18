@@ -184,7 +184,7 @@ table.oppBrListTable td{
     text-align:center;
     padding:5px 0 5px;
     border-radius:5px;
-    display:block;
+    display:inline-block;
     box-shadow:2px 2px 2px #555;
 }
 .btnCancel {
@@ -199,6 +199,6 @@ table.oppBrListTable td{
     text-align:center;
     padding:5px 0 5px;
     border-radius:5px;
-    display:block;
+    display:inline-block;
     box-shadow:2px 2px 2px #555;
 }
