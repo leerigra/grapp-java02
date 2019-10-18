@@ -19,11 +19,11 @@
             </p>
             </h2>
         </div>
-        <div class="content-header">
+        <div id="content-body">
             <h3>枝口リスト</h3>
             <jsp:include page="oppbranchlist.jsp"/>
 
-            <div class="content-navi">
+            <div id="content-navi">
                 <div id="nav">
                     <ul>
                     <li class="btnOK"><a href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <br/>
-        <div class="content-footer">
+        <div id="content-footer">
             <div class="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
                 </p>
