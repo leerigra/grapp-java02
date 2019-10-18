@@ -1,0 +1,204 @@
+
+body {
+    font-family: "Meiryo UI", "Arial", "Helvetica", "sans-serif";
+    font-size: 90%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    background-color: #dcdcdc;
+}
+
+#page {
+    background-color: #FFFFFF;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#dimensions {
+    font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+#content {
+    float: left;
+    background-color: #FFFFFF;
+    border: 1px solid #aaa;
+    height : 99%;
+    width : 99%;
+}
+
+#content-body {
+    margin-left: 10px;
+} 
+
+
+div.content-navi {
+    clear: both;
+    height: 20px;
+    padding: 5px;
+    margin: 10px;
+}
+
+div.content-footer {
+    clear: both;
+    height: 25px;
+    font-size: 10px;
+    color: #ffffff;
+    background-color: #555;
+    padding:1px;
+}
+
+div.footerleft {
+    float: left;
+    margin-left:5px;
+}
+
+div.footerright {
+    float: right;
+    margin-right:5px;
+}
+
+#canvas-content {
+    padding-left: 0px;
+    padding-right: 30px;
+}
+
+a {
+    color: #015BA7;
+}
+
+input {
+        font-size: 12px;
+}
+
+a:hover {
+    background-color: #015BA7;
+    color: white;
+    text-decoration: none;
+}
+
+
+div.content-header h2 {
+    height: 50px;
+    background-color: #FFFFFF;
+    border-bottom: medium solid #4b0082;
+	background-image:url(../images/heroku.png);	/*背景画像*/
+	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
+    background-position: left 5px bottom 2px;
+    padding: 0px;
+    color: #5f5f5f;
+    font-size: 8px;
+    font-weight: normal;
+    margin:0 0 0 auto;
+}
+
+.left{
+    text-align: left;
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+
+div.content-header h3 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: #5a5a5a;
+    margin: 2px;
+    padding: 2px;
+}
+
+div.content-header p {
+    color: #000000;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 10px;
+}
+
+div.content-subhedder h4 {
+    background-color: #7058a3;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 18px;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+
+div.content-data {
+    margin-left: 20px;
+    padding: 10px;
+} 
+
+table.oppBrListTable{
+    width: 95%;
+    border-collapse: collapse;
+    border-spacing: 0;
+} 
+
+
+table.oppBrListTable tr{
+    /*background-color: #ffffff;*/
+    
+}
+
+table.oppBrListTable tr:ntn-child(odd){
+    background-color: #bfd7f5;
+}
+
+table.oppBrListTable th{
+    font-size: 12px;
+    font-weight: normal;
+    background-color:#ad9dcf;
+    padding: 5px;
+    border-bottom: 1px solid #222;
+}
+
+table.oppBrListTable td{
+    font-size: 12px;
+    padding: 5px;
+    border-bottom: 1px solid #777;
+}
+
+.table_btn {
+  margin-left:2px;
+  margin-bottom:2px;
+}
+ 
+
+.navbtn {
+  float: right;
+}
+ 
+
+.btnOK {
+    color:#fff;
+    background-color:#8574ad;
+    width:80px;
+    font-size:12px;
+    text-decoration:none;
+    text-align:center;
+    padding:5px 0 5px;
+    border-radius:5px;
+    display:block;
+    box-shadow:2px 2px 2px #555;
+}
+.btnCancel {
+    color:#8574ad;
+    border-color:#8574ad;
+    border-width: 1px;
+
+    background-color:#ffffff;
+    width:80px;
+    font-size:12px;
+    text-decoration:none;
+    text-align:center;
+    padding:5px 0 5px;
+    border-radius:5px;
+    display:block;
+    box-shadow:2px 2px 2px #555;
+}

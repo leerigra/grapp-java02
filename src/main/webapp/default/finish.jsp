@@ -26,6 +26,11 @@ POSSIBILITY OF SUCH DAMAGE.
 <html>
 <!DOCTYPE html>
 <html>
+<% 
+  String strId=request.getParameter("ojbID");
+  String strDescription=request.getParameter("description");
+%>
+
 <head>
     <title>Force.com Canvas Java Quick Start</title>
 
@@ -34,7 +39,12 @@ POSSIBILITY OF SUCH DAMAGE.
 
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
- 
+
+    <script>
+        function clickBack(){
+	        history.back();
+    }
+</script>
 </head>
 <body>
     <div id="content">
@@ -45,11 +55,18 @@ POSSIBILITY OF SUCH DAMAGE.
 
         <div id="content-data">
             <h4>申請完了</h4>
-			<p>申請が完了しました</p>
-			<p>申請対象Id: ${canvasRequest.context.environmentContext.record.Id}</p>
+            <div id="fin_msg">
+			    <b>申請が完了しました</b><br/>
+			    申請対象Id: <%= strId%><br/>
+			    申請内容: <%= strDescription%><br/>        
+                <br/>
+                <input type="button" value="back" onclick="clickBack()"/>
+            </div>
+
         </div>
  
-        
+ 
+
         <div id="footercont">
             <div id="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>

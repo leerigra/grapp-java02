@@ -1,0 +1,116 @@
+
+body {
+    font-family: "Meiryo UI", "Arial", "Helvetica", "sans-serif";
+    font-size: 90%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    background-color: #dcdcdc;
+}
+
+#page {
+    background-color: #FFFFFF;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#dimensions {
+    font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+#content {
+    float: left;
+    background-color: #FFFFFF;
+    border: 1px solid #aaa;
+    height : 99%;
+    width : 99%;
+}
+
+#content-body {
+    margin-left: 10px;
+} 
+
+#footer {
+    clear: both;
+}
+
+#canvas-content {
+    padding-left: 0px;
+    padding-right: 30px;
+}
+
+a {
+    color: #015BA7;
+}
+
+a:hover {
+    background-color: #015BA7;
+    color: white;
+    text-decoration: none;
+}
+
+
+h2.content-header  {
+    height: 50px;
+    color: #000000;
+    font-size: 24px;
+    font-weight: normal;
+    background-color: #FFFFFF;
+    border-bottom: medium solid #4b0082;
+	background-image:url(../images/heroku.png);	/*背景画像*/
+	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
+    background-position: left 5px bottom 2px;
+}
+
+h3.content-header  {
+    color: #000000;
+    font-size: 24px;
+    font-weight: normal;
+    background-color: #d1bada;
+    margin: 5px;
+    padding: 10px;
+}
+
+h4.content-subhedder {
+    background-color: #7058a3;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 18px;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+
+div.content-data {
+    margin-left: 20px;
+} 
+
+table.oppBrListTable{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left:10px;
+    background-color: #579cf1;
+
+} 
+
+
+table.oppBrListTable tr{
+    background-color: #ffffff;
+}
+
+table.oppBrListTable tr:ntn-child(odd){
+    background-color: #bfd7f5;
+}
+
+table.oppBrListTable th{
+    font-size: 12px;
+    border-bottom: 1px;
+    border-color:#666666;
+    background-color:#7058a3;
+}
+
+table.oppBrListTable td{
+    font-size: 10px;
+}
+

@@ -23,9 +23,8 @@ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABI
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE. edit!
 --%>
-
-<div id="sfdc_context">
-  <table border="0" width="100%">
+<div class="content-data">
+  <table>
     <tr>
       <td><b>Salesforce ログインユーザ名: </b></td>
       <td><span id='username'>${canvasRequest.context.userContext.userName}</span></td>
@@ -34,20 +33,30 @@ POSSIBILITY OF SUCH DAMAGE. edit!
       <td><b>Salesforce ログインユーザID: </b></td>
       <td><span id='userId'>${canvasRequest.context.userContext.userId}</span></td>
     </tr>
-    
+      <tr>
+        <td><b>displayLocation: </b></td>
+        <td><span id='displayLocation'>${canvasRequest.context.environmentContext.displayLocation}</span></td>
+      </tr>
+
     <c:if test="${!empty canvasRequest.context.environmentContext.record.Id}">
       <tr>
         <td><b>Salesforceオブジェクト: </b></td>
         <td><span id='type'>${canvasRequest.context.environmentContext.record.attributes.type}</span></td>
       </tr>
+
       <tr>
-        <td><b>レコードID: </b></td>
+        <td><b>レコードID(from Page): </b></td>
         <td><span id='Id'>${canvasRequest.context.environmentContext.record.Id}</span></td>
       </tr>
-<tr>
-        <td><b>Name: </b></td>
-        <td><span id='Name'>${canvasRequest.context.environmentContext.record.Name}</span></td>
-      </tr>
     </c:if>
+
+      <tr>
+        <td><b>レコードID(from AuraComponent): </b></td>
+        <td><span id='comp_id'>${canvasRequest.context.environmentContext.parameters.Id}</span></td>
+      </tr>
+      <tr>
+        <td><b>Name(from AuraComponent): </b></td>
+        <td><span id='comp_Name'>${canvasRequest.context.environmentContext.parameters.Name}</span></td>
+      </tr>
   </table>
 </div>

@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  
+    <script type="text/javascript" src="/scripts/json2.js"></script>
+    <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
+
+    <title>Force.com Canvas Java Quick Start</title>
+</head>
+
+<body>
+    <div id="content">
+        <div>
+             <h2 class="content-header">xx</h2>
+             <h3 class="content-header">Canvasサンプルアプリケーション</h3>
+        </div>
+
+        <div>
+            <h4 class="content-subhedder">実行予定</h4>
+            
+<div class="content-data">
+<table class="oppBrListTable">
+    <tr>
+        <th>実行／払込予定日</th>
+        <th>実行／払込予定額（現通貨）</th>
+        <th>実行／払込確度</th>
+        <th>作成日時</th>
+        <th>資金化への申請状況</th>
+    </tr>
+    
+    <tr>
+        <td>2019/10/30</td>
+        <td>1,000,000</td>
+        <td>A</td>
+        <td>2019/10/15</td>
+        <td>申請中</td>
+    </tr>
+
+    <tr>
+        <td>2019/11/20</td>
+        <td>2,000,000</td>
+        <td>B</td>
+        <td>2019/10/15</td>
+        <td>&nbsp;</td>
+    </tr>
+    
+    <tr>
+        <td>2019/12/10</td>
+        <td>3,000,000</td>
+        <td>C</td>
+        <td>2019/10/15</td>
+        <td>&nbsp;</td>
+    </tr>
+        
+</table>
+</div>
+
+            <h4 class="content-subhedder">Salesforceからの送信データ</h4>
+            
+<div class="content-data">
+  <table>
+    <tr>
+      <td><b>Salesforce ログインユーザ名: </b></td>
+      <td><span id='username'>xogawa.naoko@dbj.contract.isid.co.jp.citsdev01x</span></td>
+    </tr>
+    <tr>
+      <td><b>Salesforce ログインユーザID: </b></td>
+      <td><span id='userId'>0057F000002Fh5RQAS</span></td>
+    </tr>
+      <tr>
+        <td><b>displayLocation: </b></td>
+        <td><span id='displayLocation'>Aura</span></td>
+      </tr>
+
+    <c:if test="false">
+      <tr>
+        <td><b>Salesforceオブジェクト: </b></td>
+        <td><span id='type'></span></td>
+      </tr>
+
+      <tr>
+        <td><b>レコードID(from Page): </b></td>
+        <td><span id='Id'></span></td>
+      </tr>
+    </c:if>
+
+      <tr>
+        <td><b>レコードID(from AuraComponent): </b></td>
+        <td><span id='comp_id'>0060k0000091Sc4AAE</span></td>
+      </tr>
+      <tr>
+        <td><b>Name(from AuraComponent): </b></td>
+        <td><span id='comp_Name'></span></td>
+      </tr>
+  </table>
+</div>
+
+        </div>
+ 
+        
+        <div id="footer">
+            <div id="footerleft">
+                <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
+                </p>
+            </div>
+            <div id="footerright">
+                <p>Salesforce: <a title="Safe Harbor" href="http://www.salesforce.com/company/investor/safe_harbor.jsp"><strong>SafeHarbor</strong></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -12,5 +12,6 @@
             "server": "ec2-107-22-160-185.compute-1.amazonaws.com",
             "username": "uxsvvqdujoyrti"
         }
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
