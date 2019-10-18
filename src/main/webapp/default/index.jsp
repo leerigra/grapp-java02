@@ -24,10 +24,9 @@
             <jsp:include page="oppbranchlist.jsp"/>
 
             <div class="content-navi">
-                <ul id="nav">
-                    <li class="btnCancel" ><a href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
-                    <li class="btnOK" ><a href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>                   
-                </ul>
+
+                <a class="btnOK" href="javascript:void(0)" onclick="btnOK_click()">保存</a>
+                <a class="btnCancel" href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a>
                 <br/>
             </div>
         </div>
