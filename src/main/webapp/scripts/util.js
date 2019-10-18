@@ -72,30 +72,3 @@ function offComma(obj){
 }
 
 
-/**************************
- * 日付のスラッシュ編集を行うFunction
- **************************/
-function toDateFormat(obj){
-  if((obj.value).trim().length != 0 && !isNaN(obj.value)){
-    obj.value = Date(obj.value).
-
-  var year = obj.value.getFullYear()
-  var month = obj.value.getMonth() + 1;
-  var day = obj.value.getDate();
-
-  obj.value = year + '/' + month + '/' + day + '/'
-
-  }
-}
-
-/**************************
- * カンマ編集を解除するFunction
- **************************/
-function offDateFormat(obj){
-  var reg = new RegExp(",", "g");
-  var chgVal = obj.value.replace(reg, "");
-  if(!isNaN(chgVal)){
-    obj.value = chgVal;  //値セット
-    obj.select();        //全選択
-  }
-}
