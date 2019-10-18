@@ -3,19 +3,19 @@
   String plan_date1="2019/10/30";
   String plan_amount1="1,000,000";
   String plan_accuracy1="A";
-  String create_date1="2019-10-15";
+  String create_date1="2019/10/15 12:00";
 
   String change_category2="";
   String plan_date2="2019/11/20";
   String plan_amount2="2,000,000";
   String plan_accuracy2="B";
-  String create_date2="2019/10/15";
+  String create_date2="2019/10/15 10:00";
 
   String change_category3="新規";
   String plan_date3="2019/12/10";
   String plan_amount3="3,000,000";
   String plan_accuracy3="C";
-  String create_date3="2019/10/15";
+  String create_date3="2019/10/15 11:00";
 
 
 %>
@@ -36,7 +36,7 @@
     
     <tr>
         <td class="center"><%= change_category1 %></td>
-        <td class="left"><input type="text" size="8" value=<%= plan_date1 %>/></td>
+        <td class="left"><input type="text" size="10" value=<%= plan_date1 %>/></td>
         <td class="right"><input type="text" size="18" class="right" value=<%= plan_amount1 %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
             <select name="plan_accuracy1">
@@ -51,7 +51,7 @@
     </tr>
     <tr>
         <td class="center"><%= change_category2 %></td>
-        <td class="left"><input type="text" size="8" value=<%= plan_date2 %>/></td>
+        <td class="left"><input type="text" size="10" value=<%= plan_date2 %>/></td>
         <td class="right"><input type="text" class="right" size="18" value=<%= plan_amount3 %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
             <select name="plan_accuracy2">
@@ -66,7 +66,7 @@
     </tr>
     <tr>
         <td class="center"><%= change_category3 %></td>
-        <td class="left"><input type="text" size="8" value=<%= plan_date3 %>/></td>
+        <td class="left"><input type="text" size="10" value=<%= plan_date3 %>/></td>
         <td class="right"><input type="text" class="right" size="18" value=<%= plan_amount3 %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
        <td class="center">
             <select name="plan_accuracy3">
