@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div>
+    <div id="content">
         <div id="content-header">
             <h2>
             <p class="right">
