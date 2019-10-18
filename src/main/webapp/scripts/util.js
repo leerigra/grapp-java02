@@ -17,16 +17,16 @@ function insertRow(id) {
 
     // ボタン用 HTML
     var delButton = '<input type="button" value="行削除" onclick="deleteRow(this)" />';
-    var inText='<input type="text" class="right" onfocus="offComma(this)" onblur="toComma(this)" />';
+    var inNumber='<input type="text" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" />';
     var inSelect='<select><option value=""></option><option value="A">A</option> <option value="B">B</option> <option value="C">C</option> </select>'
-    var inDate='<input type="string"/>';
+    var inDate='<input type="string" size="8" />';
     // 行数取得
     var row_len = table.rows.length;
  
     // セルの内容入力
     cell1.innerHTML = "追加";
     cell2.innerHTML = inDate;
-    cell3.innerHTML = inText;
+    cell3.innerHTML = inNumber;
     cell4.innerHTML = inSelect;
     cell5.innerHTML = "&nbsp;";
     cell6.innerHTML = delButton;

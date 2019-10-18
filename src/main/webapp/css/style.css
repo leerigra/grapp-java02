@@ -66,6 +66,10 @@ a {
     color: #015BA7;
 }
 
+input {
+        font-size: 12px;
+}
+
 a:hover {
     background-color: #015BA7;
     color: white;
