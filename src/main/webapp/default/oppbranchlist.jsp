@@ -123,7 +123,7 @@ function offComma(obj){
         <td nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
     </tr>
     <tr>
-        <td class="center"><%= change_category 2%></td>
+        <td class="center"><%= change_category2 %></td>
         <td class="left"><%= plan_date2 %></td>
         <td class="right"><%= plan_amount2 %></td>
         <td class="center">
@@ -134,7 +134,7 @@ function offComma(obj){
                 <option value="C">C</option>
             </select> 
         </td>
-        <td class="left"><%= create_date 2%></td>
+        <td class="left"><%= create_date2 %></td>
         <td nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
     </tr>
     <tr>
