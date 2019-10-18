@@ -165,7 +165,8 @@ table.oppBrListTable td{
 }
 
 .table_btn {
-  float: right;
+  margin-left:2px;
+  margin-bottom:2px;
 }
  
 
