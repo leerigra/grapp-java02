@@ -11,7 +11,7 @@
   String plan_accuracy2="B";
   String create_date2="2019/10/15 10:00";
 
-  String change_category3="新規";
+  String change_category3="";
   String plan_date3="2019/12/10";
   String plan_amount3="3,000,000";
   String plan_accuracy3="C";
@@ -37,7 +37,7 @@
     
     <tr>
         <td class="center"><%= change_category1 %></td>
-        <td class="left"><input type="text" size="10" value=<%= plan_date1 %>/></td>
+        <td class="left"><input type="text" size="10" value=<%= plan_date1 %> ></input></td>
         <td class="right"><input type="text" size="18" class="right" value=<%= plan_amount1 %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
             <select name="plan_accuracy1">

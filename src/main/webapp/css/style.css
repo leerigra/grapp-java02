@@ -176,6 +176,7 @@ table.oppBrListTable td{
 }
  
 #nav li {
+  clear: both;
   width: 70px;
   text-align: center;
   background-color: rgb(155, 151, 151);
