@@ -31,19 +31,13 @@ div.content-body {
 } 
 
 
-a {
-    color: #015BA7;
-}
+
 
 input {
         font-size: 12px;
 }
 
-a:hover {
-    background-color: #015BA7;
-    color: white;
-    text-decoration: none;
-}
+
 
 
 .left{
@@ -128,6 +122,7 @@ table.oppBrListTable td{
  
 div.content-navi {
     margin: 10px;
+    float: right;
 }
 
 div.content-navi ul {
@@ -147,19 +142,27 @@ div.content-navi ul li {
 .navbtn {
   float: right;
 }
- 
+
+li a{
+    text-decoration: none;
+}
+
+li a:hover {
+    opacity:0.5;
+}
 .btnOK {
     color:#fff;
-    background-color:#8574ad;
+    background-color:#7058a3;
     font-size:12px;
     text-decoration:none;
     text-align:center;
     border-radius:5px;
     box-shadow:2px 2px 2px #555;
 }
+
 .btnCancel {
-    color:#8574ad;
-    border-color:#8574ad;
+    color:#7058a3;
+    border-color:#7058a3;
     border-width: 1px;
     background-color:#ffffff;
     font-size:12px;
