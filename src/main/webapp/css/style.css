@@ -179,11 +179,10 @@ table.oppBrListTable td{
     color:#fff;
     background-color:#8574ad;
     width:80px;
-    font-size:18px;
+    font-size:14px;
     text-decoration:none;
-    display:block;
     text-align:center;
-    padding:8px 0 10px;
+    padding:2px 0 10px;
     border-radius:5px;
 }
 .btnCancel {
@@ -191,10 +190,9 @@ table.oppBrListTable td{
     border-color:#8574ad;
     background-color:#ffffff;
     width:80px;
-    font-size:18px;
+    font-size:14px;
     text-decoration:none;
-    display:block;
     text-align:center;
-    padding:8px 0 10px;
+    padding:2px 0 10px;
     border-radius:5px;
 }
