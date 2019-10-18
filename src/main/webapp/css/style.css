@@ -160,7 +160,7 @@ li a:hover {
     box-shadow:2px 2px 2px #555;
 }
 
-a:link[class="btnOK"]{
+a.linkOK{
 	 color:#fff;
 }
 
@@ -175,7 +175,7 @@ a:link[class="btnOK"]{
     box-shadow:2px 2px 2px #555;
 }
 
-a:link[class="btnCancel"]{
+a.linkCancel{
 	color:#7058a3;
 }
 
