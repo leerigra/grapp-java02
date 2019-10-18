@@ -72,3 +72,35 @@ function offComma(obj){
 }
 
 
+function selTableRow(pos)
+	{
+    var posId="tr_"+ pos
+
+		document.getElementById(posId).style.backgroundColor="red";
+		document.getElementById("tr2").style.backgroundColor="white";
+		
+	}
+
+function btnCancel_Click()
+{
+  var result = window.confirm("入力内容を破棄してよろしいですか？");
+
+  if( result ) {
+      console.log('OKがクリックされました');
+      location.reload();
+      }
+    else {
+        console.log('キャンセルがクリックされました');
+    }
+}
+function btnOK_click()
+{
+  var result = window.confirm("保存してよろしいですか？");
+
+  if( result ) {
+      console.log('OKがクリックされました');
+      }
+    else {
+        console.log('キャンセルがクリックされました');
+    }
+}
