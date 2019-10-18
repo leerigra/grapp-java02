@@ -160,7 +160,9 @@ li.btnOK {
 }
 
 a.linkOK{
-	 color:#fff;
+     color:#ffffff;
+     font-size: 12px;
+     font-weight: bold;
 }
 
 li.btnCancel {
@@ -175,6 +177,8 @@ li.btnCancel {
 
 a.linkCancel{
 	color:#7058a3;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 
