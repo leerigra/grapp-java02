@@ -52,7 +52,7 @@
     </tr>
     <tr>
         <td class="center"><%= change_category2 %></td>
-        <td class="left"><input type="text" size="10" value=<%= plan_date2 %>/></td>
+        <td class="left"><input type="text" size="10" value=<%= plan_date2 %>></input></td>
         <td class="right"><input type="text" class="right" size="18" value=<%= plan_amount3 %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
             <select name="plan_accuracy2">
@@ -67,7 +67,7 @@
     </tr>
     <tr>
         <td class="center"><%= change_category3 %></td>
-        <td class="left"><input type="text" size="10" value=<%= plan_date3 %>/></td>
+        <td class="left"><input type="text" size="10" value=<%= plan_date3 %>></input></td>
         <td class="right"><input type="text" class="right" size="18" value=<%= plan_amount3 %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
        <td class="center">
             <select name="plan_accuracy3">
