@@ -178,21 +178,21 @@ table.oppBrListTable td{
 .btnOK {
     color:#fff;
     background-color:#8574ad;
-    width:80px;
+    width:100px;
     font-size:14px;
     text-decoration:none;
     text-align:center;
-    padding:2px 0 10px;
+    padding:8px 0 10px;
     border-radius:5px;
 }
 .btnCancel {
     color:#8574ad;
     border-color:#8574ad;
     background-color:#ffffff;
-    width:80px;
+    width:100px;
     font-size:14px;
     text-decoration:none;
     text-align:center;
-    padding:2px 0 10px;
+    padding:8px 0 10px;
     border-radius:5px;
 }
