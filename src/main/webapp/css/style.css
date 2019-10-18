@@ -192,3 +192,15 @@ table.oppBrListTable td{
   font-weight: normal;
   padding: 10px;
 }
+
+.btnOK {
+    border-radius:5px;
+    color:#fff;
+    background-color:#373592;
+}
+.btnCancel {
+    border-radius:5px;
+    border-color:#373592;
+    color:#373592;
+    background-color:#ffffff;
+}
