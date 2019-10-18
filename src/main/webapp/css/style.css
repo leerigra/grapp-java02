@@ -188,11 +188,9 @@ table.oppBrListTable td{
   float: right;
 }
  
-
 .btnOK {
     color:#fff;
     background-color:#8574ad;
-    width:80px;
     font-size:12px;
     text-decoration:none;
     text-align:center;
@@ -204,11 +202,9 @@ table.oppBrListTable td{
     border-color:#8574ad;
     border-width: 1px;
     background-color:#ffffff;
-    width:80px;
     font-size:12px;
     text-decoration:none;
     text-align:center;
-    padding:5px 0 5px;
     border-radius:5px;
     box-shadow:2px 2px 2px #555;
 }

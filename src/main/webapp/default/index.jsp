@@ -26,8 +26,8 @@
             <div class="content-navi">
                 <div id="nav">
                     <ul>
-                    <li><a class="btnOK" href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
-                    <li><a class="btnCancel" href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
+                    <li class="btnOK"><a href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
+                    <li class="btnCancel"><a href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
                     </ul>
                 </div>
                 <br/>
