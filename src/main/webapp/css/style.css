@@ -98,7 +98,7 @@ a:hover {
     text-align: right;
 }
 
-.content-header h3 {
+div.content-header h3 {
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
@@ -107,7 +107,7 @@ a:hover {
     padding: 2px;
 }
 
-.content-header p {
+div.content-header p {
     color: #000000;
     font-size: 12px;
     font-weight: normal;
@@ -116,7 +116,7 @@ a:hover {
     padding: 10px;
 }
 
-.content-subhedder h4 {
+div.content-subhedder h4 {
     background-color: #7058a3;
     color: #ffffff;
     font-weight: normal;
@@ -126,7 +126,7 @@ a:hover {
 }
 
 
-.content-data {
+div.content-data {
     margin-left: 20px;
     padding: 10px;
 } 
@@ -167,13 +167,13 @@ table.oppBrListTable td{
 }
  
 
-.nav ul {
+div.nav ul {
   list-style-type: none; /*箇条書きのポッチを消す*/
   text-align:center /*左右中央寄せは親要素に対して指定*/
 }
 
 /* ↓id="nav"の中のulの中のliに対してCSSを適用*/
-.nav ul li { 
+div.nav ul li { 
   display: inline-block;/*inline-blockにします*/
   width: 80px;/*幅も指定できる*/
   padding: 10px 0;/*余白も指定できる*/
