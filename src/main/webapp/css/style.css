@@ -18,7 +18,7 @@ body {
     font-family: "Arial", "Helvetica", "sans-serif";
 }
 
-div.content {
+#content {
     float: left;
     background-color: #FFFFFF;
     border: 1px solid #aaa;
@@ -26,38 +26,10 @@ div.content {
     width : 99%;
 }
 
-div.content-body {
+#content-body {
     margin-left: 10px;
 } 
 
-
-div.content-navi {
-    margin: 10px;
-}
-
-div.content-footer {
-    clear: both;
-    height: 25px;
-    font-size: 10px;
-    color: #ffffff;
-    background-color: #555;
-    padding:1px;
-}
-
-div.footerleft {
-    float: left;
-    margin-left:5px;
-}
-
-div.footerright {
-    float: right;
-    margin-right:5px;
-}
-
-#canvas-content {
-    padding-left: 0px;
-    padding-right: 30px;
-}
 
 a {
     color: #015BA7;
@@ -71,6 +43,17 @@ a:hover {
     background-color: #015BA7;
     color: white;
     text-decoration: none;
+}
+
+
+.left{
+    text-align: left;
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
 }
 
 
@@ -88,26 +71,7 @@ div.content-header h2 {
     margin:0 0 0 auto;
 }
 
-.left{
-    text-align: left;
-}
-.center{
-    text-align: center;
-}
-.right{
-    text-align: right;
-}
-
-div.content-header h3 {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: normal;
-    background-color: #5a5a5a;
-    margin: 2px;
-    padding: 2px;
-}
-
-div.content-header p {
+#content-header p {
     color: #000000;
     font-size: 12px;
     font-weight: normal;
@@ -116,20 +80,17 @@ div.content-header p {
     padding: 10px;
 }
 
-div.content-subhedder h4 {
-    background-color: #7058a3;
+
+#content-body h3 {
     color: #ffffff;
+    font-size: 16px;
     font-weight: normal;
-    font-size: 18px;
-    padding: 5px;
-    margin-left: 15px;
+    background-color: #5a5a5a;
+    margin: 2px;
+    padding: 2px;
 }
 
 
-div.content-data {
-    margin-left: 20px;
-    padding: 10px;
-} 
 
 table.oppBrListTable{
     width: 95%;
@@ -139,8 +100,7 @@ table.oppBrListTable{
 
 
 table.oppBrListTable tr{
-    /*background-color: #ffffff;*/
-    
+    background-color: #ffffff;
 }
 
 table.oppBrListTable tr:ntn-child(odd){
@@ -166,14 +126,17 @@ table.oppBrListTable td{
   margin-bottom:2px;
 }
  
+#content-navi {
+    margin: 10px;
+}
 
-div.nav ul {
+#content-navi ul {
   list-style-type: none; /*箇条書きのポッチを消す*/
-  text-align:center /*左右中央寄せは親要素に対して指定*/
+  text-align: center; /*左右中央寄せは親要素に対して指定*/
 }
 
 /* ↓id="nav"の中のulの中のliに対してCSSを適用*/
-div.nav ul li { 
+#content-navi ul li { 
   display: inline-block;/*inline-blockにします*/
   width: 80px;/*幅も指定できる*/
   padding: 10px 0;/*余白も指定できる*/
@@ -204,4 +167,23 @@ div.nav ul li {
     text-align:center;
     border-radius:5px;
     box-shadow:2px 2px 2px #555;
+}
+
+#content-footer {
+    clear: both;
+    height: 25px;
+    font-size: 10px;
+    color: #ffffff;
+    background-color: #555;
+    padding:1px;
+}
+
+div.footerleft {
+    float: left;
+    margin-left:5px;
+}
+
+div.footerright {
+    float: right;
+    margin-right:5px;
 }

@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <div class="content">
-        <div class="content-header">
+    <div id="content">
+        <div id="content-header">
             <h2>
             <p class="right">
                 Salesforce ログインユーザ名: <span id='username'>${canvasRequest.context.userContext.userName}</span><br/>
@@ -19,22 +19,19 @@
             </p>
             </h2>
         </div>
-        <div class="content-body">
+        <div id="content-body">
             <h3>枝口リスト</h3>
             <jsp:include page="oppbranchlist.jsp"/>
 
-            <div class="content-navi">
-                <div class="nav">
-                    <ul>
+            <div id="content-navi">
+                <ul>
                     <li class="btnOK"><a href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
                     <li class="btnCancel"><a href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
-                    </ul>
-                </div>
-                <br/>
+                </ul>
             </div>
         </div>
         <br/>
-        <div class="content-footer">
+        <div id="content-footer">
             <div class="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
                 </p>
