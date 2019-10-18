@@ -18,7 +18,7 @@ body {
     font-family: "Arial", "Helvetica", "sans-serif";
 }
 
-div#content {
+.content {
     float: left;
     background-color: #FFFFFF;
     border: 1px solid #aaa;
@@ -26,16 +26,16 @@ div#content {
     width : 99%;
 }
 
-div#content-body {
+.content-body {
     margin-left: 10px;
 } 
 
 
-div#content-navi {
+.content-navi {
     margin: 10px;
 }
 
-div#content-footer {
+.content-footer {
     clear: both;
     height: 25px;
     font-size: 10px;
@@ -74,7 +74,7 @@ a:hover {
 }
 
 
-div.content-header h2 {
+.content-header h2 {
     height: 50px;
     background-color: #FFFFFF;
     border-bottom: medium solid #4b0082;
@@ -98,7 +98,7 @@ div.content-header h2 {
     text-align: right;
 }
 
-div.content-header h3 {
+.content-header h3 {
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
@@ -107,7 +107,7 @@ div.content-header h3 {
     padding: 2px;
 }
 
-div.content-header p {
+.content-header p {
     color: #000000;
     font-size: 12px;
     font-weight: normal;
@@ -116,7 +116,7 @@ div.content-header p {
     padding: 10px;
 }
 
-div.content-subhedder h4 {
+.content-subhedder h4 {
     background-color: #7058a3;
     color: #ffffff;
     font-weight: normal;
@@ -126,7 +126,7 @@ div.content-subhedder h4 {
 }
 
 
-div.content-data {
+.content-data {
     margin-left: 20px;
     padding: 10px;
 } 
@@ -167,13 +167,13 @@ table.oppBrListTable td{
 }
  
 
-#nav ul {
+.nav ul {
   list-style-type: none; /*箇条書きのポッチを消す*/
   text-align:center /*左右中央寄せは親要素に対して指定*/
 }
 
 /* ↓id="nav"の中のulの中のliに対してCSSを適用*/
-#nav ul li { 
+.nav ul li { 
   display: inline-block;/*inline-blockにします*/
   width: 80px;/*幅も指定できる*/
   padding: 10px 0;/*余白も指定できる*/

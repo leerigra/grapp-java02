@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="content">
+    <div class="content">
         <div class="content-header">
             <h2>
             <p class="right">
@@ -19,12 +19,12 @@
             </p>
             </h2>
         </div>
-        <div id="content-body">
+        <div class="content-body">
             <h3>枝口リスト</h3>
             <jsp:include page="oppbranchlist.jsp"/>
 
-            <div id="content-navi">
-                <div id="nav">
+            <div class="content-navi">
+                <div class="nav">
                     <ul>
                     <li class="btnOK"><a href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
                     <li class="btnCancel"><a href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <br/>
-        <div id="content-footer">
+        <div class="content-footer">
             <div class="footerleft">
                 <p>Powered By: <a title="Heroku" href="#" onclick="window.top.location.href='http://www.heroku.com'"><strong>Heroku</strong></a>
                 </p>
