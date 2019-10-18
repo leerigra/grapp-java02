@@ -135,7 +135,7 @@ div.content-navi ul {
 div.content-navi ul li { 
   display: inline-block;/*inline-blockにします*/
   width: 80px;/*幅も指定できる*/
-  padding: 10px 0;/*余白も指定できる*/
+  padding: 5px 0;/*余白も指定できる*/
   margin: 10px 0;/*余白も指定できる*/
   vertical-align: middle;/*縦の表示位置も指定できる*/
  }
@@ -160,9 +160,8 @@ li a:hover {
     box-shadow:2px 2px 2px #555;
 }
 
-.btnOK li a{
-    color:#fff;
-    font-size:14px;
+a:link[class="btnOK"]{
+	 color:#fff;
 }
 
 .btnCancel {
@@ -176,9 +175,8 @@ li a:hover {
     box-shadow:2px 2px 2px #555;
 }
 
-.btnCancel li a{
-    color:#7058a3;
-    font-size:14px;
+a:link[class="btnCancel"]{
+	color:#7058a3;
 }
 
 
