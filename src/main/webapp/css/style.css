@@ -151,8 +151,7 @@ li a{
 li a:hover {
     opacity:0.5;
 }
-.btnOK {
-    color:#fff;
+li.btnOK {
     background-color:#8060A5;
     text-decoration:none;
     text-align:center;
@@ -164,8 +163,7 @@ a.linkOK{
 	 color:#fff;
 }
 
-.btnCancel {
-    color:#8060A5;
+li.btnCancel {
     border-color:#8060A5;
     border-width: 1px;
     background-color:#ffffff;
