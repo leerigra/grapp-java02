@@ -190,6 +190,8 @@ table.oppBrListTable td{
 .btnCancel {
     color:#8574ad;
     border-color:#8574ad;
+    border-width: 1px;
+
     background-color:#ffffff;
     width:80px;
     font-size:12px;
