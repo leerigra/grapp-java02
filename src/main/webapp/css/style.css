@@ -34,8 +34,8 @@ body {
 div.content-navi {
     clear: both;
     height: 20px;
-    padding:5px;
-    margin:0px;
+    padding: 5px;
+    margin: 10px;
 }
 
 div.content-footer {
@@ -176,10 +176,9 @@ table.oppBrListTable td{
 }
  
 #nav li {
-  clear: both;
   width: 70px;
   text-align: center;
-  background-color: rgb(155, 151, 151);
+  background-color: rgb(85, 83, 83);
   float: right;
   height: 30px;
   line-height: 30px;
@@ -189,7 +188,7 @@ table.oppBrListTable td{
 #nav li a {
   text-decoration: none;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: normal;
   padding: 10px;
 }
