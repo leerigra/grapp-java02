@@ -153,11 +153,15 @@ li a:hover {
 .btnOK {
     color:#fff;
     background-color:#7058a3;
-    font-size:12px;
     text-decoration:none;
     text-align:center;
     border-radius:5px;
     box-shadow:2px 2px 2px #555;
+}
+
+.btnOK li a{
+    color:#fff;
+    font-size:14px;
 }
 
 .btnCancel {
@@ -165,12 +169,17 @@ li a:hover {
     border-color:#7058a3;
     border-width: 1px;
     background-color:#ffffff;
-    font-size:12px;
     text-decoration:none;
     text-align:center;
     border-radius:5px;
     box-shadow:2px 2px 2px #555;
 }
+
+.btnCancel li a{
+    color:#7058a3;
+    font-size:14px;
+}
+
 
 div.content-footer {
     clear: both;
