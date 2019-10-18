@@ -63,6 +63,7 @@ div.content-header h2 {
     font-size: 8px;
     font-weight: normal;
     margin:0 0 0 auto;
+    opacity:0.6;
 }
 
 div.content-header p {
@@ -79,7 +80,7 @@ div.content-body h3 {
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
-    background-color: #6e577a;
+    background-color: #7058a3;
     margin: 2px;
     padding: 2px;
 }
