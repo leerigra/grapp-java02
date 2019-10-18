@@ -178,11 +178,11 @@ table.oppBrListTable td{
 .btnOK {
     color:#fff;
     background-color:#8574ad;
-    width:100px;
-    font-size:14px;
+    width:80px;
+    font-size:12px;
     text-decoration:none;
     text-align:center;
-    padding:8px 0 10px;
+    padding:5px 0 5px;
     border-radius:5px;
     display:block;
 }
@@ -190,11 +190,11 @@ table.oppBrListTable td{
     color:#8574ad;
     border-color:#8574ad;
     background-color:#ffffff;
-    width:100px;
-    font-size:14px;
+    width:80px;
+    font-size:12px;
     text-decoration:none;
     text-align:center;
-    padding:8px 0 10px;
+    padding:5px 0 5px;
     border-radius:5px;
     display:block;
 }
