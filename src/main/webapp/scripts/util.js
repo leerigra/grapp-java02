@@ -51,13 +51,13 @@ function insertRow(id) {
 function upddelRow(obj) {
     // 削除ボタンを押下された行を取得
     tr = obj.parentNode.parentNode;
-    alert("消す？" + tr.cell2.innerHTML);
-    if (tr.cell2.innerHTML==="削除") {
+    
+    if (tr.cell2.innerHTML === "削除") {
       tr.removeClass("delete_row");
-    }else{
+    } else {
       // 論理削除的にグレーアウト
       tr.setAttribute("class","delete_row");
-      tr.cell2.innerHTML="削除";
+      tr.cell2.innerHTML = "削除";
     }
 }
 
