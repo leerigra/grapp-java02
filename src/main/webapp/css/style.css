@@ -49,8 +49,9 @@ input {
 .right{
     text-align: right;
 }
-
-
+.hidden{
+    display:none;
+}
 div.content-header h2 {
     height: 50px;
     background-color: #FFFFFF;

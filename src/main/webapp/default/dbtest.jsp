@@ -15,7 +15,7 @@ String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
 <div class="content-data">
     <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchList')" />
 
-    <table class="oppBrListTable" id="BranchList">
+    <table class="oppBrListTable" id="BranchListDB">
     <tr>
         <th>変更区分</th>
         <th>実行／払込予定日</th>
@@ -23,6 +23,7 @@ String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
         <th>実行／払込確度</th>
         <th>作成日時</th>
         <th>削除</th>
+        <th class="hidden">recid</th>
     </tr>
     
 <%
@@ -37,9 +38,9 @@ while(rs.next()){
       <tr>
         <td class="center">&nbsp;</td>
         <td class="left"><input type="text" size="10" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
-        <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> /></td>
+        <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)/></td>
         <td class="center">
-            <select name="plan_accuracy1">
+            <select name="plan_accuracy">
                 <option value=""></option>
                 <option value="A" <% if ("A".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>A</option>
                 <option value="B" <% if ("B".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>B</option>
@@ -48,6 +49,7 @@ while(rs.next()){
         </td>
         <td class="left"><%=objDtFmt.format(rs.getDate("create_date"))%></td>
         <td nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
+        <td class="left hidden"><%=rs.getDate("oppbranchid"))%></td>
     </tr>
 
 <%
