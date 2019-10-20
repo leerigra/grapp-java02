@@ -34,8 +34,8 @@ function insertRow(id) {
     cell6.innerHTML = "&nbsp;";
     cell7.innerHTML = delButton;
 
-    cell1.setAttribute("class","hidden cell1");
-    cell2.setAttribute("class","center cell2");
+    cell1.setAttribute("class","hidden");
+    cell2.setAttribute("class","center");
     cell3.setAttribute("class","left" );
     cell4.setAttribute("class","right");
     cell5.setAttribute("class","center");
