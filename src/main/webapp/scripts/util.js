@@ -51,8 +51,8 @@ function insertRow(id) {
 function upddelRow(obj) {
     // 削除ボタンを押下された行を取得
     tr = obj.parentNode.parentNode;
-    alert(tr.cell2.value);
-    if (tr.cell2.value=="削除") {
+    alert("ステータスは" + tr.cell2.value);
+    if (tr.cell2.value === "削除") {
       tr.removeClass("delete_row");
     }else{
       // 論理削除的にグレーアウト
