@@ -101,14 +101,6 @@ table.oppBrListTable{
 } 
 
 
-table.oppBrListTable tr{
-    background-color: #ffffff;
-}
-
-table.oppBrListTable tr:ntn-child(odd){
-    background-color: #bfd7f5;
-}
-
 table.oppBrListTable th{
     font-size: 12px;
     font-weight: normal;
@@ -123,6 +115,7 @@ table.oppBrListTable td{
     border-bottom: 1px solid #777;
     background-color: transparent;
 }
+
 
 .table_btn {
   margin-left:2px;
