@@ -34,9 +34,9 @@ function insertRow(id) {
     cell6.innerHTML = "&nbsp;";
     cell7.innerHTML = delButton;
 
-    cell1.setAttribute("class","hidden");
-    cell2.setAttribute("class","center");
-    cell3.setAttribute("class","left");
+    cell1.setAttribute("class","hidden cell1");
+    cell2.setAttribute("class","center cell2");
+    cell3.setAttribute("class","left" );
     cell4.setAttribute("class","right");
     cell5.setAttribute("class","center");
     cell6.setAttribute("class","left");
@@ -51,14 +51,14 @@ function insertRow(id) {
 function upddelRow(obj) {
     // 削除ボタンを押下された行を取得
     tr = obj.parentNode.parentNode;
-    
     //if (tr.cell2.innerHTML === "削除") {
     //  tr.removeClass("delete_row");
     //} else {
       // 論理削除的にグレーアウト
       tr.setAttribute("class","delete_row");
       tr.cell2.innerHTML = "削除";
-    //}
+      td.
+      //}
 }
 
 

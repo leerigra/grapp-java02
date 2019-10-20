@@ -21,8 +21,9 @@
         </div>
         <div class="content-body">
             <h3>枝口リスト</h3>
-            <jsp:include page="oppbranchlist.jsp"/>
-
+            <jsp:include page="oppbranchlist.jsp">
+                <jsp:param name="recid" value="${canvasRequest.context.environmentContext.parameters.Id}" />
+            </jsp:include>
             <div class="content-navi">
                 <ul>
                     <li class="btnCancel"><a class="linkCancel" href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
