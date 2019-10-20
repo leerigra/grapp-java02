@@ -30,6 +30,11 @@
                 </ul>
             </div>
         </div>
+        <div class="content-body">
+            <h3>DB接続テスト</h3>
+            <jsp:include page="dbtest.jsp"/>
+        </div>
+
         <br/>
         <div class="content-footer">
             <div class="footerleft">

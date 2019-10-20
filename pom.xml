@@ -71,6 +71,13 @@
             <version>1.4</version>
         </dependency>
 
+        <!-- postgresql_adding_at_self_ -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.4</version>
+        </dependency>
+
     </dependencies>
 
     <build>

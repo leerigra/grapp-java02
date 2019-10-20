@@ -1,11 +1,13 @@
+package servlets;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DBConnectTest {
-    public static void main(String[] args) {
+public class testDB {
+    public static void DBtest(String[] args) {
         Connection conn = null;
         Statement stmt = null;
         ResultSet rset = null;
@@ -34,9 +36,9 @@ public class DBConnectTest {
             }
 
             //INSERT文の実行
-            sql = "INSERT INTO jdbc_test VALUES (1, 'AAA')";
-            stmt.executeUpdate(sql);
-            conn.commit();
+            //sql = "INSERT INTO jdbc_test VALUES (1, 'AAA')";
+            //stmt.executeUpdate(sql);
+            //conn.commit();
         }
         catch (SQLException e){
             e.printStackTrace();
@@ -53,4 +55,5 @@ public class DBConnectTest {
 
         }
     }
+    
 }

@@ -1,4 +1,4 @@
-package bean;
+package servlets;
 
 public class oppBranchList {
 	private String id;
