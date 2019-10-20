@@ -26,7 +26,7 @@ Connection db=DriverManager.getConnection(url, user, password);
 db.setReadOnly(true);
 Statement objSql=db.createStatement();
 ResultSet rs=objSql.executeQuery("SELECT * FROM oppbranch where extid='0060k0000091Sc4AAE'");
-DecimalFormat objFmt=new DecimalFormat("#,###円");
+DecimalFormat objFmt=new DecimalFormat("#,###");
 while(rs.next()){
 %>
       <tr>
@@ -36,9 +36,9 @@ while(rs.next()){
         <td class="center">
             <select name="plan_accuracy1">
                 <option value=""></option>
-                <option value="A" selected>A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
+                <option value="A" <% if ("A".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>A</option>
+                <option value="B" <% if ("B".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>B</option>
+                <option value="C" <% if ("C".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>C</option>
             </select> 
         </td>
         <td class="left"><%=rs.getDate("create_date")%></td>
