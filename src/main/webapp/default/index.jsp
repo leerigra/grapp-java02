@@ -32,7 +32,9 @@
         </div>
         <div class="content-body">
             <h3>DB接続テスト</h3>
-            <jsp:include page="dbtest.jsp"/>
+            <jsp:include page="dbtest.jsp">
+                <jsp:param name="recid" value=${canvasRequest.context.environmentContext.parameters.Id} />
+            </jsp:include>
         </div>
 
         <br/>
