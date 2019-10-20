@@ -121,6 +121,7 @@ table.oppBrListTable td{
     font-size: 12px;
     padding: 5px;
     border-bottom: 1px solid #777;
+    background-color: transparent;
 }
 
 .table_btn {

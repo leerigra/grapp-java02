@@ -13,6 +13,8 @@ function insertRow(id) {
     var cell4 = row.insertCell(-1);
     var cell5 = row.insertCell(-1);
     var cell6 = row.insertCell(-1);
+    var cell7 = row.insertCell(-1);
+    
     
 
     // ボタン用 HTML
@@ -24,18 +26,21 @@ function insertRow(id) {
     var row_len = table.rows.length;
  
     // セルの内容入力
-    cell1.innerHTML = "追加";
-    cell2.innerHTML = inDate;
-    cell3.innerHTML = inNumber;
-    cell4.innerHTML = inSelect;
-    cell5.innerHTML = "&nbsp;";
-    cell6.innerHTML = delButton;
+    cell1.innerHTML = "&nbsp;";
+    cell2.innerHTML = "追加";
+    cell3.innerHTML = inDate;
+    cell4.innerHTML = inNumber;
+    cell5.innerHTML = inSelect;
+    cell6.innerHTML = "&nbsp;";
+    cell7.innerHTML = delButton;
 
-    cell1.setAttribute("class","center");
-    cell2.setAttribute("class","left");
-    cell3.setAttribute("class","right");
-    cell4.setAttribute("class","center");
-    cell5.setAttribute("class","left");
+    cell1.setAttribute("class","hidden");
+    cell2.setAttribute("class","center");
+    cell3.setAttribute("class","left");
+    cell4.setAttribute("class","right");
+    cell5.setAttribute("class","center");
+    cell6.setAttribute("class","left");
+    cell7.setAttribute("class","center");
    
 
 }
@@ -47,7 +52,7 @@ function upddelRow(obj) {
     // 削除ボタンを押下された行を取得
     tr = obj.parentNode.parentNode;
     // 論理削除的にグレーアウト
-    tr.setAttribute("class"."delete_row");
+    tr.setAttribute("class","delete_row");
 }
 
 
