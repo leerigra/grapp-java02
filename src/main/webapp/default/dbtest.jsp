@@ -17,13 +17,14 @@ String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
 
     <table class="oppBrListTable" id="BranchListDB">
     <tr>
+        <th>recid</th>
         <th>変更区分</th>
         <th>実行／払込予定日</th>
         <th>実行／払込予定額（原通貨）</th>
         <th>実行／払込確度</th>
         <th>作成日時</th>
-        <th>削除</th>
-        <th>recid</th>
+        <th>&nbsp;</th>
+
     </tr>
     
 <%
@@ -36,6 +37,7 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 while(rs.next()){
 %>
       <tr>
+        <td class="left"><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>
         <td class="left"><input type="text" size="10" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
         <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)/></td>
@@ -49,7 +51,7 @@ while(rs.next()){
         </td>
         <td class="left"><%=objDtFmt.format(rs.getDate("create_date"))%></td>
         <td nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
-        <td><%= rs.getString("oppbranchid") %></td>
+        
     </tr>
 
 <%
