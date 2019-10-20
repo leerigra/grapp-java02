@@ -36,7 +36,7 @@ while(rs.next()){
 %>
       <tr>
         <td class="center">&nbsp;</td>
-        <td class="left"><input type="text" size="10" value=<%=objDtFmt.format(rs.getString("plan_Date"))%> ></input></td>
+        <td class="left"><input type="text" size="10" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
         <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> /></td>
         <td class="center">
             <select name="plan_accuracy1">
