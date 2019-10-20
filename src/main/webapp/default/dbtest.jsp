@@ -24,7 +24,6 @@ String password = "2d989239c38338117217f11fbd0bfc7cca8d1a671c3f395a833e0eab79320
 String recid = request.getParameter("recid");
 String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
 
-strsql=strsql+
 Connection db=DriverManager.getConnection(url, user, password);
 db.setReadOnly(true);
 Statement objSql=db.createStatement();
