@@ -49,7 +49,7 @@ while(rs.next()){
         </td>
         <td class="left"><%=objDtFmt.format(rs.getDate("create_date"))%></td>
         <td nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
-        <td class="left hidden"><%=rs.getDate("oppbranchid"))%></td>
+        <td class="left hidden"><%= rs.getDate("oppbranchid") %></td>
     </tr>
 
 <%
