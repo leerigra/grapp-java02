@@ -31,7 +31,7 @@ db.setReadOnly(true);
 Statement objSql=db.createStatement();
 ResultSet rs=objSql.executeQuery(strsql);
 DecimalFormat objFmt=new DecimalFormat("#,###");
-DateFormat objDtFmt=new DateFormat("yyyy/MM/dd HH:mm");
+SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 while(rs.next()){
 %>
       <tr>
