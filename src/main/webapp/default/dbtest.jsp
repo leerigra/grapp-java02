@@ -23,7 +23,7 @@ String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
         <th>実行／払込確度</th>
         <th>作成日時</th>
         <th>削除</th>
-        <th class="hidden">recid</th>
+        <th>recid</th>
     </tr>
     
 <%
@@ -49,7 +49,7 @@ while(rs.next()){
         </td>
         <td class="left"><%=objDtFmt.format(rs.getDate("create_date"))%></td>
         <td nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
-        <td class="hidden"><%= rs.getString("oppbranchid") %></td>
+        <td><%= rs.getString("oppbranchid") %></td>
     </tr>
 
 <%
