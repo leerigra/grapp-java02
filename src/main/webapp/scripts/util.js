@@ -57,7 +57,7 @@ function upddelRow(obj) {
       // 論理削除的にグレーアウト
       tr.setAttribute("class","delete_row");
       tr.cell2.innerHTML = "削除";
-      td.
+
       //}
 }
 
