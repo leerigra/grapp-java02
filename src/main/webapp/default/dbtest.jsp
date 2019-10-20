@@ -13,7 +13,7 @@ String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
 <script type="text/javascript" src="/scripts/util.js"></script>
  
 <div class="content-data">
-    <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchList')" />
+    <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB')" />
 
     <table class="oppBrListTable" id="BranchListDB">
     <tr>
@@ -50,7 +50,7 @@ while(rs.next()){
             </select> 
         </td>
         <td class="left"><%=objDtFmt.format(rs.getDate("create_date"))%></td>
-        <td nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
+        <td nowrap><input type="button" value="行削除" onclick="upddelRow(this)" /></td>
         
     </tr>
 

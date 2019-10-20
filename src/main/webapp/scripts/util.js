@@ -39,7 +39,18 @@ function insertRow(id) {
    
 
 }
- 
+
+/**
+ * 行削除
+ */
+function upddelRow(obj) {
+    // 削除ボタンを押下された行を取得
+    tr = obj.parentNode.parentNode;
+    // 論理削除的にグレーアウト
+    tr.setAttribute("class"."delete_row");
+}
+
+
 /**
  * 行削除
  */

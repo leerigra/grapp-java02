@@ -52,6 +52,12 @@ input {
 .hidden{
     display:none;
 }
+
+
+.delete_row{
+    background-color: #222;
+}
+
 div.content-header h2 {
     height: 50px;
     background-color: #FFFFFF;
