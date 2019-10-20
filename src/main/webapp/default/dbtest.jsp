@@ -23,7 +23,7 @@ String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
         <th>実行／払込予定額（原通貨）</th>
         <th>実行／払込確度</th>
         <th>作成日時</th>
-        <th>&nbsp;</th>
+        <th>""</th>
 
     </tr>
     
@@ -38,7 +38,7 @@ while(rs.next()){
 %>
       <tr>
         <td class="left"><%= rs.getString("oppbranchid") %></td>
-        <td class="center">&nbsp;</td>
+        <td class="center">""</td>
         <td class="left"><input type="text" size="10" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
         <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)/></td>
         <td class="center">
