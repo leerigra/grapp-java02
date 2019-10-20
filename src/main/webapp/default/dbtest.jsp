@@ -22,10 +22,13 @@ String url = "jdbc:postgresql://ec2-107-22-160-185.compute-1.amazonaws.com:5432/
 String user = "uxsvvqdujoyrti";
 String password = "2d989239c38338117217f11fbd0bfc7cca8d1a671c3f395a833e0eab7932050c";
 
+String strsql="SELECT * FROM oppbranch where extid='" + ${canvasRequest.context.environmentContext.parameters.Id} +"'";
+
+strsql=strsql+
 Connection db=DriverManager.getConnection(url, user, password);
 db.setReadOnly(true);
 Statement objSql=db.createStatement();
-ResultSet rs=objSql.executeQuery("SELECT * FROM oppbranch where extid='0060k0000091Sc4AAE'");
+ResultSet rs=objSql.executeQuery(strsql);
 DecimalFormat objFmt=new DecimalFormat("#,###");
 while(rs.next()){
 %>
