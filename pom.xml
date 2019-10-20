@@ -87,8 +87,10 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <!--source>${java.version}</source-->
+                    <!--target>${java.version}</target-->
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <!-- The maven app assembler plugin will generate a script that sets up the classpath and runs your project -->
