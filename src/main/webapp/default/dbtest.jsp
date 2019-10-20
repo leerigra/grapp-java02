@@ -50,7 +50,7 @@ while(rs.next()){
             </select> 
         </td>
         <td class="left"><%=objDtFmt.format(rs.getDate("create_date"))%></td>
-        <td nowrap><input type="button" value="行削除" onclick="upddelRow(this)" /></td>
+        <td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this)" /></td>
         
     </tr>
 
