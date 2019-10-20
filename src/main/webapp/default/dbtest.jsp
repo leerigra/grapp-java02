@@ -30,7 +30,7 @@ DecimalFormat objFmt=new DecimalFormat("#,###円");
 while(rs.next()){
 %>
       <tr>
-        <td class="center"><%= change_category1 %></td>
+        <td class="center">&nbsp;</td>
         <td class="left"><input type="text" size="10" value=<%=rs.getString("plan_Date")%> ></input></td>
         <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> /></td>
         <td class="center">
