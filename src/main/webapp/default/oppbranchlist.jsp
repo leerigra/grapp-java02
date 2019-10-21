@@ -1,9 +1,9 @@
 <%@ page contentType="text/html; charset=Shift_JIS"
          import="java.sql.*,java.text.*" %>
 
-<%
-<script type="text/javascript">
 
+<script type="text/javascript" src="/scripts/util.js"></script>
+<script type="text/javascript">
 function tableClick(obj){
 
   // クリックされた行を取得
@@ -16,8 +16,7 @@ function tableClick(obj){
   oppbranchid = table.rows[rowidx].cells[0].innerHTML;
   document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
 }
-
-%>
+</script>
 
 <%
 Class.forName("org.postgresql.Driver");
@@ -32,11 +31,9 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
 SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
 String oppbranchid="";
-
 %>
 
-<script type="text/javascript" src="/scripts/util.js"></script>
- 
+
 <div class="content-data">
     <p id="memo">memo</p>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB');" />
@@ -62,8 +59,7 @@ ResultSet rs=objSql.executeQuery(strsql);
 
 while(rs.next()){
 
-
-    %>
+%>
       <tr>
         <td class="hidden"><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
@@ -92,8 +88,9 @@ db.close();
 </table>
 
 </div>
+
 <div id="iframeBlock">
-<div class="iframeBody">
-    <iframe id="oppdetail" src="/default/oppbranchdetail.jsp?oppbranchid=<%= oppbranchid %>" name="testIframe" frameborder="0" width="800px" height="1000"></iframe>
-</div>
+    <div class="iframeBody">
+        <iframe id="oppdetail" src="/default/oppbranchdetail.jsp?oppbranchid=<%= oppbranchid %>" name="testIframe" frameborder="0" width="800px" height="1000"></iframe>
+    </div>
 </div>
