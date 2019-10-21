@@ -152,8 +152,8 @@ function tableClick(obj){
 
   // クリックされた行を取得
   tr = obj.parentNode.parentNode;
-  rowidx = tr.selectionRowIndex
-  text = tr.cellIndex(1).value
+  rowidx = tr.selectionRowIndex;
+  text = tr.cellIndex(1).value;
   // --- 行・列・値の取得＆編集 ------------------
     wOut += '行:' + rowidx + '&nbsp;&nbsp;';
     wOut += '値:' + text;
