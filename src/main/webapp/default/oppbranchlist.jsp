@@ -14,8 +14,8 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
 SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
 String sel_recid = "1";
-Date sel_plan_Date_b = objDtFmt.format("2019-11-1");
-Date sel_plan_Date_a = objDtFmt.format("2019-12-2");
+Date sel_plan_Date_b;
+Date sel_plan_Date_a;
 long sel_plan_amount_b = 1000000;
 long sel_plan_amount_a = 2000000;
 String sel_plan_accuracy_b = "B";
