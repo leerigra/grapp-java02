@@ -13,6 +13,7 @@ Connection db=DriverManager.getConnection(url, user, password);
 db.setReadOnly(true);
 Statement objSql=db.createStatement();
 ResultSet rs=objSql.executeQuery(strsql);
+rs.next();
 DecimalFormat objFmt=new DecimalFormat("#,###");
 SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 %>
