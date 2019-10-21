@@ -103,7 +103,7 @@ table.oppBrListTable{
 
 table.oppBrListTable th{
     font-size: 12px;
-    font-weight: normal;
+    font-weight: bold;
     background-color: rgb(201, 154, 255);
     padding: 5px;
     border-bottom: 1px solid #222;
@@ -119,7 +119,7 @@ table.oppBrListTable td{
 
 
 table.oppBrDetailTable{
-    width: 95%;
+    width: 70%;
     border-collapse: collapse;
     border-spacing: 0;
    } 
@@ -127,16 +127,10 @@ table.oppBrDetailTable{
 
 table.oppBrDetailTable th{
     font-size: 12px;
-    font-weight: normal;
+    font-weight: bold;
     background-color: rgb(201, 154, 255);
     padding: 5px;
     border-bottom: 1px solid #222;
-}
-
-td.colth{
-    background-color:#cabaec;
-    text-align: left;
-    font-style: normal;
 }
 
 table.oppBrDetailTable td{
@@ -146,6 +140,11 @@ table.oppBrDetailTable td{
     background-color: transparent;
 }
 
+td.colth{
+    background-color:#cabaec;
+    text-align: left;
+    font-style: normal;
+}
 
 .table_btn {
   margin-left:2px;
