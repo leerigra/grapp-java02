@@ -23,7 +23,7 @@ String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
         <th>実行／払込予定額（原通貨）</th>
         <th>実行／払込確度</th>
         <th>作成日時</th>
-        <th>&nbsp;</th>
+        <th>削除</th>
 
     </tr>
     

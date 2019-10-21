@@ -38,6 +38,7 @@ div.content-data {
 
 input {
         font-size: 14px;
+        background-color: transparent;
 }
 
 
@@ -58,7 +59,7 @@ input {
 
 
 .delete_row{
-    background-color: #222;
+    background-color: #777;
 }
 
 div.content-header h2 {
