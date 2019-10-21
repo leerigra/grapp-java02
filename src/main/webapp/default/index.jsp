@@ -32,8 +32,8 @@
             </div>
         </div>
         
-        <frameset rows="30%, *">
-        <iframe src="oppbranchdetail.jsp" name="form">
+        <frameset rows="100%, *">
+        <iframe src="/default/oppbranchdetail.jsp?oppbranchid=<%= "1"　%>" name="form">
         </iframe>
         </frameset>
 
