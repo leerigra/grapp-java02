@@ -13,7 +13,7 @@ String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
 <script type="text/javascript" src="/scripts/util.js"></script>
  
 <div class="content-data">
-    <p id="clickKekka"></p>
+    <p id="memo">memo</p>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB');" />
 
     <table class="oppBrListTable" id="BranchListDB" onclick="tableClick('BranchListDB')">

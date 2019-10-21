@@ -158,7 +158,7 @@ function tableClick(obj){
     wOut += '行:' + rowidx + '&nbsp;&nbsp;';
     wOut += '値:' + text;
  
-  document.getElementById("memo").innerHTML = wOut;
- 
+  document.getElementById("memo_p").innerHTML = wOut;
+  tr.style.backgroundColor = "yellow";
 }
 
