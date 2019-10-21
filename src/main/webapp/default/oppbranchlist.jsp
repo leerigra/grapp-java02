@@ -31,7 +31,8 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
 SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
 SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
-String oppbranchid="1";
+var oppbranchid="1";
+
 %>
 
 
