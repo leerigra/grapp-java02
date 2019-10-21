@@ -6,7 +6,7 @@ Class.forName("org.postgresql.Driver");
 String url = "jdbc:postgresql://ec2-107-22-160-185.compute-1.amazonaws.com:5432/deck0jp8rljjoa";
 String user = "uxsvvqdujoyrti";
 String password = "2d989239c38338117217f11fbd0bfc7cca8d1a671c3f395a833e0eab7932050c";
-String recid = request.getParameter("oppbranchid");
+String oppbranchid = request.getParameter("oppbranchid");
 String strsql = "SELECT * FROM oppbranch where oppbranchid='" + oppbranchid + "'";
 
 Connection db=DriverManager.getConnection(url, user, password);
@@ -21,7 +21,7 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
  
 <div class="content-data">
 
-    <p>recid:<%= recid %></p>
+    <p>oppbranchid:<%= oppbranchid %></p>
 
     <table class="oppBrDetailTable" id="BranchDetailDB">
         <tr>
