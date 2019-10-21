@@ -66,18 +66,18 @@ select {
 
 #iframeBlock{
 height:100%;
-}
 
-.iframeBody{
+    .iframeBody{
     height:100%;
-}
 
-iframe{
+        iframe{
         border:none;
         width:100%;
         height:100%;
         padding:0;
         margin:0;
+        }
+    }
 }
 
 
