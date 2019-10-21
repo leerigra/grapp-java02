@@ -30,7 +30,7 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
 SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
 SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
-String oppbranchid="";
+String oppbranchid="0";
 %>
 
 
