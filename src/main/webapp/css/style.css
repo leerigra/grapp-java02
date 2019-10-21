@@ -64,6 +64,23 @@ select {
     background-color: #777;
 }
 
+#iframeBlock{
+height:100%;
+
+    .iframeBody{
+    height:100%;
+
+        iframe{
+        border:none;
+        width:100%;
+        height:100%;
+        padding:0;
+        margin:0;
+        }
+    }
+}
+
+
 div.content-header h2 {
     height: 50px;
     background-color: #FFFFFF;
