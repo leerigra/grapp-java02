@@ -148,16 +148,22 @@ function btnOK_click()
 }
 
 
-function tableClick(obj){
+function tableClick(argEnv){
 
-  // クリックされた行を取得
-  tr = obj.parentNode.parentNode;
-  rowidx = tr.selectionRowIndex;
-  text = tr.cellIndex(1).value;
-  // --- 行・列・値の取得＆編集 ------------------
-    wOut += '行:' + rowidx + '&nbsp;&nbsp;';
-    wOut += '値:' + text;
+  // --- クリックされたエレメントを取得 ------------
+  var wElement = (argEnv.srcElement || argEnv.target);
  
+  if (wElement.tagName.toUpperCase() == 'TD'){
+ 
+    tr = wElement.parentNode.parentNode;
+
+    // --- 行・列・値の取得＆編集 ------------------
+    wOut += '列:' + wElement.cellIndex + '&nbsp;&nbsp;';
+    wOut += '行:' + wElement.parentNode.sectionRowIndex + '&nbsp;&nbsp;';
+    wOut += '値:' + wElement.innerHTML;
+    
+  }
+
   document.getElementById("memo_p").innerHTML = wOut;
   tr.style.backgroundColor = "yellow";
 }
