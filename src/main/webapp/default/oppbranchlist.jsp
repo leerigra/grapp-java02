@@ -13,7 +13,7 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
 SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
 SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
-
+String oppbranchid="1";
 
 %>
 
@@ -74,3 +74,6 @@ db.close();
 </table>
 
 </div>
+
+<iframe id="oppdetail" src="/default/oppbranchdetail.jsp?oppbranchid=<%= oppbranchid %>" name="testIframe"></iframe>>
+
