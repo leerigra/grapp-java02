@@ -75,13 +75,16 @@ function deleteRow(obj) {
 
 
 function checkDel(obj) {
-  // 削除ボタンを押下された行を取得
+  // 削除チェックボックスがクリックされた行を取得
   tr = obj.parentNode.parentNode;
+  table = tr.parentNode;
+　rowidx = tr.sectionRowIndex;
 
   if (obj.checked==true){
     
     // 論理削除的にグレーアウト
     tr.setAttribute("class","delete_row");
+    table.rows[rowidx].cells[1].innerHTML="削除";
   
   }else{
     
@@ -148,7 +151,13 @@ function btnOK_click()
 }
 
 
-function tableClick(argEnv){
+function tableClick(tableid){
+
+  // テーブル取得
+  var table = document.getElementById(tableid);
+
+
+
 
   // --- クリックされたエレメントを取得 ------------
   var wElement = (argEnv.srcElement || argEnv.target);
