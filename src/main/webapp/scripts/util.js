@@ -85,7 +85,7 @@ function checkDel(obj) {
   
   }else{
     
-    tr.removeClass("delete_row");
+    tr.removeAttribute("class","delete_row");
   }
 }
 
