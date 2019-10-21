@@ -69,7 +69,8 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
         </tr>
 
     </table>
-
+</div>
+<div class="content-data">
     <table class="oppBrDetailTable" id="BranchDetailmemo">
         <tr>
             <td class="colth">備考:</td>
@@ -92,4 +93,3 @@ objSql.close();
 db.close();
 %>
 
-</div>
