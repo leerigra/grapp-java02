@@ -146,3 +146,30 @@ function btnOK_click()
         console.log('キャンセルがクリックされました');
     }
 }
+
+
+function tableClick(argEnv){
+ // ===================================================
+ //  ○ クリック時の位置と値の取得 ○
+ //
+ //  tableのクリック位置と値を取得するサンプルです
+ //  （行と列はTRなども含んだ、0からの値です）
+ // ====================================================
+  var wOut = '';
+ 
+  // --- クリックされたエレメントを取得 ------------
+  var wElement = (argEnv.srcElement || argEnv.target);
+ 
+  // --- TDのみ対象とする --------------------------
+  if (wElement.tagName.toUpperCase() == 'TR'){
+ 
+    // --- 行・列・値の取得＆編集 ------------------
+    wOut += '行:' + wElement.cellIndex + '&nbsp;&nbsp;';
+    wOut += '列:' + wElement.parentNode.sectionRowIndex + '&nbsp;&nbsp;';
+    wOut += '値:' + wElement.innerHTML;
+ 
+    // --- 結果表示 ------------------------------
+    document.getElementById("clickKekka").innerHTML = wOut;
+ 
+  }
+}
