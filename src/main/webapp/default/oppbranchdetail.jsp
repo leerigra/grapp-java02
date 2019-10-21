@@ -69,12 +69,23 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
         </tr>
 
     </table>
-    <div class="comment-data">
-    備考：備考
 
-    資金課担当者：　資金化　担当
-　  承認／差戻コメント：　承認のコメント？
-    </div>
+    <table class="oppBrDetailTable" id="BranchDetailmemo">
+        <tr>
+            <td class="colth">備考:</td>
+            <td class="left"><textarea rows="10" cols="60">ここに記入してください</textarea></td>
+        </tr>
+        <tr>
+            <td class="colth">資金課担当者：</td>
+            <td class="left"><input type="text"> ></input></td>
+        </tr>
+ 
+        <tr>
+            <td class="colth">承認／差戻コメント：</td>
+            <td class="left"><textarea rows="10" cols="60">ここに記入してください</textarea></input></td>
+        </tr>
+    </table>
+ </div>
 <%
 rs.close();
 objSql.close();
