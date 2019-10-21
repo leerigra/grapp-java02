@@ -74,6 +74,8 @@ db.close();
 </table>
 
 </div>
-
-<iframe id="oppdetail" src="/default/oppbranchdetail.jsp?oppbranchid=<%= oppbranchid %>" name="testIframe" width=100% height=100%></iframe>>
-
+<div id="iframeBlock">
+<div class="iframeBody">
+    <iframe id="oppdetail" src="/default/oppbranchdetail.jsp?oppbranchid=<%= oppbranchid %>" name="testIframe" ></iframe>>
+</div>
+</div>
