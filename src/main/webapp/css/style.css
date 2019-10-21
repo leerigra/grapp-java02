@@ -95,6 +95,14 @@ div.content-body h3 {
     padding: 2px;
 }
 
+div.section-title h4{
+    color: #222;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 2px;
+    padding: 2px;
+    border-bottom: medium double rgb(33, 2, 58);
+}
 
 
 table.oppBrListTable{
