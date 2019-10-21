@@ -13,10 +13,8 @@ function tableClick(tr){
   alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
  
   //選択された行のidをセットしてリロード
-
   oppbranchid = table.rows[rowidx].cells[0].innerHTML;
-　alert("変更後:" + oppbranchid);
-  tr.setAttribute("class","sel_row");
+　tr.setAttribute("class","sel_row");
   document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
 }
 </script>
