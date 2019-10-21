@@ -33,7 +33,7 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
         <tr>
             <td class="colth">実行／払込予定日:</td>
             <td class="left"><%= objDtFmt.format(rs.getDate("plan_Date")) %> </td>
-            <td class="left"><input type="text" value=<%= objDtFmt.format(rs.getDate("plan_Date")) %> ></input></td>
+            <td class="right"><input type="text" value=<%= objDtFmt.format(rs.getDate("plan_Date")) %> ></input></td>
         </tr>
         <tr>
             <td class="colth">実行払込予定額(現通貨):</td>
@@ -43,7 +43,7 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
         <tr>
             <td class="colth">実行／払込確度:</td>
             <td class="center"><%= rs.getString("plan_accuracy") %></td>
-            <td class="center">
+            <td class="right">
                 <select name="plan_accuracy">
                     <option value=""></option>
                     <option value="A" <% if ("A".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>A</option>

@@ -34,7 +34,7 @@ div.content-body {
 
 
 input {
-        font-size: 12px;
+        font-size: 14px;
 }
 
 
@@ -102,15 +102,15 @@ table.oppBrListTable{
 
 
 table.oppBrListTable th{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
-    background-color: rgb(201, 154, 255);
+    background-color: rgb(170, 161, 180);;
     padding: 5px;
     border-bottom: 1px solid #222;
 }
 
 table.oppBrListTable td{
-    font-size: 12px;
+    font-size: 14px;
     padding: 5px;
     border-bottom: 1px solid #777;
     background-color: transparent;
@@ -126,21 +126,21 @@ table.oppBrDetailTable{
 
 
 table.oppBrDetailTable th{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
-    background-color: rgb(201, 154, 255);
+    background-color: rgb(170, 161, 180);
     padding: 5px;
     border-bottom: 1px solid #222;
 }
 
 table.oppBrDetailTable td{
-    font-size: 12px;
+    font-size: 14px;
     padding: 5px;
     border-bottom: 1px solid #777;
     background-color: transparent;
 }
 
-td.colth{
+.colth{
     background-color:#cabaec;
     text-align: left;
     font-style: normal;
