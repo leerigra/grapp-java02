@@ -140,7 +140,7 @@ table.oppBrDetailTable td{
     background-color: transparent;
 }
 
-.colth{
+table.oppBrDetailTable td.colth{
     background-color:#cabaec;
     text-align: left;
     font-style: normal;
