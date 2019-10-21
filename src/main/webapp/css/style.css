@@ -117,6 +117,37 @@ table.oppBrListTable td{
 }
 
 
+
+table.oppBrDetailTable{
+    width: 95%;
+    border-collapse: collapse;
+    border-spacing: 0;
+   } 
+
+
+
+table.oppBrDetailTable th{
+    font-size: 12px;
+    font-weight: normal;
+    background-color: rgb(201, 154, 255);
+    padding: 5px;
+    border-bottom: 1px solid #222;
+}
+
+th.colth{
+    background-color:#cabaec;
+    text-align: left;
+    font-style: normal;
+}
+
+table.oppBrDetailTable td{
+    font-size: 12px;
+    padding: 5px;
+    border-bottom: 1px solid #777;
+    background-color: transparent;
+}
+
+
 .table_btn {
   margin-left:2px;
   margin-bottom:2px;
