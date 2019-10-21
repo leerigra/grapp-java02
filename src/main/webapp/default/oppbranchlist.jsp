@@ -33,7 +33,8 @@ db.setReadOnly(true);
 Statement objSql=db.createStatement();
 ResultSet rs=objSql.executeQuery(strsql);
 DecimalFormat objFmt=new DecimalFormat("#,###");
-SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
+SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
+SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 while(rs.next()){
 %>
       <tr>
@@ -49,7 +50,7 @@ while(rs.next()){
                 <option value="C" <% if ("C".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>C</option>
             </select> 
         </td>
-        <td class="left"><%=objDtFmt.format(rs.getDate("create_date"))%></td>
+        <td class="left"><%=objDtTmFmt.format(rs.getDate("create_date"))%></td>
         <td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this)" /></td>
         
     </tr>
