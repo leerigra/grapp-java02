@@ -8,6 +8,15 @@ String user = "uxsvvqdujoyrti";
 String password = "2d989239c38338117217f11fbd0bfc7cca8d1a671c3f395a833e0eab7932050c";
 String recid = request.getParameter("recid");
 String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
+
+String sel_recid=1;
+String sel_plan_Date_b="2019/11/1";
+String sel_plan_Date_a="2019/11/2";
+String sel_plan_amount_b=1000000;
+String sel_plan_amount_a=2000000;
+string sel_plan_accuracy_b="B";
+string sel_plan_accuracy_a="A";
+
 %>
 
 <script type="text/javascript" src="/scripts/util.js"></script>
@@ -65,4 +74,87 @@ objSql.close();
 db.close();
 %>
 </table>
+
+<div class="content-data">
+
+    <div class="section-title"><h4>枝口情報</h4></div>
+    <p>oppbranchid:<%= oppbranchid %></p>
+
+    <table class="oppBrDetailTable" id="BranchDetailDB">
+        <tr>
+            <th>&nbsp;</th>
+            <th>変更前</th>
+            <th>変更後</th>
+        </tr>
+        <tr>
+            <td class="colth">実行／払込予定日:</td>
+            <td class="left"></td><%= sel_plan_Date_b %> </td>
+            <td class="right"><input type="text" value=<%= objDtFmt.format(sel_plan_Date_a) %> ></input></td>
+        </tr>
+        <tr>
+            <td class="colth">実行払込予定額(現通貨):</td>
+            <td class="right"><%= objFmt.format(sel_plan_amount_b)) %></td>
+            <td class="right"><input type="text" size="18" class="right" value=<%= objFmt.format(sel_plan_amount_a) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        </tr>
+        <tr>
+            <td class="colth">実行／払込確度:</td>
+            <td class="center"><%= sel_plan_accuracy_b") %></td>
+            <td class="right">
+                <select name="plan_accuracy">
+                    <option value=""></option>
+                    <option value="A" <% if ("A".equals(sel_plan_accuracy_a)) { %>selected<% } %>>A</option>
+                    <option value="B" <% if ("B".equals(sel_plan_accuracy_a)) { %>selected<% } %>>B</option>
+                    <option value="C" <% if ("C".equals(sel_plan_accuracy_a)) { %>selected<% } %>>C</option>
+                </select> 
+            </td>
+        </tr>
+        <tr>
+            <td class="colth">ネッティング額（現通貨）:</td>
+            <td class="right"></td>
+            <td class="right"><input type="text" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        </tr>
+        <tr>
+            <td class="colth">実行日控除額（現通貨）:</td>
+            <td class="right"><%= objFmt.format(rs.getLong("plan_amount")) %></td>
+            <td class="right"><input type="text" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        </tr>
+        <tr>
+            <td class="colth">差額（現通貨）:</td>
+            <td class="right"><%= objFmt.format(rs.getLong("plan_amount")) %></td>
+            <td class="right"><input type="text" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        </tr>
+
+    </table>
+</div>
+<div class="content-data">
+    <table class="oppBrDetailTable" id="BranchDetailmemo">
+        <tr>
+            <td class="colth">備考:</td>
+            <td class="left"><textarea id="memo" rows="10" cols="50">ここに記入してください</textarea></td>
+        </tr>
+    
+    </table>
+</div>
+<div class="content-data">
+    <div class="section-title"><h4>資金課 確認状況</h4></div>
+    <table class="oppBrDetailTable" id="BranchDetailApproval">
+        <tr>
+            <td class="colth">資金課への申請状況</td><
+            <td class="left">申請中</td>　<!--一時保存,申請中,差戻,承認反映中-->
+        </tr>
+
+        <tr>
+            <td class="colth">資金課担当者：</td>
+            <td class="left">担当　一郎</td>
+        </tr>
+ 
+        <tr>
+            <td class="colth">承認／差戻コメント：</td>
+            <td class="left">承認 or 差し戻しのコメントがここに表示されます。</td>
+        </tr>
+    </table>
+ </div>
+
+
+
 </div>

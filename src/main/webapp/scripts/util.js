@@ -87,8 +87,14 @@ function checkDel(obj) {
     table.rows[rowidx].cells[1].innerHTML="削除";
   
   }else{
-    
+  
     tr.removeAttribute("class","delete_row");
+    
+    if (table.rows[rowidx].cells[0].innerHTML==""){
+      table.rows[rowidx].cells[1].innerHTML="追加";
+    } else {
+    table.rows[rowidx].cells[1].innerHTML="";
+    }
   }
 }
 
@@ -151,29 +157,25 @@ function btnOK_click()
 }
 
 
-function tableClick(tableid){
+function tableClick(obj){
 
-  // テーブル取得
-  var table = document.getElementById(tableid);
-
-
-
-
-  // --- クリックされたエレメントを取得 ------------
-  var wElement = (argEnv.srcElement || argEnv.target);
+  // 削除チェックボックスがクリックされた行を取得
+  tr = obj.parentNode.parentNode;
+  table = tr.parentNode;
+  rowidx = tr.sectionRowIndex;
  
-  if (wElement.tagName.toUpperCase() == 'TD'){
- 
-    tr = wElement.parentNode.parentNode;
+  //選択された行の値を全部セット 
 
-    // --- 行・列・値の取得＆編集 ------------------
-    wOut += '列:' + wElement.cellIndex + '&nbsp;&nbsp;';
-    wOut += '行:' + wElement.parentNode.sectionRowIndex + '&nbsp;&nbsp;';
-    wOut += '値:' + wElement.innerHTML;
-    
-  }
-
-  document.getElementById("memo_p").innerHTML = wOut;
-  tr.style.backgroundColor = "yellow";
+  sel_recid = table.rows[rowidx].cells[0].innerHTML;
+  sel_plan_Date_b= table.rows[rowidx].cells[2].innerHTML;
+  sel_plan_Date_a = table.rows[rowidx].cells[2].innerHTML;
+  sel_plan_amount_b = table.rows[rowidx].cells[3].innerHTML;
+  sel_plan_amount_a = table.rows[rowidx].cells[3].innerHTML;
+  sel_plan_accuracy_b = table.rows[rowidx].cells[4].innerHTML;
+  sel_plan_accuracy_a = table.rows[rowidx].cells[4].innerHTML;
+  
 }
 
+function reloadDetail(detailid){
+  document.getElementById('iframe_id')[0].contentDocument.location.reload(true);
+}
