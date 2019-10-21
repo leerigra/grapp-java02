@@ -32,8 +32,8 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
         </tr>
         <tr>
             <th class="colth">実行／払込予定日:</th>
-            <td class="left"><%= objDtFmt.format(rs.getDate("plan_Date")) %> ></td>
-            <td class="left"><input type="text" size="10" value=<%= objDtFmt.format(rs.getDate("plan_Date")) %> ></input></td>
+            <td class="left"><%= objDtFmt.format(rs.getDate("plan_Date")) %> </td>
+            <td class="left"><input type="text" value=<%= objDtFmt.format(rs.getDate("plan_Date")) %> ></input></td>
         </tr>
         <tr>
             <th class="colth">実行払込予定額(現通貨):</th>
