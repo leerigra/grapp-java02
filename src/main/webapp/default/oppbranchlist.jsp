@@ -9,6 +9,10 @@ String password = "2d989239c38338117217f11fbd0bfc7cca8d1a671c3f395a833e0eab79320
 String recid = request.getParameter("recid");
 String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
 
+DecimalFormat objFmt=new DecimalFormat("#,###");
+SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
+SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
+
 String sel_recid = "1";
 Date sel_plan_Date_b = objDtFmt.format("2019-11-1");
 Date sel_plan_Date_a = objDtFmt.format("2019-12-2");
@@ -43,9 +47,7 @@ Connection db=DriverManager.getConnection(url, user, password);
 db.setReadOnly(true);
 Statement objSql=db.createStatement();
 ResultSet rs=objSql.executeQuery(strsql);
-DecimalFormat objFmt=new DecimalFormat("#,###");
-SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
-SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
+
 while(rs.next()){
 %>
       <tr>
