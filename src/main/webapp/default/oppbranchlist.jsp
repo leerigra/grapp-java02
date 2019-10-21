@@ -39,7 +39,6 @@ String oppbranchid="1";
 
 
 <div class="content-data">
-    <p id="memo">memo</p>
     <input type="button" class="table_btn" value="行追加"  />
 
     <table class="oppBrListTable" id="BranchListDB" >

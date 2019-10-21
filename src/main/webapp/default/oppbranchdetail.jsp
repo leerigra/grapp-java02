@@ -27,8 +27,6 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 <div class="content-data">
 
     <div class="section-title"><h4>枝口情報</h4></div>
-    <p>oppbranchid:<%= oppbranchid %></p>
-
     <table class="oppBrDetailTable" id="BranchDetailDB">
         <tr>
             <th>&nbsp;</th>
