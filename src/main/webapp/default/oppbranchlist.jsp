@@ -26,7 +26,8 @@ String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
         <th>削除</th>
 
     </tr>
-    
+    <!--選択肢：新規,変更,削除,取下-->
+
 <%
 Connection db=DriverManager.getConnection(url, user, password);
 db.setReadOnly(true);
@@ -39,7 +40,7 @@ while(rs.next()){
 %>
       <tr>
         <td class="hidden"><%= rs.getString("oppbranchid") %></td>
-        <td class="center">&nbsp;</td>
+        <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
         <td class="left"><input type="text" size="10" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
         <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">

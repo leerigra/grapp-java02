@@ -84,6 +84,10 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 <div class="content-data">
     <div class="section-title"><h4>資金課 確認状況</h4></div>
     <table class="oppBrDetailTable" id="BranchDetailApproval">
+        <tr>
+            <td class="colth">資金課への申請状況</td><
+            <td class="left">申請中</td>　<!--一時保存,申請中,差戻,承認反映中-->
+        </tr>
 
         <tr>
             <td class="colth">資金課担当者：</td>
