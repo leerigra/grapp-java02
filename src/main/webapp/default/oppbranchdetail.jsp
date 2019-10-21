@@ -74,7 +74,7 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
     <table class="oppBrDetailTable" id="BranchDetailmemo">
         <tr>
             <td class="colth">備考:</td>
-            <td class="left"><textarea rows="10" cols="60">ここに記入してください</textarea></td>
+            <td class="left"><textarea rows="10" cols="50">ここに記入してください</textarea></td>
         </tr>
         <tr>
             <td class="colth">資金課担当者：</td>
@@ -83,7 +83,7 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
  
         <tr>
             <td class="colth">承認／差戻コメント：</td>
-            <td class="left"><textarea rows="10" cols="60">ここに記入してください</textarea></input></td>
+            <td class="left"><textarea rows="10" cols="50">ここに記入してください</textarea></input></td>
         </tr>
     </table>
  </div>
