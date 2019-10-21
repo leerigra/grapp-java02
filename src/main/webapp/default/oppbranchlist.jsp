@@ -9,13 +9,13 @@ String password = "2d989239c38338117217f11fbd0bfc7cca8d1a671c3f395a833e0eab79320
 String recid = request.getParameter("recid");
 String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
 
-String sel_recid=1;
-date sel_plan_Date_b="2019/11/1";
-date sel_plan_Date_a="2019/11/2";
-long sel_plan_amount_b=1000000;
-long sel_plan_amount_a=2000000;
-String sel_plan_accuracy_b="B";
-String sel_plan_accuracy_a="A";
+String sel_recid = "1";
+date sel_plan_Date_b = "2019/11/1";
+date sel_plan_Date_a = "2019/11/2";
+long sel_plan_amount_b = 1000000;
+long sel_plan_amount_a = 2000000;
+String sel_plan_accuracy_b = "B";
+String sel_plan_accuracy_a = "A";
 
 %>
 
@@ -78,7 +78,7 @@ db.close();
 <div class="content-data">
 
     <div class="section-title"><h4>枝口情報</h4></div>
-    <p>oppbranchid:<%= oppbranchid %></p>
+    <p>oppbranchid:<%= sel_recid %></p>
 
     <table class="oppBrDetailTable" id="BranchDetailDB">
         <tr>
@@ -93,12 +93,12 @@ db.close();
         </tr>
         <tr>
             <td class="colth">実行払込予定額(現通貨):</td>
-            <td class="right"><%= objFmt.format(sel_plan_amount_b)) %></td>
+            <td class="right"><%= objFmt.format(sel_plan_amount_b) %></td>
             <td class="right"><input type="text" size="18" class="right" value=<%= objFmt.format(sel_plan_amount_a) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         </tr>
         <tr>
             <td class="colth">実行／払込確度:</td>
-            <td class="center"><%= sel_plan_accuracy_b") %></td>
+            <td class="center"><%= sel_plan_accuracy_b %></td>
             <td class="right">
                 <select name="plan_accuracy">
                     <option value=""></option>
