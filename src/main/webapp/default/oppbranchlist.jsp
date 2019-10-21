@@ -2,6 +2,24 @@
          import="java.sql.*,java.text.*" %>
 
 <%
+<script type="text/javascript">
+
+function tableClick(obj){
+
+  // クリックされた行を取得
+  tr = obj.parentNode.parentNode;
+  table = tr.parentNode;
+  rowidx = tr.sectionRowIndex;
+ 
+  //選択された行のidをセットしてリロード
+
+  oppbranchid = table.rows[rowidx].cells[0].innerHTML;
+  document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
+}
+
+%>
+
+<%
 Class.forName("org.postgresql.Driver");
 String url = "jdbc:postgresql://ec2-107-22-160-185.compute-1.amazonaws.com:5432/deck0jp8rljjoa";
 String user = "uxsvvqdujoyrti";
@@ -13,7 +31,7 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
 SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
 SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
-String oppbranchid="2";
+String oppbranchid="";
 
 %>
 
@@ -76,6 +94,6 @@ db.close();
 </div>
 <div id="iframeBlock">
 <div class="iframeBody">
-    <iframe id="oppdetail" src="/default/oppbranchdetail.jsp?oppbranchid=<%= oppbranchid %>" name="testIframe" frameborder="0" width="600px" height="800"></iframe>
+    <iframe id="oppdetail" src="/default/oppbranchdetail.jsp?oppbranchid=<%= oppbranchid %>" name="testIframe" frameborder="0" width="800px" height="1000"></iframe>
 </div>
 </div>

@@ -157,25 +157,3 @@ function btnOK_click()
 }
 
 
-function tableClick(obj){
-
-  // 削除チェックボックスがクリックされた行を取得
-  tr = obj.parentNode.parentNode;
-  table = tr.parentNode;
-  rowidx = tr.sectionRowIndex;
- 
-  //選択された行の値を全部セット 
-
-  sel_recid = table.rows[rowidx].cells[0].innerHTML;
-  sel_plan_Date_b= table.rows[rowidx].cells[2].innerHTML;
-  sel_plan_Date_a = table.rows[rowidx].cells[2].innerHTML;
-  sel_plan_amount_b = table.rows[rowidx].cells[3].innerHTML;
-  sel_plan_amount_a = table.rows[rowidx].cells[3].innerHTML;
-  sel_plan_accuracy_b = table.rows[rowidx].cells[4].innerHTML;
-  sel_plan_accuracy_a = table.rows[rowidx].cells[4].innerHTML;
-  
-}
-
-function reloadDetail(detailid){
-  document.getElementById('iframe_id')[0].contentDocument.location.reload(true);
-}
