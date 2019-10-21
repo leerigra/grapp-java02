@@ -32,7 +32,12 @@
             </div>
         </div>
         
-        <div class="content-body">
+        <frameset rows="30%, *">
+        <iframe src="oppbranchdetail.jsp" name="form">
+        </iframe>
+        </frameset>
+
+            <div class="content-body">
             <h3>枝口詳細</h3>
             <jsp:include page="oppbranchdetail.jsp">
                 <jsp:param name="oppbranchid" value="1" />
