@@ -31,17 +31,17 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
             <th>変更後</th>
         </tr>
         <tr>
-            <th class="colth">実行／払込予定日:</th>
+            <td class="colth">実行／払込予定日:</td>
             <td class="left"><%= objDtFmt.format(rs.getDate("plan_Date")) %> </td>
             <td class="left"><input type="text" value=<%= objDtFmt.format(rs.getDate("plan_Date")) %> ></input></td>
         </tr>
         <tr>
-            <th class="colth">実行払込予定額(現通貨):</th>
+            <td class="colth">実行払込予定額(現通貨):</td>
             <td class="right"><%= objFmt.format(rs.getLong("plan_amount")) %></td>
             <td class="right"><input type="text" size="18" class="right" value=<%= objFmt.format(rs.getLong("plan_amount")) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         </tr>
         <tr>
-            <th class="colth">実行／払込確度:</th>
+            <td class="colth">実行／払込確度:</td>
             <td class="center"><%= rs.getString("plan_accuracy") %></td>
             <td class="center">
                 <select name="plan_accuracy">
@@ -53,17 +53,17 @@ SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
             </td>
         </tr>
         <tr>
-            <th class="colth">ネッティング額（現通貨）:</th>
+            <td class="colth">ネッティング額（現通貨）:</td>
             <td class="right"><%= objFmt.format(rs.getLong("plan_amount")) %></td>
             <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         </tr>
         <tr>
-            <th class="colth">実行日控除額（現通貨）:</th>
+            <td class="colth">実行日控除額（現通貨）:</td>
             <td class="right"><%= objFmt.format(rs.getLong("plan_amount")) %></td>
             <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         </tr>
         <tr>
-            <th class="colth">差額（現通貨）:</th>
+            <td class="colth">差額（現通貨）:</td>
             <td class="right"><%= objFmt.format(rs.getLong("plan_amount")) %></td>
             <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         </tr>

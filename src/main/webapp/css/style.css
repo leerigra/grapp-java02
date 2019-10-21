@@ -133,7 +133,7 @@ table.oppBrDetailTable th{
     border-bottom: 1px solid #222;
 }
 
-th.colth{
+td.colth{
     background-color:#cabaec;
     text-align: left;
     font-style: normal;
