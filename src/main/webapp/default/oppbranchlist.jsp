@@ -16,7 +16,7 @@ String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
     <p id="memo">memo</p>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB');" />
 
-    <table class="oppBrListTable" id="BranchListDB" onclick="tableClick('BranchListDB')">
+    <table class="oppBrListTable" id="BranchListDB" onclick="tableClick('event')">
     <tr>
         <th class="hidden">recid</th>
         <th>変更区分</th>
