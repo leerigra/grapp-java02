@@ -36,7 +36,7 @@ String oppbranchid="1";
 
 
 <div class="content-data">
-    <input type="button" class="table_btn" value="行追加"  />
+    <input type="button" class="table_btn" value="行追加" onclick="insertRow(BranchListDB)") />
 
     <table class="oppBrListTable" id="BranchListDB" >
     <tr>
