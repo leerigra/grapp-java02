@@ -160,5 +160,5 @@ function tableClick(obj){
  
   document.getElementById("memo").innerHTML = wOut;
  
-  }
 }
+
