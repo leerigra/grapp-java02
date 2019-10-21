@@ -10,7 +10,6 @@ function tableClick(tr){
   // クリックされた行を取得
   table = tr.parentNode;
   rowidx = tr.sectionRowIndex;
-  alert("変更前:" + oppbranchid);
   alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
  
   //選択された行のidをセットしてリロード
