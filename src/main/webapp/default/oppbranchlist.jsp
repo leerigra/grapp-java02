@@ -40,7 +40,7 @@ String oppbranchid="1";
 
 <div class="content-data">
     <p id="memo">memo</p>
-    <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB');" />
+    <input type="button" class="table_btn" value="行追加"  />
 
     <table class="oppBrListTable" id="BranchListDB" >
     <tr>
@@ -64,10 +64,10 @@ ResultSet rs=objSql.executeQuery(strsql);
 while(rs.next()){
 
 %>
-      <tr onclick="tableClick('BranchListDB')">
+      <tr onclick="alert('行クリック')">
         <td class="hidden"><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
-        <td class="left"><input type="text" size="10" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
+        <td onclick="alert('行クリック')" class="left"><input type="text" size="10" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
         <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
             <select name="plan_accuracy">
