@@ -64,6 +64,10 @@ select {
     background-color: #777;
 }
 
+.sel_row{
+    background-color: rgb(167, 221, 252);
+}
+
 #iframeBlock{
 height:100%;
 

@@ -4,16 +4,20 @@
 
 <script type="text/javascript" src="/scripts/util.js"></script>
 <script type="text/javascript">
+
 function tableClick(obj){
 
   // クリックされた行を取得
   tr = obj.parentNode.parentNode;
   table = tr.parentNode;
   rowidx = tr.sectionRowIndex;
+
+  alert("選択した行は：" + rowidx);
  
   //選択された行のidをセットしてリロード
 
   oppbranchid = table.rows[rowidx].cells[0].innerHTML;
+  tr.setAttribute("class","sel_row");
   document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
 }
 </script>
@@ -91,6 +95,6 @@ db.close();
 
 <div id="iframeBlock">
     <div class="iframeBody">
-        <iframe id="oppdetail" src="/default/oppbranchdetail.jsp?oppbranchid=<%= oppbranchid %>" name="testIframe" frameborder="0" width="800px" height="1000"></iframe>
+        <iframe id="oppdetail" src="/default/oppbranchdetail.jsp?oppbranchid=<%= oppbranchid %>" name="testIframe" frameborder="0" width="800px" height="1500px"></iframe>
     </div>
 </div>
