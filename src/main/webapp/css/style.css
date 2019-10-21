@@ -104,7 +104,8 @@ table.oppBrListTable{
 table.oppBrListTable th{
     font-size: 14px;
     font-weight: bold;
-    background-color: rgb(170, 161, 180);;
+    background-color: rgb(85, 74, 104);
+    color: #fff;
     padding: 5px;
     border-bottom: 1px solid #222;
 }
@@ -128,7 +129,8 @@ table.oppBrDetailTable{
 table.oppBrDetailTable th{
     font-size: 14px;
     font-weight: bold;
-    background-color: rgb(170, 161, 180);
+    background-color: rgb(85, 74, 104);
+    color: #fff;
     padding: 5px;
     border-bottom: 1px solid #222;
 }
