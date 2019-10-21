@@ -11,11 +11,11 @@ function tableClick(tr){
   table = tr.parentNode;
   rowidx = tr.sectionRowIndex;
 
-  alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
+  alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[1].innerHTML);
  
   //選択された行のidをセットしてリロード
 
-  oppbranchid = table.rows[rowidx].cells[0].innerHTML;
+  oppbranchid = table.rows[rowidx].cells[1].innerHTML;
   tr.setAttribute("class","sel_row");
   document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
 }
