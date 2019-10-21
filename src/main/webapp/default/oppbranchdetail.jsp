@@ -23,6 +23,7 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
  
 <div class="content-data">
 
+    <div class="section-title"><h4>枝口情報</h4></div>
     <p>oppbranchid:<%= oppbranchid %></p>
 
     <table class="oppBrDetailTable" id="BranchDetailDB">
@@ -77,6 +78,13 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
             <td class="colth">備考:</td>
             <td class="left"><textarea rows="10" cols="50">ここに記入してください</textarea></td>
         </tr>
+    
+    </table>
+</div>
+<div class="content-data">
+    <div class="section-title"><h4>資金課 確認状況</h4></div>
+    <table class="oppBrDetailTable" id="BranchDetailApproval">
+
         <tr>
             <td class="colth">資金課担当者：</td>
             <td class="left">担当　一郎</td>
