@@ -32,6 +32,19 @@
             </div>
         </div>
         
+        <div class="content-body">
+            <h3>枝口詳細</h3>
+            <jsp:include page="oppbranchdetail.jsp">
+                <jsp:param name="oppbranchid" value="1" />
+            </jsp:include>
+            <div class="content-navi">
+                <ul>
+                    <li class="btnCancel"><a class="linkCancel" href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
+                    <li class="btnOK"><a class="linkOK" href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
+                </ul>
+            </div>
+        </div>
+        
         <br/>
         <div class="content-footer">
             <div class="footerleft">
