@@ -18,7 +18,10 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
 SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
 SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 %>
- 
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+  
+<script type="text/javascript" src="/scripts/json2.js"></script>
+<script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
 <script type="text/javascript" src="/scripts/util.js"></script>
  
 <div class="content-data">
