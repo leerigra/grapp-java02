@@ -41,7 +41,9 @@ input {
         background-color: transparent;
 }
 
-
+select {
+        background-color:transparent;
+}
 
 
 .left{
