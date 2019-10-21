@@ -136,10 +136,7 @@ table.oppBrDetailTable th{
     background-color:#7058a3;
 }
 
-table.oppBrDetailTable th .colth{
-    font-size: 12px;
-    border-bottom: 1px;
-    border-color:#666666;
+th.colth{
     background-color:#cabaec;
     text-align: left;
     font-style: normal;
