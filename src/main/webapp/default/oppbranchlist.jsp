@@ -10,12 +10,12 @@ String recid = request.getParameter("recid");
 String strsql = "SELECT * FROM oppbranch where extid='" + recid + "'";
 
 String sel_recid=1;
-String sel_plan_Date_b="2019/11/1";
-String sel_plan_Date_a="2019/11/2";
-String sel_plan_amount_b=1000000;
-String sel_plan_amount_a=2000000;
-string sel_plan_accuracy_b="B";
-string sel_plan_accuracy_a="A";
+date sel_plan_Date_b="2019/11/1";
+date sel_plan_Date_a="2019/11/2";
+long sel_plan_amount_b=1000000;
+long sel_plan_amount_a=2000000;
+String sel_plan_accuracy_b="B";
+String sel_plan_accuracy_a="A";
 
 %>
 
