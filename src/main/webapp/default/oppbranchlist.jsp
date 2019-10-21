@@ -42,7 +42,7 @@ String oppbranchid="1";
     <p id="memo">memo</p>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB');" />
 
-    <table class="oppBrListTable" id="BranchListDB" onclick="tableClick('BranchListDB')">
+    <table class="oppBrListTable" id="BranchListDB" >
     <tr>
         <th class="hidden">recid</th>
         <th>変更区分</th>
@@ -64,7 +64,7 @@ ResultSet rs=objSql.executeQuery(strsql);
 while(rs.next()){
 
 %>
-      <tr>
+      <tr onclick="tableClick('BranchListDB')">
         <td class="hidden"><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
         <td class="left"><input type="text" size="10" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
