@@ -78,7 +78,7 @@ function checkDel(obj) {
   // 削除ボタンを押下された行を取得
   tr = obj.parentNode.parentNode;
 
-  if obj.checked=true{
+  if (obj.checked=true){
     
     // 論理削除的にグレーアウト
     tr.setAttribute("class","delete_row");
