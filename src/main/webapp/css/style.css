@@ -30,6 +30,9 @@ div.content-body {
     margin-left: 10px;
 } 
 
+div.content-data {
+    margin: 10px;
+} 
 
 
 
@@ -134,7 +137,6 @@ table.oppBrDetailTable th{
     padding: 5px;
     border-bottom: 1px solid #222;
 }
-
 table.oppBrDetailTable td{
     font-size: 14px;
     padding: 5px;
