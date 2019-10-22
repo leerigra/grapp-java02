@@ -14,10 +14,10 @@ function tableClick(tr){
   tr.setAttribute("class","sel_row");
   
   //選択された行のidをセットしてリロード
-  oppbranchid = table.rows[rowidx].cells[0].innerHTML;
+  document.getElementById('sel_oppbranchid').innerHTML=table.rows[rowidx].cells[0].innerHTML;
   reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
   //document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
-  document.getElementById('sel_oppbranchid')[0].contentDocument.location.replace(reloadurl);
+  document.getElementById('sel_oppbranchid').contentDocument.location.replace(reloadurl);
 }
 </script>
 
