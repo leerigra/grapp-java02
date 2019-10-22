@@ -17,7 +17,7 @@ function tableClick(tr){
   oppbranchid = table.rows[rowidx].cells[0].innerHTML;
   reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
   //document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
-  document.getElementById('oppdetail')[0].contentDocument.location.replace(reloadurl);
+  document.getElementById('sel_oppbranchid')[0].contentDocument.location.replace(reloadurl);
 }
 </script>
 
@@ -35,8 +35,9 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
 %>
 
-
 <div class="content-data">
+    <form name="fm_opplist">
+    <INPUT type="hidden" id="sel_oppbranchid">4</input>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow(BranchListDB)") />
 
     <table class="oppBrListTable" id="BranchListDB" >
@@ -87,7 +88,7 @@ objSql.close();
 db.close();
 %>
 </table>
-
+</form>
 </div>
 
 <div id="iframeBlock">
