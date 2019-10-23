@@ -14,10 +14,11 @@ function tableClick(tr){
   tr.setAttribute("class","sel_row");
   
   //選択された行のidをセットしてリロード
-  sel_oppbranchid.innerHTML=table.rows[rowidx].cells[0].innerHTML;
+  document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
+
   reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
   //document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
-  document.getElementById('sel_oppbranchid').contentDocument.location.replace(reloadurl);
+  document.getElementById("sel_oppbranchid").contentDocument.location.replace(reloadurl);
 }
 </script>
 
@@ -37,7 +38,7 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
 <div class="content-data">
     <form name="fm_opplist">
-    <INPUT type="hidden" id="sel_oppbranchid">4</input>
+    <INPUT type="text" id="sel_oppbranchid" value="4"></input>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow(BranchListDB)") />
 
     <table class="oppBrListTable" id="BranchListDB" >
