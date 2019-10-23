@@ -66,7 +66,7 @@ cell_lst_netting_upd.innerHTML = inNumber + " id='lst_netting_upd_" + row_len + 
 cell_lst_deduction_upd.innerHTML = inNumber + " id='lst_deduction_upd_" + row_len + "' />";
 cell_lst_differenc_upd.innerHTML = inNumber + " id='lst_difference_upd_" + row_len + "' />";
 
-cell_id.setAttribute("class","hidden");   
+cell_id.setAttribute("class","hidden");
 cell_status.setAttribute("class","center");  
 
 cell_plan_Date.setAttribute("class","left"); 
@@ -77,16 +77,16 @@ cell_create_date.setAttribute("class","left");
 cell_checkbox.setAttribute("class","center"); 
 
 cell_lst_netting.setAttribute("class","hidden");
-cell_lst_deduction.setAttribute("class","hidden"); 
-cell_lst_difference.setAttribute("class","hidden"); 
+cell_lst_deduction.setAttribute("class","hidden");
+cell_lst_difference.setAttribute("class","hidden");
 
-cell_lst_plan_Date_upd.setAttribute("class","hidden"); 
+cell_lst_plan_Date_upd.setAttribute("class","hidden");
 cell_lst_plan_amount_upd.setAttribute("class","hidden"); 
-cell_lst_plan_accuracy_upd.setAttribute("class","hidden"); 
+cell_lst_plan_accuracy_upd.setAttribute("class","hidden");
 
 cell_lst_netting_upd.setAttribute("class","hidden"); 
-cell_lst_deduction_upd.setAttribute("class","hidden"); 
-cell_lst_difference_upd.setAttribute("class","hidden"); 
+cell_lst_deduction_upd.setAttribute("class","hidden");
+cell_lst_difference_upd.setAttribute("class","hidden");
 
 cell_id.setAttribute("id","lst_id_" + row_len);   
 cell_status.setAttribute("id","lst_status_" + row_len);  
