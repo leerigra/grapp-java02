@@ -12,7 +12,7 @@ function tableClick(tr){
   rowidx = tr.sectionRowIndex;
   col2_id = "col2_" + table.rows[rowidx].cells[0].innerHTML;
 
-  alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
+  //alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
   tr.setAttribute("class","sel_row");
   
   //選択された行のidをセットしてリロード
@@ -20,10 +20,10 @@ function tableClick(tr){
   
 
     document.getElementById( "col1_b" ).innerHTML = document.getElementById(col2_id).value;
-    document.getElementById( "col2_b" ).value = table.rows[rowidx].cells[3].innerHTML;
+    document.getElementById( "col2_b" ).innerHTML = document.getElementById(col3_id).value;
     
     document.getElementById( "col1_a" ).value = document.getElementById(col2_id).value;
-    document.getElementById( "col2_a" ).value = table.rows[rowidx].cells[3].value;
+    document.getElementById( "col2_a" ).value = document.getElementById(col3_id).value;
     
 
   reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
