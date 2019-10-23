@@ -12,9 +12,11 @@ function insertRow(id) {
 
     var cell_id  = row.insertCell(-1);
     var cell_status  = row.insertCell(-1);
+
     var cell_plan_Date  = row.insertCell(-1);
     var cell_plan_amount  = row.insertCell(-1);
     var cell_plan_accuracy  = row.insertCell(-1);
+
     var cell_create_date  = row.insertCell(-1);
     var cell_checkbox  = row.insertCell(-1);
 
@@ -25,8 +27,10 @@ function insertRow(id) {
     var cell_lst_plan_Date_upd = row.insertCell(-1);
     var cell_lst_plan_amount_upd = row.insertCell(-1);
     var cell_lst_plan_accuracy_upd = row.insertCell(-1);
+
     var cell_lst_netting_upd = row.insertCell(-1);
     var cell_lst_deduction_upd = row.insertCell(-1);
+    var cell_lst_difference_upd = row.insertCell(-1);
 
 
     // ボタン用 HTML
@@ -45,7 +49,7 @@ cell_status.innerHTML ="追加";
 
 cell_plan_Date.innerHTML  = inDate;
 cell_plan_amount.innerHTML  = inNumber;
-cell_plan_accuracy.innerHTML  = inSelect
+cell_plan_accuracy.innerHTML  = inSelect;
 
 cell_create_date.innerHTML = "&nbsp;";
 cell_checkbox.innerHTML = delCheckbox; 
@@ -86,9 +90,11 @@ cell_lst_difference_upd.setAttribute("class","hidden");
 
 cell_id.setAttribute("id","lst_id_" + row_len);   
 cell_status.setAttribute("id","lst_status_" + row_len);  
+
 cell_plan_Date.setAttribute("id","lst_plan_Date_" + row_len);  
 cell_plan_amount.setAttribute("id","lst_plan_amount" + row_len);  
 cell_plan_accuracy.setAttribute("id","lst_plan_accuracy" + row_len);    
+
 cell_create_date.setAttribute("id","lst_create_dateft" + row_len);    
 cell_checkbox.setAttribute("id","lst_checkbox" + row_len); 
 
