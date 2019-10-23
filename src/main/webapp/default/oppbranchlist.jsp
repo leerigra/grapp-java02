@@ -23,7 +23,7 @@ function tableClick(tr){
     document.getElementById( "col5_a" ).value = table.rows[rowidx].cells[6].value;
     document.getElementById( "col6_a" ).value = table.rows[rowidx].cells[7].value;
 
-    document.getElementById( "col1_b" ).value = table.rows[rowidx].cells[2].innerHTML;
+    document.getElementById( "col1_b" ).value = document.getElementById( "col2_" +  table.rows[rowidx].cells[0].innerHTML ).value
     document.getElementById( "col2_b" ).value = table.rows[rowidx].cells[3].innerHTML;
     document.getElementById( "col3_b" ).value = table.rows[rowidx].cells[4].innerHTML;
     document.getElementById( "col4_b" ).value = table.rows[rowidx].cells[5].innerHTML;
@@ -82,10 +82,10 @@ while(rs.next()){
       <tr onclick="tableClick(this)">
         <td class="hidden"><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
-        <td onclick="alert('列クリック')" class="left"><input type="text" size="10" id=<%="col2_" + String.valueOf(i) %> value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
-        <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td onclick="alert('列クリック')" class="left"><input type="text" size="10" id="<%="col2_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
+        <td class="right"><input type="text" size="18" class="right" id="<%="col3_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
-            <select name="plan_accuracy">
+            <select name="plan_accuracy" id="<%="col4_" + String.valueOf(i) %>">
                 <option value=""></option>
                 <option value="A" <% if ("A".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>A</option>
                 <option value="B" <% if ("B".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>B</option>
