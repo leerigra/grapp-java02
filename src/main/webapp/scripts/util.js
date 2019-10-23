@@ -50,11 +50,13 @@ function insertRow(id) {
 
 cell_id.innerHTML = "&nbsp;";
 cell_status.innerHTML ="追加";
+
 cell_plan_Date.innerHTML  = inDate;
 cell_plan_amount.innerHTML  = inNumber;
 cell_plan_accuracy.innerHTML  = inSelect
+
 cell_create_date.innerHTML = "&nbsp;";
-cell_checkbox.innerHTML = "&nbsp;"; 
+cell_checkbox.innerHTML = delCheckbox; 
 
 cell_lst_netting.innerHTML = inNumber;
 cell_lst_deduction.innerHTML = inNumber; 
@@ -62,16 +64,19 @@ cell_lst_difference.innerHTML = inNumber;
 
 cell_lst_plan_Date_upd.innerHTML = inDate;
 cell_lst_plan_amount_upd.innerHTML = inNumber;
-cell_lst_plan_accuracy_upd.innerHTML  = inSelect
+cell_lst_plan_accuracy_upd.innerHTML  = inSelect;
+
 cell_lst_netting_upd.innerHTML = inNumber;
 cell_lst_deduction_upd.innerHTML = inNumber;
-
+cell_lst_differenc_upd.innerHTML = inNumber;
 
 cell_id.setAttribute("class","hidden");   
 cell_status.setAttribute("class","center");  
-cell_plan_Date.setAttribute("class","left" );  
+
+cell_plan_Date.setAttribute("class","left" ); 
 cell_plan_amount.setAttribute("class","right" );  
-cell_plan_accuracy.setAttribute("class","center" );    
+cell_plan_accuracy.setAttribute("class","center" );
+
 cell_create_date.setAttribute("class","left" );    
 cell_checkbox.setAttribute("class","center"); 
 
@@ -82,8 +87,10 @@ cell_lst_difference.setAttribute("class","hidden");
 cell_lst_plan_Date_upd.setAttribute("class","hidden"); 
 cell_lst_plan_amount_upd.setAttribute("class","hidden"); 
 cell_lst_plan_accuracy_upd.setAttribute("class","hidden"); 
+
 cell_lst_netting_upd.setAttribute("class","hidden"); 
 cell_lst_deduction_upd.setAttribute("class","hidden"); 
+cell_lst_difference_upd.setAttribute("class","hidden"); 
 
 cell_id.setAttribute("id","lst_id_" + row_len);   
 cell_status.setAttribute("id","lst_status_" + row_len);  
@@ -100,9 +107,10 @@ cell_lst_difference.setAttribute("id","lst_difference"+ row_len);
 cell_lst_plan_Date_upd.setAttribute("id","lst_plan_Date_upd"+ row_len); 
 cell_lst_plan_amount_upd.setAttribute("id","lst_plan_amount_upd"+ row_len); 
 cell_lst_plan_accuracy_upd.setAttribute("id","lst_plan_accuracy_upd"+ row_len); 
+
 cell_lst_netting_upd.setAttribute("id","lst_netting_upd"+ row_len); 
 cell_lst_deduction_upd.setAttribute("id","lst_deduction_upd"+ row_len);     
-   
+cell_lst_difference_upd.setAttribute("id","lst_difference_upd"+ row_len);     
 
 }
 
