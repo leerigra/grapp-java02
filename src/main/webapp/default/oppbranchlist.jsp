@@ -10,8 +10,12 @@ function tableClick(tr){
   // クリックされた行を取得
   table = tr.parentNode;
   rowidx = tr.sectionRowIndex;
-  col2_id = "col2_" + rowidx;
-  col3_id = "col3_" + rowidx;
+  sel_plan_Date_id = "lst_plan_Date_" + rowidx;
+  sel_plan_amount_id = "lst_plan_amount_" + rowidx;
+  sel_plan_accuracy_id = "lst_plan_accuracy_" + rowidx;
+  sel_netting_id = "lst_netting_" + rowidx;
+  sel_deduction_id = "lst_deduction_" + rowidx;
+  sel_difference_id = "lst_difference_" + rowidx;
 
   //alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
   tr.setAttribute("class","sel_row");
@@ -20,12 +24,21 @@ function tableClick(tr){
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
   
 
-    document.getElementById( "col1_b" ).innerHTML = document.getElementById(col2_id).value;
-    document.getElementById( "col2_b" ).innerHTML = document.getElementById(col3_id).value;
-    
-    document.getElementById( "col1_a" ).value = document.getElementById(col2_id).value;
-    document.getElementById( "col2_a" ).value = document.getElementById(col3_id).value;
-    
+    document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).value;
+    document.getElementById( "plan_amount_b" ).innerHTML = document.getElementById(sel_plan_amount_id).value;
+    document.getElementById( "plan_accuracy_b" ).innerHTML = document.getElementById(sel_plan_accuracy_id).value;
+    document.getElementById( "netting_b" ).innerHTML = document.getElementById(sel_netting_id).value;
+    document.getElementById( "deduction_b" ).innerHTML = document.getElementById(sel_deduction_id).value;
+    document.getElementById( "difference_b" ).innerHTML = document.getElementById(sel_difference_id).value;
+   
+    document.getElementById( "plan_Date_a" ).value = document.getElementById(sel_plan_Date_id).value;
+    document.getElementById( "plan_amount_a" ).value = document.getElementById(sel_plan_amount_id).value;
+    document.getElementById( "plan_accuracy_a" ).value = document.getElementById(sel_plan_accuracy_id).value;
+    document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id).value;
+    document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id).value;
+    document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id).value;
+     
+
 
   reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
   //document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
@@ -75,12 +88,12 @@ int i = 1;
 while(rs.next()){
 %>
       <tr onclick="tableClick(this)">
-        <td class="hidden"><%= rs.getString("oppbranchid") %></td>
+        <td class="hidden" id="<%="lst_id_" + String.valueOf(i) %>" ><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
-        <td onclick="alert('列クリック')" class="left"><input type="text" size="10" id="<%="col2_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="col3_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="left"><input type="text" size="10" id="<%="lst_plan_Date_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
+        <td class="right"><input type="text" size="18" class="right" id="<%="lst_plan_amount_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
-            <select name="plan_accuracy" id="<%="col4_" + String.valueOf(i) %>">
+            <select name="plan_accuracy" id="<%="lst_plan_accuracy_" + String.valueOf(i) %>">
                 <option value=""></option>
                 <option value="A" <% if ("A".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>A</option>
                 <option value="B" <% if ("B".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>B</option>
@@ -90,6 +103,9 @@ while(rs.next()){
         <td class="left"><%=objDtTmFmt.format(rs.getDate("create_date"))%></td>
         <!--td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td-->
         <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" /></td-->
+        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ></td>
+        <td class="hidden">id="<%="lst_deduction_" + String.valueOf(i) %>" ></td>
+        <td class="hidden">id="<%="lst_difference_" + String.valueOf(i) %>" ></td>
         
     </tr>
 
@@ -117,15 +133,44 @@ db.close();
         </tr>
         <tr>
             <td class="colth">実行／払込予定日:</td>
-            <td class="left" id="col1_b"></td>
-            <td class="right"><input type="text" id="col1_a"/></td>
+            <td class="left" id="plan_Date_b"></td>
+            <td class="right"><input type="text" id="plan_Date_a" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)"/></td>
         </tr>
         <tr>
             <td class="colth">実行払込予定額(現通貨):</td>
-            <td class="right" id="col2_b"></td>
-            <td class="right"><input type="text" id="col2_a"/></td>
+            <td class="right" id="plan_amount_b"></td>
+            <td class="right"><input type="text" id="plan_amount_a" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)"/></td>
+        </tr>
+
+        <tr>
+            <td class="colth">確度:</td>
+            <td class="right" id="plan_accuracy_b"></td>
+            <td class="right">
+                <select name="plan_accuracy" id="plan_accuracy_a">">
+                    <option value=""></option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select> 
+            </td>
         </tr>
  
+        <tr>
+            <td class="colth">ネッティング額（現通貨）:</td>
+            <td class="right" id="netting_b"></td>
+            <td class="right"><input type="text" id="netting_a" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        </tr>
+        <tr>
+            <td class="colth">実行日控除額（現通貨）:</td>
+            <td class="right" id="deduction_b"></td>
+            <td class="right"><input type="text" id="deduction_a" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        </tr>
+        <tr>
+            <td class="colth">差額（現通貨）:</td>
+            <td class="right" id="difference_b"></td>
+            <td class="right"><input type="text" id="difference_a"size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        </tr>
+
     </table>
 </div>
 <div class="content-data">
