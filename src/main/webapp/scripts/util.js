@@ -10,7 +10,7 @@ function insertRow(id) {
 
     // セルの挿入
 
-    var cell_id  = row.insertCell(-1);
+    //var cell_id  = row.insertCell(-1);
     var cell_status  = row.insertCell(-1);
 
     var cell_plan_Date  = row.insertCell(-1);
