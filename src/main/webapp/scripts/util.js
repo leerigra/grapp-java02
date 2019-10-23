@@ -36,7 +36,7 @@ function insertRow(id) {
     // ボタン用 HTML
     var delButton = '<input type="button" value="行削除" onclick="deleteRow(this)" />';
     var delCheckbox = '<input type="checkbox" name="chkdel" onclick="checkDel(this);" />';
-    var inNumber='<input type="text" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" />';
+    var inNumber='<input type="text" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" ';
     var inSelect='<select><option value=""></option><option value="A">A</option> <option value="B">B</option> <option value="C">C</option> </select>'
     var inDate='<input type="string" size="10" />';
    
@@ -54,17 +54,17 @@ cell_plan_accuracy.innerHTML  = inSelect;
 cell_create_date.innerHTML = "&nbsp;";
 cell_checkbox.innerHTML = delCheckbox; 
 
-cell_lst_netting.innerHTML = inNumber;
-cell_lst_deduction.innerHTML = inNumber; 
-cell_lst_difference.innerHTML = inNumber; 
+cell_lst_netting.innerHTML = inNumber + " id=lst_netting_" + row_len + "/>";
+cell_lst_deduction.innerHTML = inNumber + " id=lst_deduction_" + row_len + "/>"; 
+cell_lst_difference.innerHTML = inNumber + " id=lst_difference_" + row_len + "/>"; 
 
 cell_lst_plan_Date_upd.innerHTML = inDate;
-cell_lst_plan_amount_upd.innerHTML = inNumber;
+cell_lst_plan_amount_upd.innerHTML = inNumber + " id=lst_amount_upd_" + row_len + "/>"; 
 cell_lst_plan_accuracy_upd.innerHTML  = inSelect;
 
-cell_lst_netting_upd.innerHTML = inNumber;
-cell_lst_deduction_upd.innerHTML = inNumber;
-cell_lst_differenc_upd.innerHTML = inNumber;
+cell_lst_netting_upd.innerHTML = inNumber + " id=lst_netting_upd_" + row_len + "/>";
+cell_lst_deduction_upd.innerHTML = inNumber + " id=lst_deduction_upd_" + row_len + "/>"; 
+cell_lst_differenc_upd.innerHTML = inNumber + " id=lst_difference_upd_" + row_len + "/>"; 
 
 cell_id.setAttribute("class","hidden");   
 cell_status.setAttribute("class","center");  
