@@ -113,7 +113,7 @@ while(rs.next()){
         
         <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= rs.getString("netting") %></td>
         <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getString("deduction") %></td>
-        <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= Integer.parseInt(rs.getString("netting")) - Integer.parseInt(rs.getString("deduction")) %></td>
+        <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= Integer.valueOf(rs.getString("netting")) - Integer.valueOf(rs.getString("deduction")) %></td>
 
         <td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date_edit"))%> ></input></td>
         <td class="hidden"><input type="text" size="18" class="right" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount_edit"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
@@ -128,7 +128,7 @@ while(rs.next()){
        
         <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= rs.getString("netting_edit") %></td>
         <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= rs.getString("deduction_edit") %></td>
-        <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= Integer.parseInt(rs.getString("netting_edit")) - Integer.parseInt(rs.getString("deduction_edit")) %></td>
+        <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= Integer.valueOf(rs.getString("netting_edit")) - Integer.valueOf(rs.getString("deduction_edit")) %></td>
         
     </tr>
 
