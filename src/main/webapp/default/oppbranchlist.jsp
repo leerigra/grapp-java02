@@ -10,7 +10,8 @@ function tableClick(tr){
   // クリックされた行を取得
   table = tr.parentNode;
   rowidx = tr.sectionRowIndex;
-  col2_id = "col2_" + table.rows[rowidx].cells[0].innerHTML;
+  col2_id = "col2_" + rowidx;
+  col3_id = "col3_" + rowidx;
 
   //alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
   tr.setAttribute("class","sel_row");
