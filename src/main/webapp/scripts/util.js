@@ -10,7 +10,7 @@ function insertRow(id) {
 
     // セルの挿入
 
-    //var cell_id  = row.insertCell(-1);
+    var cell_id  = row.insertCell(-1);
     var cell_status  = row.insertCell(-1);
 
     var cell_plan_Date  = row.insertCell(-1);
@@ -43,29 +43,6 @@ function insertRow(id) {
     // 行数取得
     var row_len = table.rows.length;
  
-
-cell_id.innerHTML = "";
-cell_status.innerHTML ="";
-
-cell_plan_Date.innerHTML  = inDate;
-cell_plan_amount.innerHTML  = inNumber;
-cell_plan_accuracy.innerHTML  = inSelect;
-
-cell_create_date.innerHTML = "";
-cell_checkbox.innerHTML = delCheckbox; 
-
-cell_lst_netting.innerHTML = inNumber + " id='lst_netting_" + row_len + "' />";
-cell_lst_deduction.innerHTML = inNumber + " id='lst_deduction_" + row_len + "' />";
-cell_lst_difference.innerHTML = inNumber + " id='lst_difference_" + row_len + "' />";
-
-cell_lst_plan_Date_upd.innerHTML = inDate;
-cell_lst_plan_amount_upd.innerHTML = inNumber + " id='lst_amount_upd_" + row_len + "' />";
-cell_lst_plan_accuracy_upd.innerHTML  = inSelect;
-
-cell_lst_netting_upd.innerHTML = inNumber + " id='lst_netting_upd_" + row_len + "' />";
-cell_lst_deduction_upd.innerHTML = inNumber + " id='lst_deduction_upd_" + row_len + "' />";
-cell_lst_differenc_upd.innerHTML = inNumber + " id='lst_difference_upd_" + row_len + "' />";
-
 cell_id.setAttribute("class","hidden");
 cell_status.setAttribute("class","center");  
 
@@ -109,6 +86,31 @@ cell_lst_plan_accuracy_upd.setAttribute("id","lst_plan_accuracy_upd_"+ row_len);
 cell_lst_netting_upd.setAttribute("id","lst_netting_upd_"+ row_len); 
 cell_lst_deduction_upd.setAttribute("id","lst_deduction_upd_"+ row_len);     
 cell_lst_difference_upd.setAttribute("id","lst_difference_upd_"+ row_len);     
+
+
+
+cell_id.innerHTML = "";
+cell_status.innerHTML ="";
+
+cell_plan_Date.innerHTML  = inDate;
+cell_plan_amount.innerHTML  = inNumber;
+cell_plan_accuracy.innerHTML  = inSelect;
+
+cell_create_date.innerHTML = "";
+cell_checkbox.innerHTML = delCheckbox; 
+
+cell_lst_netting.innerHTML = inNumber + " id='lst_netting_" + row_len + "' />";
+cell_lst_deduction.innerHTML = inNumber + " id='lst_deduction_" + row_len + "' />";
+cell_lst_difference.innerHTML = inNumber + " id='lst_difference_" + row_len + "' />";
+
+cell_lst_plan_Date_upd.innerHTML = inDate;
+cell_lst_plan_amount_upd.innerHTML = inNumber + " id='lst_amount_upd_" + row_len + "' />";
+cell_lst_plan_accuracy_upd.innerHTML  = inSelect;
+
+cell_lst_netting_upd.innerHTML = inNumber + " id='lst_netting_upd_" + row_len + "' />";
+cell_lst_deduction_upd.innerHTML = inNumber + " id='lst_deduction_upd_" + row_len + "' />";
+cell_lst_differenc_upd.innerHTML = inNumber + " id='lst_difference_upd_" + row_len + "' />";
+
 
 }
 
