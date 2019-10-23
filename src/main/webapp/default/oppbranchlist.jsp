@@ -16,6 +16,22 @@ function tableClick(tr){
   //選択された行のidをセットしてリロード
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
 
+    document.getElementById( "col1_b" ).value = table.rows[rowidx].cells[1].innerHTML;
+    document.getElementById( "col2_b" ).value = table.rows[rowidx].cells[2].innerHTML;
+    document.getElementById( "col3_b" ).value = table.rows[rowidx].cells[3].innerHTML;
+    document.getElementById( "col4_b" ).value = table.rows[rowidx].cells[4].innerHTML;
+    document.getElementById( "col5_b" ).value = table.rows[rowidx].cells[5].innerHTML;
+    document.getElementById( "col6_b" ).value = table.rows[rowidx].cells[6].innerHTML;
+
+    document.getElementById( "col1_a" ).innerHTML = table.rows[rowidx].cells[1].innerHTML;
+    document.getElementById( "col2_a" ).innerHTML = table.rows[rowidx].cells[2].innerHTML;
+    document.getElementById( "col3_a" ).innerHTML = table.rows[rowidx].cells[3].innerHTML;
+    document.getElementById( "col4_a" ).innerHTML = table.rows[rowidx].cells[4].innerHTML;
+    document.getElementById( "col5_a" ).innerHTML = table.rows[rowidx].cells[5].innerHTML;
+    document.getElementById( "col6_a" ).innerHTML = table.rows[rowidx].cells[6].innerHTML;
+
+
+
   reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
   //document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
   document.getElementById("sel_oppbranchid").contentDocument.location.replace(reloadurl);
@@ -92,8 +108,80 @@ db.close();
 </form>
 </div>
 
-<div id="iframeBlock">
-    <div class="iframeBody">
-        <iframe id="oppdetail" src="/default/oppbranchdetail.jsp?oppbranchid=1" name="testIframe" frameborder="0" width="800px" height="1500px"></iframe>
-    </div>
+<div class="content-data">
+
+    <div class="section-title"><h4>枝口情報</h4></div>
+    <table class="oppBrDetailTable" id="BranchDetailDB">
+        <tr>
+            <th>&nbsp;</th>
+            <th>変更前</th>
+            <th>変更後</th>
+        </tr>
+        <tr>
+            <td class="colth">実行／払込予定日:</td>
+            <td class="left" id="col1_b"></td>
+            <td class="right"><input type="text" id="col1_a"/></td>
+        </tr>
+        <tr>
+            <td class="colth">実行払込予定額(現通貨):</td>
+            <td class="right" id="col2_b"></td>
+            <td class="right"><input type="text" size="18" class="right" id="col2_a" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        </tr>
+        <tr>
+            <td class="colth">実行／払込確度:</td>
+            <td class="center" id="col3_b"></td>
+            <td class="right">
+                <select name="plan_accuracy">
+                    <option value=""></option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select> 
+            </td>
+        </tr>
+        <tr>
+            <td class="colth">ネッティング額（現通貨）:</td>
+            <td class="right" id="col4_b"></td>
+            <td class="right"><input type="text" size="18" class="right" id="col4_a" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        </tr>
+        <tr>
+            <td class="colth">実行日控除額（現通貨）:</td>
+            <td class="right" id="col5_b"></td>
+            <td class="right"><input type="text" size="18" class="right" id="col5_a" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        </tr>
+        <tr>
+            <td class="colth">差額（現通貨）:</td>
+            <td class="right" id ="col6_b"><%= objFmt.format(rs.getLong("plan_amount")) %></td>
+            <td class="right"><input type="text" size="18" class="right" id="col6_b" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        </tr>
+
+    </table>
 </div>
+<div class="content-data">
+    <table class="oppBrDetailTable" id="BranchDetailmemo">
+        <tr>
+            <td class="colth">備考:</td>
+            <td class="left"><textarea id="memo" rows="10" cols="50">ここに記入してください</textarea></td>
+        </tr>
+    
+    </table>
+</div>
+<div class="content-data">
+    <div class="section-title"><h4>資金課 確認状況</h4></div>
+    <table class="oppBrDetailTable" id="BranchDetailApproval">
+        <tr>
+            <td class="colth">資金課への申請状況</td><
+            <td class="left">申請中</td>　<!--一時保存,申請中,差戻,承認反映中-->
+        </tr>
+
+        <tr>
+            <td class="colth">資金課担当者：</td>
+            <td class="left">担当　一郎</td>
+        </tr>
+ 
+        <tr>
+            <td class="colth">承認／差戻コメント：</td>
+            <td class="left">承認 or 差し戻しのコメントがここに表示されます。</td>
+        </tr>
+    </table>
+ </div>
