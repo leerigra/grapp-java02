@@ -115,7 +115,8 @@ while(rs.next()){
         <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getString("deduction") %></td>
         <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= rs.getString("difference") %></td>
 
-        <td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date_edit"))%> ></input></td>
+        <!--td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date_edit"))%> ></input></td-->
+        <td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=rs.getDate("plan_Date_edit")%> ></input></td>
         <td class="hidden"><input type="text" size="18" class="right" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount_edit"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="hidden">
             <select  id="<%="lst_plan_accuracy_upd_" + String.valueOf(i) %>">
