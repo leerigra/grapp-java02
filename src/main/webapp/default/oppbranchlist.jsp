@@ -55,7 +55,7 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 <div class="content-data">
     <form name="fm_opplist">
     <input type="text" id="sel_oppbranchid"/>
-    <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB')" />
+    <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB')"  />
 
     <table class="oppBrListTable" id="BranchListDB" >
     <tr>
@@ -77,7 +77,6 @@ Statement objSql=db.createStatement();
 ResultSet rs=objSql.executeQuery(strsql);
 
 while(rs.next()){
-
 %>
       <tr onclick="tableClick(this)">
         <td class="hidden"><%= rs.getString("oppbranchid") %></td>
@@ -104,6 +103,7 @@ rs.close();
 objSql.close();
 db.close();
 %>
+
 </table>
 </form>
 </div>
@@ -125,36 +125,9 @@ db.close();
         <tr>
             <td class="colth">実行払込予定額(現通貨):</td>
             <td class="right" id="col2_b"></td>
-            <td class="right"><input type="text" size="18" class="right" id="col2_a" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+            <td class="right"><input type="text" id="col2_a"/></td>
         </tr>
-        <tr>
-            <td class="colth">実行／払込確度:</td>
-            <td class="center" id="col3_b"></td>
-            <td class="right">
-                <select name="plan_accuracy">
-                    <option value=""></option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                </select> 
-            </td>
-        </tr>
-        <tr>
-            <td class="colth">ネッティング額（現通貨）:</td>
-            <td class="right" id="col4_b"></td>
-            <td class="right"><input type="text" size="18" class="right" id="col4_a" onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        </tr>
-        <tr>
-            <td class="colth">実行日控除額（現通貨）:</td>
-            <td class="right" id="col5_b"></td>
-            <td class="right"><input type="text" size="18" class="right" id="col5_a" onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        </tr>
-        <tr>
-            <td class="colth">差額（現通貨）:</td>
-            <td class="right" id ="col6_b"><%= objFmt.format(rs.getLong("plan_amount")) %></td>
-            <td class="right"><input type="text" size="18" class="right" id="col6_b" onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        </tr>
-
+ 
     </table>
 </div>
 <div class="content-data">
@@ -170,7 +143,7 @@ db.close();
     <div class="section-title"><h4>資金課 確認状況</h4></div>
     <table class="oppBrDetailTable" id="BranchDetailApproval">
         <tr>
-            <td class="colth">資金課への申請状況</td><
+            <td class="colth">資金課への申請状況</td>
             <td class="left">申請中</td>　<!--一時保存,申請中,差戻,承認反映中-->
         </tr>
 
