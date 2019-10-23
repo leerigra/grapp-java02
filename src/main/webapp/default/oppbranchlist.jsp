@@ -81,7 +81,7 @@ while(rs.next()){
       <tr onclick="tableClick(this)">
         <td class="hidden"><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
-        <td onclick="alert('列クリック')" class="left"><input type="text" size="10" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
+        <td onclick="alert('列クリック')" class="left"><input type="text" size="10" id=<%="col2_" + rs.index %> value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
         <td class="right"><input type="text" size="18" class="right" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
             <select name="plan_accuracy">
