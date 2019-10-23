@@ -17,6 +17,13 @@ function tableClick(tr){
   sel_deduction_id = "lst_deduction_" + rowidx;
   sel_difference_id = "lst_difference_" + rowidx;
 
+  sel_plan_Date_id_upd = "lst_plan_Date_upd_" + rowidx;
+  sel_plan_amount_id_upd = "lst_plan_amount_upd_" + rowidx;
+  sel_plan_accuracy_id_upd = "lst_plan_accuracy_upd_" + rowidx;
+  sel_netting_id_upd = "lst_netting_upd_" + rowidx;
+  sel_deduction_id_upd = "lst_deduction_upd_" + rowidx;
+  sel_difference_id_upd = "lst_difference_upd_" + rowidx;
+
   //alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
   tr.setAttribute("class","sel_row");
   
@@ -31,12 +38,12 @@ function tableClick(tr){
     document.getElementById( "deduction_b" ).innerHTML = document.getElementById(sel_deduction_id).innerHTML;
     document.getElementById( "difference_b" ).innerHTML = document.getElementById(sel_difference_id).innerHTML;
    
-    document.getElementById( "plan_Date_a" ).value = document.getElementById(sel_plan_Date_id).value;
-    document.getElementById( "plan_amount_a" ).value = document.getElementById(sel_plan_amount_id).value;
-    document.getElementById( "plan_accuracy_a" ).value = document.getElementById(sel_plan_accuracy_id).value;
-    document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id).innerHTML;
-    document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id).innerHTML;
-    document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id).innerHTML;
+    document.getElementById( "plan_Date_a" ).value = document.getElementById(sel_plan_Date_id_upd).value;
+    document.getElementById( "plan_amount_a" ).value = document.getElementById(sel_plan_amount_id_upd).value;
+    document.getElementById( "plan_accuracy_a" ).value = document.getElementById(sel_plan_accuracy_id_upd).value;
+    document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id_upd).innerHTML;
+    document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id_upd).innerHTML;
+    document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
      
 
 
@@ -103,9 +110,22 @@ while(rs.next()){
         <td class="left"><%=objDtTmFmt.format(rs.getDate("create_date"))%></td>
         <!--td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td-->
         <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" /></td-->
-        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" >999</td>
-        <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" >888</td>
-        <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" >777</td>
+        
+        
+        <td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
+        <td class="hidden"><input type="text" size="18" class="right" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="hidden">
+            <select  id="<%="lst_plan_accuracy_upd_" + String.valueOf(i) %>">
+                <option value=""></option>
+                <option value="A" <% if ("A".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>A</option>
+                <option value="B" <% if ("B".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>B</option>
+                <option value="C" <% if ("C".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>C</option>
+            </select> 
+        </td>
+       
+        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" >999</td>
+        <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" >888</td>
+        <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" >777</td>
         
     </tr>
 
