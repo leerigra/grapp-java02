@@ -11,8 +11,8 @@ function tableClick(tr){
   table = tr.parentNode;
   rowidx = tr.sectionRowIndex;
   col2_id = "col2_" + table.rows[rowidx].cells[0].innerHTML;
-  alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML +"2colのidは："+col2_id);
-  alert("値は：" + document.getElementById(col2_id).value );
+
+  alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML +"2colのidは："+col2_id + "値は：" + document.getElementById(col2_id).value);
   tr.setAttribute("class","sel_row");
   
   //選択された行のidをセットしてリロード
