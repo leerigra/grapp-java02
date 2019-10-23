@@ -6,18 +6,10 @@ function insertRow(id) {
     var table = document.getElementById(id);
     // 行を行末に追加
     var row = table.insertRow(-1);
+    row.setAttribute("onclick","'tableClick(this)'");
+
     // セルの挿入
 
-
-
-    var cell1 = row.insertCell(-1);
-    var cell2 = row.insertCell(-1);
-    var cell3 = row.insertCell(-1);
-    var cell4 = row.insertCell(-1);
-    var cell5 = row.insertCell(-1);
-    var cell6 = row.insertCell(-1);
-    var cell7 = row.insertCell(-1);
-    
     var cell_id  = row.insertCell(-1);
     var cell_status  = row.insertCell(-1);
     var cell_plan_Date  = row.insertCell(-1);
