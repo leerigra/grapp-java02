@@ -10,11 +10,13 @@ function tableClick(tr){
   // クリックされた行を取得
   table = tr.parentNode;
   rowidx = tr.sectionRowIndex;
-  alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
+  col2_id = "col2_" + table.rows[rowidx].cells[0].innerHTML;
+  alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML +"2colのidは："+col2_id);
   tr.setAttribute("class","sel_row");
   
   //選択された行のidをセットしてリロード
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
+  
 
     document.getElementById( "col1_a" ).value = table.rows[rowidx].cells[2].value;
     document.getElementById( "col2_a" ).value = table.rows[rowidx].cells[3].value;
@@ -23,7 +25,7 @@ function tableClick(tr){
     document.getElementById( "col5_a" ).value = table.rows[rowidx].cells[6].value;
     document.getElementById( "col6_a" ).value = table.rows[rowidx].cells[7].value;
 
-    document.getElementById( "col1_b" ).value = document.getElementById( "col2_" +  table.rows[rowidx].cells[0].innerHTML ).value
+    document.getElementById( "col1_b" ).value = document.getElementById(col2_id).value
     document.getElementById( "col2_b" ).value = table.rows[rowidx].cells[3].innerHTML;
     document.getElementById( "col3_b" ).value = table.rows[rowidx].cells[4].innerHTML;
     document.getElementById( "col4_b" ).value = table.rows[rowidx].cells[5].innerHTML;
