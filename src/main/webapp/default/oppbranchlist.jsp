@@ -16,19 +16,19 @@ function tableClick(tr){
   //選択された行のidをセットしてリロード
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
 
-  document.getElementById( "col1_a" ).value = table.rows[rowidx].cells[1].innerHTML;
-    document.getElementById( "col2_a" ).value = table.rows[rowidx].cells[2].innerHTML;
-    document.getElementById( "col3_a" ).value = table.rows[rowidx].cells[3].innerHTML;
-    document.getElementById( "col4_a" ).value = table.rows[rowidx].cells[4].innerHTML;
-    document.getElementById( "col5_a" ).value = table.rows[rowidx].cells[5].innerHTML;
-    document.getElementById( "col6_a" ).value = table.rows[rowidx].cells[6].innerHTML;
+  document.getElementById( "col1_a" ).value = table.rows[rowidx].cells[2].innerHTML;
+    document.getElementById( "col2_a" ).value = table.rows[rowidx].cells[3].innerHTML;
+    document.getElementById( "col3_a" ).value = table.rows[rowidx].cells[4].innerHTML;
+    document.getElementById( "col4_a" ).value = table.rows[rowidx].cells[5].innerHTML;
+    document.getElementById( "col5_a" ).value = table.rows[rowidx].cells[6].innerHTML;
+    document.getElementById( "col6_a" ).value = table.rows[rowidx].cells[7].innerHTML;
 
-    document.getElementById( "col1_b" ).innerHTML = table.rows[rowidx].cells[1].innerHTML;
-    document.getElementById( "col2_b" ).innerHTML = table.rows[rowidx].cells[2].innerHTML;
-    document.getElementById( "col3_b" ).innerHTML = table.rows[rowidx].cells[3].innerHTML;
-    document.getElementById( "col4_b" ).innerHTML = table.rows[rowidx].cells[4].innerHTML;
-    document.getElementById( "col5_b" ).innerHTML = table.rows[rowidx].cells[5].innerHTML;
-    document.getElementById( "col6_b" ).innerHTML = table.rows[rowidx].cells[6].innerHTML;
+    document.getElementById( "col1_b" ).innerHTML = table.rows[rowidx].cells[2].innerHTML;
+    document.getElementById( "col2_b" ).innerHTML = table.rows[rowidx].cells[3].innerHTML;
+    document.getElementById( "col3_b" ).innerHTML = table.rows[rowidx].cells[4].innerHTML;
+    document.getElementById( "col4_b" ).innerHTML = table.rows[rowidx].cells[5].innerHTML;
+    document.getElementById( "col5_b" ).innerHTML = table.rows[rowidx].cells[6].innerHTML;
+    document.getElementById( "col6_b" ).innerHTML = table.rows[rowidx].cells[7].innerHTML;
 
 
 
