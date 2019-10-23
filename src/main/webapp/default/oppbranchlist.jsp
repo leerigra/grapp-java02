@@ -38,7 +38,7 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
 <div class="content-data">
     <form name="fm_opplist">
-    <INPUT type="text" id="sel_oppbranchid" value="4"></input>
+    <input type="text" id="sel_oppbranchid"/>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow(BranchListDB)") />
 
     <table class="oppBrListTable" id="BranchListDB" >
