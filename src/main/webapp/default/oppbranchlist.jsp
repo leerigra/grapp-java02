@@ -109,8 +109,7 @@ while(rs.next()){
         </td>
         <td class="left"><%=objDtTmFmt.format(rs.getDate("create_date"))%></td>
         <!--td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td-->
-        <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" /></td-->
-        
+        <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" /></td>
         
         <td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
         <td class="hidden"><input type="text" size="18" class="right" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
