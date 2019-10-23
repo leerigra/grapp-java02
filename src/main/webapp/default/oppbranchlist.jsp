@@ -12,27 +12,21 @@ function tableClick(tr){
   rowidx = tr.sectionRowIndex;
   col2_id = "col2_" + table.rows[rowidx].cells[0].innerHTML;
   alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML +"2colのidは："+col2_id);
+  alert("値は：" + document.getElementById(col2_id).value );
   tr.setAttribute("class","sel_row");
   
   //選択された行のidをセットしてリロード
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
   
 
-    document.getElementById( "col1_a" ).innerHTML = document.getElementById(col2_id).value
-    document.getElementById( "col2_a" ).value = table.rows[rowidx].cells[3].value;
-    document.getElementById( "col3_a" ).value = table.rows[rowidx].cells[4].value;
-    document.getElementById( "col4_a" ).value = table.rows[rowidx].cells[5].value;
-    document.getElementById( "col5_a" ).value = table.rows[rowidx].cells[6].value;
-    document.getElementById( "col6_a" ).value = table.rows[rowidx].cells[7].value;
+   
 
-    document.getElementById( "col1_b" ).innerHTML = document.getElementById(col2_id).value
+    document.getElementById( "col1_b" ).innerHTML = document.getElementById(col2_id).value;
     document.getElementById( "col2_b" ).value = table.rows[rowidx].cells[3].innerHTML;
-    document.getElementById( "col3_b" ).value = table.rows[rowidx].cells[4].innerHTML;
-    document.getElementById( "col4_b" ).value = table.rows[rowidx].cells[5].innerHTML;
-    document.getElementById( "col5_b" ).value = table.rows[rowidx].cells[6].innerHTML;
-    document.getElementById( "col6_b" ).value = table.rows[rowidx].cells[7].innerHTML;
-
-
+    
+    document.getElementById( "col1_a" ).innerHTML = document.getElementById(col2_id).value;
+    document.getElementById( "col2_a" ).value = table.rows[rowidx].cells[3].value;
+    
 
   reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
   //document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
