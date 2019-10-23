@@ -109,15 +109,13 @@ while(rs.next()){
         </td>
         <td class="left"><%=objDtTmFmt.format(rs.getDate("create_date"))%></td>
         <!--td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td-->
-        <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" ></td>
-        
+        <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" /></td>
         <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= rs.getString("netting") %></td>
         <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getString("deduction") %></td>
         <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= rs.getString("difference") %></td>
 
-        <!--td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date_edit"))%> ></input></td-->
-        <td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=rs.getDate("plan_Date_edit")%> ></input></td>
-        <td class="hidden"><input type="text" size="18" class="right" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount_edit"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="hidden" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date_edit"))%></td>
+        <td class="hidden" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount_edit"))%></td>
         <td class="hidden">
             <select  id="<%="lst_plan_accuracy_upd_" + String.valueOf(i) %>">
                 <option value=""></option>
@@ -158,7 +156,7 @@ db.close();
         <tr>
             <td class="colth">実行／払込予定日:</td>
             <td class="left" id="plan_Date_b"></td>
-            <td class="right"><input type="text" id="plan_Date_a" size="18" class="left" /></td>
+            <td class="right"><input type="text" id="plan_Date_a" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)"/></td>
         </tr>
         <tr>
             <td class="colth">実行払込予定額(現通貨):</td>
