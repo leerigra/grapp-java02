@@ -57,7 +57,7 @@ cell_plan_Date.innerHTML  = inDate;
 
 cell_plan_amount.setAttribute("id","lst_plan_amount_" + row_len);  
 cell_plan_amount.setAttribute("class","right");  
-cell_plan_amount.innerHTML  = inNumber;
+cell_plan_amount.innerHTML  = inNumber+ " id='lst_plan_amount_" + row_len + "' />";
 
 cell_plan_accuracy.setAttribute("id","lst_plan_accuracy_" + row_len);    
 cell_plan_accuracy.setAttribute("class","center");

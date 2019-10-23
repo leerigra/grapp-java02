@@ -111,24 +111,24 @@ while(rs.next()){
         <!--td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td-->
         <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" ></td>
         
-        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" >999</td>
-        <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" >888</td>
-        <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" >777</td>
+        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= rs.getString("netting") %></td>
+        <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getString("deduction") %></td>
+        <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= Integer.parseInt(rs.getString("netting")) - Integer.parseInt(rs.getString("deduction")) %></td>
 
-        <td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
-        <td class="hidden"><input type="text" size="18" class="right" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date_edit"))%> ></input></td>
+        <td class="hidden"><input type="text" size="18" class="right" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount_edit"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="hidden">
             <select  id="<%="lst_plan_accuracy_upd_" + String.valueOf(i) %>">
                 <option value=""></option>
-                <option value="A" <% if ("A".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>A</option>
-                <option value="B" <% if ("B".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>B</option>
-                <option value="C" <% if ("C".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>C</option>
+                <option value="A" <% if ("A".equals(rs.getString("plan_accuracy_edit"))) { %>selected<% } %>>A</option>
+                <option value="B" <% if ("B".equals(rs.getString("plan_accuracy_edit"))) { %>selected<% } %>>B</option>
+                <option value="C" <% if ("C".equals(rs.getString("plan_accuracy_edit"))) { %>selected<% } %>>C</option>
             </select> 
         </td>
        
-        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" >666</td>
-        <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" >555</td>
-        <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" >444</td>
+        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= rs.getString("netting_edit") %></td>
+        <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= rs.getString("deduction_edit") %></td>
+        <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= Integer.parseInt(rs.getString("netting_edit")) - Integer.parseInt(rs.getString("deduction_edit")) %></td>
         
     </tr>
 
