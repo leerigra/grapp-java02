@@ -6,7 +6,7 @@ function insertRow(id) {
     var table = document.getElementById(id);
     // 行を行末に追加
     var row = table.insertRow(-1);
-    row.setAttribute("onclick","'tableClick(this)'");
+    row.setAttribute("onclick","tableClick(this)");
 
     // セルの挿入
 
@@ -69,11 +69,11 @@ cell_lst_differenc_upd.innerHTML = inNumber;
 cell_id.setAttribute("class","hidden");   
 cell_status.setAttribute("class","center");  
 
-cell_plan_Date.setAttribute("class","left" ); 
-cell_plan_amount.setAttribute("class","right" );  
-cell_plan_accuracy.setAttribute("class","center" );
+cell_plan_Date.setAttribute("class","left"); 
+cell_plan_amount.setAttribute("class","right");  
+cell_plan_accuracy.setAttribute("class","center");
 
-cell_create_date.setAttribute("class","left" );    
+cell_create_date.setAttribute("class","left");    
 cell_checkbox.setAttribute("class","center"); 
 
 cell_lst_netting.setAttribute("class","hidden");
@@ -92,23 +92,23 @@ cell_id.setAttribute("id","lst_id_" + row_len);
 cell_status.setAttribute("id","lst_status_" + row_len);  
 
 cell_plan_Date.setAttribute("id","lst_plan_Date_" + row_len);  
-cell_plan_amount.setAttribute("id","lst_plan_amount" + row_len);  
-cell_plan_accuracy.setAttribute("id","lst_plan_accuracy" + row_len);    
+cell_plan_amount.setAttribute("id","lst_plan_amount_" + row_len);  
+cell_plan_accuracy.setAttribute("id","lst_plan_accuracy_" + row_len);    
 
-cell_create_date.setAttribute("id","lst_create_dateft" + row_len);    
-cell_checkbox.setAttribute("id","lst_checkbox" + row_len); 
+cell_create_date.setAttribute("id","lst_create_dateft_" + row_len);    
+cell_checkbox.setAttribute("id","lst_checkbox_" + row_len); 
 
-cell_lst_netting.setAttribute("id","lst_netting"+ row_len);
-cell_lst_deduction.setAttribute("id","lst_deduction"+ row_len); 
-cell_lst_difference.setAttribute("id","lst_difference"+ row_len); 
+cell_lst_netting.setAttribute("id","lst_netting_"+ row_len);
+cell_lst_deduction.setAttribute("id","lst_deduction_"+ row_len); 
+cell_lst_difference.setAttribute("id","lst_difference_"+ row_len); 
 
-cell_lst_plan_Date_upd.setAttribute("id","lst_plan_Date_upd"+ row_len); 
-cell_lst_plan_amount_upd.setAttribute("id","lst_plan_amount_upd"+ row_len); 
-cell_lst_plan_accuracy_upd.setAttribute("id","lst_plan_accuracy_upd"+ row_len); 
+cell_lst_plan_Date_upd.setAttribute("id","lst_plan_Date_upd_"+ row_len); 
+cell_lst_plan_amount_upd.setAttribute("id","lst_plan_amount_upd_"+ row_len); 
+cell_lst_plan_accuracy_upd.setAttribute("id","lst_plan_accuracy_upd_"+ row_len); 
 
-cell_lst_netting_upd.setAttribute("id","lst_netting_upd"+ row_len); 
-cell_lst_deduction_upd.setAttribute("id","lst_deduction_upd"+ row_len);     
-cell_lst_difference_upd.setAttribute("id","lst_difference_upd"+ row_len);     
+cell_lst_netting_upd.setAttribute("id","lst_netting_upd_"+ row_len); 
+cell_lst_deduction_upd.setAttribute("id","lst_deduction_upd_"+ row_len);     
+cell_lst_difference_upd.setAttribute("id","lst_difference_upd_"+ row_len);     
 
 }
 
