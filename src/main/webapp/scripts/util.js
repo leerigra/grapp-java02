@@ -241,3 +241,21 @@ function resetTr(id) {
     }
   }
 
+function inesrtData{
+  String strsql = "SELECT oppbranchid,plan_date,plan_date_edit,plan_amount,plan_amount_edit,plan_accuracy,plan_accuracy_edit,create_date,update_date,COALESCE(netting,0) as netting,COALESCE(netting_edit,0) as netting_edit,COALESCE(deduction,0) as deduction,COALESCE(deduction_edit,0) as deduction_edit,COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit FROM oppbranch where extid='" + recid + "'";
+
+}
+
+function updateData{
+  String strsql = "UPDATE public.oppbranch SET "
+  strsql = strsql + "plan_date_edit = '2019-10-30'::date, plan_amount_edit = '1000000'::numeric, "
+  strsql = strsql + "plan_accuracy_edit = 'A'::character(1) "
+  strsql = strsql + " WHERE oppbranchid =" + 1 +"'";
+  strsql = strsql + " AND extid='" + recid + "'";
+
+}
+
+function deleteData{
+  String strsql = "SELECT oppbranchid,plan_date,plan_date_edit,plan_amount,plan_amount_edit,plan_accuracy,plan_accuracy_edit,create_date,update_date,COALESCE(netting,0) as netting,COALESCE(netting_edit,0) as netting_edit,COALESCE(deduction,0) as deduction,COALESCE(deduction_edit,0) as deduction_edit,COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit FROM oppbranch where extid='" + recid + "'";
+
+}
