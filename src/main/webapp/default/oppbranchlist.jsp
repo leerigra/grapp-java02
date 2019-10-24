@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=Shift_JIS"
          import="java.sql.*,java.text.*" %>
 
+
 <script type="text/javascript" src="/scripts/util.js"></script>
 <script type="text/javascript">
 
@@ -27,8 +28,9 @@ function tableClick(tr){
   tr.setAttribute("class","sel_row");
   
   //選択された行のidをセットしてリロード
-    document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
+  document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
   
+
     document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).value;
     document.getElementById( "plan_amount_b" ).innerHTML = document.getElementById(sel_plan_amount_id).value;
     document.getElementById( "plan_accuracy_b" ).innerHTML = document.getElementById(sel_plan_accuracy_id).value;
@@ -42,6 +44,12 @@ function tableClick(tr){
     document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id_upd).innerHTML;
     document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id_upd).innerHTML;
     document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
+     
+
+
+  reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
+  //document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
+  document.getElementById("sel_oppbranchid").contentDocument.location.replace(reloadurl);
 }
 </script>
 
@@ -56,7 +64,6 @@ String strsql = "SELECT oppbranchid,COALESCE(plan_date,""),COALESCE(plan_date_ed
 DecimalFormat objFmt=new DecimalFormat("#,###");
 
 %>
-
 <form name="fm_opplist">
 <div class="content-data">
  
