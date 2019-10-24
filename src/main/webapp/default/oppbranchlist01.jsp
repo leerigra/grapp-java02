@@ -32,6 +32,7 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
 %>
 
+<form name="fm_opplist">
 <div class="content-data">
  
     <input type="text" id="sel_oppbranchid"/>
@@ -44,11 +45,11 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
         <th>実行／払込予定日</th>
         <th>実行／払込予定額（原通貨）</th>
         <th>実行／払込確度</th>
-        <th>ネッティング額（原通貨）</th>
-        <th>実行日控除額（原通貨）</th>
-        <th>差額（原通貨）</th>
         <th>作成日時</th>
         <th>削除</th>
+       <th>ネッティング額（原通貨）</th>
+       <th>実行日控除額（原通貨）</th>
+       <th>差額（現通貨）</th>
 
     </tr>
     <!--選択肢：新規,変更,削除,取下-->
@@ -65,8 +66,8 @@ while(rs.next()){
       <tr onclick="tableClick(this)">
         <td class="hidden" id="<%="lst_id_" + String.valueOf(i) %>" ><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
-        <td class="left"><input type="text" size="10" id="<%="lst_plan_Date_" + String.valueOf(i) %>" value=<%=rs.getDate("plan_Date")%> ></input></td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_plan_amount_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="left"><input type="text" size="10" id="<%="lst_plan_Date_" + String.valueOf(i) %>" value=<%= rs.getDate("plan_Date") %> ></input></td>
+        <td class="right"><input type="text" size="18" class="right" id="<%="lst_plan_amount_" + String.valueOf(i) %>" value=<%= objFmt.format(rs.getLong("plan_amount")) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
             <select name="plan_accuracy" id="<%="lst_plan_accuracy_" + String.valueOf(i) %>">
                 <option value=""></option>
@@ -75,15 +76,16 @@ while(rs.next()){
                 <option value="C" <% if ("C".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>C</option>
             </select> 
         </td>
+        <td class="left"><%= rs.getDate("create_date")%></td>
         <!--td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td-->
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= rs.getLong("netting") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getLong("deduction") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= rs.getLong("difference") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        <td class="left"><%=rs.getDate("create_date")%></td>
-        <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" /></td>
+        <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" ></td>
+        
+        <td class="right" id="<%="lst_netting_" + String.valueOf(i) %>" value=<%= objFmt.format(rs.getLong("netting")) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="right" id="<%="lst_deduction_" + String.valueOf(i) %>" value=<%= objFmt.format( rs.getLong("deduction")) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="right" id="<%="lst_difference_" + String.valueOf(i) %>" value=<%= objFmt.format( rs.getLong("difference") %> onfocus="offComma(this)" onblur="toComma(this)" /> </td>
 
-        <td class="hidden" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=rs.getDate("plan_Date_edit")%></td>
-        <td class="hidden" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount_edit"))%></td>
+        <td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%= rs.getDate("plan_Date_edit") %> ></input></td>
+        <td class="hidden"><input type="text" size="18" class="right" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%= objFmt.format(rs.getLong("plan_amount_edit"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="hidden">
             <select  id="<%="lst_plan_accuracy_upd_" + String.valueOf(i) %>">
                 <option value=""></option>
@@ -93,7 +95,7 @@ while(rs.next()){
             </select> 
         </td>
        
-        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= rs.getString("netting_edit"),"") %></td>
+        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= rs.getString("netting_edit") %></td>
         <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= rs.getString("deduction_edit") %></td>
         <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= rs.getString("difference_edit") %></td>
         
@@ -113,3 +115,4 @@ db.close();
 </div>
 
 
+ </form>
