@@ -34,7 +34,7 @@ function tableClick(tr){
   alert("値セット処理始めるよ");
   //選択された行のidをセットして詳細表示
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
-  //document.getElementById( "plan_Date_b" ).innerHTML =  table.rows[rowidx].cells[2].innerHTML;
+  document.getElementById( "plan_Date_b" ).innerHTML =  table.rows[rowidx].cells[2].innerHTML;
   //document.getElementById( "plan_amount_b" ).innerHTML =  table.rows[rowidx].cells[3].innerHTML;
   //document.getElementById( "plan_accuracy_b" ).innerHTML =  table.rows[rowidx].cells[4].innerHTML;
   //document.getElementById( "netting_b" ).innerHTML =  table.rows[rowidx].cells[5].innerHTML;
@@ -42,7 +42,7 @@ function tableClick(tr){
   //document.getElementById( "difference_b" ).innerHTML =  table.rows[rowidx].cells[7].innerHTML;
   
   
-  document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).innerHTML;
+  //document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).innerHTML;
   document.getElementById( "plan_amount_b" ).innerHTML = document.getElementById(sel_plan_amount_id).innerHTML;
   document.getElementById( "plan_accuracy_b" ).innerHTML = document.getElementById(sel_plan_accuracy_id).innerHTML;
   document.getElementById( "netting_b" ).innerHTML = document.getElementById(sel_netting_id).innerHTML;
