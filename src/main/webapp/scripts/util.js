@@ -231,6 +231,7 @@ function resetTr(id) {
       alert(trid);
       
       var tr = document.getElementById(trid);
+      alert(tr.innerHTML);
       tr.removeClass("sel_row");
       alert(tr.innerHTML);
     }
