@@ -80,6 +80,9 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
         <th>実行／払込予定日</th>
         <th>実行／払込予定額（原通貨）</th>
         <th>実行／払込確度</th>
+        <th>ネッティング額（原通貨）</th>
+        <th>実行日控除額（原通貨）</th>
+        <th>差額（原通貨）</th>
         <th>作成日時</th>
         <th>削除</th>
 
@@ -108,12 +111,11 @@ while(rs.next()){
                 <option value="C" <% if ("C".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>C</option>
             </select> 
         </td>
+        <td class="right"><input type="text" size="18" class="right" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= rs.getLong("netting") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="right"><input type="text" size="18" class="right" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getLong("deduction") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="right"><input type="text" size="18" class="right" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= rs.getLong("difference") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="left"><%=rs.getDate("create_date")%></td>
-        <!--td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td-->
         <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" /></td>
-        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= rs.getString("netting") %></td>
-        <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getString("deduction") %></td>
-        <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= rs.getString("difference") %></td>
 
         <td class="hidden" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=rs.getDate("plan_Date_edit")%></td>
         <td class="hidden" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount_edit"))%></td>
