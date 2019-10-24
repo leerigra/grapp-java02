@@ -227,12 +227,13 @@ function resetTr(id) {
     var rowcnt = table.rows.length;
     alert("行数：" + rowcnt);
     for(var i = 1; i < rowcnt-1; i++) {
-      var trid = "tr_" + i;
-      alert(document.getElementById(trid).classList.contains("sel_row"));
-      document.getElementById(trid).classList.remove("sel_row");
 
-      alert("おわった");
-     
+      var trid = "tr_" + i;
+      alert (trid);
+      if(document.getElementById(trid).classList.contains("sel_row")){alert("あった")} else {alert("無かった")}
+      //document.getElementById(trid).classList.remove("sel_row");
+
+      
     }
   }
 
