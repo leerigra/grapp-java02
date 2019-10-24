@@ -9,6 +9,9 @@
 
 function tableClick(tr){
 
+  //選択状態をクリア  
+  resetTr("BranchListDB");
+
   // クリックされた行を取得
   table = tr.parentNode;
   rowidx = tr.sectionRowIndex;
@@ -28,11 +31,7 @@ function tableClick(tr){
 
   alert("選択した行は：" + rowidx +". idは:" + table.rows[rowidx].cells[0].innerHTML);
    
-  resetTr("BranchListDB");
-
-  
   tr.setAttribute("class","sel_row");
-
 
   //選択された行のidをセットしてリロード
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
