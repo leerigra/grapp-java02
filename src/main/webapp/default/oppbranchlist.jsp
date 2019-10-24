@@ -59,7 +59,7 @@ String url = "jdbc:postgresql://ec2-107-22-160-185.compute-1.amazonaws.com:5432/
 String user = "uxsvvqdujoyrti";
 String password = "2d989239c38338117217f11fbd0bfc7cca8d1a671c3f395a833e0eab7932050c";
 String recid = request.getParameter("recid");
-String strsql = "SELECT oppbranchid,plan_date,plan_date_edit,plan_amount,plan_amount_edit,plan_accuracy,plan_accuracy_edit, create_date,update_date,netting,netting_edit,deduction,deduction_edit,netting-deduction as difference, netting_edit-deduction_edit as difference_edit FROM oppbranch where extid='" + recid + "'";
+String strsql = "SELECT oppbranchid,COALESCE(plan_date,""),COALESCE(plan_date_edit,""),COALESCE(plan_amount,""),COALESCE(plan_amount_edit,""),COALESCE(plan_accuracy,""),COALESCE(plan_accuracy_edit,""), COALESCE(create_date,""),COALESCE(update_date,""),COALESCE(netting,""),COALESCE(netting_edit,""),COALESCE(deduction,""),COALESCE(deduction_edit,""),COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit FROM oppbranch where extid='" + recid + "'";
 
 DecimalFormat objFmt=new DecimalFormat("#,###");
 SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
@@ -97,7 +97,7 @@ while(rs.next()){
       <tr onclick="tableClick(this)">
         <td class="hidden" id="<%="lst_id_" + String.valueOf(i) %>" ><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
-        <td class="left"><input type="text" size="10" id="<%="lst_plan_Date_" + String.valueOf(i) %>" value=<%=objDtFmt.format(rs.getDate("plan_Date"))%> ></input></td>
+        <td class="left"><input type="text" size="10" id="<%="lst_plan_Date_" + String.valueOf(i) %>" value=<%=rs.getDate("plan_Date")%> ></input></td>
         <td class="right"><input type="text" size="18" class="right" id="<%="lst_plan_amount_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="center">
             <select name="plan_accuracy" id="<%="lst_plan_accuracy_" + String.valueOf(i) %>">
@@ -107,7 +107,7 @@ while(rs.next()){
                 <option value="C" <% if ("C".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>C</option>
             </select> 
         </td>
-        <td class="left"><%=objDtTmFmt.format(rs.getDate("create_date"))%></td>
+        <td class="left"><%= rs.getDate("create_date")%></td>
         <!--td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td-->
         <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" ></td>
         
