@@ -135,8 +135,14 @@ function upddelRow(obj) {
 function deleteRow(obj) {
     // 削除ボタンを押下された行を取得
     tr = obj.parentNode.parentNode;
-    // trのインデックスを取得して行を削除する
-    tr.parentNode.deleteRow(tr.sectionRowIndex);
+
+    var result = window.confirm("選択した実行予定を削除してよろしいですか？");
+
+    if( result ) {
+        // trのインデックスを取得して行を削除する
+        tr.parentNode.deleteRow(tr.sectionRowIndex);
+    }
+    
 }
 
 
