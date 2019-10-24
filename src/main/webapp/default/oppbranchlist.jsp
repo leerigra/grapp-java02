@@ -33,6 +33,7 @@ function tableClick(tr){
 
   //選択された行のidをセットして詳細表示
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
+  alert(table.rows[rowidx].cells[0].innerHTML);
   alert(document.getElementById(sel_plan_Date_id).innerHTML);
   document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).innerHTML;
   alert(document.getElementById(sel_plan_amount_id).innerHTML);
