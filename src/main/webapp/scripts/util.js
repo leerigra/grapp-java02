@@ -232,6 +232,8 @@ function resetTr(id) {
       
       var tr = document.getElementById(trid);
       
+      alert(tr.hasClass("sel_row"));
+
       if(tr.hasClass("sel_row")){
         tr.removeClass("sel_row");
       } else {
