@@ -228,18 +228,11 @@ function resetTr(id) {
     alert("行数：" + rowcnt);
     for(var i = 1; i < rowcnt-1; i++) {
       var trid = "tr_" + i;
-      alert(trid);
-      
-      var tr = document.getElementById(trid);
-      
-      alert(tr.hasClass("sel_row"));
+      alert(document.getElementById(trid).classList.contains("sel_row"));
+      document.getElementById(trid).classList.remove("sel_row");
 
-      if(tr.hasClass("sel_row")){
-        tr.removeClass("sel_row");
-      } else {
-        alert("ない");
-      }
+      alert("おわった");
+     
     }
-    alert("おわった");
   }
 
