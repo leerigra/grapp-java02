@@ -117,8 +117,8 @@ while(rs.next()){
         <td class="left"><%=rs.getDate("create_date")%></td>
         <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" /></td>
 
-        <td class="hidden" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=rs.getDate("plan_Date_edit")%></td>
-        <td class="hidden" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount_edit"))%></td>
+        <td class="hidden" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%=rs.getDate("plan_Date_edit")%>></td>
+        <td class="hidden" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%=objFmt.format(rs.getLong("plan_amount_edit"))%>></td>
         <td class="hidden">
             <select  id="<%="lst_plan_accuracy_upd_" + String.valueOf(i) %>">
                 <option value=""></option>
