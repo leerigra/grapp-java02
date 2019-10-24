@@ -1,8 +1,7 @@
 <%@ page contentType="text/html; charset=Shift_JIS"
          import="java.sql.*,java.text.*" %>
 
-
-<script type="text/javascript" src="/scripts/util.js"></script>
+e<script type="text/javascript" src="/scripts/util.js"></script>
 <script type="text/javascript">
 
 function tableClick(tr){
