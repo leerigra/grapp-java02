@@ -15,6 +15,13 @@
 			});
         }
 
+        function setSize() {
+        	
+            Sfdc.canvas.client.resize(sr.client,  {
+            	width : options.width?options.width:"1200px", 
+      			height : options.height?options.height:"2000px"
+			});
+        }
         var sr = JSON.parse('${canvasRequestJson}');
         Sfdc.canvas(function() {
             var photoUri = sr.context.user.profileThumbnailUrl +  "?oauth_token=" + sr.client.oauthToken;
@@ -27,7 +34,7 @@
     <title>Force.com Canvas Java Quick Start</title>
 </head>
 
-<body>
+<body onLoad="setSize()">
     <div class="content">
         <div class="content-header">
             <h2>
