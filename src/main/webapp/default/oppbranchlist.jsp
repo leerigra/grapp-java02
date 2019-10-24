@@ -31,9 +31,9 @@ function tableClick(tr){
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
   
 
-    document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).value;
-    document.getElementById( "plan_amount_b" ).innerHTML = document.getElementById(sel_plan_amount_id).value;
-    document.getElementById( "plan_accuracy_b" ).innerHTML = document.getElementById(sel_plan_accuracy_id).value;
+    document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).innerHTML;
+    document.getElementById( "plan_amount_b" ).innerHTML = document.getElementById(sel_plan_amount_id).innerHTML;
+    document.getElementById( "plan_accuracy_b" ).innerHTML = document.getElementById(sel_plan_accuracy_id).innerHTML;
     document.getElementById( "netting_b" ).innerHTML = document.getElementById(sel_netting_id).innerHTML;
     document.getElementById( "deduction_b" ).innerHTML = document.getElementById(sel_deduction_id).innerHTML;
     document.getElementById( "difference_b" ).innerHTML = document.getElementById(sel_difference_id).innerHTML;
