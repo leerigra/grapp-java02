@@ -224,7 +224,7 @@ function resetTr(id) {
     // テーブル取得
     var table = document.getElementById(id);
     // 行数
-    var rowcnt = table.tbl1.rows.length;
+    var rowcnt = table.rows.length;
     alert("行数：" rowcnt);
     for(var i = 1; i < rowcnt; i++) {
       var tr = document.getElementById("tr_" + i);
