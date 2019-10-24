@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=Shift_JIS"
          import="java.sql.*,java.text.*" %>
 
-e<script type="text/javascript" src="/scripts/util.js"></script>
+<script type="text/javascript" src="/scripts/util.js"></script>
 <script type="text/javascript">
 
 function tableClick(tr){
@@ -111,9 +111,9 @@ while(rs.next()){
             </select> 
         </td>
 
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_netting_" + String.valueOf(i) %>" value=<%= rs.getLong("netting") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_deduction_" + String.valueOf(i) %>" value=<%= rs.getLong("deduction") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_difference_" + String.valueOf(i) %>" value= <%= rs.getLong("difference") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="right"><input type="text" size="18" class="right" id="<%="lst_netting_" + String.valueOf(i) %>" value=<%= objFmt.format(rs.getLong("netting")) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="right"><input type="text" size="18" class="right" id="<%="lst_deduction_" + String.valueOf(i) %>" value=<%= objFmt.format(rs.getLong("deduction")) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="right"><input type="text" size="18" class="right" id="<%="lst_difference_" + String.valueOf(i) %>" value= <%= objFmt.format(rs.getLong("difference")) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="left"><%=rs.getDate("create_date")%></td>
         <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" /></td>
 
