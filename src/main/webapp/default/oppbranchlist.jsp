@@ -42,10 +42,6 @@ function tableClick(tr){
     document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id_upd).innerHTML;
     document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id_upd).innerHTML;
     document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
-
-  reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
-  //document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
-  document.getElementById("sel_oppbranchid").contentDocument.location.replace(reloadurl);
 }
 </script>
 
@@ -58,10 +54,9 @@ String recid = request.getParameter("recid");
 String strsql = "SELECT oppbranchid,COALESCE(plan_date,""),COALESCE(plan_date_edit,""),COALESCE(plan_amount,""),COALESCE(plan_amount_edit,""),COALESCE(plan_accuracy,""),COALESCE(plan_accuracy_edit,""), COALESCE(create_date,""),COALESCE(update_date,""),COALESCE(netting,""),COALESCE(netting_edit,""),COALESCE(deduction,""),COALESCE(deduction_edit,""),COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit FROM oppbranch where extid='" + recid + "'";
 
 DecimalFormat objFmt=new DecimalFormat("#,###");
-SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
-SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
 %>
+
 <form name="fm_opplist">
 <div class="content-data">
  
