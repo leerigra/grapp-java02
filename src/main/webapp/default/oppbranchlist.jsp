@@ -28,29 +28,27 @@ function tableClick(tr){
   sel_netting_id_upd = "lst_netting_upd_" + rowidx;
   sel_deduction_id_upd = "lst_deduction_upd_" + rowidx;
   sel_difference_id_upd = "lst_difference_upd_" + rowidx;
-
-  alert("選択した行は：" + rowidx +". idは:" + table.rows[rowidx].cells[0].innerHTML);
-   
+ 
   tr.setAttribute("class","sel_row");
 
   //選択された行のidをセットして詳細表示
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
-  
-
-    document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).innerHTML;
-    document.getElementById( "plan_amount_b" ).innerHTML = document.getElementById(sel_plan_amount_id).innerHTML;
-    document.getElementById( "plan_accuracy_b" ).innerHTML = document.getElementById(sel_plan_accuracy_id).innerHTML;
-    document.getElementById( "netting_b" ).innerHTML = document.getElementById(sel_netting_id).innerHTML;
-    document.getElementById( "deduction_b" ).innerHTML = document.getElementById(sel_deduction_id).innerHTML;
-    document.getElementById( "difference_b" ).innerHTML = document.getElementById(sel_difference_id).innerHTML;
+  alert(document.getElementById(sel_plan_Date_id).innerHTML);
+  document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).innerHTML;
+  alert(document.getElementById(sel_plan_amount_id).innerHTML);
+  document.getElementById( "plan_amount_b" ).innerHTML = document.getElementById(sel_plan_amount_id).innerHTML;
+  document.getElementById( "plan_accuracy_b" ).innerHTML = document.getElementById(sel_plan_accuracy_id).innerHTML;
+  document.getElementById( "netting_b" ).innerHTML = document.getElementById(sel_netting_id).innerHTML;
+  document.getElementById( "deduction_b" ).innerHTML = document.getElementById(sel_deduction_id).innerHTML;
+  document.getElementById( "difference_b" ).innerHTML = document.getElementById(sel_difference_id).innerHTML;
    
-    document.getElementById( "plan_Date_a" ).value = document.getElementById(sel_plan_Date_id_upd).innerHTML;
-    document.getElementById( "plan_amount_a" ).value = document.getElementById(sel_plan_amount_id_upd).innerHTML;
-    document.getElementById( "plan_accuracy_a" ).value = document.getElementById(sel_plan_accuracy_id_upd).innerHTML;
-    document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id_upd).innerHTML;
-    document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id_upd).innerHTML;
-    document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
-     
+  document.getElementById( "plan_Date_a" ).value = document.getElementById(sel_plan_Date_id_upd).innerHTML;
+  document.getElementById( "plan_amount_a" ).value = document.getElementById(sel_plan_amount_id_upd).innerHTML;
+  document.getElementById( "plan_accuracy_a" ).value = document.getElementById(sel_plan_accuracy_id_upd).innerHTML;
+  document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id_upd).innerHTML;
+  document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id_upd).innerHTML;
+  document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
+    
 
 }
 </script>
