@@ -28,7 +28,8 @@ function tableClick(tr){
   tr.setAttribute("class","sel_row");
   
   //選択された行のidをセットしてリロード
-    document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
+  document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
+  
 
     document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).value;
     document.getElementById( "plan_amount_b" ).innerHTML = document.getElementById(sel_plan_amount_id).value;
@@ -45,6 +46,10 @@ function tableClick(tr){
     document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
      
 
+
+  reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
+  //document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
+  document.getElementById("sel_oppbranchid").contentDocument.location.replace(reloadurl);
 }
 </script>
 
@@ -72,9 +77,6 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
         <th>実行／払込予定日</th>
         <th>実行／払込予定額（原通貨）</th>
         <th>実行／払込確度</th>
-        <th>ネッティング額（原通貨）</th>
-        <th>実行日控除額（原通貨）</th>
-        <th>差額（現通貨）</th>
         <th>作成日時</th>
         <th>削除</th>
 
@@ -103,14 +105,13 @@ while(rs.next()){
                 <option value="C" <% if ("C".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>C</option>
             </select> 
         </td>
-        
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_netting_" + String.valueOf(i) %>" value=<%= objFmt.format(rs.getLong("netting")) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_deduction_" + String.valueOf(i) %>" value=<%= objFmt.format(rs.getLong("deduction")) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_difference_" + String.valueOf(i) %>" value=<%= objFmt.format(rs.getLong("difference")) %> onfocus="offComma(this)" onblur="toComma(this)" /> </td>
- 
         <td class="left"><%= rs.getDate("create_date")%></td>
         <!--td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td-->
         <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" ></td>
+        
+        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= rs.getString("netting") %></td>
+        <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getString("deduction") %></td>
+        <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= rs.getString("difference") %></td>
 
         <td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%= rs.getDate("plan_Date_edit") %> ></input></td>
         <td class="hidden"><input type="text" size="18" class="right" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%= objFmt.format(rs.getLong("plan_amount_edit"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
