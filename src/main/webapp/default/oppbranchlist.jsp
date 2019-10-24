@@ -27,9 +27,8 @@ function tableClick(tr){
   tr.setAttribute("class","sel_row");
   
   //選択された行のidをセットしてリロード
-  document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
+    document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
   
-
     document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).value;
     document.getElementById( "plan_amount_b" ).innerHTML = document.getElementById(sel_plan_amount_id).value;
     document.getElementById( "plan_accuracy_b" ).innerHTML = document.getElementById(sel_plan_accuracy_id).value;
@@ -43,8 +42,6 @@ function tableClick(tr){
     document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id_upd).innerHTML;
     document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id_upd).innerHTML;
     document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
-     
-
 
   reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
   //document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
@@ -64,7 +61,6 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
 SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
 SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
-
 %>
 <form name="fm_opplist">
 <div class="content-data">
@@ -72,10 +68,10 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
     <input type="text" id="sel_oppbranchid"/>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB')"  />
 
-    <table class="oppBrListTable" id="BranchListDB" >
+    <table class="oppBrListTable" id="BranchListDB">
     <tr>
         <th class="hidden">recid</th>
-        <th>変更区分</th>
+        <th>変更区分</th>    <!--選択肢：新規,変更,削除,取下-->
         <th>実行／払込予定日</th>
         <th>実行／払込予定額（原通貨）</th>
         <th>実行／払込確度</th>
@@ -84,9 +80,7 @@ SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
         <th>差額（原通貨）</th>
         <th>作成日時</th>
         <th>削除</th>
-
     </tr>
-    <!--選択肢：新規,変更,削除,取下-->
 
 <%
 Connection db=DriverManager.getConnection(url, user, password);
