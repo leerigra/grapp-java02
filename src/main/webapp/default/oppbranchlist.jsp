@@ -26,12 +26,13 @@ function tableClick(tr){
   sel_deduction_id_upd = "lst_deduction_upd_" + rowidx;
   sel_difference_id_upd = "lst_difference_upd_" + rowidx;
 
-  alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
+  alert("選択した行は：" + rowidx +". idは:" + table.rows[rowidx].cells[0].innerHTML);
    
-  resetTr("BranchListDB");
-  alert("消えた？");
+  //resetTr("BranchListDB");
+
+  
   tr.setAttribute("class","sel_row");
-  alert("選択した？");
+
 
   //選択された行のidをセットしてリロード
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
