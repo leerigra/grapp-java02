@@ -72,6 +72,9 @@ select {
     background-color: rgb(167, 221, 252);
 }
 
+.default_row{
+    background-color:#ffffff;
+}
 
 div.content-header h2 {
     height: 50px;

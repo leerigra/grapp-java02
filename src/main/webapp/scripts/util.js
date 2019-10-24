@@ -194,14 +194,6 @@ function offComma(obj){
 }
 
 
-function selTableRow(pos)
-	{
-    var posId="tr_"+ pos
-
-		document.getElementById(posId).style.backgroundColor="red";
-		document.getElementById("tr2").style.backgroundColor="white";
-		
-	}
 
 function btnCancel_Click()
 {
@@ -227,24 +219,17 @@ function btnOK_click()
     }
 }
 
+//テーブルの背景色初期化
+function resetTr(id) {
+    // テーブル取得
+    var table = document.getElementById(id);
+    // 行数
+    var rowcnt = table.tbl1.rows.length;
 
-function tr_default(tblID){
- var vTR = tblID + " tr";
- $(vTR).css("background-color","#ffffff");
- $(vTR).mouseover(function(){
-  $(this).css("cursor","pointer")
- });
- $(vTR).mouseout(function(){
-  $(this).css("cursor","normal")
- });
-}
+    for(var i = 1; i < rowcnt; i++) {
+      var tr = document.getElementById("tr_" + i);
+      tr.setAttribute("class","default_row");
+      tr.removeClass("sel_row");
+    }  
+  }
 
-function tr_click(trID){
- trID.css("background-color","#e49e61");
- trID.mouseover(function(){
-  $(this).css("cursor","pointer")
- });
- trID.mouseout(function(){
-  $(this).css("cursor","normal")
- });
-}

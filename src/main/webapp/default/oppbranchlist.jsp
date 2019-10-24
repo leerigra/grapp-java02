@@ -27,13 +27,8 @@ function tableClick(tr){
   sel_difference_id_upd = "lst_difference_upd_" + rowidx;
 
   alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
-
-    tr_default("BranchListDB");
-    $("BranchListDB tr").click(function(){
-    tr_default("BranchListDB");
-    tr_click($(this));
-    });
-
+   
+  resetTr("BranchListDB");
 
   tr.setAttribute("class","sel_row");
   
@@ -102,7 +97,7 @@ int i = 1;
 
 while(rs.next()){
 %>
-      <tr onclick="tableClick(this)">
+      <tr id="<%="tr_" + String.valueOf(i) %>" onclick="tableClick(this)">
         <td class="hidden" id="<%="lst_id_" + String.valueOf(i) %>" ><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
         <td class="left" id="<%="lst_plan_Date_" + String.valueOf(i) %> "><%= rs.getDate("plan_Date") %></td>
