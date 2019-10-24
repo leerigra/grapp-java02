@@ -38,9 +38,9 @@ function tableClick(tr){
     document.getElementById( "deduction_b" ).innerHTML = document.getElementById(sel_deduction_id).innerHTML;
     document.getElementById( "difference_b" ).innerHTML = document.getElementById(sel_difference_id).innerHTML;
    
-    document.getElementById( "plan_Date_a" ).value = document.getElementById(sel_plan_Date_id_upd).value;
-    document.getElementById( "plan_amount_a" ).value = document.getElementById(sel_plan_amount_id_upd).value;
-    document.getElementById( "plan_accuracy_a" ).value = document.getElementById(sel_plan_accuracy_id_upd).value;
+    document.getElementById( "plan_Date_a" ).value = document.getElementById(sel_plan_Date_id_upd).innerHTML;
+    document.getElementById( "plan_amount_a" ).value = document.getElementById(sel_plan_amount_id_upd).innerHTML;
+    document.getElementById( "plan_accuracy_a" ).value = document.getElementById(sel_plan_accuracy_id_upd).innerHTML;
     document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id_upd).innerHTML;
     document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id_upd).innerHTML;
     document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
@@ -95,34 +95,21 @@ while(rs.next()){
       <tr onclick="tableClick(this)">
         <td class="hidden" id="<%="lst_id_" + String.valueOf(i) %>" ><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
-        <td class="left"><input type="text" size="10" id="<%="lst_plan_Date_" + String.valueOf(i) %>" value=<%= rs.getDate("plan_Date") %> ></input></td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_plan_amount_" + String.valueOf(i) %>" value=<%= objFmt.format(rs.getLong("plan_amount")) %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        <td class="center">
-            <select name="plan_accuracy" id="<%="lst_plan_accuracy_" + String.valueOf(i) %>">
-                <option value=""></option>
-                <option value="A" <% if ("A".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>A</option>
-                <option value="B" <% if ("B".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>B</option>
-                <option value="C" <% if ("C".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>C</option>
-            </select> 
-        </td>
+        <td class="left" id="<%="lst_plan_Date_" + String.valueOf(i) %>"><%= rs.getDate("plan_Date") %></td>
+        <td class="right" id="<%="lst_plan_amount_" + String.valueOf(i) %> "><%= objFmt.format(rs.getLong("plan_amount")) %></td>
+        <td class="center" id="<%="lst_plan_accuracy_" + String.valueOf(i) %>"> <%= rs.getString("plan_accuracy")%></td>
         <td class="left"><%= rs.getDate("create_date")%></td>
-        <!--td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td-->
-        <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" ></td>
+
+        <td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td>
+        <!--td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" ></td-->
         
         <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= rs.getString("netting") %></td>
         <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getString("deduction") %></td>
         <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= rs.getString("difference") %></td>
 
-        <td class="hidden"><input type="text" size="10" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" value=<%= rs.getDate("plan_Date_edit") %> ></input></td>
-        <td class="hidden"><input type="text" size="18" class="right" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" value=<%= objFmt.format(rs.getLong("plan_amount_edit"))%> onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        <td class="hidden">
-            <select  id="<%="lst_plan_accuracy_upd_" + String.valueOf(i) %>">
-                <option value=""></option>
-                <option value="A" <% if ("A".equals(rs.getString("plan_accuracy_edit"))) { %>selected<% } %>>A</option>
-                <option value="B" <% if ("B".equals(rs.getString("plan_accuracy_edit"))) { %>selected<% } %>>B</option>
-                <option value="C" <% if ("C".equals(rs.getString("plan_accuracy_edit"))) { %>selected<% } %>>C</option>
-            </select> 
-        </td>
+        <td class="hidden" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" ><%= rs.getDate("plan_Date_edit") %></td>
+        <td class="hidden" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("plan_amount_edit"))%></td>
+        <td class="hidden" id="<%="lst_plan_accuracy_upd_" + String.valueOf(i) %>"><%= rs.getString("plan_accuracy_edit") %></td>
        
         <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= rs.getString("netting_edit") %></td>
         <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= rs.getString("deduction_edit") %></td>

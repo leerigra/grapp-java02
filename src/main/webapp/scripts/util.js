@@ -68,9 +68,9 @@ cell_create_date.setAttribute("id","lst_create_date_" + row_len);
 cell_create_date.setAttribute("class","left");    
 cell_create_date.innerHTML = "";
 
-cell_checkbox.setAttribute("id","lst_checkbox_" + row_len); 
+cell_checkbox.setAttribute("id","lst_btn_" + row_len); 
 cell_checkbox.setAttribute("class","center"); 
-cell_checkbox.innerHTML = delCheckbox; 
+cell_checkbox.innerHTML = delButton; 
 
 cell_lst_netting.setAttribute("id","lst_netting_"+ row_len);
 cell_lst_netting.setAttribute("class","hidden");
