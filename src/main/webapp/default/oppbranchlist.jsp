@@ -33,7 +33,7 @@ function tableClick(tr){
    
   tr.setAttribute("class","sel_row");
 
-  //選択された行のidをセットしてリロード
+  //選択された行のidをセットして詳細表示
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
   
 
@@ -52,10 +52,6 @@ function tableClick(tr){
     document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
      
 
-
-  reloadurl ="/default/oppbranchdetail.jsp?oppbranchid=" + table.rows[rowidx].cells[0].innerHTML;
-  //document.getElementById('oppdetail')[0].contentDocument.location.reload(true);
-  document.getElementById("sel_oppbranchid").contentDocument.location.replace(reloadurl);
 }
 </script>
 
