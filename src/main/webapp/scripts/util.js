@@ -241,8 +241,8 @@ function resetTr(id) {
     }
   }
 
-function inesrtData{
-  String strsql = " INSERT INTO public.oppbranch ";
+function inesrtData(){
+  var strsql = " INSERT INTO public.oppbranch ";
   strsql = stsql + "(extid, oppbranchid, plan_date, plan_date_edit, plan_amount, plan_amount_edit, ";
   strsql = stsql + "plan_accuracy, p lan_accuracy_edit, create_date, update_date, ";
   strsql = stsql + "netting, netting_edit, deduction, deduction_edit, difference, difference_edit)";
@@ -250,8 +250,8 @@ function inesrtData{
 
 }
 
-function updateData{
-  String strsql = "UPDATE public.oppbranch SET ";
+function updateData(){
+  var strsql = "UPDATE public.oppbranch SET ";
   strsql = strsql + "plan_date_edit = '2019-10-30'::date, plan_amount_edit = '1000000'::numeric, ";
   strsql = strsql + "plan_accuracy_edit = 'A'::character(1) ";
   strsql = strsql + " WHERE oppbranchid =" + 1 +"'";
@@ -259,8 +259,8 @@ function updateData{
 
 }
 
-function deleteData{
-  String strsql = "UPDATE public.oppbranch SET ";
+function deleteData(){
+  var strsql = "UPDATE public.oppbranch SET ";
   strsql = strsql + "del_flg = true ";
   strsql = strsql + " WHERE oppbranchid =" + 1 +"'";
   strsql = strsql + " AND extid='" + recid + "'";
