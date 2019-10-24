@@ -229,6 +229,8 @@ function resetTr(id) {
     for(var i = 1; i < rowcnt-1; i++) {
       var tr = document.getElementById("tr_" + i);
       tr.removeClass("sel_row");
-    }  
+      alert(tr.innerHTML);
+    }
+    alert("おわった");
   }
 
