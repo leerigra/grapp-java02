@@ -5,6 +5,24 @@
   
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
+    <script>
+        function resetSize(newDimensions) {
+        	var options = newDimensions ? newDimensions : {};
+            console.log("resize.");
+            Sfdc.canvas.client.resize(sr.client,  {
+            	width : options.width?options.width:"1200px", 
+      			height : options.height?options.height:"2000px"
+			});
+        }
+
+        var sr = JSON.parse('${canvasRequestJson}');
+        Sfdc.canvas(function() {
+            var photoUri = sr.context.user.profileThumbnailUrl +  "?oauth_token=" + sr.client.oauthToken;
+            Sfdc.canvas.byId('header').style.backgroundImage =  "url('"+(photoUri.indexOf("http")==0 ? "" :sr.client.instanceUrl) + photoUri+"')";
+            resetSize();
+            initTabs();
+        });
+    </script>
 
     <title>Force.com Canvas Java Quick Start</title>
 </head>
