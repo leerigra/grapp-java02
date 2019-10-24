@@ -62,6 +62,9 @@ String recid = request.getParameter("recid");
 String strsql = "SELECT oppbranchid,COALESCE(plan_date,""),COALESCE(plan_date_edit,""),COALESCE(plan_amount,""),COALESCE(plan_amount_edit,""),COALESCE(plan_accuracy,""),COALESCE(plan_accuracy_edit,""), COALESCE(create_date,""),COALESCE(update_date,""),COALESCE(netting,""),COALESCE(netting_edit,""),COALESCE(deduction,""),COALESCE(deduction_edit,""),COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit FROM oppbranch where extid='" + recid + "'";
 
 DecimalFormat objFmt=new DecimalFormat("#,###");
+SimpleDateFormat objDtFmt=new SimpleDateFormat("yyyy/MM/dd");
+SimpleDateFormat objDtTmFmt=new SimpleDateFormat("yyyy/MM/dd HH:mm");
+
 
 %>
 <form name="fm_opplist">
@@ -108,7 +111,7 @@ while(rs.next()){
         <td class="left"><%=rs.getDate("create_date")%></td>
         <!--td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td-->
         <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" /></td>
-        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= nvl(rs.getString("netting")) %></td>
+        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= rs.getString("netting") %></td>
         <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getString("deduction") %></td>
         <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= rs.getString("difference") %></td>
 
@@ -123,7 +126,7 @@ while(rs.next()){
             </select> 
         </td>
        
-        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= rs.getString("netting_edit") %></td>
+        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= ObjectUtils.defaultIfNull(rs.getString("netting_edit"),"") %></td>
         <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= rs.getString("deduction_edit") %></td>
         <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= rs.getString("difference_edit") %></td>
         
