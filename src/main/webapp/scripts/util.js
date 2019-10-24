@@ -165,7 +165,11 @@ function checkDel(obj) {
 }
 
 
-
+function nvl(obj){
+  if (obj == null) {
+    obj = "";
+  } 
+}
 
 /**************************
  * カンマ編集を行うFunction
@@ -175,6 +179,7 @@ function toComma(obj){
     obj.value = Number(obj.value).toLocaleString();
   }
 }
+
 
 /**************************
  * カンマ編集を解除するFunction
