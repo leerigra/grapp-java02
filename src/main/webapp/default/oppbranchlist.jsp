@@ -31,20 +31,12 @@ function tableClick(tr){
  
   tr.setAttribute("class","sel_row");
 
-  alert("値セット処理始めるよ");
-  //選択された行のidをセットして詳細表示
+   //選択された行のidをセットして詳細表示
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
   document.getElementById( "plan_Date_b" ).innerHTML =  table.rows[rowidx].cells[2].innerHTML;
   document.getElementById( "plan_amount_b" ).innerHTML =  table.rows[rowidx].cells[3].innerHTML;
   document.getElementById( "plan_accuracy_b" ).innerHTML =  table.rows[rowidx].cells[4].innerHTML;
-  //document.getElementById( "netting_b" ).innerHTML =  table.rows[rowidx].cells[5].innerHTML;
-  //document.getElementById( "deduction_b" ).innerHTML =  table.rows[rowidx].cells[6].innerHTML;
-  //document.getElementById( "difference_b" ).innerHTML =  table.rows[rowidx].cells[7].innerHTML;
   
-  
-  //document.getElementById( "plan_Date_b" ).innerHTML = document.getElementById(sel_plan_Date_id).innerHTML;
-  //document.getElementById( "plan_amount_b" ).innerHTML = document.getElementById(sel_plan_amount_id).innerHTML;
-  //document.getElementById( "plan_accuracy_b" ).innerHTML = document.getElementById(sel_plan_accuracy_id).innerHTML;
   document.getElementById( "netting_b" ).innerHTML = document.getElementById(sel_netting_id).innerHTML;
   document.getElementById( "deduction_b" ).innerHTML = document.getElementById(sel_deduction_id).innerHTML;
   document.getElementById( "difference_b" ).innerHTML = document.getElementById(sel_difference_id).innerHTML;
@@ -110,17 +102,17 @@ while(rs.next()){
         <td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td>
         <!--td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" ></td-->
         
-        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= rs.getString("netting") %></td>
-        <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getString("deduction") %></td>
-        <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= rs.getString("difference") %></td>
+        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("netting")) %></td>
+        <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("deduction")) %></td>
+        <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("difference")) %></td>
 
         <td class="hidden" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" ><%= rs.getDate("plan_Date_edit") %></td>
         <td class="hidden" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("plan_amount_edit"))%></td>
         <td class="hidden" id="<%="lst_plan_accuracy_upd_" + String.valueOf(i) %>"><%= rs.getString("plan_accuracy_edit") %></td>
        
-        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= rs.getString("netting_edit") %></td>
-        <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= rs.getString("deduction_edit") %></td>
-        <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= rs.getString("difference_edit") %></td>
+        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("netting_edit")) %></td>
+        <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("deduction_edit")) %></td>
+        <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("difference_edit")) %></td>
         
     </tr>
 
