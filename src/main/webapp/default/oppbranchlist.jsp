@@ -38,7 +38,7 @@ function tableClick(tr){
   document.getElementById( "plan_amount_b" ).innerHTML =  table.rows[rowidx].cells[3].innerHTML;
   document.getElementById( "plan_accuracy_b" ).innerHTML =  table.rows[rowidx].cells[4].innerHTML;
   document.getElementById( "netting_b" ).innerHTML =  table.rows[rowidx].cells[5].innerHTML;
-  /document.getElementById( "deduction_b" ).innerHTML =  table.rows[rowidx].cells[6].innerHTML;
+  document.getElementById( "deduction_b" ).innerHTML =  table.rows[rowidx].cells[6].innerHTML;
   document.getElementById( "difference_b" ).innerHTML =  table.rows[rowidx].cells[7].innerHTML;
   
   
