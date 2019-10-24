@@ -29,9 +29,9 @@ function tableClick(tr){
   alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
    
   resetTr("BranchListDB");
-  alert("消えた？")
+  alert("消えた？");
   tr.setAttribute("class","sel_row");
-  alert("選択した？")
+  alert("選択した？");
 
   //選択された行のidをセットしてリロード
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
