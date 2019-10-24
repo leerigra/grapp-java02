@@ -110,9 +110,10 @@ while(rs.next()){
                 <option value="C" <% if ("C".equals(rs.getString("plan_accuracy"))) { %>selected<% } %>>C</option>
             </select> 
         </td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= rs.getLong("netting") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= rs.getLong("deduction") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
-        <td class="right"><input type="text" size="18" class="right" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= rs.getLong("difference") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+
+        <td class="right"><input type="text" size="18" class="right" id="<%="lst_netting_" + String.valueOf(i) %>" value=<%= rs.getLong("netting") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="right"><input type="text" size="18" class="right" id="<%="lst_deduction_" + String.valueOf(i) %>" value=<%= rs.getLong("deduction") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
+        <td class="right"><input type="text" size="18" class="right" id="<%="lst_difference_" + String.valueOf(i) %>" value= <%= rs.getLong("difference") %> onfocus="offComma(this)" onblur="toComma(this)" /></td>
         <td class="left"><%=rs.getDate("create_date")%></td>
         <td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" /></td>
 
