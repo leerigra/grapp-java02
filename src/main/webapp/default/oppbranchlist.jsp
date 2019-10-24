@@ -102,17 +102,17 @@ while(rs.next()){
         <td class="center" nowrap><input type="button" value="行削除" onclick="deleteRow(this);" /></td>
         <!--td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" ></td-->
         
-        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("netting")) %></td>
-        <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("deduction")) %></td>
-        <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("difference")) %></td>
+        <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("netting")) %></td>
+        <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("deduction")) %></td>
+        <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("difference")) %></td>
 
         <td class="hidden" id="<%="lst_plan_Date_upd_" + String.valueOf(i) %>" ><%= rs.getDate("plan_Date_edit") %></td>
         <td class="hidden" id="<%="lst_plan_amount_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("plan_amount_edit"))%></td>
         <td class="hidden" id="<%="lst_plan_accuracy_upd_" + String.valueOf(i) %>"><%= rs.getString("plan_accuracy_edit") %></td>
        
-        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("netting_edit")) %></td>
-        <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("deduction_edit")) %></td>
-        <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("difference_edit")) %></td>
+        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("netting_edit")) %></td>
+        <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("deduction_edit")) %></td>
+        <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("difference_edit")) %></td>
         
     </tr>
 
