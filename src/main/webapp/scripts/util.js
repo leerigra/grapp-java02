@@ -225,16 +225,11 @@ function resetTr(id) {
     var table = document.getElementById(id);
     // 行数
     var rowcnt = table.rows.length;
-    alert("行数：" + rowcnt);
-    for(var i = 1; i < rowcnt-1; i++) {
+    for(var i = 1; i < rowcnt; i++) {
 
       var trid = "tr_" + i;
-      alert (trid);
       if(document.getElementById(trid).classList.contains("sel_row")){
-          alert("あった");
           document.getElementById(trid).classList.remove("sel_row");
-      } else {
-          alert("無かった");
       }
       
     }
