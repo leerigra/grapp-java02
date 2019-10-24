@@ -19,7 +19,7 @@
         	
             Sfdc.canvas.client.resize(sr.client,  {
             	width : options.width?options.width:"1200px", 
-      			height : options.height?options.height:"2000px"
+      			height : options.height?options.height:"4000px"
 			});
         }
         var sr = JSON.parse('${canvasRequestJson}');
