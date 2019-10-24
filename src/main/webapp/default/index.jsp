@@ -17,8 +17,8 @@
         	var options = newDimensions ? newDimensions : {};
             console.log("resize.");
             Sfdc.canvas.client.resize(sr.client,  {
-            	width : options.width?options.width:"600px", 
-      			height : options.height?options.height:"600px"
+            	width : options.width?options.width:"120px", 
+      			height : options.height?options.height:"2000px"
 			});
         }
 
@@ -46,11 +46,11 @@
         <div class="content-body">
 
         <div class="tab-box">
-            <a href="javascript:;" onclick="resetSize()" class="tabLink activeLink" id="c1">Canvas1</a>
-            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="c2">Canvas2</a>
+            <a href="javascript:;" onclick="resetSize()" class="tabLink activeLink" id="context">Canvas1</a>
+            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="Resize">Canvas2</a>
         </div>
 
-        <div class="tabcontent paddingAll" id="c1-1">
+        <div class="tabcontent paddingAll" id="context-1">
             <h3>実行予定①</h3>
             <jsp:include page="oppbranchlist.jsp">
                 <jsp:param name="recid" value="${canvasRequest.context.environmentContext.parameters.Id}" />
@@ -63,7 +63,7 @@
             </div>
         </div>
 
-        <div class="tabcontent paddingAll hide" id="c2-1">
+        <div class="tabcontent paddingAll hide" id="resize-1">
             <h3>実行予定②</h3>
             <jsp:include page="oppbranchlist01.jsp">
                  <jsp:param name="recid" value="${canvasRequest.context.environmentContext.parameters.Id}" />
