@@ -17,7 +17,7 @@
         	var options = newDimensions ? newDimensions : {};
             console.log("resize.");
             Sfdc.canvas.client.resize(sr.client,  {
-            	width : options.width?options.width:"120px", 
+            	width : options.width?options.width:"1200px", 
       			height : options.height?options.height:"2000px"
 			});
         }
