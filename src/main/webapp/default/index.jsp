@@ -20,7 +20,7 @@
             </h2>
         </div>
         <div class="content-body">
-            <h3>枝口リスト</h3>
+            <h3>実行予定①</h3>
             <jsp:include page="oppbranchlist.jsp">
                 <jsp:param name="recid" value="${canvasRequest.context.environmentContext.parameters.Id}" />
             </jsp:include>
@@ -35,9 +35,9 @@
        
 
         <div class="content-body">
-            <h3>枝口詳細</h3>
-            <jsp:include page="oppbranchdetail.jsp">
-                <jsp:param name="oppbranchid" value="1" />
+            <h3>実行予定②</h3>
+            <jsp:include page="oppbranchlist01.jsp">
+                 <jsp:param name="recid" value="${canvasRequest.context.environmentContext.parameters.Id}" />
             </jsp:include>
             <div class="content-navi">
                 <ul>
