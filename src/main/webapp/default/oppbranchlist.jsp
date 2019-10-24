@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=Shift_JIS"
-         import="java.sql.*,java.text.*" %>
+         import="java.sql.*,java.text.*,org.apache.commons.lang3.ObjectUtils" %>
 
 
 <script type="text/javascript" src="/scripts/util.js"></script>
