@@ -36,14 +36,14 @@
 
 <body onLoad="setSize()">
     <div class="content">
-        <div class="content-header">
+        <!--div class="content-header">
             <h2>
             <p class="right">
                 Salesforce ログインユーザ名: <span id='username'>${canvasRequest.context.userContext.userName}</span><br/>
                 操作対象レコードID: <span id='comp_id'>${canvasRequest.context.environmentContext.parameters.Id}</span>
             </p>
             </h2>
-        </div>
+        </div-->
         <div class="content-body">
             <h3>実行予定①</h3>
             <jsp:include page="oppbranchlist.jsp">
