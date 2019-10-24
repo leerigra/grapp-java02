@@ -5,6 +5,8 @@
 <script type="text/javascript" src="/scripts/util.js"></script>
 <script type="text/javascript">
 
+
+
 function tableClick(tr){
 
   // クリックされた行を取得
@@ -24,7 +26,15 @@ function tableClick(tr){
   sel_deduction_id_upd = "lst_deduction_upd_" + rowidx;
   sel_difference_id_upd = "lst_difference_upd_" + rowidx;
 
-  //alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
+  alert("選択した行は：" + rowidx +". idは:" +table.rows[rowidx].cells[0].innerHTML);
+
+    tr_default("BranchListDB");
+    $("BranchListDB tr").click(function(){
+    tr_default("BranchListDB");
+    tr_click($(this));
+    });
+
+
   tr.setAttribute("class","sel_row");
   
   //選択された行のidをセットしてリロード
@@ -95,10 +105,10 @@ while(rs.next()){
       <tr onclick="tableClick(this)">
         <td class="hidden" id="<%="lst_id_" + String.valueOf(i) %>" ><%= rs.getString("oppbranchid") %></td>
         <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
-        <td class="left" id="<%="lst_plan_Date_" + String.valueOf(i) %>"><%= rs.getDate("plan_Date") %></td>
+        <td class="left" id="<%="lst_plan_Date_" + String.valueOf(i) %> "><%= rs.getDate("plan_Date") %></td>
         <td class="right" id="<%="lst_plan_amount_" + String.valueOf(i) %> "><%= objFmt.format(rs.getLong("plan_amount")) %></td>
-        <td class="center" id="<%="lst_plan_accuracy_" + String.valueOf(i) %>"> <%= rs.getString("plan_accuracy")%></td>
-        <td class="left"><%= rs.getDate("create_date")%></td>
+        <td class="center" id="<%="lst_plan_accuracy_" + String.valueOf(i) %> "><%= rs.getString("plan_accuracy") %></td>
+        <td class="left"><%= rs.getDate("create_date") %></td>
 
         <td class="center" nowrap><input type="button" value="行削除" onclick="upddelRow(this);" /></td>
         <!--td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" ></td-->
