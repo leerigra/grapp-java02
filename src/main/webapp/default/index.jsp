@@ -52,18 +52,6 @@
         
        
 
-        <div class="content-body">
-            <h3>実行予定②</h3>
-            <jsp:include page="oppbranchlist01.jsp">
-                 <jsp:param name="recid" value="${canvasRequest.context.environmentContext.parameters.Id}" />
-            </jsp:include>
-            <div class="content-navi">
-                <ul>
-                    <li class="btnCancel"><a class="linkCancel" href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
-                    <li class="btnOK"><a class="linkOK" href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
-                </ul>
-            </div>
-        </div>
         
         <br/>
         <div class="content-footer">
