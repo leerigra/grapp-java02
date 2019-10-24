@@ -22,8 +22,8 @@ div.content {
     float: left;
     background-color: #FFFFFF;
     border: 1px solid #aaa;
-    height : 99%;
-    width : 99%;
+    height : 3000px;
+    width : 2000px;
 }
 
 div.content-body {
