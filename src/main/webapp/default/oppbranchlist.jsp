@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=Shift_JIS"
-         import="java.sql.*,java.text.*,org.apache.commons.lang3.StringUtils" %>
+         import="java.sql.*,java.text.*" %>
 
 
 <script type="text/javascript" src="/scripts/util.js"></script>
@@ -126,7 +126,7 @@ while(rs.next()){
             </select> 
         </td>
        
-        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= StringUtils.defaultString(rs.getString("netting_edit"),"") %></td>
+        <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= rs.getString("netting_edit"),"") %></td>
         <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= rs.getString("deduction_edit") %></td>
         <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= rs.getString("difference_edit") %></td>
         
