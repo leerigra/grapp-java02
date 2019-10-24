@@ -230,9 +230,12 @@ function resetTr(id) {
 
       var trid = "tr_" + i;
       alert (trid);
-      if(document.getElementById(trid).classList.contains("sel_row")){alert("あった")} else {alert("無かった")}
-      //document.getElementById(trid).classList.remove("sel_row");
-
+      if(document.getElementById(trid).classList.contains("sel_row")){
+          alert("あった");
+          document.getElementById(trid).classList.remove("sel_row");
+      } else {
+          alert("無かった");
+      }
       
     }
   }
