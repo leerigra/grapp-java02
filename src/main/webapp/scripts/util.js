@@ -231,9 +231,12 @@ function resetTr(id) {
       alert(trid);
       
       var tr = document.getElementById(trid);
-      alert(tr.classList);
-      tr.removeClass("sel_row");
-      alert(tr.classList);
+      
+      if(tr.hasClass("sel_row")){
+        tr.removeClass("sel_row");
+      } else {
+        alert("ない");
+      }
     }
     alert("おわった");
   }
