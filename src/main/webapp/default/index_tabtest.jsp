@@ -1,12 +1,36 @@
 <!DOCTYPE html>
+
+
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/default/default${ua.device.mobile ? '-mobile':''}.css "/>
+    <link rel="stylesheet" type="text/css" href="/default/tabs${ua.device.mobile ? '-mobile':''}.css" />
   
     <script type="text/javascript" src="/scripts/json2.js"></script>
     <script type="text/javascript" src="/sdk/js/canvas-all.js"></script>
+    <script type="text/javascript" src="/default/tabs.js"></script>
+    <script type="text/javascript" src="/scripts/chatter-talk.js"></script>
 
-    <title>Force.com Canvas Java Quick Start</title>
+    <script>
+        function resetSize(newDimensions) {
+        	var options = newDimensions ? newDimensions : {};
+            console.log("resize.");
+            Sfdc.canvas.client.resize(sr.client,  {
+            	width : options.width?options.width:"1200px", 
+      			height : options.height?options.height:"2000px"
+			});
+        }
+
+        var sr = JSON.parse('${canvasRequestJson}');
+        Sfdc.canvas(function() {
+            var photoUri = sr.context.user.profileThumbnailUrl +  "?oauth_token=" + sr.client.oauthToken;
+            Sfdc.canvas.byId('header').style.backgroundImage =  "url('"+(photoUri.indexOf("http")==0 ? "" :sr.client.instanceUrl) + photoUri+"')";
+            resetSize();
+            initTabs();
+        });
+    </script>
+
 </head>
 
 <body>
@@ -20,6 +44,13 @@
             </h2>
         </div>
         <div class="content-body">
+
+        <div class="tab-box">
+            <a href="javascript:;" onclick="resetSize()" class="tabLink activeLink" id="context">Canvas1</a>
+            <a href="javascript:;" onclick="resetSize()" class="tabLink " id="Resize">Canvas2</a>
+        </div>
+
+        <div class="tabcontent paddingAll" id="context-1">
             <h3>実行予定①</h3>
             <jsp:include page="oppbranchlist.jsp">
                 <jsp:param name="recid" value="${canvasRequest.context.environmentContext.parameters.Id}" />
@@ -31,10 +62,8 @@
                 </ul>
             </div>
         </div>
-        
-       
 
-        <div class="content-body">
+        <div class="tabcontent paddingAll hide" id="resize-1">
             <h3>実行予定②</h3>
             <jsp:include page="oppbranchlist01.jsp">
                  <jsp:param name="recid" value="${canvasRequest.context.environmentContext.parameters.Id}" />
@@ -45,6 +74,12 @@
                     <li class="btnOK"><a class="linkOK" href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
                 </ul>
             </div>
+        </div>
+
+        
+ 
+
+            
         </div>
         
         <br/>
