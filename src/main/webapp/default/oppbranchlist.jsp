@@ -28,7 +28,7 @@ function tableClick(tr){
 
   alert("選択した行は：" + rowidx +". idは:" + table.rows[rowidx].cells[0].innerHTML);
    
-  //resetTr("BranchListDB");
+  resetTr("BranchListDB");
 
   
   tr.setAttribute("class","sel_row");

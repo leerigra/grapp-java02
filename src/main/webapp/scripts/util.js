@@ -225,7 +225,7 @@ function resetTr(id) {
     var table = document.getElementById(id);
     // 行数
     var rowcnt = table.rows.length;
-    alert("行数：" rowcnt);
+    alert("行数：" + rowcnt);
     for(var i = 1; i < rowcnt; i++) {
       var tr = document.getElementById("tr_" + i);
       tr.removeClass("sel_row");
