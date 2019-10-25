@@ -6,7 +6,7 @@ function insertRow(id) {
     var table = document.getElementById(id);
     // 行を行末に追加
     var row = table.insertRow(-1);
-    row.setAttribute("onclick","tableClick(this);");
+    row.setAttribute("onclick","tableClick(this)");
 
     // セルの挿入
 
@@ -42,7 +42,7 @@ function insertRow(id) {
    
     // 行数取得
     var row_len = table.rows.length;
-
+    alert(row_len);
 cell_id.setAttribute("id","lst_id_" + row_len);    
 cell_id.setAttribute("class","hidden");
 cell_id.innerHTML = "";
