@@ -50,8 +50,8 @@ function insertRow(id) {
     var add_lst_plan_Date = "lst_plan_Date_" + (table.rows.length - 1);
     var add_lst_plan_amount = "lst_plan_amount_" + (table.rows.length - 1);
     var add_lst_plan_accuracy = "lst_plan_accuracy_" + (table.rows.length - 1);
-    var add_lst_create_date = "lst_create_date" + (table.rows.length - 1);
-    var add_lst_netting_ = "lst_netting_" + (table.rows.length - 1);
+    var add_lst_create_date = "lst_create_date_" + (table.rows.length - 1);
+    var add_lst_netting = "lst_netting_" + (table.rows.length - 1);
     var add_lst_deduction = "lst_deduction_" + (table.rows.length - 1);
     var add_lst_difference = "lst_difference_" + (table.rows.length - 1);
     var add_lst_plan_Date_upd = "lst_plan_Date_upd_" + (table.rows.length - 1);
@@ -95,7 +95,7 @@ function insertRow(id) {
     //cell_lst_netting.innerHTML = inNumber + " id='lst_netting_" + row_len + "' />";
 
 
-    cell_lst_deduction.setAttribute("id",lst_deduction);
+    cell_lst_deduction.setAttribute("id",add_lst_deduction);
     cell_lst_deduction.setAttribute("class","hidden");
     //cell_lst_deduction.innerHTML = inNumber + " id='lst_deduction_" + row_len + "' />";
 
