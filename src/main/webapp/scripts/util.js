@@ -251,7 +251,7 @@ function offCommaVal(str){
   var reg = new RegExp(",", "g");
   var chgVal = str.replace(reg, "");
   if(!isNaN(chgVal)){
-    str= chgVal;  //値セット
+    return chgVal;  //変換した結果をかえす
   }
 }
 
