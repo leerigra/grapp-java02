@@ -11,6 +11,12 @@
  
     // データベースへのアクセス
     db.open();
+    %>
+
+    <script>
+        alert("このSQL実行！！" + strsql);
+    </script>
+    <%
  
     // SQL文を実行
     db.execute(strsql);
@@ -21,3 +27,6 @@
     // 元のページへリダイレクト
     response.sendRedirect("oppbranchlist.jsp");
 %>
+<script>
+alert("できた！");
+</script>
