@@ -54,9 +54,7 @@ function tableClick(tr){
 
 }
 </script>
-<form name="fm_opplist">
-    <div class="content-data">
-    
+
 <%
 String url = "jdbc:postgresql://ec2-107-22-160-185.compute-1.amazonaws.com:5432/deck0jp8rljjoa";
 String user = "uxsvvqdujoyrti";
@@ -66,6 +64,8 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
 String recid = request.getParameter("recid"); 
 %>
 
+<form name="fm_opplist">
+    <div class="content-data">
     <input type="hidden" id="sel_oppid" value="<%= recid %>"/>
     <input type="hidden" id="sel_oppbranchid"/>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB')"  />
