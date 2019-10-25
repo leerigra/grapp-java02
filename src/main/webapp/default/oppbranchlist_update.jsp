@@ -21,12 +21,12 @@
         db.close();
  
         // 元のページへリダイレクト
-        response.sendRedirect("oppbranchlist.jsp");
+        response.sendRedirect("index.jsp");
     }
 %>
 <html>
     <body>
-        <p>終わってないかも！</p>
+        <p>エラーかも！</p>
         <p>sqlは：<%=in_strsql%></p>
     </body>
 </html>
