@@ -264,7 +264,7 @@ function btnOK_click()
 
   if( result ) {
       
-    if(document.getElementById( "status_b").value=="新規"){
+    if(document.getElementById( "status_b").innerHTML=="新規"){
       var strsql = " INSERT INTO public.oppbranch ";
       strsql = strsql + "(extid, oppbranchid, plan_date, plan_date_edit, plan_amount, plan_amount_edit, ";
       strsql = strsql + "plan_accuracy, p lan_accuracy_edit, create_date, update_date, ";
