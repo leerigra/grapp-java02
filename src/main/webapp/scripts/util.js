@@ -15,7 +15,7 @@ function insertRow(id) {
    
     //選択状態をクリアして追加行を選択。
     resetTr("BranchListDB");
-    tr.setAttribute("class","sel_row");
+    row.setAttribute("class","sel_row");
 
     // セルの挿入
     var cell_id  = row.insertCell(-1);
