@@ -6,7 +6,7 @@
     // 入力された引数を取得する
 
   
-    String comment = request.getParameter("strsql");
+    String strsql = request.getParameter("strsql");
  
     // MyDBAccess のインスタンスを生成する
     PostgresDB db = new PostgresDB();
