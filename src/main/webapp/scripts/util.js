@@ -6,13 +6,17 @@ function insertRow(id) {
     var table = document.getElementById(id);
     // 行を行末に追加
     var row = table.insertRow(-1);
+    // 行数取得
+    var row_len = table.rows.length;
+
+    //　行の属性設定
+    row.setAttribute("id","tr_" + (table.rows.length - 1));
     row.setAttribute("onclick","tableClick(this)");
+   
 
     // セルの挿入
-
     var cell_id  = row.insertCell(-1);
     var cell_status  = row.insertCell(-1);
-
     var cell_plan_Date  = row.insertCell(-1);
     var cell_plan_amount  = row.insertCell(-1);
     var cell_plan_accuracy  = row.insertCell(-1);
@@ -39,9 +43,7 @@ function insertRow(id) {
     var inNumber='<input type="text" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" ';
     var inSelect='<select><option value=""></option><option value="A">A</option> <option value="B">B</option> <option value="C">C</option> </select>'
     var inDate='<input type="string" size="10" />';
-   
-    // 行数取得
-    var row_len = table.rows.length;
+
     
     var add_lst_id = "lst_id_" + (table.rows.length - 1);
     alert(add_lst_id);
