@@ -42,8 +42,8 @@ function insertRow(id) {
    
     // 行数取得
     var row_len = table.rows.length;
-    alert(row_len);
     var add_lst_id = "lst_id_" + row_len - 1;
+    alert(add_lst_id);
     var add_lst_status = "lst_status_" + row_len - 1;
     var add_lst_plan_Date = "lst_plan_Date_" + row_len - 1;
     var add_lst_plan_amount = "lst_plan_amount_" + row_len - 1;
