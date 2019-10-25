@@ -294,12 +294,12 @@ function btnOK_click()
     
       var strsql = "UPDATE public.oppbranch SET ";     
       strsql = strsql + "plan_date_edit = '" + document.getElementById( "plan_Date_a").value +"'::date, ";
-      strsql = strsql + "plan_amount_edit = '" + document.getElementById( "plan_amount_a").value +"'::numeric, ";
+      strsql = strsql + "plan_amount_edit = " + document.getElementById( "plan_amount_a").value +"::numeric, ";
       strsql = strsql + "plan_accuracy_edit = '" + document.getElementById( "plan_accuracy_a").value +"'::character(1) , ";
       strsql = strsql + "update_date = current_timestamp, "
-      strsql = strsql + "netting_edit = '" + document.getElementById( "netting_a" ).value +"'::numeric, ";
-      strsql = strsql + "deduction_edit = '" + document.getElementById( "deduction_a" ).value +"'::numeric, ";
-      strsql = strsql + "difference_edit = '" + document.getElementById( "difference_a" ).value +"'::numeric ";
+      strsql = strsql + "netting_edit = " + document.getElementById( "netting_a" ).value +"::numeric, ";
+      strsql = strsql + "deduction_edit = " + document.getElementById( "deduction_a" ).value +"::numeric, ";
+      strsql = strsql + "difference_edit = " + document.getElementById( "difference_a" ).value +"::numeric ";
       strsql = strsql + "WHERE extid='" + document.getElementById( "sel_oppid" ).value +"' ";
       strsql = strsql + "AND oppbranchid ='" + document.getElementById( "sel_oppbranchid" ).value +"' ";
 
