@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*, postgres.PostgresDB"
-    contentType="text/html; charset=utf-8" errorPage="default/exException.jsp"%>
+    contentType="text/html; charset=utf-8" errorPage="/default/exException.jsp"%>
 
     <%
     // 内容: データベースにアクセスする
