@@ -244,6 +244,17 @@ function offComma(obj){
   }
 }
 
+/**************************
+ * カンマ編集を解除するFunction
+ **************************/
+function offCommaVal(str){
+  var reg = new RegExp(",", "g");
+  var chgVal = str.replace(reg, "");
+  if(!isNaN(chgVal)){
+    str= chgVal;  //値セット
+  }
+}
+
 
 
 function btnCancel_Click()
@@ -273,17 +284,17 @@ function btnOK_click()
       strsql = strsql + "'" + document.getElementById( "sel_oppid" ).value +"'::character(18), ";
       strsql = strsql + "'" + document.getElementById( "plan_Date_a").value +"'::date, ";
       strsql = strsql + "'" + document.getElementById( "plan_Date_a").value +"'::date, ";
-      strsql = strsql + offComma(document.getElementById( "plan_amount_a" ).value) + "::numeric, ";
-      strsql = strsql + offComma(document.getElementById( "plan_amount_a" ).value) + "::numeric, ";
+      strsql = strsql + offCommaVal(document.getElementById( "plan_amount_a" ).value) + "::numeric, ";
+      strsql = strsql + offCommaVal(document.getElementById( "plan_amount_a" ).value) + "::numeric, ";
       strsql = strsql + "'" + document.getElementById( "plan_accuracy_a" ).value + "'::character(1), ";
       strsql = strsql + "'" + document.getElementById( "plan_accuracy_a" ).value + "'::character(1), ";
       strsql = strsql + "current_timestamp, current_timestamp, "
-      strsql = strsql + offComma(document.getElementById( "netting_a" ).value) + "::numeric,";
-      strsql = strsql + offComma(document.getElementById( "netting_a" ).value) + "::numeric,";;
-      strsql = strsql + offComma(document.getElementById( "deduction_a" ).value) + "::numeric,";
-      strsql = strsql + offComma(document.getElementById( "deduction_a" ).value) + "::numeric,";
-      strsql = strsql + offComma(document.getElementById( "difference_a" ).value) + "::numeric,";
-      strsql = strsql + offComma(document.getElementById( "difference_a" ).value) + "::numeric" ;
+      strsql = strsql + offCommaVal(document.getElementById( "netting_a" ).value) + "::numeric,";
+      strsql = strsql + offCommaVal(document.getElementById( "netting_a" ).value) + "::numeric,";;
+      strsql = strsql + offCommaVal(document.getElementById( "deduction_a" ).value) + "::numeric,";
+      strsql = strsql + offCommaVal(document.getElementById( "deduction_a" ).value) + "::numeric,";
+      strsql = strsql + offCommaVal(document.getElementById( "difference_a" ).value) + "::numeric,";
+      strsql = strsql + offCommaVal(document.getElementById( "difference_a" ).value) + "::numeric" ;
       strsql = strsql + ")";
 
       alert('データを追加するSQL：'　+ strsql);
@@ -292,12 +303,12 @@ function btnOK_click()
     
       var strsql = "UPDATE public.oppbranch SET ";     
       strsql = strsql + "plan_date_edit = '" + document.getElementById( "plan_Date_a").value +"'::date, ";
-      strsql = strsql + "plan_amount_edit = " + offComma(document.getElementById( "plan_amount_a").value) +"::numeric, ";
+      strsql = strsql + "plan_amount_edit = " + offCommaVal(document.getElementById( "plan_amount_a").value) +"::numeric, ";
       strsql = strsql + "plan_accuracy_edit = '" + document.getElementById( "plan_accuracy_a").value +"'::character(1) , ";
       strsql = strsql + "update_date = current_timestamp, "
-      strsql = strsql + "netting_edit = " + offComma(document.getElementById( "netting_a" ).value) +"::numeric, ";
-      strsql = strsql + "deduction_edit = " + offComma(document.getElementById( "deduction_a" ).value) +"::numeric, ";
-      strsql = strsql + "difference_edit = " + offComma(document.getElementById( "difference_a" ).value) +"::numeric ";
+      strsql = strsql + "netting_edit = " + offCommaVal(document.getElementById( "netting_a" ).value) +"::numeric, ";
+      strsql = strsql + "deduction_edit = " + offCommaVal(document.getElementById( "deduction_a" ).value) +"::numeric, ";
+      strsql = strsql + "difference_edit = " + offCommaVal(document.getElementById( "difference_a" ).value) +"::numeric ";
       strsql = strsql + "WHERE extid='" + document.getElementById( "sel_oppid" ).value +"' ";
       strsql = strsql + "AND oppbranchid ='" + document.getElementById( "sel_oppbranchid" ).value +"' ";
 
