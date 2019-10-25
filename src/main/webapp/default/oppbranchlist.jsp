@@ -64,11 +64,11 @@ String strsql = "SELECT oppbranchid,plan_date,plan_date_edit,plan_amount,plan_am
 DecimalFormat objFmt=new DecimalFormat("#,###");
 
 %>
-<form id="fm_opplist" action="/default/oppbranchlist_update.jsp" method="GET">
+<form id="fm_opplist" action="/default/oppbranchlist_update.jsp" method="POST">
 <div class="content-data">
     <input type="hidden" id="sel_oppid" value="<%= recid %>" />
     <input type="hidden" id="sel_oppbranchid"/>
-    <input type="hidden" id="strsql"/>
+    <input type="hidden" id="sendsql"/>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB')"  />
 
     <table class="oppBrListTable" id="BranchListDB" >
