@@ -278,7 +278,7 @@ function btnOK_click()
       strsql = strsql + "deduction_edit = '" + document.getElementById( "deduction_a" ).value +"'::numeric, ";
       strsql = strsql + "difference_edit = '" + document.getElementById( "difference_a" ).value +"'::numeric ";
       strsql = strsql + "WHERE oppbranchid =" + document.getElementById( "sel_oppbranchid" ).value +"' ";
-      strsql = strsql + "AND extid='" + document.getElementById( "sel_oppid" ).value +"' ";
+      strsql = strsql + "AND extid='" + document.getElementById( "sel_oppid" ).innerHTML +"' ";
 
       alert('データを更新しました。' + strsql);
     }
