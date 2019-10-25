@@ -127,10 +127,33 @@ function insertRow(id) {
     cell_lst_difference_upd.setAttribute("class","hidden");
     //cell_lst_differenc_upd.innerHTML = inNumber + " id='lst_difference_upd_" + row_len + "' />";
 
+
+
+
+
   //選択状態をクリアして追加行を選択。
   resetTr("BranchListDB");
   row.setAttribute("class","sel_row");
 
+     //選択された行のidをセットして詳細表示
+     document.getElementById( "sel_oppbranchid" ).value = "";
+     document.getElementById( "status_b" ).innerHTML = "新規";
+     
+     document.getElementById( "plan_Date_b" ).innerHTML = "";
+     document.getElementById( "plan_amount_b" ).innerHTML = "";
+     document.getElementById( "plan_accuracy_b" ).innerHTML = "";
+     
+     document.getElementById( "netting_b" ).innerHTML = "";
+     document.getElementById( "deduction_b" ).innerHTML = "";
+     document.getElementById( "difference_b" ).innerHTML = "";
+      
+     document.getElementById( "plan_Date_a" ).value = "";
+     document.getElementById( "plan_amount_a" ).value　= "";
+     document.getElementById( "plan_accuracy_a" ).value = "";
+     document.getElementById( "netting_a" ).value = "";
+     document.getElementById( "deduction_a" ).value = "";
+     document.getElementById( "difference_a" ).value = "";
+       
 }
 
 /**
@@ -277,8 +300,9 @@ function btnOK_click()
       strsql = strsql + "netting_edit = '" + document.getElementById( "netting_a" ).value +"'::numeric, ";
       strsql = strsql + "deduction_edit = '" + document.getElementById( "deduction_a" ).value +"'::numeric, ";
       strsql = strsql + "difference_edit = '" + document.getElementById( "difference_a" ).value +"'::numeric ";
-      strsql = strsql + "WHERE oppbranchid =" + document.getElementById( "sel_oppbranchid" ).value +"' ";
-      strsql = strsql + "AND extid='" + document.getElementById( "sel_oppid" ).value +"' ";
+      strsql = strsql + "WHERE extid='" + document.getElementById( "sel_oppid" ).value +"' ";
+      strsql = strsql + "AND oppbranchid ='" + document.getElementById( "sel_oppbranchid" ).value +"' ";
+
 
       alert('データを更新しました。' + strsql);
     }
