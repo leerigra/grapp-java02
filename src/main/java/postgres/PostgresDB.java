@@ -1,3 +1,8 @@
+/*
+*  ↓このURLを参考
+*　https://www.atmarkit.co.jp/ait/articles/0111/02/news003.html
+*
+*/
 package postgres;
  
 import java.sql.*;
