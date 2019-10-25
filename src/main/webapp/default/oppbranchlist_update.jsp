@@ -1,5 +1,6 @@
 <%@ page import="java.sql.*, postgres.PostgresDB"
-    contentType="text/html; charset=utf-8" %>
+    contentType="text/html; charset=utf-8" errorPage="/default/exException.jsp"%>
+
     <%
     // 内容: データベースにアクセスする
     // 入力された引数を取得する
