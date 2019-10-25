@@ -68,7 +68,16 @@ public class PostgresDB {
      * @param sql SQL 文
      */
     public void execute(String sql) throws Exception {
-        statement.execute(sql);
+        try {
+        
+            statement.execute(sql);
+        
+        } catch(Exception e) {
+            System.out.println("例外が発生しました。");
+            System.out.println(e);
+            
+        }
+
     }
  
     /**
