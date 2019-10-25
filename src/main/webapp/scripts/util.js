@@ -13,10 +13,7 @@ function insertRow(id) {
     row.setAttribute("id","tr_" + (table.rows.length - 1));
     row.setAttribute("onclick","tableClick(this)");
    
-    //選択状態をクリアして追加行を選択。
-    resetTr("BranchListDB");
-    row.setAttribute("class","sel_row");
-
+  
     // セルの挿入
     var cell_id  = row.insertCell(-1);
     var cell_status  = row.insertCell(-1);
@@ -130,6 +127,9 @@ function insertRow(id) {
     cell_lst_difference_upd.setAttribute("class","hidden");
     //cell_lst_differenc_upd.innerHTML = inNumber + " id='lst_difference_upd_" + row_len + "' />";
 
+  //選択状態をクリアして追加行を選択。
+  resetTr("BranchListDB");
+  row.setAttribute("class","sel_row");
 
 }
 
