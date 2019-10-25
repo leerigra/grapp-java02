@@ -6,7 +6,7 @@ function insertRow(id) {
     var table = document.getElementById(id);
     // 行を行末に追加
     var row = table.insertRow(-1);
-    row.setAttribute("onclick","tableClick(this)");
+    row.setAttribute("onclick","tableClick(this);");
 
     // セルの挿入
 
