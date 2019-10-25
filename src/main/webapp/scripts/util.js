@@ -316,7 +316,7 @@ function btnOK_click()
     }
 
     //SQLを設定
-    document.getElementById( "strsql" ).innerHTML = strsql;
+    document.getElementById( "strsql" ).value = strsql;
 
     //submit
     document.getElementById("fm_opplist").submit();
