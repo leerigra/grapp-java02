@@ -239,11 +239,54 @@ function btnOK_click()
   var result = window.confirm("保存してよろしいですか？");
 
   if( result ) {
-      console.log('OKがクリックされました');
-      }
-    else {
-        console.log('キャンセルがクリックされました');
+      
+    if(document.getElementById( "status_b").value=="新規"){
+      var strsql = " INSERT INTO public.oppbranch ";
+      strsql = stsql + "(extid, oppbranchid, plan_date, plan_date_edit, plan_amount, plan_amount_edit, ";
+      strsql = stsql + "plan_accuracy, p lan_accuracy_edit, create_date, update_date, ";
+      strsql = stsql + "netting, netting_edit, deduction, deduction_edit, difference, difference_edit)";
+      strsql = stsql + "VALUES (";
+
+      strsql = stsql + document.getElementById( "plan_Date_a").value +", ";
+      strsql = stsql + document.getElementById( "plan_Date_a").value +", ";
+      strsql = stsql + document.getElementById( "plan_amount_a" ).value +", ";
+      strsql = stsql + document.getElementById( "plan_amount_a" ).value +", ";
+      strsql = stsql + document.getElementById( "plan_accuracy_a" ).value +", ";
+      strsql = stsql + document.getElementById( "plan_accuracy_a" ).value +", ";
+      strsql = stsql + document.getElementById( "plan_accuracy_a" ).value +", ";
+      strsql = stsql + document.getElementById( "plan_accuracy_a" ).value +", ";
+      strsql = stsql + "current_timestamp, current_timestamp,"
+      strsql = stsql + document.getElementById( "netting_a" ).value +",";
+      strsql = stsql + document.getElementById( "netting_a" ).value +",";;
+      strsql = stsql + document.getElementById( "deduction_a" ).value +",";
+      strsql = stsql + document.getElementById( "deduction_a" ).value +",";
+      strsql = stsql + document.getElementById( "difference_a" ).value +",";
+      strsql = stsql + document.getElementById( "difference_a" ).value +",";
+      strsql = stsql + ")";
+
+      alert('データを追加しました。'　+ strsql);
+
+    } else {
+    
+      var strsql = "UPDATE public.oppbranch SET ";
+      
+      strsql = strsql + "plan_date_edit = '" + document.getElementById( "plan_Date_a").value +"'::date, ";
+      strsql = strsql + "plan_amount_edit = '" + document.getElementById( "plan_amount_a").value +"'::numeric, ";
+      strsql = strsql + "plan_accuracy_edit = '" + document.getElementById( "plan_accuracy_a").value +"'::character(1) , ";
+      strsql = strsql + "update_date = current_timestamp, "
+      strsql = strsql + "netting_edit = '" + document.getElementById( "netting_a" ).value +"'::numeric, ";
+      strsql = strsql + "deduction_edit = '" + document.getElementById( "deduction_a" ).value +"'::numeric, ";
+      strsql = strsql + "difference_edit = '" + document.getElementById( "difference_a" ).value +"'::numeric ";
+      strsql = strsql + "WHERE oppbranchid =" + document.getElementById( "" ).value +"' ";
+      strsql = strsql + "AND extid='" + document.getElementById( "" ).value +"' ";
+
+      alert('データを更新しました。' + strsql);
     }
+
+  } else {
+  
+    alert('保存をキャンセルしました。');
+  }
 }
 
 //テーブルの背景色初期化
