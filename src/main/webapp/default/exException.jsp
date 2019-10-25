@@ -1,6 +1,6 @@
 
 <%-- (1)exceptionオブジェクトを使用するためisErrorPage属性を指定しています。 --%>
-<%@ page contentType="text/html; charset=windows-31j"
+<%@ page contentType="text/html; charset=utf-8"
     isErrorPage="true"%>
 
 <html>

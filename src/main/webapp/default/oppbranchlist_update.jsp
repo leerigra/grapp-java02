@@ -6,39 +6,27 @@
     // 入力された引数を取得する
   
     String in_strsql = request.getParameter("strsql");
-    %>
-    <script type="text/javascript">
-        alert("SQL:"  + in_strsql);
-    </script>
-   <%
-   // MyDBAccess のインスタンスを生成する
-    PostgresDB db = new PostgresDB();
-    %>
-    <script type="text/javascript">
-        alert("DBインスタンス");
-        </script>
+    if(str != in_strsql) {
+ 
+        // MyDBAccess のインスタンスを生成する
+        PostgresDB db = new PostgresDB();
+ 
+        // データベースへのアクセス
+        db.open();
     
-    <%
-    // データベースへのアクセス
-    db.open();
-   %>
-    <script type="text/javascript">
-    alert("つながった");
-    </script>
-
-   <%
-    // SQL文を実行
-    db.execute(in_strsql);
+        // SQL文を実行
+        db.execute(in_strsql);
  
-    // データベースへのコネクションを閉じる
-    db.close();
+        // データベースへのコネクションを閉じる
+        db.close();
  
-    // 元のページへリダイレクト
-    //response.sendRedirect("oppbranchlist.jsp");
+        // 元のページへリダイレクト
+        response.sendRedirect("oppbranchlist.jsp");
+    }
 %>
 <html>
     <body>
-        <p>できあがり！</p>
+        <p>終わってないかも！</p>
         <p>sqlは：<%=in_strsql%></p>
     </body>
 </html>
