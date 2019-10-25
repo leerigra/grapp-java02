@@ -5,8 +5,6 @@
 <script type="text/javascript" src="/scripts/util.js"></script>
 <script type="text/javascript">
 
-
-
 function tableClick(tr){
 
   //選択状態をクリア  
@@ -66,7 +64,7 @@ String strsql = "SELECT oppbranchid,plan_date,plan_date_edit,plan_amount,plan_am
 DecimalFormat objFmt=new DecimalFormat("#,###");
 
 %>
-<form name="fm_opplist">
+<form name="fm_opplist" action="oppbranchlist_update.jsp">
 <div class="content-data">
     <input type="hidden" id="sel_oppid" value="<%= recid %>" />
     <input type="hidden" id="sel_oppbranchid"/>
@@ -212,4 +210,14 @@ db.close();
         </tr>
     </table>
  </div>
- </form>
+
+ <div class="content-navi">
+        <input class="btnCancel"　type="button" value="キャンセル"　onclick="btnCancel_Click()">
+        <input class="btnOK"　type="submit" value="保存">
+    <ul>
+        <li class="btnCancel"><a class="linkCancel" href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
+        <li class="btnOK"><a class="linkOK" href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
+    </ul>
+</div>
+
+</form>

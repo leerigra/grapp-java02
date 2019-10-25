@@ -1,3 +1,4 @@
+
 /*
  * 行追加
  */
@@ -289,11 +290,12 @@ function btnOK_click()
 
       alert('データを追加するSQL：'　+ strsql);
 
-    
-     
+      
     
     } else {
     
+
+     
 
       var strsql = "UPDATE public.oppbranch SET ";     
       strsql = strsql + "plan_date_edit = '" + document.getElementById( "plan_Date_a").value +"'::date, ";
@@ -310,19 +312,7 @@ function btnOK_click()
       alert('データを更新するSQL：' + strsql);
     }
 
-      // クラスのロード
-      Class.forName("org.postgresql.Driver");
-      var url = "jdbc:postgresql://ec2-107-22-160-185.compute-1.amazonaws.com:5432/deck0jp8rljjoa";
-      var user = "uxsvvqdujoyrti";
-      var password = "2d989239c38338117217f11fbd0bfc7cca8d1a671c3f395a833e0eab7932050c";
-      var db=DriverManager.getConnection(url, user, password);
- 
-      var objSql=db.createStatement();      // ステートメントの作成
- 
-      // SQLの実行
-      objSql.executeUpdate(strsql);
-
-
+      
   } else {
   
     alert('保存をキャンセルしました。');
