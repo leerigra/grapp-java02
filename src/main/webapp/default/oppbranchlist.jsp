@@ -15,6 +15,7 @@ function tableClick(tr){
   // クリックされた行を取得
   table = tr.parentNode;
   rowidx = tr.sectionRowIndex;
+  sel_status_id ="lst_status_"+ rowidx;
   sel_plan_Date_id = "lst_plan_Date_" + rowidx;
   sel_plan_amount_id = "lst_plan_amount_" + rowidx;
   sel_plan_accuracy_id = "lst_plan_accuracy_" + rowidx;
@@ -33,6 +34,7 @@ function tableClick(tr){
 
    //選択された行のidをセットして詳細表示
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
+  document.getElementById( "status_b" ).innerHTML = table.rows[rowidx].cells[1].innerHTML;
   document.getElementById( "plan_Date_b" ).innerHTML =  table.rows[rowidx].cells[2].innerHTML;
   document.getElementById( "plan_amount_b" ).innerHTML =  table.rows[rowidx].cells[3].innerHTML;
   document.getElementById( "plan_accuracy_b" ).innerHTML =  table.rows[rowidx].cells[4].innerHTML;
@@ -93,7 +95,7 @@ while(rs.next()){
 %>
       <tr id="<%="tr_" + String.valueOf(i) %>" onclick="tableClick(this)">
         <td class="hidden" id="<%="lst_id_" + String.valueOf(i) %>" ><%= rs.getString("oppbranchid") %></td>
-        <td class="center">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
+        <td class="center"id="<%="lst_Status_" + String.valueOf(i) %> ">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
         <td class="left" id="<%="lst_plan_Date_" + String.valueOf(i) %> "><%= rs.getDate("plan_Date") %></td>
         <td class="right" id="<%="lst_plan_amount_" + String.valueOf(i) %> "><%= objFmt.format(rs.getLong("plan_amount")) %></td>
         <td class="center" id="<%="lst_plan_accuracy_" + String.valueOf(i) %> "><%= rs.getString("plan_accuracy") %></td>
@@ -132,6 +134,7 @@ db.close();
 <div class="content-data">
 
     <div class="section-title"><h4>枝口情報</h4></div>
+    <p>変更区分：<span id ="status_b"></span></p>
     <table class="oppBrDetailTable" id="BranchDetailDB">
         <tr>
             <th>&nbsp;</th>
