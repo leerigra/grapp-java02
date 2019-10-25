@@ -317,10 +317,10 @@ function btnOK_click()
 
     //SQLを設定
     document.getElementById( "sendsql" ).value = strsql;
-
+    alert("コレを送る⇒" + document.getElementById( "sendsql" ).value);
     //submit
     document.getElementById("fm_opplist").submit();
-    alert('さぶみっとした？');
+   
   } else {
   
     alert('保存をキャンセルしました。');
