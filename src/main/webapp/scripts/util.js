@@ -289,14 +289,9 @@ function btnOK_click()
       strsql = strsql + ")";
 
       alert('データを追加するSQL：'　+ strsql);
-
-      
-    
+  
     } else {
     
-
-     
-
       var strsql = "UPDATE public.oppbranch SET ";     
       strsql = strsql + "plan_date_edit = '" + document.getElementById( "plan_Date_a").value +"'::date, ";
       strsql = strsql + "plan_amount_edit = '" + document.getElementById( "plan_amount_a").value +"'::numeric, ";
@@ -308,11 +303,11 @@ function btnOK_click()
       strsql = strsql + "WHERE extid='" + document.getElementById( "sel_oppid" ).value +"' ";
       strsql = strsql + "AND oppbranchid ='" + document.getElementById( "sel_oppbranchid" ).value +"' ";
 
-
       alert('データを更新するSQL：' + strsql);
     }
 
-      
+    location.href = "/default/oppbranchlist_update.jsp?strsql=" + strsql;
+   
   } else {
   
     alert('保存をキャンセルしました。');

@@ -212,9 +212,7 @@ db.close();
  </div>
 
  <div class="content-navi">
-        <input type="button" value="キャンセル"　onclick="btnCancel_Click()">
-        <input type="submit" value="保存">
-    <ul>
+     <ul>
         <li class="btnCancel"><a class="linkCancel" href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
         <li class="btnOK"><a class="linkOK" href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
     </ul>
