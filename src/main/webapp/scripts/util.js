@@ -1,4 +1,4 @@
-/**
+/*
  * 行追加
  */
 function insertRow(id) {
@@ -287,8 +287,11 @@ function btnOK_click()
       strsql = strsql + document.getElementById( "difference_a" ).value + ",";
       strsql = strsql + ")";
 
-      alert('データを追加しました。'　+ strsql);
+      alert('データを追加するSQL：'　+ strsql);
 
+    
+     
+    
     } else {
     
 
@@ -304,8 +307,21 @@ function btnOK_click()
       strsql = strsql + "AND oppbranchid ='" + document.getElementById( "sel_oppbranchid" ).value +"' ";
 
 
-      alert('データを更新しました。' + strsql);
+      alert('データを更新するSQL：' + strsql);
     }
+
+      // クラスのロード
+      Class.forName("org.postgresql.Driver");
+      var url = "jdbc:postgresql://ec2-107-22-160-185.compute-1.amazonaws.com:5432/deck0jp8rljjoa";
+      var user = "uxsvvqdujoyrti";
+      var password = "2d989239c38338117217f11fbd0bfc7cca8d1a671c3f395a833e0eab7932050c";
+      var db=DriverManager.getConnection(url, user, password);
+ 
+      var objSql=db.createStatement();      // ステートメントの作成
+ 
+      // SQLの実行
+      objSql.executeUpdate(strsql);
+
 
   } else {
   
@@ -354,3 +370,4 @@ function deleteData(){
   strsql = strsql + " AND extid='" + recid + "'";
 
 }
+
