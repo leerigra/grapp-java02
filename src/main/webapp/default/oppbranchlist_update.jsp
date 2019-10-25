@@ -6,17 +6,29 @@
     // 入力された引数を取得する
 
   
-    String strsql = request.getParameter("strsql");
- 
-    // MyDBAccess のインスタンスを生成する
+    String in_strsql = request.getParameter("strsql");
+    <script type="text/javascript">
+        alert("SQL:"  + in_strsql);
+    </script>
+   // MyDBAccess のインスタンスを生成する
     PostgresDB db = new PostgresDB();
- 
+    %>
+    <script type="text/javascript">
+        alert("DBインスタンス");
+        </script>
+    
+    <%
     // データベースへのアクセス
     db.open();
-   
+   %>
+    <script type="text/javascript">
+    alert("つながった");
+    </script>
+
+   <%
     // SQL文を実行
-    db.execute(strsql);
- 
+    db.execute(in_strsql);
+ 　%>
     // データベースへのコネクションを閉じる
     db.close();
  
