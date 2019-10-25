@@ -5,7 +5,7 @@
     // 内容: データベースにアクセスする
     // 入力された引数を取得する
   
-    String in_strsql = request.getParameter("strsql");
+    String in_strsql = request.getParameter("sendsql");
     if(in_strsql != null) {
  
         // MyDBAccess のインスタンスを生成する
