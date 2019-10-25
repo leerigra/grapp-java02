@@ -6,7 +6,7 @@
     // 入力された引数を取得する
   
     String in_strsql = request.getParameter("strsql");
-    if(str != in_strsql) {
+    if(in_strsql != null) {
  
         // MyDBAccess のインスタンスを生成する
         PostgresDB db = new PostgresDB();
