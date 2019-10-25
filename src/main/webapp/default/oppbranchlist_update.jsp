@@ -12,11 +12,6 @@
     // データベースへのアクセス
     db.open();
  
-    // データベース更新用のSQL文を作成
-    String sql = "update member set comment='" + comment
-            + "', attendance=" + attendance
-            + " where member_id=" + member_id;
- 
     // SQL文を実行
     db.execute(strsql);
  
