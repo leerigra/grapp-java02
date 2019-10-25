@@ -34,7 +34,10 @@ function tableClick(tr){
 
    //選択された行のidをセットして詳細表示
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
-  document.getElementById( "status_b" ).innerHTML = table.rows[rowidx].cells[1].innerHTML;
+  if(table.rows[rowidx].cells[1].innerHTML == "" && table.rows[rowidx].cells[0].innerHTML != "")
+  {
+  document.getElementById( "status_b" ).innerHTML = "変更";
+  }
   document.getElementById( "plan_Date_b" ).innerHTML =  table.rows[rowidx].cells[2].innerHTML;
   document.getElementById( "plan_amount_b" ).innerHTML =  table.rows[rowidx].cells[3].innerHTML;
   document.getElementById( "plan_accuracy_b" ).innerHTML =  table.rows[rowidx].cells[4].innerHTML;

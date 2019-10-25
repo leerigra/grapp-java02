@@ -45,7 +45,6 @@ function insertRow(id) {
 
     
     var add_lst_id = "lst_id_" + (table.rows.length - 1);
-    alert(add_lst_id);
     var add_lst_status = "lst_status_" + (table.rows.length - 1);
     var add_lst_plan_Date = "lst_plan_Date_" + (table.rows.length - 1);
     var add_lst_plan_amount = "lst_plan_amount_" + (table.rows.length - 1);
