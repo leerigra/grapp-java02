@@ -38,7 +38,7 @@ function insertRow(id) {
 
 
     // ボタン用 HTML
-    var delButton = '<input type="button" value="行削除" onclick="deleteRow(this)" />';
+    var delButton = '<input type="button" value="行削除" onclick="deleteRow(this)"  disabled/>';
     var delCheckbox = '<input type="checkbox" name="chkdel" onclick="checkDel(this);" />';
     var inNumber='<input type="text" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" ';
     var inSelect='<select><option value=""></option><option value="A">A</option> <option value="B">B</option> <option value="C">C</option> </select>'
