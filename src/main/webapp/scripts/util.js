@@ -320,7 +320,7 @@ function btnOK_click()
 
     //submit
     document.getElementById("fm_opplist").submit();
-    
+    alert('さぶみっとした？');
   } else {
   
     alert('保存をキャンセルしました。');
