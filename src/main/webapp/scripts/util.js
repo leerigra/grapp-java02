@@ -249,27 +249,27 @@ function btnOK_click()
 
       strsql = strsql + document.getElementById( "plan_Date_a").value +", ";
       strsql = strsql + document.getElementById( "plan_Date_a").value +", ";
-      strsql = strsql + document.getElementById( "plan_amount_a" ).value +", ";
-      strsql = strsql + document.getElementById( "plan_amount_a" ).value +", ";
-      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value +", ";
-      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value +", ";
-      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value +", ";
-      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value +", ";
-      strsql = strsql + "current_timestamp, current_timestamp,"
-      strsql = strsql + document.getElementById( "netting_a" ).value +",";
-      strsql = strsql + document.getElementById( "netting_a" ).value +",";;
-      strsql = strsql + document.getElementById( "deduction_a" ).value +",";
-      strsql = strsql + document.getElementById( "deduction_a" ).value +",";
-      strsql = strsql + document.getElementById( "difference_a" ).value +",";
-      strsql = strsql + document.getElementById( "difference_a" ).value +",";
+      strsql = strsql + document.getElementById( "plan_amount_a" ).value + ", ";
+      strsql = strsql + document.getElementById( "plan_amount_a" ).value + ", ";
+      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value + ", ";
+      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value + ", ";
+      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value + ", ";
+      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value + ", ";
+      strsql = strsql + "current_timestamp, current_timestamp, "
+      strsql = strsql + document.getElementById( "netting_a" ).value + ",";
+      strsql = strsql + document.getElementById( "netting_a" ).value + ",";;
+      strsql = strsql + document.getElementById( "deduction_a" ).value + ",";
+      strsql = strsql + document.getElementById( "deduction_a" ).value + ",";
+      strsql = strsql + document.getElementById( "difference_a" ).value + ",";
+      strsql = strsql + document.getElementById( "difference_a" ).value + ",";
       strsql = strsql + ")";
 
       alert('データを追加しました。'　+ strsql);
 
     } else {
     
-      var strsql = "UPDATE public.oppbranch SET ";
-      
+
+      var strsql = "UPDATE public.oppbranch SET ";     
       strsql = strsql + "plan_date_edit = '" + document.getElementById( "plan_Date_a").value +"'::date, ";
       strsql = strsql + "plan_amount_edit = '" + document.getElementById( "plan_amount_a").value +"'::numeric, ";
       strsql = strsql + "plan_accuracy_edit = '" + document.getElementById( "plan_accuracy_a").value +"'::character(1) , ";
@@ -277,8 +277,8 @@ function btnOK_click()
       strsql = strsql + "netting_edit = '" + document.getElementById( "netting_a" ).value +"'::numeric, ";
       strsql = strsql + "deduction_edit = '" + document.getElementById( "deduction_a" ).value +"'::numeric, ";
       strsql = strsql + "difference_edit = '" + document.getElementById( "difference_a" ).value +"'::numeric ";
-      strsql = strsql + "WHERE oppbranchid =" + document.getElementById( "" ).value +"' ";
-      strsql = strsql + "AND extid='" + document.getElementById( "" ).value +"' ";
+      strsql = strsql + "WHERE oppbranchid =" + document.getElementById( "sel_oppbranchid" ).value +"' ";
+      strsql = strsql + "AND extid='" + document.getElementById( "sel_oppid" ).value +"' ";
 
       alert('データを更新しました。' + strsql);
     }
