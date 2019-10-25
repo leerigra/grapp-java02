@@ -19,7 +19,7 @@ public class PostgresDB {
      * @param user ユーザー名
      * @param password パスワード
      */
-    public DBAccess(String driver, String url, String user, String password) {
+    public PostgresDB(String driver, String url, String user, String password) {
         this.driver = driver;
         this.url = url;
         this.user = user;
@@ -30,7 +30,7 @@ public class PostgresDB {
      * 引数なしのコンストラクタ
      * 既定値を使用する
      */
-    public DBAccess() {
+    public PostgresDB() {
         driver = "org.postgresql.Driver";
         url = "jdbc:postgresql://ec2-107-22-160-185.compute-1.amazonaws.com:5432/deck0jp8rljjoa";
         user = "uxsvvqdujoyrti";
