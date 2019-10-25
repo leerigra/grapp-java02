@@ -1,4 +1,4 @@
-package servlets;
+package postgres;
  
 import java.sql.*;
  

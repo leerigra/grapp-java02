@@ -1,5 +1,6 @@
-<%@ page import="java.sql.*, servlet.PostgresDB"
+<%@ page import="java.sql.*, postgres.PostgresDB"
     contentType="text/html; charset=euc-jp" %>
+    alert()
     <%
     // 内容: データベースにアクセスする
     // 入力された引数を取得する
