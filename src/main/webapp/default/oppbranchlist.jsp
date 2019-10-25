@@ -68,7 +68,7 @@ String strsql = "SELECT oppbranchid,plan_date,plan_date_edit,plan_amount,plan_am
 DecimalFormat objFmt=new DecimalFormat("#,###");
 
 %>
-    <input type="hidden" id="sel_oppid" value="<%= recid %>"/>
+    <input type="hidden" id="sel_oppid" value="<%= request.getParameter("recid"); %>"/>
     <input type="hidden" id="sel_oppbranchid"/>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB')"  />
 
