@@ -4,12 +4,13 @@
     <%
     // 内容: データベースにアクセスする
     // 入力された引数を取得する
-
   
     String in_strsql = request.getParameter("strsql");
+    %>
     <script type="text/javascript">
         alert("SQL:"  + in_strsql);
     </script>
+   <%
    // MyDBAccess のインスタンスを生成する
     PostgresDB db = new PostgresDB();
     %>
@@ -28,7 +29,7 @@
    <%
     // SQL文を実行
     db.execute(in_strsql);
- 　%>
+ 
     // データベースへのコネクションを閉じる
     db.close();
  
