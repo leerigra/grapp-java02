@@ -1,14 +1,10 @@
-<%@ page import="java.sql.*, javax.swing.JOptionPane, postgres.PostgresDB"
+<%@ page import="java.sql.*, postgres.PostgresDB"
     contentType="text/html; charset=utf-8" %>
-    <script type="text/javascript">
-    alert("よばれた！");
-    </script>
     <%
     // 内容: データベースにアクセスする
     // 入力された引数を取得する
 
-    JOptionPane.showMessageDialog(null, "きたよ！");
-
+  
     String comment = request.getParameter("strsql");
  
     // MyDBAccess のインスタンスを生成する
@@ -17,7 +13,6 @@
     // データベースへのアクセス
     db.open();
    
- 
     // SQL文を実行
     db.execute(strsql);
  
@@ -25,5 +20,11 @@
     db.close();
  
     // 元のページへリダイレクト
-    response.sendRedirect("oppbranchlist.jsp");
+    //response.sendRedirect("oppbranchlist.jsp");
 %>
+<html>
+    <body>
+        <p>できあがり！</p>
+        <p>sqlは：<%=strsql%></p>
+    </body>
+</html>
