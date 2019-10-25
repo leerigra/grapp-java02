@@ -64,7 +64,7 @@ String strsql = "SELECT oppbranchid,plan_date,plan_date_edit,plan_amount,plan_am
 DecimalFormat objFmt=new DecimalFormat("#,###");
 
 %>
-<form name="fm_opplist" action="\default\oppbranchlist_update.jsp">
+<form name="fm_opplist" action="/default/oppbranchlist_update.jsp" method="POST">
 <div class="content-data">
     <input type="hidden" id="sel_oppid" value="<%= recid %>" />
     <input type="hidden" id="sel_oppbranchid"/>
