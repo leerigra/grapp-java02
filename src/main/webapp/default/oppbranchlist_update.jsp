@@ -39,6 +39,6 @@
 <html>
     <body>
         <p>できあがり！</p>
-        <p>sqlは：<%=strsql%></p>
+        <p>sqlは：<%=in_strsql%></p>
     </body>
 </html>
