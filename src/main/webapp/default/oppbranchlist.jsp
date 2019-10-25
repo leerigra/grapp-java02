@@ -68,6 +68,7 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
 <div class="content-data">
     <input type="hidden" id="sel_oppid" value="<%= recid %>" />
     <input type="hidden" id="sel_oppbranchid"/>
+    <input type="hidden" id="strsql"/>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB')"  />
 
     <table class="oppBrListTable" id="BranchListDB" >

@@ -306,8 +306,12 @@ function btnOK_click()
       alert('データを更新するSQL：' + strsql);
     }
 
-    location.href = "/default/oppbranchlist_update.jsp?strsql=" + strsql;
-   
+    //SQLを設定
+    document.getElementById( "strsql" ).innerHTML = strsql;
+
+    //submit
+    document.getElementById("fm_opplist").submit();
+    
   } else {
   
     alert('保存をキャンセルしました。');
