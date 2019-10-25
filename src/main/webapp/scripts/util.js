@@ -42,13 +42,13 @@ function insertRow(id) {
    
     // 行数取得
     var row_len = table.rows.length;
-    var row_id = rowlen - 1;
-    var add_lst_id = "lst_id_" + String.valueOf(row_id);
+    
+    var add_lst_id = "lst_id_" + (table.rows.length - 1);
     alert(add_lst_id);
-    var add_lst_status = "lst_status_" + String.valueOf(row_id);
-    var add_lst_plan_Date = "lst_plan_Date_" + String.valueOf(row_id);
-    var add_lst_plan_amount = "lst_plan_amount_" + String.valueOf(row_id);
-    var add_lst_plan_accuracy = "lst_plan_accuracy_" + String.valueOf(row_id);
+    var add_lst_status = "lst_status_" + (table.rows.length - 1);
+    var add_lst_plan_Date = "lst_plan_Date_" + (table.rows.length - 1);
+    var add_lst_plan_amount = "lst_plan_amount_" + (table.rows.length - 1);
+    var add_lst_plan_accuracy = "lst_plan_accuracy_" + (table.rows.length - 1);
 
     cell_id.setAttribute("id",add_lst_id);    
     cell_id.setAttribute("class","hidden");
