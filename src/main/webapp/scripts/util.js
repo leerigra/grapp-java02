@@ -242,27 +242,27 @@ function btnOK_click()
       
     if(document.getElementById( "status_b").value=="新規"){
       var strsql = " INSERT INTO public.oppbranch ";
-      strsql = stsql + "(extid, oppbranchid, plan_date, plan_date_edit, plan_amount, plan_amount_edit, ";
-      strsql = stsql + "plan_accuracy, p lan_accuracy_edit, create_date, update_date, ";
-      strsql = stsql + "netting, netting_edit, deduction, deduction_edit, difference, difference_edit)";
-      strsql = stsql + "VALUES (";
+      strsql = strsql + "(extid, oppbranchid, plan_date, plan_date_edit, plan_amount, plan_amount_edit, ";
+      strsql = strsql + "plan_accuracy, p lan_accuracy_edit, create_date, update_date, ";
+      strsql = strsql + "netting, netting_edit, deduction, deduction_edit, difference, difference_edit)";
+      strsql = strsql + "VALUES (";
 
-      strsql = stsql + document.getElementById( "plan_Date_a").value +", ";
-      strsql = stsql + document.getElementById( "plan_Date_a").value +", ";
-      strsql = stsql + document.getElementById( "plan_amount_a" ).value +", ";
-      strsql = stsql + document.getElementById( "plan_amount_a" ).value +", ";
-      strsql = stsql + document.getElementById( "plan_accuracy_a" ).value +", ";
-      strsql = stsql + document.getElementById( "plan_accuracy_a" ).value +", ";
-      strsql = stsql + document.getElementById( "plan_accuracy_a" ).value +", ";
-      strsql = stsql + document.getElementById( "plan_accuracy_a" ).value +", ";
-      strsql = stsql + "current_timestamp, current_timestamp,"
-      strsql = stsql + document.getElementById( "netting_a" ).value +",";
-      strsql = stsql + document.getElementById( "netting_a" ).value +",";;
-      strsql = stsql + document.getElementById( "deduction_a" ).value +",";
-      strsql = stsql + document.getElementById( "deduction_a" ).value +",";
-      strsql = stsql + document.getElementById( "difference_a" ).value +",";
-      strsql = stsql + document.getElementById( "difference_a" ).value +",";
-      strsql = stsql + ")";
+      strsql = strsql + document.getElementById( "plan_Date_a").value +", ";
+      strsql = strsql + document.getElementById( "plan_Date_a").value +", ";
+      strsql = strsql + document.getElementById( "plan_amount_a" ).value +", ";
+      strsql = strsql + document.getElementById( "plan_amount_a" ).value +", ";
+      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value +", ";
+      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value +", ";
+      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value +", ";
+      strsql = strsql + document.getElementById( "plan_accuracy_a" ).value +", ";
+      strsql = strsql + "current_timestamp, current_timestamp,"
+      strsql = strsql + document.getElementById( "netting_a" ).value +",";
+      strsql = strsql + document.getElementById( "netting_a" ).value +",";;
+      strsql = strsql + document.getElementById( "deduction_a" ).value +",";
+      strsql = strsql + document.getElementById( "deduction_a" ).value +",";
+      strsql = strsql + document.getElementById( "difference_a" ).value +",";
+      strsql = strsql + document.getElementById( "difference_a" ).value +",";
+      strsql = strsql + ")";
 
       alert('データを追加しました。'　+ strsql);
 
