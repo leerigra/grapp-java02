@@ -152,7 +152,7 @@ row.setAttribute("class","sel_row");
    document.getElementById( "plan_accuracy_a" ).value = "";
    document.getElementById( "netting_a" ).value = "";
    document.getElementById( "deduction_a" ).value = "";
-   document.getElementById( "difference_a" ).value = "";
+   document.getElementById( "difference_a" ).innerHTML = "";
    }
 
 /**
@@ -374,7 +374,7 @@ if( result ) {
 
   //SQLを設定
   document.getElementById( "sendsql" ).value = strsql;
-  alert(strsql);
+  //alert(strsql);
   //submit
   document.getElementById("fm_opplist").submit();
  
