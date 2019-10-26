@@ -36,7 +36,7 @@ function insertRow(id) {
     var cell_lst_netting_upd = row.insertCell(-1);
     var cell_lst_deduction_upd = row.insertCell(-1);
     var cell_lst_difference_upd = row.insertCell(-1);
-
+    var cell_lst_description = row.insertCell(-1);
 
     // ボタン用 HTML
     var delButton = '<input type="button" value="行削除" onclick="deleteRow(this)"  disabled/>';
@@ -61,6 +61,7 @@ function insertRow(id) {
     var add_lst_netting_upd = "lst_netting_upd_" + (table.rows.length - 1);
     var add_lst_deduction_upd = "lst_deduction_upd_" + (table.rows.length - 1);
     var add_lst_difference_upd = "lst_difference_upd_" + (table.rows.length - 1);
+    var add_lst_description = "lst_description_" + (table.rows.length - 1);
 
 
     cell_id.setAttribute("id",add_lst_id);    
@@ -128,6 +129,9 @@ function insertRow(id) {
     cell_lst_difference_upd.setAttribute("class","hidden");
     //cell_lst_differenc_upd.innerHTML = inNumber + " id='lst_difference_upd_" + row_len + "' />";
 
+    cell_lst_description.setAttribute("id",add_lst_description);     
+    cell_lst_description.setAttribute("class","hidden");
+    //cell_lst_differenc_upd.innerHTML = inNumber + " id='lst_difference_upd_" + row_len + "' />";
 
 
 
@@ -154,7 +158,7 @@ function insertRow(id) {
      document.getElementById( "netting_a" ).value = "";
      document.getElementById( "deduction_a" ).value = "";
      document.getElementById( "difference_a" ).value = "";
-       
+     document.getElementById( "description" ).innerHTML = "";
 }
 
 /**
@@ -180,7 +184,7 @@ function deleteRowDB(obj){
   tr = obj.parentNode.parentNode;
   table = tr.parentNode;
   rowidx = tr.sectionRowIndex;
-  alert("選択行⇒:" + rowidx);
+  //alert("選択行⇒:" + rowidx);
 
   var result = window.confirm("選択した実行予定を削除してよろしいですか？");
 
@@ -197,7 +201,7 @@ function deleteRowDB(obj){
 
     //SQLを設定
     document.getElementById( "sendsql" ).value = strsql;
-    alert("コレを送る⇒" + document.getElementById( "sendsql" ).value);
+    //alert("コレを送る⇒" + document.getElementById( "sendsql" ).value);
     //submit
     document.getElementById("fm_opplist").submit();
   }
@@ -227,12 +231,12 @@ function deleteRow(obj) {
 
         //SQLを設定
         document.getElementById( "sendsql" ).value = strsql;
-        alert("コレを送る⇒" + document.getElementById( "sendsql" ).value);
+        //alert("コレを送る⇒" + document.getElementById( "sendsql" ).value);
         //submit
         document.getElementById("fm_opplist").submit();
 
     } else {
-      alert("やめたよ！");
+      //alert("やめたよ！");
     }
     
 }
@@ -341,10 +345,9 @@ function btnOK_click()
       strsql = strsql + offCommaVal(document.getElementById( "deduction_a" ).value) + "::numeric,";
       strsql = strsql + offCommaVal(document.getElementById( "deduction_a" ).value) + "::numeric,";
       strsql = strsql + offCommaVal(document.getElementById( "difference_a" ).value) + "::numeric,";
-      strsql = strsql + offCommaVal(document.getElementById( "difference_a" ).value) + "::numeric" ;
+      strsql = strsql + offCommaVal(document.getElementById( "difference_a" ).value) + "::numeric," ;
+      strsql = strsql + "'" + document.getElementById( "description" ).innnerHTML + "'" ;
       strsql = strsql + ")";
-
-      alert('データを追加するSQL：'　+ strsql);
   
     } else {
     
@@ -355,22 +358,22 @@ function btnOK_click()
       strsql = strsql + "update_date = current_timestamp, "
       strsql = strsql + "netting_edit = " + offCommaVal(document.getElementById( "netting_a" ).value) +"::numeric, ";
       strsql = strsql + "deduction_edit = " + offCommaVal(document.getElementById( "deduction_a" ).value) +"::numeric, ";
-      strsql = strsql + "difference_edit = " + offCommaVal(document.getElementById( "difference_a" ).value) +"::numeric ";
+      strsql = strsql + "difference_edit = " + offCommaVal(document.getElementById( "difference_a" ).value) +"::numeric, ";
+      strsql = strsql + "description = '" + document.getElementById( "description" ).innnerHTML + "' " ;
       strsql = strsql + "WHERE extid='" + document.getElementById( "sel_oppid" ).value +"' ";
       strsql = strsql + "AND oppbranchid ='" + document.getElementById( "sel_oppbranchid" ).value +"' ";
 
-      alert('データを更新するSQL：' + strsql);
+
     }
 
     //SQLを設定
     document.getElementById( "sendsql" ).value = strsql;
-    alert("コレを送る⇒" + document.getElementById( "sendsql" ).value);
     //submit
     document.getElementById("fm_opplist").submit();
    
   } else {
   
-    alert('保存をキャンセルしました。');
+    //alert('保存をキャンセルしました。');
   }
 }
 
@@ -389,30 +392,3 @@ function resetTr(id) {
       
     }
   }
-
-function inesrtData(){
-  var strsql = " INSERT INTO public.oppbranch ";
-  strsql = stsql + "(extid, oppbranchid, plan_date, plan_date_edit, plan_amount, plan_amount_edit, ";
-  strsql = stsql + "plan_accuracy, p lan_accuracy_edit, create_date, update_date, ";
-  strsql = stsql + "netting, netting_edit, deduction, deduction_edit, difference, difference_edit)";
-  strsql = stsql + "VALUES (1, 'Cheese', 9.99)";
-
-}
-
-function updateData(){
-  var strsql = "UPDATE public.oppbranch SET ";
-  strsql = strsql + "plan_date_edit = '2019-10-30'::date, plan_amount_edit = '1000000'::numeric, ";
-  strsql = strsql + "plan_accuracy_edit = 'A'::character(1) ";
-  strsql = strsql + " WHERE oppbranchid =" + 1 +"'";
-  strsql = strsql + " AND extid='" + recid + "'";
-
-}
-
-function deleteData(){
-  var strsql = "UPDATE public.oppbranch SET ";
-  strsql = strsql + "del_flg = true ";
-  strsql = strsql + " WHERE oppbranchid =" + 1 +"'";
-  strsql = strsql + " AND extid='" + recid + "'";
-
-}
-
