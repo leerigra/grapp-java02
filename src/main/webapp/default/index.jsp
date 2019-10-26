@@ -10,16 +10,16 @@
         	var options = newDimensions ? newDimensions : {};
             console.log("resize.");
             Sfdc.canvas.client.resize(sr.client,  {
-            	width : options.width?options.width:"1200px", 
-      			height : options.height?options.height:"2000px"
+            	width : options.width?options.width:"1500px", 
+      			height : options.height?options.height:"5000px"
 			});
         }
 
         function setSize() {
         	
             Sfdc.canvas.client.resize(sr.client,  {
-            	width : options.width?options.width:"1200px", 
-      			height : options.height?options.height:"4000px"
+            	width : options.width?options.width:"1500px", 
+      			height : options.height?options.height:"5000px"
 			});
         }
         var sr = JSON.parse('${canvasRequestJson}');
