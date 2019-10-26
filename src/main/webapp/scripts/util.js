@@ -225,7 +225,11 @@ function deleteRow(obj) {
         strsql = strsql + "WHERE extid='" + oppid + "' ";
         strsql = strsql + "AND oppbranchid ='" + oppbrid + "' ";
 
-        alert("SQL! ⇒" + strsql );
+        //SQLを設定
+        document.getElementById( "sendsql" ).value = strsql;
+        alert("コレを送る⇒" + document.getElementById( "sendsql" ).value);
+        //submit
+        document.getElementById("fm_opplist").submit();
 
     } else {
       alert("やめたよ！");
