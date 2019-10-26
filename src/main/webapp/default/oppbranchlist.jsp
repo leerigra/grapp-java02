@@ -124,7 +124,7 @@ while(rs.next()){
         <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("netting_edit")) %></td>
         <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("deduction_edit")) %></td>
         <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("difference_edit")) %></td>
-        <td class="hidden" id="<%="lst_description_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getString("description")) %></td>
+        <td class="hidden" id="<%="lst_description_" + String.valueOf(i) %>" ><%= rs.getString("description") %></td>
         
     </tr>
 
