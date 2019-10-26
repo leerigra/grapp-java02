@@ -86,7 +86,7 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
     <tr>
         <th class="hidden">recid</th>
         <th>変更区分</th>
-        <th>実行／払込予定日(YYYY-MM-DD)</th>
+        <th>実行／払込予定日</th>
         <th>実行／払込予定額（原通貨）</th>
         <th>実行／払込確度</th>
         <th>作成日時</th>
@@ -151,18 +151,18 @@ db.close();
             <th>変更後</th>
         </tr>
         <tr>
-            <td class="colth">実行払込予定日:</td>
+            <td class="colth">実行／払込予定日(YYYY-MM-DD):</td>
             <td class="left" id="plan_Date_b"></td>
             <td class="right"><input type="text" id="plan_Date_a" size="18" class="left" /></td>
         </tr>
         <tr>
-            <td class="colth">実行払込予定額(現通貨):</td>
+            <td class="colth">実行／払込予定額(現通貨):</td>
             <td class="right" id="plan_amount_b"></td>
             <td class="right"><input type="text" id="plan_amount_a" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)"/></td>
         </tr>
 
         <tr>
-            <td class="colth">確度:</td>
+            <td class="colth">実行／払込確度:</td>
             <td class="right" id="plan_accuracy_b"></td>
             <td class="right">
                 <select name="plan_accuracy" id="plan_accuracy_a">">
