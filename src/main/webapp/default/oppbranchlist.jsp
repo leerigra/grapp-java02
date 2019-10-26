@@ -61,7 +61,7 @@ String password = "2d989239c38338117217f11fbd0bfc7cca8d1a671c3f395a833e0eab79320
 String recid = request.getParameter("recid");
 String ses_oppid = (String) session.getAttribute("sel_oppid");
 if((recid == null || recid.isEmpty()) && (ses_oppid != null || !ses_oppid.isEmpty())){
-    recid = session_oppid;
+    recid = ses_oppid ;
 }
 if((recid != null || !recid.isEmpty()) && (ses_oppid == null || ses_oppid.isEmpty())) {
     session.setAttribute("sel_oppid", recid);
