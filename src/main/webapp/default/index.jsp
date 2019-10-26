@@ -1,6 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8"
-         import="java.sql.*,java.text.*" %>
-
+<!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
@@ -35,27 +33,28 @@
 
     <title>Force.com Canvas Java Quick Start</title>
 </head>
+
 <body onLoad="setSize()">
     <div class="content">
-        <!--<div class="content-header">
+        <!--div class="content-header">
             <h2>
             <p class="right">
                 Salesforce ログインユーザ名: <span id='username'>${canvasRequest.context.userContext.userName}</span><br/>
                 操作対象レコードID: <span id='comp_id'>${canvasRequest.context.environmentContext.parameters.Id}</span>
             </p>
             </h2>
-        </div>-->
-         <div class="content-body">
+        </div-->
+        <div class="content-body">
             <h3>実行予定①</h3>
             <jsp:include page="oppbranchlist.jsp">
                 <jsp:param name="recid" value="${canvasRequest.context.environmentContext.parameters.Id}" />
             </jsp:include>
-            <!--<div class="content-navi">
+            <div class="content-navi">
                 <ul>
                     <li class="btnCancel"><a class="linkCancel" href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
                     <li class="btnOK"><a class="linkOK" href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
                 </ul>
-            </div>-->
+            </div>
         </div>
         
        
