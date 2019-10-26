@@ -67,7 +67,7 @@ if((recid != null || !recid.isEmpty()) && (ses_oppid == null || ses_oppid.isEmpt
     session.setAttribute("sel_oppid", recid);
 }
 
-String strsql = "SELECT oppbranchid,plan_date,plan_date_edit,plan_amount,plan_amount_edit,plan_accuracy,plan_accuracy_edit,create_date,update_date,COALESCE(netting,0) as netting,COALESCE(netting_edit,0) as netting_edit,COALESCE(deduction,0) as deduction,COALESCE(deduction_edit,0) as deduction_edit,COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit FROM oppbranch where extid='" + recid + "'";
+String strsql = "SELECT oppbranchid,plan_date,plan_date_edit,plan_amount,plan_amount_edit,plan_accuracy,plan_accuracy_edit,create_date,update_date,COALESCE(netting,0) as netting,COALESCE(netting_edit,0) as netting_edit,COALESCE(deduction,0) as deduction,COALESCE(deduction_edit,0) as deduction_edit,COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit FROM oppbranch where extid='" + recid + "' AND del_flg = false";
 
 DecimalFormat objFmt=new DecimalFormat("#,###");
 
