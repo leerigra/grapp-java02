@@ -32,11 +32,7 @@
             initTabs();
         });
     </script>
-<%
-if((String) session.getAttribute("sel_oppid") == null){
-    session.setAttribute("sel_oppid", ${canvasRequest.context.environmentContext.parameters.Id}");
-}
-%>
+
     <title>Force.com Canvas Java Quick Start</title>
 </head>
 <body onLoad="setSize()">
