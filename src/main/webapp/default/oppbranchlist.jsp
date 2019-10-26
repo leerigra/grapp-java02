@@ -27,7 +27,7 @@ function tableClick(tr){
   sel_netting_id_upd = "lst_netting_upd_" + rowidx;
   sel_deduction_id_upd = "lst_deduction_upd_" + rowidx;
   sel_difference_id_upd = "lst_difference_upd_" + rowidx;
-  sel_description = "lst_description_" + rowidx;
+
 
   tr.setAttribute("class","sel_row");
 
@@ -49,7 +49,7 @@ function tableClick(tr){
   document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id_upd).innerHTML;
   document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id_upd).innerHTML;
   document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
-  document.getElementById( "description" ).value = document.getElementById(sel_description).innerHTML;  
+
 
 }
 </script>
@@ -68,7 +68,7 @@ if((recid != null || !recid.isEmpty()) && (ses_oppid == null || ses_oppid.isEmpt
     session.setAttribute("sel_oppid", recid);
 }
 
-String strsql = "SELECT oppbranchid,COALESCE(status, '') as status,plan_date,plan_date_edit,plan_amount,plan_amount_edit,plan_accuracy,plan_accuracy_edit,create_date,update_date,COALESCE(netting,0) as netting,COALESCE(netting_edit,0) as netting_edit,COALESCE(deduction,0) as deduction,COALESCE(deduction_edit,0) as deduction_edit,COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit, description FROM oppbranch where extid='" + recid + "' AND del_flg = false";
+String strsql = "SELECT oppbranchid,COALESCE(status, '') as status,plan_date,plan_date_edit,plan_amount,plan_amount_edit,plan_accuracy,plan_accuracy_edit,create_date,update_date,COALESCE(netting,0) as netting,COALESCE(netting_edit,0) as netting_edit,COALESCE(deduction,0) as deduction,COALESCE(deduction_edit,0) as deduction_edit,COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit FROM oppbranch where extid='" + recid + "' AND del_flg = false";
 
 DecimalFormat objFmt=new DecimalFormat("#,###");
 
@@ -124,8 +124,7 @@ while(rs.next()){
         <td class="hidden" id="<%="lst_netting_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("netting_edit")) %></td>
         <td class="hidden" id="<%="lst_deduction_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("deduction_edit")) %></td>
         <td class="hidden" id="<%="lst_difference_upd_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("difference_edit")) %></td>
-        <td class="hidden" id="<%="lst_description_" + String.valueOf(i) %>" ><%= rs.getString("description") %></td>
-        
+         
     </tr>
 
 <%

@@ -36,8 +36,7 @@ function insertRow(id) {
   var cell_lst_netting_upd = row.insertCell(-1);
   var cell_lst_deduction_upd = row.insertCell(-1);
   var cell_lst_difference_upd = row.insertCell(-1);
-  var cell_lst_description = row.insertCell(-1);
-
+  
   // ボタン用 HTML
   var delButton = '<input type="button" value="行削除" onclick="deleteRow(this)"  disabled/>';
   var delCheckbox = '<input type="checkbox" name="chkdel" onclick="checkDel(this);" />';
@@ -61,8 +60,7 @@ function insertRow(id) {
   var add_lst_netting_upd = "lst_netting_upd_" + (table.rows.length - 1);
   var add_lst_deduction_upd = "lst_deduction_upd_" + (table.rows.length - 1);
   var add_lst_difference_upd = "lst_difference_upd_" + (table.rows.length - 1);
-  var add_lst_description = "lst_description_" + (table.rows.length - 1);
-
+  
 
   cell_id.setAttribute("id",add_lst_id);    
   cell_id.setAttribute("class","hidden");
@@ -129,10 +127,7 @@ function insertRow(id) {
   cell_lst_difference_upd.setAttribute("class","hidden");
   //cell_lst_differenc_upd.innerHTML = inNumber + " id='lst_difference_upd_" + row_len + "' />";
 
-  cell_lst_description.setAttribute("id",add_lst_description);     
-  cell_lst_description.setAttribute("class","hidden");
-  //cell_lst_differenc_upd.innerHTML = inNumber + " id='lst_difference_upd_" + row_len + "' />";
-
+  
 
 
 
@@ -158,8 +153,7 @@ row.setAttribute("class","sel_row");
    document.getElementById( "netting_a" ).value = "";
    document.getElementById( "deduction_a" ).value = "";
    document.getElementById( "difference_a" ).value = "";
-   document.getElementById( "description" ).innerHTML = "";
-}
+   }
 
 /**
 * 行削除
@@ -333,6 +327,7 @@ if( result ) {
       console.log('キャンセルがクリックされました');
   }
 }
+
 function btnOK_click()
 {
 var result = window.confirm("保存してよろしいですか？");
@@ -343,7 +338,7 @@ if( result ) {
     var strsql = " INSERT INTO public.oppbranch ";
     strsql = strsql + "(extid, status, plan_date, plan_date_edit, plan_amount, plan_amount_edit, ";
     strsql = strsql + "plan_accuracy, plan_accuracy_edit, create_date, update_date, ";
-    strsql = strsql + "netting, netting_edit, deduction, deduction_edit, difference, difference_edit, description)";
+    strsql = strsql + "netting, netting_edit, deduction, deduction_edit, difference, difference_edit)";
     strsql = strsql + "VALUES (";
     strsql = strsql + "'" + document.getElementById( "sel_oppid" ).value +"'::character(18), ";
     strsql = strsql + "' ', ";
@@ -359,8 +354,7 @@ if( result ) {
     strsql = strsql + offCommaVal(document.getElementById( "deduction_a" ).value) + "::numeric,";
     strsql = strsql + offCommaVal(document.getElementById( "deduction_a" ).value) + "::numeric,";
     strsql = strsql + offCommaVal(document.getElementById( "difference_a" ).value) + "::numeric,";
-    strsql = strsql + offCommaVal(document.getElementById( "difference_a" ).value) + "::numeric," ;
-    strsql = strsql + "'" + document.getElementById( "description" ).innnerHTML + "'" ;
+    strsql = strsql + offCommaVal(document.getElementById( "difference_a" ).value) + "::numeric" ;
     strsql = strsql + ")";
 
   } else {
@@ -373,8 +367,7 @@ if( result ) {
     strsql = strsql + "update_date = current_timestamp, "
     strsql = strsql + "netting_edit = " + offCommaVal(document.getElementById( "netting_a" ).value) +"::numeric, ";
     strsql = strsql + "deduction_edit = " + offCommaVal(document.getElementById( "deduction_a" ).value) +"::numeric, ";
-    strsql = strsql + "difference_edit = " + offCommaVal(document.getElementById( "difference_a" ).value) +"::numeric, ";
-    strsql = strsql + "description = '" + document.getElementById( "description" ).innnerHTML + "' " ;
+    strsql = strsql + "difference_edit = " + offCommaVal(document.getElementById( "difference_a" ).value) +"::numeric ";
     strsql = strsql + "WHERE extid='" + document.getElementById( "sel_oppid" ).value +"' ";
     strsql = strsql + "AND oppbranchid ='" + document.getElementById( "sel_oppbranchid" ).value +"' ";
 
