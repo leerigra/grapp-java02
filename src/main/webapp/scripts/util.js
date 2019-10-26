@@ -181,7 +181,7 @@ function deleteRowDB(obj){
   table = tr.parentNode;
   rowidx = tr.sectionRowIndex;
   alert("選択行⇒:" + rowidx);
-  
+
   var result = window.confirm("選択した実行予定を削除してよろしいですか？");
 
   if( result ) {
@@ -209,12 +209,26 @@ function deleteRowDB(obj){
 function deleteRow(obj) {
     // 削除ボタンを押下された行を取得
     tr = obj.parentNode.parentNode;
+    table = tr.parentNode;
+    rowidx = tr.sectionRowIndex;
+    alert("選択行⇒:" + rowidx);
 
     var result = window.confirm("選択した実行予定を削除してよろしいですか？");
 
     if( result ) {
-        // trのインデックスを取得して行を削除する
-        tr.parentNode.deleteRow(tr.sectionRowIndex);
+        //選択された行を削除するSQLを生成
+        oppbrid = table.rows[rowidx].cells[0].innerHTML;
+        oppid = document.getElementById("sel_oppid").value;
+
+        var strsql = "UPDATE public.oppbranch SET ";     
+        strsql = strsql + "del_flg = true ";
+        strsql = strsql + "WHERE extid='" + oppid + "' ";
+        strsql = strsql + "AND oppbranchid ='" + oppbrid + "' ";
+
+        alert("SQL!⇒" + strsql);
+        
+    } else {
+      alert("やめたよ！")
     }
     
 }
