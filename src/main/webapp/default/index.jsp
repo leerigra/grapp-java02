@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=utf-8"
+         import="java.sql.*,java.text.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,14 +38,14 @@
 
 <body onLoad="setSize()">
     <div class="content">
-        <!--div class="content-header">
+        <div class="content-header">
             <h2>
             <p class="right">
                 Salesforce ログインユーザ名: <span id='username'>${canvasRequest.context.userContext.userName}</span><br/>
                 操作対象レコードID: <span id='comp_id'>${canvasRequest.context.environmentContext.parameters.Id}</span>
             </p>
             </h2>
-        </div-->
+        </div>
         <%
             HttpSession session = request.getSession();
             session.setAttribute("sel_oppid", ${canvasRequest.context.environmentContext.parameters.Id}");
