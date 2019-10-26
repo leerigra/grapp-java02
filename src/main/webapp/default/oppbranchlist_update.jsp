@@ -4,7 +4,7 @@
     <%
     // 内容: データベースにアクセスする
     // 入力された引数を取得する
-  
+    String in_oppid = request.getParameter("sel_oppid");
     String in_strsql = request.getParameter("sendsql");
     if(in_strsql != null) {
  
@@ -20,8 +20,11 @@
         // データベースへのコネクションを閉じる
         db.close();
  
+        session.setAttribute("oppid",in_oppid); %>
+
         // 元のページへリダイレクト
         response.sendRedirect("index.jsp");
+        
     }
 %>
 <html>
