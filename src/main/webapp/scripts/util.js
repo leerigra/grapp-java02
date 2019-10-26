@@ -183,10 +183,10 @@ function deleteRowDB(obj){
     tr = obj.parentNode.parentNode;
     table = tr.parentNode;
     rowidx = tr.sectionRowIndex;
-    
+    alert("選択行⇒:" + rowidx);
     //選択された行を削除するSQLを生成
-    oppbrid= table.rows[rowidx].cells[0].innerHTML;
-    oppid=document.getElementById("sel_oppid").value;
+    oppbrid = table.rows[rowidx].cells[0].innerHTML;
+    oppid = document.getElementById("sel_oppid").value;
 
     var strsql = "UPDATE public.oppbranch SET ";     
     strsql = strsql + "del_flg = true ";
