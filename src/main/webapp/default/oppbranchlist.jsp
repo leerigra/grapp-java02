@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8"
-         import="java.sql.*,java.text.*" %>
+         import="java.sql.*,java.text.*,java.text.SimpleDateFormat" %>
 
 
 <script type="text/javascript" src="/scripts/util.js"></script>
@@ -71,7 +71,8 @@ if((recid != null || !recid.isEmpty()) && (ses_oppid == null || ses_oppid.isEmpt
 String strsql = "SELECT oppbranchid,COALESCE(status, '') as status,plan_date,plan_date_edit,plan_amount,plan_amount_edit,plan_accuracy,plan_accuracy_edit,create_date,update_date,COALESCE(netting,0) as netting,COALESCE(netting_edit,0) as netting_edit,COALESCE(deduction,0) as deduction,COALESCE(deduction_edit,0) as deduction_edit,COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit, description FROM oppbranch where extid='" + recid + "' AND del_flg = false";
 
 DecimalFormat objFmt=new DecimalFormat("#,###");
-
+SimpleDateFormat objFmtDate = new SimpleDateFormat("YYYY-MM-DD");
+SimpleDateFormat objFmtDateTm = new SimpleDateFormat("YYYY-MM-DD HH:mm");
 %>
 <form id="fm_opplist" action="/default/oppbranchlist_update.jsp" method="POST">
 <div class="content-data">
@@ -107,10 +108,10 @@ while(rs.next()){
       <tr id="<%="tr_" + String.valueOf(i) %>" onclick="tableClick(this)">
         <td class="hidden" id="<%="lst_id_" + String.valueOf(i) %>" ><%= rs.getString("oppbranchid") %></td>
         <td class="center"id="<%="lst_Status_" + String.valueOf(i) %> "><%= rs.getString("status") %></td>　    <!--選択肢：新規,変更,削除,取下-->
-        <td class="left" id="<%="lst_plan_Date_" + String.valueOf(i) %> "><%= rs.getDate("plan_Date") %></td>
+        <td class="left" id="<%="lst_plan_Date_" + String.valueOf(i) %> "><%= objFmtDate.format(rs.getDate("plan_Date")) %></td>
         <td class="right" id="<%="lst_plan_amount_" + String.valueOf(i) %> "><%= objFmt.format(rs.getLong("plan_amount")) %></td>
         <td class="center" id="<%="lst_plan_accuracy_" + String.valueOf(i) %> "><%= rs.getString("plan_accuracy") %></td>
-        <td class="left"><%= rs.getDate("create_date") %></td>
+        <td class="left"><%= objFmtDateTm.format(rs.getDate("create_date")) %></td>
 
         <td class="center" nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
         <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("netting")) %></td>
@@ -154,12 +155,12 @@ db.close();
         <tr>
             <td class="colth">実行／払込予定日:</td>
             <td class="left" id="plan_Date_b"></td>
-            <td class="right"><input type="text" id="plan_Date_a" size="18" class="left" /></td>
+            <td class="right"><input type="text" id="plan_Date_a" size="18" class="left" onfocus="offDateFmt(this)" onblur="toDateFmt(this)"/></td>
         </tr>
         <tr>
             <td class="colth">実行払込予定額(現通貨):</td>
             <td class="right" id="plan_amount_b"></td>
-            <td class="right"><input type="text" id="plan_amount_a" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)"/></td>
+            <td class="right"><input type="text" id="plan_amount_a" size="18" class="right" onfocus="offDateFmt(this)" onblur="toDateFmt(this)"/></td>
         </tr>
 
         <tr>

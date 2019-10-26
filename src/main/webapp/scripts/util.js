@@ -306,18 +306,71 @@ function offCommaVal(str){
   }
 }
 
-/**************************
- * カンマ編集を解除するFunction
- **************************/
-function nulltoblank(str){
-  
-  if(str == null){
-    return '';  //変換した結果をかえす
-  } else {
-    return str;
-  }
+/**
+ * 日付チェック
+ * @param {*} strDate 
+ */
+function isDate (strDate) {
+
+   // 空文字は無視
+   if(strDate == ""){
+    return true;
+}  
+// 年月日の形式のみ許容する
+if(!strDate.match(/^\d{4}\d{1,2}\d{1,2}$/)){
+    return false;
+} 
+
+// 日付変換された日付が入力値と同じ事を確認
+// new Date()の引数に不正な日付が入力された場合、相当する日付に変換されてしまうため
+// 
+var date = new Date(strDate);  
+if(date.getFullYear() !=  strDate.split("-")[0] 
+    || date.getMonth() != strDate.split("-")[1] - 1 
+    || date.getDate() != strDate.split("-")[2])
+{
+  return false;
+}
+
+return true;
 
 }
+
+/**************************
+ * 日付編集を行うFunction
+ **************************/
+function toDateFmt(obj){
+  if((obj.value).trim().length != 0 && !isNaN(obj.value)){
+  
+    var inDate = obj.value;
+
+    if(inDate.isDate = true){
+      obj.value = inDate.substr( 0, 4 ) + "-" +  inDate.substr( 4, 2 ) + "-" + inDate.substr( 6, 2 ) ;
+    } else{
+
+      alert("正しい日付を入力してください。");
+    }
+  
+  }else{
+    alert("正しい日付を入力してください。");
+    
+  }
+ }
+
+
+
+/**************************
+ * 日付編集を解除するFunction
+ **************************/
+function offDateFmt(obj){
+  var reg = new RegExp("-", "g");
+  var chgVal = obj.value.replace(reg, "");
+  if(!isNaN(chgVal)){
+    obj.value = chgVal;  //値セット
+    obj.select();        //全選択
+  }
+}
+
 
 
 
