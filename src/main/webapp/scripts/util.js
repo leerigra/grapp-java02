@@ -376,6 +376,7 @@ if( result ) {
 
   //SQLを設定
   document.getElementById( "sendsql" ).value = strsql;
+  alert(strsql);
   //submit
   document.getElementById("fm_opplist").submit();
  
