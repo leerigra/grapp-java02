@@ -306,6 +306,19 @@ function offCommaVal(str){
   }
 }
 
+/**************************
+ * カンマ編集を解除するFunction
+ **************************/
+function nulltoblank(str){
+  
+  if(str == null){
+    return '';  //変換した結果をかえす
+  } else {
+    return str;
+  }
+
+}
+
 
 
 function btnCancel_Click()
