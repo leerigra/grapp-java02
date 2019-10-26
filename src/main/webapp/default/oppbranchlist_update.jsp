@@ -20,7 +20,7 @@
         // データベースへのコネクションを閉じる
         db.close();
  
-        session.setAttribute("oppid",in_oppid); %>
+        session.setAttribute("sel_oppid",in_oppid); 
 
         // 元のページへリダイレクト
         response.sendRedirect("index.jsp");
