@@ -342,17 +342,17 @@ if( result ) {
     strsql = strsql + "' ', ";
     strsql = strsql + "'" + document.getElementById( "plan_Date_a").value +"'::date, ";
     strsql = strsql + "'" + document.getElementById( "plan_Date_a").value +"'::date, ";
-    strsql = strsql + offCommaVal(document.getElementById( "plan_amount_a" ).value) + "::numeric, ";
-    strsql = strsql + offCommaVal(document.getElementById( "plan_amount_a" ).value) + "::numeric, ";
+    strsql = strsql + "COALESCE(" + offCommaVal(document.getElementById( "plan_amount_a" ).value) + ",0)::numeric, ";
+    strsql = strsql + "COALESCE(" + offCommaVal(document.getElementById( "plan_amount_a" ).value) + ",0)::numeric, ";
     strsql = strsql + "'" + document.getElementById( "plan_accuracy_a" ).value + "'::character(1), ";
     strsql = strsql + "'" + document.getElementById( "plan_accuracy_a" ).value + "'::character(1), ";
     strsql = strsql + "current_timestamp, current_timestamp, "
-    strsql = strsql + offCommaVal(document.getElementById( "netting_a" ).value) + "::numeric,";
-    strsql = strsql + offCommaVal(document.getElementById( "netting_a" ).value) + "::numeric,";;
-    strsql = strsql + offCommaVal(document.getElementById( "deduction_a" ).value) + "::numeric,";
-    strsql = strsql + offCommaVal(document.getElementById( "deduction_a" ).value) + "::numeric,";
-    strsql = strsql + offCommaVal(document.getElementById( "difference_a" ).value) + "::numeric,";
-    strsql = strsql + offCommaVal(document.getElementById( "difference_a" ).value) + "::numeric" ;
+    strsql = strsql + "COALESCE(" + offCommaVal(document.getElementById( "netting_a" ).value) + ",0)::numeric, ";
+    strsql = strsql + "COALESCE(" + offCommaVal(document.getElementById( "netting_a" ).value) + ",0)::numeric, ";
+    strsql = strsql + "COALESCE(" + offCommaVal(document.getElementById( "deduction_a" ).value) + ",0)::numeric, ";
+    strsql = strsql + "COALESCE(" + offCommaVal(document.getElementById( "deduction_a" ).value) + ",0)::numeric, ";
+    strsql = strsql + (offCommaVal(document.getElementById( "netting_a" ).value) -  offCommaVal(document.getElementById( "deduction_a" ).value)) + "::numeric,";
+    strsql = strsql + (offCommaVal(document.getElementById( "netting_a" ).value) -  offCommaVal(document.getElementById( "deduction_a" ).value)) + "::numeric" ;
     strsql = strsql + ")";
 
   } else {
