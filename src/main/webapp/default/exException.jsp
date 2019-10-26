@@ -7,7 +7,7 @@
 <body>
 
 <%
-    out.println("例外処理JSPプログラム");
+    out.println("システムエラーが発生しました。");
     out.println("<BR><BR>");
 
     //(2)スローされた例外の簡潔な情報を
