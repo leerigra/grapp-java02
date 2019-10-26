@@ -33,7 +33,7 @@ function tableClick(tr){
 
    //選択された行のidをセットして詳細表示
   document.getElementById( "sel_oppbranchid" ).value = table.rows[rowidx].cells[0].innerHTML;
-  document.getElementById( "status_b" ).innerHTML = "変更";
+  document.getElementById( "status_b" ).innerHTML = table.rows[rowidx].cells[1].innerHTML;
   
   document.getElementById( "plan_Date_b" ).innerHTML =  table.rows[rowidx].cells[2].innerHTML;
   document.getElementById( "plan_amount_b" ).innerHTML =  table.rows[rowidx].cells[3].innerHTML;
@@ -49,7 +49,7 @@ function tableClick(tr){
   document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id_upd).innerHTML;
   document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id_upd).innerHTML;
   document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
-  document.getElementById( "description" ).innerHTML = document.getElementById(sel_description).innerHTML;  
+  document.getElementById( "description" ).value = document.getElementById(sel_description).innerHTML;  
 
 }
 </script>
@@ -68,15 +68,15 @@ if((recid != null || !recid.isEmpty()) && (ses_oppid == null || ses_oppid.isEmpt
     session.setAttribute("sel_oppid", recid);
 }
 
-String strsql = "SELECT oppbranchid,plan_date,plan_date_edit,plan_amount,plan_amount_edit,plan_accuracy,plan_accuracy_edit,create_date,update_date,COALESCE(netting,0) as netting,COALESCE(netting_edit,0) as netting_edit,COALESCE(deduction,0) as deduction,COALESCE(deduction_edit,0) as deduction_edit,COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit, description FROM oppbranch where extid='" + recid + "' AND del_flg = false";
+String strsql = "SELECT oppbranchid,status,plan_date,plan_date_edit,plan_amount,plan_amount_edit,plan_accuracy,plan_accuracy_edit,create_date,update_date,COALESCE(netting,0) as netting,COALESCE(netting_edit,0) as netting_edit,COALESCE(deduction,0) as deduction,COALESCE(deduction_edit,0) as deduction_edit,COALESCE(netting,0)-COALESCE(deduction,0) as difference, COALESCE(netting_edit,0)-COALESCE(deduction_edit,0) as difference_edit, description FROM oppbranch where extid='" + recid + "' AND del_flg = false";
 
 DecimalFormat objFmt=new DecimalFormat("#,###");
 
 %>
 <form id="fm_opplist" action="/default/oppbranchlist_update.jsp" method="POST">
 <div class="content-data">
-    <input type="text" id="sel_oppid" value="<%= recid %>" />
-    <input type="text" id="session_oppid" value="<%= ses_oppid %>" />
+    <input type="hidden" id="sel_oppid" value="<%= recid %>" />
+    <input type="hidden" id="session_oppid" value="<%= ses_oppid %>" />
     
     <input type="hidden" id="sel_oppbranchid"/>
     <input type="hidden" id="sendsql" name="sendsql"/>
@@ -106,7 +106,7 @@ while(rs.next()){
 %>
       <tr id="<%="tr_" + String.valueOf(i) %>" onclick="tableClick(this)">
         <td class="hidden" id="<%="lst_id_" + String.valueOf(i) %>" ><%= rs.getString("oppbranchid") %></td>
-        <td class="center"id="<%="lst_Status_" + String.valueOf(i) %> ">&nbsp;</td>　    <!--選択肢：新規,変更,削除,取下-->
+        <td class="center"id="<%="lst_Status_" + String.valueOf(i) %> "><%= rs.getString("status") %></td>　    <!--選択肢：新規,変更,削除,取下-->
         <td class="left" id="<%="lst_plan_Date_" + String.valueOf(i) %> "><%= rs.getDate("plan_Date") %></td>
         <td class="right" id="<%="lst_plan_amount_" + String.valueOf(i) %> "><%= objFmt.format(rs.getLong("plan_amount")) %></td>
         <td class="center" id="<%="lst_plan_accuracy_" + String.valueOf(i) %> "><%= rs.getString("plan_accuracy") %></td>

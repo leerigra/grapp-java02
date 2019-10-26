@@ -352,6 +352,7 @@ function btnOK_click()
     } else {
     
       var strsql = "UPDATE public.oppbranch SET ";     
+      strsql = strsql + "status = '変更', ";
       strsql = strsql + "plan_date_edit = '" + document.getElementById( "plan_Date_a").value +"'::date, ";
       strsql = strsql + "plan_amount_edit = " + offCommaVal(document.getElementById( "plan_amount_a").value) +"::numeric, ";
       strsql = strsql + "plan_accuracy_edit = '" + document.getElementById( "plan_accuracy_a").value +"'::character(1) , ";
