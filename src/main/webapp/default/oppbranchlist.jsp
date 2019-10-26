@@ -48,7 +48,7 @@ function tableClick(tr){
   document.getElementById( "plan_accuracy_a" ).value = document.getElementById(sel_plan_accuracy_id_upd).innerHTML;
   document.getElementById( "netting_a" ).value = document.getElementById(sel_netting_id_upd).innerHTML;
   document.getElementById( "deduction_a" ).value = document.getElementById(sel_deduction_id_upd).innerHTML;
-  document.getElementById( "difference_a" ).value = document.getElementById(sel_difference_id_upd).innerHTML;
+  document.getElementById( "difference_a" ).innerHTML = document.getElementById(sel_difference_id_upd).innerHTML;
 
 
 }
