@@ -33,9 +33,10 @@ div.content-body {
 } 
 
 div.content-data {
-    margin: 10px;
+    margin: 5px;
     height : 99%;
     width :  99%;
+    clear: both;
 } 
 
 
@@ -106,7 +107,7 @@ div.content-body h3 {
     font-size: 16px;
     font-weight: normal;
     background-color: #8060A5;
-    margin: 2px;
+    margin: 10px;
     padding: 2px;
 }
 
@@ -181,7 +182,7 @@ table.oppBrDetailTable td.colth{
 }
  
 div.content-navi {
-    margin: 10px;
+    margin: 5px;
     float: right;
 }
 

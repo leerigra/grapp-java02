@@ -46,7 +46,6 @@
         </div-->
         <div class="content-body">
             <h3>実行予定</h3>
-            <br/>
             <jsp:include page="oppbranchlist.jsp">
                 <jsp:param name="recid" value="${canvasRequest.context.environmentContext.parameters.Id}" />
             </jsp:include>
