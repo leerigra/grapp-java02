@@ -77,10 +77,10 @@ select {
 }
 
 div.content-header h2 {
-    height: 50px;
+    height: 30px;
     background-color: #FFFFFF;
     border-bottom: medium solid #4b0082;
-	/*background-image:url(../images/heroku.png);	背景画像*/
+	background-image:url(../images/heroku.png);	/*背景画像*/
 	background-repeat:no-repeat;		/*背景画像を繰り返さない*/
     background-position: left 5px bottom 2px;
     padding: 0px;
@@ -88,7 +88,7 @@ div.content-header h2 {
     font-size: 8px;
     font-weight: normal;
     margin:0 0 0 auto;
-    opacity:0.6;
+    opacity:0.3;
 }
 
 div.content-header p {

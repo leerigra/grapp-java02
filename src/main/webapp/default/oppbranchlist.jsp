@@ -86,7 +86,7 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
     <tr>
         <th class="hidden">recid</th>
         <th>変更区分</th>
-        <th>実行／払込予定日</th>
+        <th>実行／払込予定日(YYYY-MM-DD)</th>
         <th>実行／払込予定額（原通貨）</th>
         <th>実行／払込確度</th>
         <th>作成日時</th>
@@ -187,7 +187,7 @@ db.close();
         <tr>
             <td class="colth">差額（現通貨）:</td>
             <td class="right" id="difference_b"></td>
-            <td class="right"><input type="text" id="difference_a"size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)" /></td>
+            <td class="right" id="difference_a"></td>
         </tr>
 
     </table>

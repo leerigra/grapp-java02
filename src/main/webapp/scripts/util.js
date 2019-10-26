@@ -313,8 +313,6 @@ if(str == null){
 
 }
 
-
-
 function btnCancel_Click()
 {
 var result = window.confirm("入力内容を破棄してよろしいですか？");
