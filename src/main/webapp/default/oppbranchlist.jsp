@@ -111,8 +111,7 @@ while(rs.next()){
         <td class="center" id="<%="lst_plan_accuracy_" + String.valueOf(i) %> "><%= rs.getString("plan_accuracy") %></td>
         <td class="left"><%= rs.getDate("create_date") %></td>
 
-        <td class="center" nowrap><input type="button" value="行削除" onclick="deleteRow('this')" /></td>
-       
+        <td class="center" nowrap><input type="button" value="行削除" onclick="deleteRow(this)" /></td>
         <td class="hidden" id="<%="lst_netting_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("netting")) %></td>
         <td class="hidden" id="<%="lst_deduction_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("deduction")) %></td>
         <td class="hidden" id="<%="lst_difference_" + String.valueOf(i) %>" ><%= objFmt.format(rs.getLong("difference")) %></td>
