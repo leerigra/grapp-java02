@@ -75,13 +75,13 @@ DecimalFormat objFmt=new DecimalFormat("#,###");
 %>
 <form id="fm_opplist" action="/default/oppbranchlist_update.jsp" method="POST">
 <div class="content-data">
+    <div class="section-title"><h4>枝口リスト</h4></div>
+    
     <input type="hidden" id="sel_oppid" value="<%= recid %>" />
     <input type="hidden" id="session_oppid" value="<%= ses_oppid %>" />
-    
     <input type="hidden" id="sel_oppbranchid"/>
     <input type="hidden" id="sendsql" name="sendsql"/>
     <input type="button" class="table_btn" value="行追加" onclick="insertRow('BranchListDB')"  />
-    <div class="section-title"><h4>枝口リスト</h4></div>
     <table class="oppBrListTable" id="BranchListDB" >
     <tr>
         <th class="hidden">recid</th>
