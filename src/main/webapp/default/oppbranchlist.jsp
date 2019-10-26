@@ -139,7 +139,7 @@ db.close();
 </table>
 
 </div>
-
+<br/>
 <div class="content-data">
 
     <div class="section-title"><h4>枝口情報更新</h4></div>
@@ -192,6 +192,8 @@ db.close();
 
     </table>
 </div>
+<br/>
+
 <div class="content-data">
     <!--<table class="oppBrDetailTable" id="BranchDetailmemo">
         <tr>
@@ -201,6 +203,13 @@ db.close();
     
     </table-->
 </div>
+<div class="content-navi">
+        <ul>
+           <li class="btnCancel"><a class="linkCancel" href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
+           <li class="btnOK"><a class="linkOK" href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
+       </ul>
+   </div>
+<br/>   
 <div class="content-data">
     <div class="section-title"><h4>資金課 確認状況</h4></div>
     <table class="oppBrDetailTable" id="BranchDetailApproval">
@@ -221,11 +230,5 @@ db.close();
     </table>
  </div>
 
- <div class="content-navi">
-     <ul>
-        <li class="btnCancel"><a class="linkCancel" href="javascript:void(0)" onclick="btnCancel_Click()">キャンセル</a></li>
-        <li class="btnOK"><a class="linkOK" href="javascript:void(0)" onclick="btnOK_click()">保存</a></li>
-    </ul>
-</div>
 
 </form>
