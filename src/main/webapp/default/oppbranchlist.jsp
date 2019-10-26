@@ -151,7 +151,7 @@ db.close();
             <th>変更後</th>
         </tr>
         <tr>
-            <td class="colth">実行／払込予定日:</td>
+            <td class="colth">実行払込予定日:</td>
             <td class="left" id="plan_Date_b"></td>
             <td class="right"><input type="text" id="plan_Date_a" size="18" class="left" /></td>
         </tr>
