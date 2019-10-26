@@ -209,8 +209,8 @@ function deleteRowDB(obj){
 function deleteRow(obj) {
     // 削除ボタンを押下された行を取得
     tr = obj.parentNode.parentNode;
-    table = tr.parentNode;
-    rowidx = tr.sectionRowIndex;
+    //table = tr.parentNode;
+    //rowidx = tr.sectionRowIndex;
   //  alert("選択行⇒:" + rowidx);
 
     var result = window.confirm("選択した実行予定を削除してよろしいですか？");
