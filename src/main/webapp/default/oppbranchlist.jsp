@@ -155,12 +155,12 @@ db.close();
         <tr>
             <td class="colth">実行／払込予定日:</td>
             <td class="left" id="plan_Date_b"></td>
-            <td class="right"><input type="text" id="plan_Date_a" size="18" class="left" onfocus="offDateFmt(this)" onblur="toDateFmt(this)"/></td>
+            <td class="right"><input type="text" id="plan_Date_a" size="18" class="left" /></td>
         </tr>
         <tr>
             <td class="colth">実行払込予定額(現通貨):</td>
             <td class="right" id="plan_amount_b"></td>
-            <td class="right"><input type="text" id="plan_amount_a" size="18" class="right" onfocus="offDateFmt(this)" onblur="toDateFmt(this)"/></td>
+            <td class="right"><input type="text" id="plan_amount_a" size="18" class="right" onfocus="offComma(this)" onblur="toComma(this)"/></td>
         </tr>
 
         <tr>
