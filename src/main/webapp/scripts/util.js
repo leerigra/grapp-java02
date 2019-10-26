@@ -211,24 +211,24 @@ function deleteRow(obj) {
     tr = obj.parentNode.parentNode;
     table = tr.parentNode;
     rowidx = tr.sectionRowIndex;
-    alert("選択行⇒:" + rowidx);
+  //  alert("選択行⇒:" + rowidx);
 
     var result = window.confirm("選択した実行予定を削除してよろしいですか？");
 
     if( result ) {
         //選択された行を削除するSQLを生成
-        oppbrid = table.rows[rowidx].cells[0].innerHTML;
-        oppid = document.getElementById("sel_oppid").value;
+    //    oppbrid = table.rows[rowidx].cells[0].innerHTML;
+    //    oppid = document.getElementById("sel_oppid").value;
 
-        var strsql = "UPDATE public.oppbranch SET ";     
-        strsql = strsql + "del_flg = true ";
-        strsql = strsql + "WHERE extid='" + oppid + "' ";
-        strsql = strsql + "AND oppbranchid ='" + oppbrid + "' ";
+    //    var strsql = "UPDATE public.oppbranch SET ";     
+   //     strsql = strsql + "del_flg = true ";
+   //    strsql = strsql + "WHERE extid='" + oppid + "' ";
+    //    strsql = strsql + "AND oppbranchid ='" + oppbrid + "' ";
 
-        alert("SQL!⇒" + strsql);
-        
+        alert("SQL!" );
+
     } else {
-      alert("やめたよ！")
+      alert("やめたよ！");
     }
     
 }
