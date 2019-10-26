@@ -174,6 +174,33 @@ function upddelRow(obj) {
 }
 
 
+function deleteRowDB(obj){
+
+  var result = window.confirm("選択した実行予定を削除してよろしいですか？");
+
+    if( result ) {
+  // 削除ボタンを押下された行を取得
+  tr = obj.parentNode.parentNode;
+  rowidx = tr.sectionRowIndex;
+    
+  //選択された行のidをセットして詳細表示
+  oppbrid= table.rows[rowidx].cells[0].innerHTML;
+  oppid=document.getElementById( "sel_oppid").value
+
+
+  var strsql = "UPDATE public.oppbranch SET ";     
+  strsql = strsql + "del_flg = true "
+  strsql = strsql + "WHERE extid='" + oppid + "' ";
+  strsql = strsql + "AND oppbranchid ='" + oppbrid + "' ";
+
+    //SQLを設定
+  document.getElementById( "sendsql" ).value = strsql;
+  alert("コレを送る⇒" + document.getElementById( "sendsql" ).value);
+  //submit
+  document.getElementById("fm_opplist").submit();
+  }
+}
+
 /**
  * 行削除
  */
