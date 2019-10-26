@@ -181,6 +181,7 @@ function deleteRowDB(obj){
   if( result ) {
     // 削除ボタンを押下された行を取得
     tr = obj.parentNode.parentNode;
+    table = tr.parentNode;
     rowidx = tr.sectionRowIndex;
     
     //選択された行を削除するSQLを生成
