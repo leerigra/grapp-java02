@@ -44,6 +44,10 @@
             </p>
             </h2>
         </div-->
+        <%
+            HttpSession session = request.getSession();
+            session.setAttribute("sel_oppid", ${canvasRequest.context.environmentContext.parameters.Id}");
+        %>
         <div class="content-body">
             <h3>実行予定①</h3>
             <jsp:include page="oppbranchlist.jsp">
