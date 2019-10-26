@@ -328,11 +328,12 @@ function btnOK_click()
       
     if(document.getElementById( "status_b").innerHTML=="新規"){
       var strsql = " INSERT INTO public.oppbranch ";
-      strsql = strsql + "(extid, plan_date, plan_date_edit, plan_amount, plan_amount_edit, ";
+      strsql = strsql + "(extid, status, plan_date, plan_date_edit, plan_amount, plan_amount_edit, ";
       strsql = strsql + "plan_accuracy, plan_accuracy_edit, create_date, update_date, ";
       strsql = strsql + "netting, netting_edit, deduction, deduction_edit, difference, difference_edit, description)";
       strsql = strsql + "VALUES (";
       strsql = strsql + "'" + document.getElementById( "sel_oppid" ).value +"'::character(18), ";
+      strsql = strsql + "' ', ";
       strsql = strsql + "'" + document.getElementById( "plan_Date_a").value +"'::date, ";
       strsql = strsql + "'" + document.getElementById( "plan_Date_a").value +"'::date, ";
       strsql = strsql + offCommaVal(document.getElementById( "plan_amount_a" ).value) + "::numeric, ";

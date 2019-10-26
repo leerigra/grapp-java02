@@ -194,13 +194,13 @@ db.close();
     </table>
 </div>
 <div class="content-data">
-    <table class="oppBrDetailTable" id="BranchDetailmemo">
+    <!--<table class="oppBrDetailTable" id="BranchDetailmemo">
         <tr>
             <td class="colth">備考:</td>
             <td class="left"><textarea id="description" rows="10" cols="50"></textarea></td>
         </tr>
     
-    </table>
+    </table-->
 </div>
 <div class="content-data">
     <div class="section-title"><h4>資金課 確認状況</h4></div>
