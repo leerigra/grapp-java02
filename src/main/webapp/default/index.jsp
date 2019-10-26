@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8"
          import="java.sql.*,java.text.*" %>
-<!DOCTYPE html>
+
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
@@ -32,10 +32,12 @@
             initTabs();
         });
     </script>
-
+<%
+HttpSession session = request.getSession();
+session.setAttribute("sel_oppid", ${canvasRequest.context.environmentContext.parameters.Id}");
+%>
     <title>Force.com Canvas Java Quick Start</title>
 </head>
-
 <body onLoad="setSize()">
     <div class="content">
         <div class="content-header">
@@ -46,11 +48,7 @@
             </p>
             </h2>
         </div>
-        <%
-            HttpSession session = request.getSession();
-            session.setAttribute("sel_oppid", ${canvasRequest.context.environmentContext.parameters.Id}");
-        %>
-        <div class="content-body">
+         <div class="content-body">
             <h3>実行予定①</h3>
             <jsp:include page="oppbranchlist.jsp">
                 <jsp:param name="recid" value="${canvasRequest.context.environmentContext.parameters.Id}" />
