@@ -103,8 +103,6 @@ while(rs.next()){
         <td class="right" id="<%="lst_plan_amount_" + String.valueOf(i) %> "><%= objFmt.format(rs.getLong("plan_amount")) %></td>
         <td class="center" id="<%="lst_plan_accuracy_" + String.valueOf(i) %> "><%= rs.getString("plan_accuracy") %></td>
         <td class="left"><%= rs.getDate("create_date") %></td>
-
-function deleteRowDB(obj){
         <td class="center" nowrap><input type="button" value="行削除" onclick="deleteRowDB(this);" /></td>
         <!--td class="center" nowrap><input type="checkbox" name="chkdel" onclick="checkDel(this);" ></td-->
         
