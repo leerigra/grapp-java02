@@ -365,7 +365,7 @@ if( result ) {
     strsql = strsql + "update_date = current_timestamp, "
     strsql = strsql + "netting_edit = " + offCommaVal(document.getElementById( "netting_a" ).value) +"::numeric, ";
     strsql = strsql + "deduction_edit = " + offCommaVal(document.getElementById( "deduction_a" ).value) +"::numeric, ";
-    strsql = strsql + "difference_edit = " + offCommaVal(document.getElementById( "difference_a" ).value) +"::numeric ";
+    strsql = strsql + "difference_edit = " + (offCommaVal(document.getElementById( "netting_a" ).value) - offCommaVal(document.getElementById( "deduction_a" ).value)) +"::numeric ";
     strsql = strsql + "WHERE extid='" + document.getElementById( "sel_oppid" ).value +"' ";
     strsql = strsql + "AND oppbranchid ='" + document.getElementById( "sel_oppbranchid" ).value +"' ";
 
