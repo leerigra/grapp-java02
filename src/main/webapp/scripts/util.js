@@ -217,15 +217,15 @@ function deleteRow(obj) {
 
     if( result ) {
         //選択された行を削除するSQLを生成
-    //    oppbrid = table.rows[rowidx].cells[0].innerHTML;
-    //    oppid = document.getElementById("sel_oppid").value;
+        oppbrid = table.rows[rowidx].cells[0].innerHTML;
+        oppid = document.getElementById("sel_oppid").value;
 
-    //    var strsql = "UPDATE public.oppbranch SET ";     
-   //     strsql = strsql + "del_flg = true ";
-   //    strsql = strsql + "WHERE extid='" + oppid + "' ";
-    //    strsql = strsql + "AND oppbranchid ='" + oppbrid + "' ";
+        var strsql = "UPDATE public.oppbranch SET ";     
+        strsql = strsql + "del_flg = true ";
+        strsql = strsql + "WHERE extid='" + oppid + "' ";
+        strsql = strsql + "AND oppbranchid ='" + oppbrid + "' ";
 
-        alert("SQL!" );
+        alert("SQL! ⇒" + strsql );
 
     } else {
       alert("やめたよ！");
